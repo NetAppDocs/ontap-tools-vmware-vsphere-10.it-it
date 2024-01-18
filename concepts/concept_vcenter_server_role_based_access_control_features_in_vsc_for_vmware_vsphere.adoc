@@ -38,7 +38,7 @@ Per completare correttamente un'attività, è necessario disporre dei ruoli vCen
 
 NOTE: I ruoli vCenter Server si applicano agli utenti vCenter degli strumenti ONTAP, non agli amministratori. Per impostazione predefinita, gli amministratori hanno accesso completo al prodotto e non richiedono l'assegnazione di ruoli.
 
-Gli utenti e i gruppi non hanno ruoli assegnati. Essi ottengono l'accesso a un ruolo facendo parte di un ruolo vCenter Server.
+Gli utenti e i gruppi accedono a un ruolo facendo parte di un ruolo vCenter Server.
 
 
 

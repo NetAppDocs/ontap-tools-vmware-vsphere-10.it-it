@@ -27,6 +27,7 @@ Di seguito sono riportati i requisiti degli strumenti ONTAP prima di procedere c
 * Assicurarsi che l'host o il pool di risorse in cui viene distribuito l'OVA disponga delle risorse minime menzionate nella sezione *requisiti per la distribuzione degli strumenti ONTAP*.
 * Eliminare la cache del browser.
 * Sono necessari due IP virtuali per il bilanciamento del carico e Kubernetes API Server. Ottenere due IP gratuiti nella VLAN, utilizzati per la distribuzione, che viene utilizzato per accedere ai servizi dopo la distribuzione.
+* Procurarsi certificati CA (certificati root , Leaf e intermedi) dalla CA commerciale.
 * In caso di distribuzione multi-vCenter in cui i certificati CA personalizzati sono obbligatori, mappare il *Domain Name* su cui viene rilasciato il certificato al *Virtual IP*. Eseguire un controllo ping sul nome di dominio per verificare se il dominio viene risolto all'indirizzo IP desiderato.
 * È richiesta una macchina virtuale di storage su ONTAP con NFS abilitato. Per configurare la VM di storage, procedere come segue:
 +

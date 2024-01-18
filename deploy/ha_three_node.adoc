@@ -50,7 +50,7 @@ NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Res
 +
 L'ASUP può essere abilitato o disabilitato solo durante l'implementazione.
 
-.. Nome utente amministratore e password amministratore: Password utilizzata per accedere all'interfaccia utente *Gestione strumenti ONTAP*.
+.. Nome utente amministratore e password amministratore: Password utilizzata per accedere all'interfaccia utente *ONTAP Tools Manager*.
 .. Immettere le informazioni sul server NTP nel campo *Server NTP*.
 .. Password utente di manutenzione: Consente di accedere a 'Opzioni console manutenzione'.
 

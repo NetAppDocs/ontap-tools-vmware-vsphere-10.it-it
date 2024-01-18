@@ -25,7 +25,7 @@ Quando si utilizza il metodo di certificato firmato CA, è necessario che il cer
 . Immettere le informazioni di connessione per il provider di archiviazione:
 +
 .. Nome: Qualsiasi nome facile da usare come "ScaleoutVP"
-.. URL: https://<name>/virtualization/version.xml[] - Il nome nell'URL corrisponde all'IP virtuale fornito durante l'implementazione OVA per l'implementazione di Single vCenter (o) nome di dominio per le implementazioni Multi-vCenter.
+.. URL: https://<name>/virtualization/version.xml[] - Il nome nell'URL corrisponde all'IP virtuale fornito durante l'implementazione OVA per l'implementazione di Single vCenter (o) nome di dominio per le implementazioni Multi-vCenter. Aggiungere i certificati all'URL. Gli stessi certificati vengono pubblicati in vCenter.
 .. Credenziali: <nome_ute<nome_VASA Provider>/< password provider VASA> fornite durante l'implementazione OVA.
 
 

@@ -35,6 +35,9 @@ Esempi
 ----
   DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=true
 ----
+
+NOTE: Delete vVol il flusso di lavoro del datastore elimina i volumi del datastore se il flag delete_volume è stato superato come true, indipendentemente dal fatto che il volume del datastore sia gestito o non gestito.
+
 * Elimina il datastore vVol e non rimuovi volumi dallo storage
 
 
