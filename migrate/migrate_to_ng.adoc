@@ -33,7 +33,7 @@ NOTE: Come utente esistente, è necessario eseguire il backup OVA da 9,10/9,11 p
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,0. Vedere link:../qsg_10.html["ONTAP Tools Avvio rapido"]
+. Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,0. Vedere link:../deploy/qsg_10.html["ONTAP Tools Avvio rapido"]
 . Aggiungi il vCenter che desideri migrare agli strumenti ONTAP per VMware vSphere 10,0. Vedere link:../configure/add_vcenter.html["Aggiungi vCenter"].
 . Backend dello storage integrato localmente dalle API vCenter del plug-in remoto. Vedere link:../configure/onboard_svm.html["Back-end dello storage integrato"]. Aggiungi storage come ambito locale per la migrazione.
 . Utilizzare la seguente API per migrare:

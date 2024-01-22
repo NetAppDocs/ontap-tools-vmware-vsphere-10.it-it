@@ -441,7 +441,6 @@ Esempio: Per il setup multi-tenant, puoi aggiungere il back-end dello storage (c
   <block id="f6a8c4418598dbac9139a7fe52e99cd9" category="admonition">Come utente esistente, è necessario eseguire il backup OVA da 9,10/9,11 prima di eseguire l'aggiornamento alla patch 9,10D o 9,11D</block>
   <block id="2db68a279bc2b75d7d1a4b6e68d05ff4" category="list-text">Abilitare la PORTA Derby 1527 sugli strumenti ONTAP esistenti per VMware vSphere 9.10D2 e 9.11D4. Per abilitare la porta, accedere alla CLI con l'utente root ed eseguire il seguente comando:</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="inline-link-macro">ONTAP Tools Avvio rapido</block>
-  <block id="6f6b7bd58886693f11eb96bd0341b5b3" category="list-text">Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,0. Vedere <block ref="a02083ee995a4c6975877ba810ab5474" category="inline-link-macro-rx"></block></block>
   <block id="17a7ed8efe05072366e69496ed1711fb" category="list-text">Aggiungi il vCenter che desideri migrare agli strumenti ONTAP per VMware vSphere 10,0. Vedere <block ref="a10f9e2fb5f93213a95f892ddd0bf865" category="inline-link-macro-rx"></block>.</block>
   <block id="184c4f313c0a230f7a83d7121fa485d7" category="inline-link-macro">Back-end dello storage integrato</block>
   <block id="bf632d416dbc3267749473a4eedebc79" category="list-text">Backend dello storage integrato localmente dalle API vCenter del plug-in remoto. Vedere <block ref="3019410685f421965726529ee880cf27" category="inline-link-macro-rx"></block>. Aggiungi storage come ambito locale per la migrazione.</block>
@@ -675,7 +674,6 @@ Il menu del report di riepilogo delle macchine virtuali vVol fornisce le metrich
   <block id="ff31982aef870d546d52f49bb30ef34b" category="section-title">Requisiti di implementazione</block>
   <block id="26d3524e83da73ce160fdf15b9ee1f7f" category="paragraph">Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di implementazione e alcuni requisiti di base del sistema host.</block>
   <block id="f4930bf161a0a7075db869066f0839f9" category="paragraph">È possibile utilizzare gli strumenti ONTAP con un server Windows vCenter o con un'appliance virtuale VMware vCenter Server (vCSA). È necessario implementare i tool ONTAP su un vSphere supportato che include il sistema ESXi.</block>
-  <block id="ec86808f81c82b9651e18a844d1ea19f" category="paragraph">Per ulteriori informazioni, vedere <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
   <block id="86f56c72e0832c1bb59b9394dbcb0853" category="section-title">Requisiti dei tool ONTAP</block>
   <block id="dfa57bc5abba0952197bf25265b987c7" category="list-text">Scaricare il file .ova.</block>
   <block id="a81177e1cbc66e893d0b2b880b7fb4f4" category="list-text">Le credenziali di accesso per l'istanza di vCenter Server.</block>
@@ -841,4 +839,6 @@ Lo storage termina ed esegue l'attività degli strumenti ONTAP. I ruoli ONTAP de
   <block id="31b887a5d4bfcf42237476c03005131d" category="paragraph">Gli utenti e i gruppi accedono a un ruolo facendo parte di un ruolo vCenter Server.</block>
   <block id="8a52f25f3fca1f3b4922e7e5dc09fb04" category="admonition">Delete vVol il flusso di lavoro del datastore elimina i volumi del datastore se il flag delete_volume è stato superato come true, indipendentemente dal fatto che il volume del datastore sia gestito o non gestito.</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Panoramica sul role-based access control per i tool ONTAP</block>
+  <block id="9984e4b52821af66b163b37639e5ffca" category="list-text">Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,0. Vedere <block ref="09991ee05a1b93f3c38bbfed0e5d1010" category="inline-link-macro-rx"></block></block>
+  <block id="e5317f6738020b54574baa6f35cf9f92" category="paragraph">Per ulteriori informazioni, vedere <block ref="cab16d3be602ba465c507fec284cffbd" category="inline-link-macro-rx"></block></block>
 </blocks>
