@@ -19,7 +19,7 @@ Puoi aggiungere e gestire più vCenter con una sola istanza dei tool ONTAP per V
 
 *Fasi*
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare vCenters dalla barra laterale
 . Selezionare *ADD* to onboard vCenter with vCenter IP Address/Hostname, username, password e port.
 

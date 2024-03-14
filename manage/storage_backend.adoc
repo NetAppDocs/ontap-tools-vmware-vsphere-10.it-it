@@ -21,7 +21,7 @@ Per aggiungere backend di archiviazione, procedere come segue.
 
 *Fasi*
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare *backend di archiviazione* dalla barra laterale.
 . Selezionare *Aggiungi*.
 
@@ -32,7 +32,7 @@ Per aggiungere backend di archiviazione, procedere come segue.
 
 Per modificare il backend dello storage esistente, attenersi alla procedura riportata di seguito.
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Seleziona i backend di storage dalla barra laterale.
 . Selezionare il *Storage backend* che si desidera modificare
 . Fare clic sul menu puntini di sospensione verticali e selezionare *Modifica*.
@@ -46,7 +46,7 @@ Per modificare il backend dello storage esistente, attenersi alla procedura ripo
 Prima di rimuovere il backend dello storage, occorre eliminare tutti gli archivi dati collegati al back-end dello storage.
 Per rimuovere il backend dello storage, procedere come segue.
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare *backend di archiviazione* dalla barra laterale.
 . Selezionare il backend di archiviazione che si desidera rimuovere
 . Fare clic sul menu puntini di sospensione verticali e selezionare *Rimuovi*.

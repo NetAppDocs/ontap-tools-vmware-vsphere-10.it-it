@@ -15,7 +15,7 @@ summary: È possibile configurare nuovi ruoli utente per la gestione dei backend
 
 *Cosa ti serve*
 
-* Il file dei privilegi di ONTAP dovrebbe essere stato scaricato da ONTAP Tools utilizzando \https://<loadbalancerIP>:8443/Virtualization/user-privileges/users_roles.zip.
+* Il file dei privilegi di ONTAP dovrebbe essere stato scaricato da ONTAP Tools utilizzando `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 
 NOTE: È possibile creare utenti a livello di cluster o storage diretto delle virtual machine (SVM). Puoi anche creare utenti senza utilizzare il file user_roles.json e, in tal caso, devi disporre di un set minimo di privilegi a livello di SVM.

@@ -15,7 +15,7 @@ summary: 'È possibile raccogliere i file di registro per gli strumenti ONTAP pe
 
 *Fasi*
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare *Log Bundle* dalla barra laterale.
 +
 Questa operazione può richiedere alcuni minuti.

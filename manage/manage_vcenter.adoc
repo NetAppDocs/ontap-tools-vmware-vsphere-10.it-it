@@ -21,7 +21,7 @@ Puoi aggiungere e gestire più vCenter con una sola istanza dei tool ONTAP per V
 
 *Fasi*
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare vCenters dalla barra laterale
 . Selezionare *ADD* to onboard vCenter with vCenter IP Address/Hostname, username, password e port.
 . Accedere alla pagina *Storage backend* e selezionare *Aggiungi al backend dello storage integrato* (cluster ONTAP) con nome host, nome utente, password e porta.
@@ -38,7 +38,7 @@ Questo task ti aiuta a creare la mappatura tra backend dello storage e vCenter i
 
 *Fasi*
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare vCenters dalla barra laterale.
 . Fare clic sui puntini di sospensione verticali sul vCenter che si desidera associare o dissociare dai backend di storage.
 . Selezionare *Associa o dissocia backend archiviazione* a seconda dell'azione che si desidera eseguire.
@@ -53,7 +53,7 @@ Vedere link:../configure/task_configure_user_role_and_privileges.html["Elenco de
 
 Per modificare i vCenter, procedere come segue.
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare vCenters dalla barra laterale
 . Fare clic sui puntini di sospensione verticali nel vCenter che si desidera modificare e selezionare *Modifica*.
 . Modificare i dettagli di vCenter e selezionare *Modifica*.
@@ -65,7 +65,7 @@ Per modificare i vCenter, procedere come segue.
 
 Prima di rimuoverlo, devi rimuovere tutti i backend dello storage collegati a vCenter.
 
-. Lancio https://loadBalanceIP:8443/virtualization/ui/[] Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
+. Lancio `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser con le credenziali di amministratore degli strumenti ONTAP fornite durante la distribuzione.
 . Selezionare vCenters dalla barra laterale
 . Fare clic sui puntini di sospensione verticali sul vCenter che si desidera rimuovere e selezionare *Rimuovi*.
 +
