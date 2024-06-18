@@ -2,18 +2,23 @@
 section: concepts
 title: Concetti
 entries:
-- title: Panoramica sui tool ONTAP
-  url: "/concepts/concept_ontap_tools_overview.html"
-- title: Configurazioni del provider VASA per vVol
-  url: "/concepts/concept_configure_vvols_datastores.html"
+- title: Panoramica sui tool ONTAP per VMware vSphere
+  url: "/concepts/ontap-tools-overview.html"
+- title: Concetti e termini chiave
+  url: "/concepts/ontap-tools-concepts-terms.html"
 - title: Controllo degli accessi in base al ruolo
   entries:
-  - title: Panoramica sul role-based access control per i tool ONTAP
-    url: "/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html"
-  - title: Ruoli ONTAP consigliati quando si utilizzano gli strumenti ONTAP per VMware
-      vSphere
-    url: "/concepts/concept_recommended_ontap_roles_when_using_vsc_for_vmware_vsphere.html"
-- title: Configurare l'alta disponibilità per gli strumenti ONTAP
-  url: "/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html"
+  - title: Panoramica
+    url: "/concepts/vcenter-server-role-based-access-control-features.html"
+  - title: Autorizzazioni vCenter Server
+    url: "/concepts/vcenter-server-permissions.html"
+  - title: Assegnare e modificare le autorizzazioni per vCenter Server
+    url: "/concepts/key-points-about-assign-and-modify-permissions.html"
+  - title: Privilegi richiesti per gli strumenti ONTAP per le attività VMware vSphere
+    url: "/concepts/privileges-required.html"
+  - title: Ruoli ONTAP consigliati
+    url: "/concepts/ontap-roles.html"
+- title: Alta disponibilità per i tool ONTAP per VMware vSphere
+  url: "/concepts/high-availability.html"
 - title: AutoSupport
-  url: "/concepts/asup.html"
+  url: "/concepts/autosupport.html"

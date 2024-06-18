@@ -4,31 +4,63 @@ title: Gestire gli strumenti ONTAP
 entries:
 - title: Gestire i datastore
   entries:
-  - title: Espandere o ridurre lo storage di vVol datastore
-    url: "/manage/expand_storage_of_vvol_datastore.html"
-  - title: Eliminare il datastore vVol
-    url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
-  - title: Montare e smontare un datastore vVols
-    url: "/manage/task_mount_a_vvols_datastore.html"
+  - title: Montare datastore NFS e VMFS
+    url: "/manage/mount-datastores-on-host.html"
+  - title: Montare il datastore vVol
+    url: "/manage/mount-a-vvols-datastore.html"
+  - title: Ridimensionamento di datastore NFS e VMFS
+    url: "/manage/resize-datastores.html"
+  - title: Espandere i datastore vVol
+    url: "/manage/expand-storage-of-vvol-datastore.html"
+  - title: Ridurre i datastore vVol
+    url: "/manage/remove-storage-from-a-vvols-datastore.html"
+  - title: Elimina datastore
+    url: "/manage/delete-vvols.html"
+  - title: Viste dello storage ONTAP per datastore
+    url: "/manage/storage-view-datastore.html"
+  - title: Vista dello storage della macchina virtuale
+    url: "/manage/virtual-machine-storage-view-datastore.html"
+- title: Gestire la soglia di archiviazione
+  url: "/manage/manage-storage-threshold.html"
 - title: Gestione del backend dello storage
-  url: "/manage/storage_backend.html"
-- title: Gestione di vCenter
-  url: "/manage/manage_vcenter.html"
-- title: Gestire il ciclo di vita vVol
-  url: "/manage/vvol_lifecycle_management.html"
-- title: Criteri di esportazione e iGroup gestiti
-  url: "/manage/igroup_management.html"
-- title: Accedere alla console di manutenzione degli strumenti ONTAP
+  url: "/manage/storage-backend.html"
+- title: Gestire l'istanza di vCenter Server
+  url: "/manage/manage-vcenter.html"
+- title: Gestire i certificati
+  url: "/manage/certificate-manage.html"
+- title: Gestire i criteri di igroup ed export
+  url: "/manage/igroup-management.html"
+- title: Accedi ai tool ONTAP per la console di manutenzione di VMware vSphere
   entries:
-  - title: Panoramica della console di manutenzione degli strumenti ONTAP
-    url: "/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html"
+  - title: Panoramica dei tool ONTAP per la console di manutenzione VMware vSphere
+    url: "/manage/maintenance-console.html"
   - title: Configurare l'accesso remoto alla diagnostica
-    url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
+    url: "/manage/configure-remote-diagnostic-access.html"
   - title: Avviare SSH su altri nodi
-    url: "/manage/start_the_ssh_on_other_nodes.html"
+    url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Aggiornare le credenziali vCenter e ONTAP
-    url: "/manage/update_vcenter_ontap_credentials.html"
+    url: "/manage/update-vcenter-credentials.html"
+- title: Report sui tool ONTAP
+  url: "/manage/reports.html"
 - title: Raccogliere i file di log
-  url: "/manage/task_collect_the_log_files.html"
-- title: Discovery (rilevamento)
-  url: "/manage/discovery.html"
+  url: "/manage/collect-the-log-files.html"
+- title: Gestire le macchine virtuali
+  entries:
+  - title: Considerazioni per migrare o clonare macchine virtuali
+    url: "/manage/migrate-virtual-machines.html"
+  - title: Migrazione di macchine virtuali con datastore NFS e VMFS in datastore vVol
+    url: "/manage/migrate-standard-virtual-machines-to-vvols-datastores.html"
+  - title: Pulizia VASA
+    url: "/manage/delete-virtual-machines.html"
+- title: Modificare le impostazioni dell'host ESXi
+  url: "/manage/edit-esxi-host-settings.html"
+- title: Gestire le password
+  entries:
+  - title: Modificare la password del gestore strumenti ONTAP
+    url: "/manage/change-manager-password.html"
+  - title: Reimpostare la password di gestione degli strumenti ONTAP
+    url: "/manage/reset-manager-password.html"
+  - title: Reimpostare la password utente dell'applicazione
+    url: "/manage/reset-app-password.html"
+  - title: Reimpostare la password utente della console di manutenzione
+    url: "/manage/reset-maint-password.html"

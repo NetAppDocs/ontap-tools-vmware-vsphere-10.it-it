@@ -2,23 +2,35 @@
 section: configure
 title: Configurare gli strumenti ONTAP
 entries:
-- title: Gestire l'accesso alla rete
-  url: "/configure/ip_whitelisting.html"
-- title: Configurare i ruoli e i privilegi degli utenti
-  url: "/configure/task_configure_user_role_and_privileges.html"
-- title: Interfaccia utente di ONTAP tools manager
-  url: "/configure/ontap_tools_manager_ui.html"
-- title: Aggiungi vCenter
-  url: "/configure/add_vcenter.html"
+- title: Interfaccia utente di ONTAP tools Manager
+  url: "/configure/manager-user-interface.html"
+- title: Aggiungere e gestire vCenter Server
+  url: "/configure/add-vcenter.html"
+- title: Registrare il provider VASA su vCenter Server
+  url: "/configure/registration-process.html"
+- title: Verificare il provider VASA registrato
+  url: "/configure/verify-registration.html"
+- title: Installare il plug-in NFS VAAI
+  url: "/configure/install-nfs-vaai-plug-in.html"
+- title: Aggiornare i dati dell'host
+  url: "/configure/update-host-data.html"
+- title: Configurare le impostazioni dell'host ESXi
+  entries:
+  - title: Configurare le impostazioni di multipath e timeout del server ESXi
+    url: "/configure/configure-esx-server-multipath-and-timeout-settings.html"
+  - title: Impostare i valori dell'host ESXi
+    url: "/configure/esxi-host-values.html"
+- title: Rilevamento di host e sistemi storage
+  url: "/configure/discover-storage-systems-and-hosts.html"
 - title: Aggiunta del backend dello storage
-  url: "/configure/add_storage_backend.html"
-- title: Associazione del backend dello storage con vCenter
-  url: "/configure/associate_storage_backend.html"
-- title: Backend di storage integrato (SVM o Cluster) con vCenter
-  url: "/configure/onboard_svm.html"
-- title: Registra il provider VASA su vCenter
-  url: "/configure/register_vasa.html"
-- title: Creare il datastore vVol
-  url: "/configure/create_vvols_datastore.html"
-- title: Verificare la SVM registrata
-  url: "/configure/verify_registered_svm.html"
+  url: "/configure/add-storage-backend.html"
+- title: Associazione del backend dello storage con vCenter Server
+  url: "/configure/associate-storage-backend.html"
+- title: Configurare l'accesso alla rete
+  url: "/configure/configure-network-access.html"
+- title: Configurare i ruoli e i privilegi degli utenti ONTAP
+  url: "/configure/configure-user-role-and-privileges.html"
+- title: Panoramica dei tool NetApp ONTAP per la dashboard dei plug-in di VMware vSphere
+  url: "/configure/dashboard-overview.html"
+- title: Crea archivio dati
+  url: "/configure/create-vvols-datastore.html"
