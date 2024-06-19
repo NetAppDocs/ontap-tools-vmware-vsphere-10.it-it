@@ -43,37 +43,32 @@ NOTE: Devi mantenere l'indirizzo IP del bilanciatore del carico e l'indirizzo IP
 +
 .. Nome utente e password dell'applicazione: Questo nome utente e password vengono utilizzati per registrare sia il provider VASA che SRA in vCenter Server. Questo può essere diverso dal nome utente e dalla password forniti durante la distribuzione iniziale.
 .. La casella di controllo *Abilita ASUP* è selezionata per impostazione predefinita.
-+
-AutoSupport può essere attivato o disattivato solo durante l'implementazione.
 
+
+
+
+AutoSupport può essere attivato o disattivato solo durante l'implementazione.
 .. Nel campo *ASUP Proxy URL*, fornire questo URL per evitare il blocco del firewall per la trasmissione dei dati AutoSupport.
 .. Administrator Username (Nome utente amministratore) e Administrator Password (Password amministratore): Password utilizzata per accedere a Gestione strumenti ONTAP. Questo può essere diverso dal nome utente e dalla password forniti durante la distribuzione iniziale.
 .. Immettere le informazioni sul server NTP nel campo *Server NTP*.
 .. Maintenance user password (Password utente di manutenzione): Questa opzione consente di accedere alle opzioni della console di manutenzione.
-
-
 . Nella finestra *Personalizza modello* > *Configurazione distribuzione*, immettere i dettagli forniti durante la distribuzione. Tutti i valori di questa sezione devono essere uguali a quelli forniti durante l'implementazione iniziale, ad eccezione del valore di LIF dei dati.
-+
+
 
 NOTE: Non modificare il nome della SVM storage, in quanto su cui sono archiviati i dati di recovery. Ciò si applica anche all'account utente SVM aggiunto direttamente.
-
 . Nel caso di recovery ha-deployment, fornisci i seguenti dettagli:
-+
 .. Dettagli della libreria di contenuti.
 .. Dettagli di configurazione di vCenter.
-
-
 . Nella finestra *Customize template* > *Node Configuration* (Personalizza modello* > *Configurazione nodo*) immettere i dettagli come da impostazione che si sta tentando di ripristinare, non ha o ha.
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
+
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
-
 . Accendere la macchina virtuale dopo il completamento dell'attività.
+
 +
 L'installazione viene avviata. È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM.
 Come parte dell'installazione, le configurazioni dei nodi vengono convalidate. Gli input forniti nelle diverse sezioni del modello Personalizza nel modulo OVF vengono convalidati. In caso di discrepanze, viene visualizzata una finestra di dialogo che richiede di intraprendere un'azione correttiva.
-
 . Apportare le modifiche necessarie nella finestra di dialogo. Utilizzare il pulsante Tab per spostarsi all'interno del pannello per immettere i valori, *OK* o *Annulla*.
 . Selezionando *OK* o *Annulla*, i valori forniti verranno nuovamente convalidati. È possibile correggere i valori per 3 volte. Se non si riesce a correggere entro i 3 tentativi, l'installazione del prodotto si interrompe e si consiglia di provare a eseguire l'installazione su una nuova macchina virtuale.
 . Una volta completata l'installazione, la console Web mostra lo stato degli strumenti ONTAP per VMware vSphere. Una volta completata l'installazione, è necessario modificare manualmente i requisiti hardware in base alle linee guida riportate nella link:../deploy/sizing-requirements.html["Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere"] pagina.
-
