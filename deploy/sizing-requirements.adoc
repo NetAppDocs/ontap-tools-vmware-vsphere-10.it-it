@@ -18,7 +18,7 @@ Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual 
 * *Requisiti di spazio per il pacchetto di installazione per nodo*
 +
 ** 10 GB per le installazioni con thin provisioning
-** 200 GB per installazioni con thick provisioning
+** 248 GB per installazioni con thick provisioning
 
 
 * *Requisiti di dimensionamento del sistema host per nodo*

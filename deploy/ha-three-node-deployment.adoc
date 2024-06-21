@@ -36,6 +36,10 @@ NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Res
 +
 .. Accedere al server vSphere.
 .. Accedere al pool di risorse o all'host in cui si desidera distribuire l'OVA e fare clic con il pulsante destro del mouse sulla posizione in cui si desidera distribuire la VM, quindi selezionare *Deploy OVF template...*
++
+
+NOTE: Non implementare la macchina virtuale VMware vSphere con tool ONTAP in un datastore vVol gestito dal reparto IT.
+
 .. È possibile immettere l'URL del file _.ova_ o navigare alla cartella in cui è stato salvato il file _.ova_, quindi selezionare *Avanti*
 
 
