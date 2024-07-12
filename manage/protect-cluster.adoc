@@ -1,0 +1,36 @@
+---
+permalink: manage/protect-cluster.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: 'L"azione Elimina archivio dati elimina il datastore. Nel caso del datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l"elenco delle macchine virtuali che utilizzano il datastore.' 
+---
+= Protezione del cluster host
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revdate: ONTAP tools for VMware vSphere manages protection of a host cluster.
+
+
+Tutti i datastore appartenenti alla SVM selezionata, e montati su uno o più host del cluster, sono protetti (per SMA) in un cluster di host.
+
+.Prerequisiti
+Prima di proteggere il cluster host, verificare che siano soddisfatte le seguenti condizioni: . Il cluster host utilizza datastore da una sola SVM. La versione SVM (SB) deve essere superiore a 9.15.1 . Qualsiasi datastore montato sul cluster host non deve essere montato su nessun host esterno al cluster. . Tutti i datastore montati sul cluster host devono essere datastore VMFS. . Qualsiasi archivio dati FlexVol/LUN formante montato sul cluster host non deve far parte di alcuna CG esistente. . FlexVol o LUN non devono far parte di una relazione di SnapMirror
+
+.Fasi
+. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Fare clic con il pulsante destro del mouse su un cluster host, quindi selezionare *NetApp ONTAP Tools* > *Protect Cluster*.
+. Nella finestra di protezione del cluster, immettere le impostazioni di protezione per i datastore da proteggere. Il cluster host può disporre di datastore da una sola SVM (cluster).
+. Seleziona una delle opzioni di ONTAP cluster e Storage VM di destinazione.
+. Selezionare la casella di controllo *Abilita snapshot locale* per collegare un criterio snapshot locale ai volumi di backup degli archivi dati.
+. Selezionare la casella di controllo *Abilita SnapMirror* su e *Aggiungi relazione* per proteggere i datastore con il criterio AutomatedFailoverDuplex selezionato, il cluster di destinazione e la VM di storage di destinazione.
+. Per la configurazione uniforme, selezionare *Uniform host Configuration* (Configurazione host uniforme) su true (vero).
+. Fornisce *prossimità host* o *accesso* per ogni host, a seconda della selezione del pulsante di attivazione/disattivazione della configurazione dell'host uniforme.
+. Selezionare *Aggiungi*.
+. Esaminare la pagina di riepilogo e selezionare Proteggi.
+
+
+Viene creata un'attività su vCenter. Utilizzare l'ID lavoro generato per monitorare l'attività.

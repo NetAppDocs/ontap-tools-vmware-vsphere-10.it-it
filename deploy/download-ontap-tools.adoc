@@ -13,7 +13,7 @@ summary: È possibile scaricare il file .ova per i tool ONTAP per VMware vSphere
 [role="lead"]
 È possibile scaricare `.zip` File contenente file binari (_.ova_) e certificati firmati per gli strumenti ONTAP per VMware vSphere da https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sito di supporto NetApp"^].
 
-Una volta completata l'implementazione, nel tuo ambiente vengono installati i tool ONTAP per i prodotti VMware vSphere e VASA. Per impostazione predefinita, i tool di ONTAP per VMware vSphere iniziano a funzionare non appena decidi il successivo modello di implementazione e scegli se abilitare il provider VASA in base ai tuoi requisiti. Vedere link:../configure/registration-process.html["Registrare il provider VASA con un'istanza di vCenter Server"] per ulteriori informazioni.
+Una volta completata l'implementazione, nel tuo ambiente vengono installati i tool ONTAP per i prodotti VMware vSphere e VASA. Per impostazione predefinita, i tool di ONTAP per VMware vSphere iniziano a funzionare non appena decidi il modello di implementazione e scegli se abilitare il provider VASA in base ai tuoi requisiti. Per ulteriori informazioni, vedere link:../configure/registration-process.html["Registrare il provider VASA con un'istanza di vCenter Server"] .
 
 
 
@@ -30,8 +30,8 @@ Creare la libreria di contenuti utilizzando i seguenti passaggi:
 
 . Accedere al client vSphere utilizzando `\https://vcenterip/ui`
 . Selezionare i puntini di sospensione orizzontali accanto al client vSphere e selezionare *Libreria di contenuti*.
-. Selezionare *Crea* sul lato destro della pagina.
+. Selezionare *Crea* a destra della pagina.
 . Fornire un nome per la libreria e creare la libreria di contenuti.
 . Accedere alla libreria di contenuti creata.
-. Selezionare *azioni* sul lato destro della pagina, quindi selezionare *Importa elemento* e importare il file OVA.
+. Selezionare *azioni* nella parte destra della pagina e selezionare *Importa elemento* e importare il file OVA.
 

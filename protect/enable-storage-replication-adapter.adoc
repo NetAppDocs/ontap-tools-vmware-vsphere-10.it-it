@@ -2,7 +2,7 @@
 permalink: protect/enable-storage-replication-adapter.html 
 sidebar: sidebar 
 keywords:  
-summary: I tool ONTAP per VMware vSphere consentono di utilizzare la funzionalità SRA con i tool ONTAP per VMware vSphere per configurare il disaster recovery. 
+summary: I tool ONTAP per VMware vSphere offrono la possibilità di abilitare la funzionalità SRA per la configurazione del disaster recovery. 
 ---
 = Abilitare SRA per proteggere i datastore
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: I tool ONTAP per VMware vSphere consentono di utilizzare la funzionalit
 
 
 [role="lead"]
-I tool ONTAP per VMware vSphere consentono di utilizzare la funzionalità SRA con i tool ONTAP per VMware vSphere per configurare il disaster recovery.
+I tool ONTAP per VMware vSphere offrono la possibilità di abilitare la funzionalità SRA per la configurazione del disaster recovery.
 
 *Cosa ti serve*
 
@@ -22,7 +22,7 @@ I tool ONTAP per VMware vSphere consentono di utilizzare la funzionalità SRA co
 
 *Fasi*
 
-. Accedere all'interfaccia di gestione delle appliance SRM utilizzando l'URL: `\https://:<srm_ip>:5480`, Quindi passare a Storage Replication Adapter nell'interfaccia di gestione degli appliance di VMware SRM.
+. Accedere all'interfaccia di gestione dell'appliance SRM utilizzando l'URL: `\https://:<srm_ip>:5480`, Quindi passare a Storage Replication Adapter nell'interfaccia di gestione dell'appliance VMware SRM.
 . Selezionare *Nuova scheda*.
 . Caricare il programma di installazione di _.tar.gz_ per il plug-in SRA su SRM.
 . Eseguire nuovamente la scansione delle schede per verificare che i dettagli siano aggiornati sulle schede di replica dello storage SRM

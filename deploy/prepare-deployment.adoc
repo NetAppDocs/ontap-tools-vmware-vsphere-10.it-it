@@ -32,7 +32,7 @@ I nomi host devono essere mappati agli indirizzi IP liberi sul DNS prima dell'as
 . Il modello della libreria di contenuti una volta caricato non deve essere eliminato dopo la distribuzione poiché verrà utilizzato durante i riavvii.
 . In un'implementazione multi-vCenter in cui i certificati CA personalizzati sono obbligatori, mappare il nome di dominio su cui il certificato viene rilasciato all'indirizzo IP virtuale. Eseguire un controllo _nslookup_ sul nome di dominio per verificare se il dominio viene risolto all'indirizzo IP desiderato. I certificati devono essere creati con il nome di dominio e l'indirizzo IP dell'indirizzo IP del bilanciatore del carico.
 . VLAN supportata IPv4/IPv6 - pure IPv6 non è supportato. La modalità mista è supportata con VLAN con indirizzi IPv6 e IPv4.
-. Server NTP fornito a vCenter Server per Time Sync.
+. Server NTP fornito a vCenter Server per la sincronizzazione dell'ora.
 . Indirizzo IP statico Dettagli di configurazione per il nodo o la VM in cui viene distribuito l'OVA (obbligatorio) e altri dettagli.
 +
 .. Nome host vCenter Server (vCenter dove viene distribuito OVA)

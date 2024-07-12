@@ -20,6 +20,6 @@ NOTE: Si consiglia di rimuovere qualsiasi datastore vVol prima di eseguire la pu
 
 . Annullare la registrazione del plug-in accedendo a \https://OTV_IP:8143/Register.html
 . Verificare che il plug-in non sia più disponibile su vCenter Server.
-. Shutdown dei tool ONTAP per VMware vSphere VM
-. Elimina i tool ONTAP per VMware vSphere VM
+. Chiudi i tool ONTAP per VMware vSphere VM.
+. Elimina i tool ONTAP per VMware vSphere VM.
 

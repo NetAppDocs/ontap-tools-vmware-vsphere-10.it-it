@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: I backend dello storage sono sistemi utilizzati dagli host ESXi per lo storage dei dati. 
 ---
-= Aggiunta del backend dello storage
+= Aggiungere un backend di storage
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,18 +15,17 @@ I backend dello storage sono sistemi utilizzati dagli host ESXi per lo storage d
 
 *A proposito di questa attività*
 
-Questo task ti aiuta a integrare un cluster ONTAP. Quando Aggiungi il backend dello storage utilizzando ONTAP Tools Manager, il back-end dello storage viene aggiunto al cluster globale. Associare il cluster globale a un'istanza di vCenter Server per abilitare l'utente SVM per il provisioning del datastore vVol.
+Questo task ti aiuta a integrare un cluster ONTAP. Quando Aggiungi il backend dello storage utilizzando ONTAP Tools Manager, il back-end dello storage viene aggiunto al cluster globale. Associare il cluster globale a un'istanza di vCenter Server per consentire a un utente SVM il provisioning del datastore vVol.
 
 
-NOTE: Quando Aggiungi un backend storage utilizzando l'interfaccia utente del client vSphere, il datastore vVol non supporta l'aggiunta diretta dell'utente SVM.
+NOTE: Quando si aggiunge un backend storage utilizzando l'interfaccia utente del client vSphere, il datastore vVol non supporta l'aggiunta diretta di un utente SVM.
 
 
 
 == Aggiungi il backend dello storage con ONTAP Tools Manager
 
 
-NOTE: Un backend dello storage è globale quando aggiunto da ONTAP Tools Manager o dalle API degli strumenti ONTAP. Un backend dello storage è locale quando aggiunto dalle API di vCenter Server.
-Ad esempio, in un setup multi-tenant, puoi aggiungere un back-end dello storage (cluster) a livello globale e una SVM in locale per utilizzare le credenziali utente della SVM.
+NOTE: Un backend dello storage è globale quando aggiunto da ONTAP Tools Manager o dalle API degli strumenti ONTAP. Un backend dello storage è locale quando aggiunto dalle API di vCenter Server. Ad esempio, in un setup multi-tenant, puoi aggiungere un back-end dello storage (cluster) a livello globale e una SVM a livello locale per utilizzare le credenziali utente della SVM.
 
 *Fasi*
 
@@ -34,7 +33,7 @@ Ad esempio, in un setup multi-tenant, puoi aggiungere un back-end dello storage 
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *backend di archiviazione* dalla barra laterale.
 . Selezionare *Aggiungi*.
-. Specificare l'indirizzo IP del server o i dettagli FQDN, Nome utente e Password e selezionare *Aggiungi*.
+. Fornire l'indirizzo IP del server o i dettagli relativi all'FQDN, al nome utente e alla password e selezionare *Aggiungi*.
 +
 
 NOTE: Sono supportate le LIF di gestione IPv4 e IPv6. Sono supportate anche le credenziali basate sugli utenti SVM con LIF di gestione.
@@ -48,10 +47,10 @@ NOTE: Sono supportate le LIF di gestione IPv4 e IPv6. Sono supportate anche le c
 . Accedere al client vSphere utilizzando `\https://vcenterip/ui`
 . Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
 . Nel riquadro sinistro degli strumenti di ONTAP, accedere a *backend di archiviazione* e selezionare *Aggiungi*.
-. Nella finestra *Aggiungi backend archiviazione*, specificare i dettagli relativi a indirizzo IP del server, nome utente, password e porta e fare clic su *Aggiungi*
+. Nella finestra *Aggiungi backend archiviazione*, specificare l'indirizzo IP del server, il nome utente, la password e i dettagli della porta e fare clic su *Aggiungi*.
 +
 
-NOTE: Puoi aggiungere credenziali basate su cluster e LIF DI gestione IPv4 e IPv6 o credenziali basate su SVM con una LIF di gestione di SVM per aggiungere direttamente l'utente della SVM.
+NOTE: Puoi aggiungere credenziali basate sul cluster e LIF DI gestione IPv4 e IPv6 o credenziali basate su SVM con una LIF di gestione SVM per aggiungere direttamente un utente SVM.
 
 
 

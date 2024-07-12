@@ -38,7 +38,7 @@ NOTE: Non implementare la macchina virtuale VMware vSphere con tool ONTAP in un 
 . Leggere e accettare il contratto di licenza e selezionare *Avanti*.
 . Nella finestra *Configurazione*, selezionare la configurazione *distribuzione semplice(S)*, *distribuzione facile(M)* o *distribuzione avanzata(S)* o *distribuzione avanzata(M)*.
 +
-L'opzione di implementazione avanzata usa Trident come provisioner di storage dinamico per ONTAP per creare volumi e l'implementazione semplice usa lo storage locale per creare volumi.
+Le opzioni di implementazione avanzate utilizzano Trident come provisioner di storage dinamico per ONTAP per creare volumi e la semplice implementazione usa lo storage locale per creare volumi.
 
 . Selezionare il datastore in cui è necessario implementare l'OVA e selezionare *Avanti*.
 . Selezionare la rete di origine e di destinazione e selezionare *Avanti*.
@@ -51,12 +51,7 @@ Inserire i seguenti dati:
 
 
 
-AutoSupport può essere attivato o disattivato solo durante l'implementazione.
-.. Nel campo *ASUP Proxy URL*, fornire questo URL per evitare il blocco del firewall per la trasmissione dei dati AutoSupport.
-.. Administrator Username (Nome utente amministratore) e Administrator Password (Password amministratore): Password utilizzata per accedere a Gestione strumenti ONTAP.
-.. Immettere le informazioni sul server NTP nel campo *Server NTP*.
-.. Password utente di manutenzione: Consente di accedere a 'Opzioni console manutenzione'.
-. Nella finestra *Personalizza modello* > *Configurazione distribuzione*, immettere i seguenti dettagli:
+AutoSupport può essere attivato o disattivato solo durante l'implementazione. .. Nel campo *ASUP Proxy URL*, fornire questo URL per evitare il blocco del firewall per la trasmissione dei dati AutoSupport. .. Nome utente amministratore e password amministratore: Password utilizzata per accedere a Gestione strumenti ONTAP. .. Immettere le informazioni sul server NTP nel campo *Server NTP*. .. Password utente di manutenzione: Consente di accedere a 'Opzioni console manutenzione'. . Nella finestra *Personalizza modello* > *Configurazione distribuzione*, immettere i seguenti dettagli:
 
 +
 image:../media/ha-deploy-config.png["Configurazione di distribuzione"]
@@ -67,7 +62,7 @@ image:../media/ha-deploy-config.png["Configurazione di distribuzione"]
 
 NOTE: Una volta abilitato l'ambito SVM, dovresti aver già abilitato il supporto SVM con l'indirizzo IP di gestione.
 
-. Selezionare NFS o iSCSI nel campo *protocollo*.
+. Selezionare NFS, iSCSI, NVME/TCP o NVME/FC nel campo *protocollo*.
 . Inserisci il cluster ONTAP o l'indirizzo IP di gestione SVM nel campo *LIF di gestione ONTAP/SVM*.
 . Entra nel cluster ONTAP o nella SVM ONTAP/SVM Data LIF. La LIF dati deve appartenere al protocollo selezionato. Ad esempio, se si seleziona il protocollo iSCSI, deve essere fornita una LIF dati iSCSI.
 . Per Storage VM, puoi scegliere di fornire i dettagli relativi alla Storage VM predefinita di ONTAP o creare una nuova Storage VM. Non immettere il valore nel campo *Storage VM* quando è selezionata l'opzione Enable SVM scoping (attiva ambito SVM), poiché questo campo viene ignorato.
@@ -99,11 +94,10 @@ Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizza
 
 .. Accendere la macchina virtuale dopo il completamento dell'attività.
 +
-L'installazione viene avviata. È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM.
-Come parte dell'installazione, le configurazioni dei nodi vengono convalidate. Gli input forniti nelle diverse sezioni del modello Personalizza nel modulo OVF vengono convalidati. In caso di discrepanze, viene visualizzata una finestra di dialogo che richiede di intraprendere un'azione correttiva.
+L'installazione viene avviata. È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM. Come parte dell'installazione, le configurazioni dei nodi sono validate. Gli input forniti nelle diverse sezioni del modello Personalizza nel modulo OVF vengono convalidati. In caso di discrepanze, viene visualizzata una finestra di dialogo che richiede di intraprendere un'azione correttiva.
 
 .. Apportare le modifiche necessarie nella finestra di dialogo. Utilizzare il pulsante Tab per spostarsi all'interno del pannello per immettere i valori, *OK* o *Annulla*.
-.. Selezionando *OK*, i valori forniti verranno nuovamente convalidati. È possibile correggere i valori fino a tre volte. Se non si riesce a correggere entro i 3 tentativi, l'installazione del prodotto si interrompe e si consiglia di provare a eseguire l'installazione su una nuova macchina virtuale.
+.. Selezionando *OK*, i valori forniti verranno nuovamente convalidati. Strumenti ONTAP per VMware consente tre tentativi di correggere eventuali valori non validi. Se dopo tre tentativi non è possibile risolvere i problemi, l'installazione del prodotto si interrompe e si consiglia di provare a eseguire l'installazione su una nuova VM.
 .. Una volta completata l'installazione, la console Web mostra lo stato degli strumenti ONTAP per VMware vSphere.
 
 

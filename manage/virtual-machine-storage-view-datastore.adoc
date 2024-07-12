@@ -18,7 +18,7 @@ NOTE: Questa vista è applicabile alla macchina virtuale su cui è montato almen
 
 .Fasi
 . Dal client vSphere, passare alla macchina virtuale.
-. Fare clic sulla scheda *Monitor* nel riquadro a destra.
+. Fare clic sulla scheda *Monitor* nel riquadro di destra.
 . Selezionare *NetApp ONTAP tools* > *Storage*. I dettagli *archiviazione* vengono visualizzati nel riquadro di destra. È possibile visualizzare l'elenco dei vVol presenti sulla VM.
 +
 È possibile utilizzare l'opzione 'Gestisci colonne' per nascondere o visualizzare colonne diverse.

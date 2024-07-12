@@ -24,12 +24,11 @@ Questo processo potrebbe richiedere molto tempo, a seconda della configurazione 
 . Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
 . Accedere alla scheda di conformità host ESXi nella Panoramica (dashboard) dei tool ONTAP per il plug-in VMware vSphere.
 . Selezionare il collegamento *Applica impostazioni consigliate*.
-. Nella finestra *Apply Recommended host settings* (Applica impostazioni host consigliate), selezionare gli host che si desidera rispettare con le impostazioni dell'host consigliate da NetApp e fare clic su *Next* (Avanti)
+. Nella finestra *Apply Recommended host settings* (Applica impostazioni host consigliate), selezionare gli host che si desidera rispettare con le impostazioni dell'host consigliate da NetApp e fare clic su *Next* (Avanti).
 +
 
-NOTE: È possibile espandere l'host ESXi per visualizzare i valori correnti
+NOTE: È possibile espandere l'host ESXi per visualizzare i valori correnti.
 
 . Nella pagina delle impostazioni, selezionare i valori consigliati secondo necessità.
-. Nel riquadro di riepilogo, controllare i valori e fare clic su *fine*
-È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.
+. Nel riquadro di riepilogo, controllare i valori e fare clic su *fine*. È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.
 

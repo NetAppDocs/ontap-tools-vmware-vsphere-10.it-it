@@ -15,7 +15,7 @@ summary: 'È necessario configurare i sistemi di archiviazione prima di eseguire
 
 
 
-== Configurare SRA per l'ambiente SAN
+== Configurare SRA per gli ambienti SAN
 
 *Cosa ti serve*
 
@@ -38,7 +38,7 @@ L'adattatore viene installato su SRM.
 
 . Verificare che gli host ESXi primari siano connessi alle LUN nel sistema di storage primario sul sito protetto.
 . Verificare che i LUN si trovino in igroups che dispongono di `ostype` Opzione impostata su _VMware_ sul sistema di storage primario.
-. Verificare che gli host ESXi nel sito di recovery dispongano di una connettività iSCSI appropriata alla Storage Virtual Machine (SVM). Gli host ESXi del sito secondario devono avere accesso allo storage del sito secondario, analogamente gli host ESXi del sito primario devono avere accesso allo storage del sito primario.
+. Verificare che gli host ESXi nel sito di recovery dispongano di una connettività iSCSI appropriata alla Storage Virtual Machine (SVM). Gli host ESXi del sito secondario devono avere accesso allo storage del sito secondario e gli host ESXi del sito primario devono avere accesso allo storage del sito primario.
 +
 Per farlo, verificare che gli host ESXi abbiano LUN locali connessi alla SVM o al `iscsi show initiators` Sulle SVM.
 Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la connettività iSCSI.
@@ -47,7 +47,7 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
 
 
 
-== Configurare SRA per l'ambiente NAS
+== Configurare SRA per gli ambienti NAS
 
 *Cosa ti serve*
 

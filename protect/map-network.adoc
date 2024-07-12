@@ -37,7 +37,7 @@ Viene visualizzata la procedura guidata Create Network Mapping.
 . Nella procedura guidata Create Network Mapping (Crea mappatura di rete), eseguire le seguenti operazioni:
 +
 .. Selezionare *prepara automaticamente mappature per reti con nomi corrispondenti* e fare clic su *Avanti*.
-.. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e fare clic su *Aggiungi mapping*.
+.. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e fare clic su *Aggiungi mappature*.
 .. Fare clic su *Avanti* dopo aver creato correttamente le mappature.
 .. Selezionare l'oggetto utilizzato in precedenza per creare la mappatura inversa, quindi fare clic su *fine*.
 

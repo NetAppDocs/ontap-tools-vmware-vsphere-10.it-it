@@ -23,7 +23,7 @@ entries:
     url: "/automation/onboard-svm-workflow.html"
   - title: Creare il datastore vVol
     url: "/automation/create-vvol-workflow.html"
-  - title: Montare e smontare il datastore vVol
+  - title: Montare e smontare un datastore vVols
     url: "/automation/mount-unmount-workflow.html"
   - title: Espandere o ridurre lo storage di vVol datastore
     url: "/automation/expand-shrink-workflow.html"

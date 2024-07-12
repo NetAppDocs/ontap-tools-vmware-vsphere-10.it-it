@@ -2,7 +2,7 @@
 permalink: manage/start-the-ssh-on-other-nodes.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È necessario avviare SSH su altri nodi prima di eseguire l"aggiornamento.' 
+summary: 'Prima di eseguire l"aggiornamento, è necessario avviare SSH su altri nodi.' 
 ---
 = Avviare SSH su altri nodi
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È necessario avviare SSH su altri nodi prima di eseguire l"aggiorname
 
 
 [role="lead"]
-È necessario avviare SSH su altri nodi prima di eseguire l'aggiornamento.
+Prima di eseguire l'aggiornamento, è necessario avviare SSH su altri nodi.
 
 *Cosa ti serve*
 

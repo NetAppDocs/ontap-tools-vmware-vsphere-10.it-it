@@ -6,7 +6,7 @@ entries:
   entries:
   - title: Montare datastore NFS e VMFS
     url: "/manage/mount-datastores-on-host.html"
-  - title: Montare il datastore vVol
+  - title: Montare un datastore vVols
     url: "/manage/mount-a-vvols-datastore.html"
   - title: Ridimensionamento di datastore NFS e VMFS
     url: "/manage/resize-datastores.html"
@@ -28,7 +28,7 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: Gestire i certificati
   url: "/manage/certificate-manage.html"
-- title: Gestire i criteri di igroup ed export
+- title: Gestire gli igroup e i criteri di esportazione
   url: "/manage/igroup-management.html"
 - title: Accedi ai tool ONTAP per la console di manutenzione di VMware vSphere
   entries:
@@ -66,3 +66,5 @@ entries:
     url: "/manage/reset-maint-password.html"
 - title: Pulire i volumi
   url: "/manage/delete-deployment.html"
+- title: Protezione del cluster host
+  url: "/manage/protect-cluster.html"

@@ -27,9 +27,9 @@ NOTE: Il sistema non sarà in linea fino a quando il certificato non sarà rinno
 
 . Per aggiornare il certificato autofirmato al certificato CA personalizzato, selezionare l'opzione *certificati* > *provider VASA* > *Aggiorna a CA*.
 +
-.. Nella finestra a comparsa *aggiorna certificato a CA* personalizzata, caricare il certificato del server, la chiave privata del certificato del server, il certificato della CA principale e i file di certificato intermedio. La descrizione dei certificati viene fornita nella descrizione.
+.. Nella finestra a comparsa *Aggiorna certificato alla CA* personalizzata, caricare il certificato del server, la chiave privata del certificato del server, il certificato della CA principale e i file di certificato intermedio. La descrizione dei certificati viene fornita nella descrizione.
 .. Immettere il nome di dominio per il quale è stato generato il certificato.
-.. Fare clic su *Aggiorna*
+.. Fare clic su *Upgrade* (Aggiorna).
 +
 
 NOTE: Il sistema non sarà in linea fino al completamento dell'aggiornamento.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Mount vVol 
 summary: 'È possibile montare un datastore VMware Virtual Volumes/vVol su uno o più host aggiuntivi utilizzando la finestra di dialogo Mount vVols Datastore. Il montaggio del datastore fornisce l"accesso allo storage a host aggiuntivi. È possibile smontare il datastore vVol solo attraverso le API.' 
 ---
-= Montare il datastore vVol
+= Montare un datastore vVols
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

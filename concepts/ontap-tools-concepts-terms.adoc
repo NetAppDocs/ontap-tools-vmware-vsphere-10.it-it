@@ -35,13 +35,19 @@ Un LUN è un numero utilizzato per identificare un'unità logica all'interno di 
 
 === Gestione strumenti ONTAP
 
-ONTAP Tools Manager offre un maggiore controllo ai tool ONTAP per l'amministratore di VMware vSphere sulle istanze di vCenter Server gestite e sui backend storage integrati. ONTAP tools Manager consente di gestire istanze di vCenter Server, backend di storage, certificati, password e download di pacchetti di registro.
+ONTAP Tools Manager offre un maggiore controllo ai tool ONTAP per l'amministratore di VMware vSphere sulle istanze di vCenter Server gestite e sui backend storage integrati. ONTAP tools Manager aiuta nella gestione di istanze di vCenter Server, backend di storage, certificati, password e download di bundle di log.
 
 
 
 === Open Virtual Appliance (OVA)
 
 OVA è uno standard aperto per il packaging e la distribuzione di appliance virtuali o software che devono essere eseguiti su macchine virtuali.
+
+
+
+=== SnapMirror attivo (SMAS)
+
+SnapMirror Active Sync consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando le applicazioni per il failover in modo trasparente con una copia secondaria. Per attivare un failover con la sincronizzazione attiva di SnapMirror sono necessari un intervento manuale e script personalizzato.
 
 
 

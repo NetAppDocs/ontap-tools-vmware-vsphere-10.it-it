@@ -15,10 +15,9 @@ I vCenter Server sono piattaforme di gestione centralizzata che consentono di co
 
 
 
-== Associare o dissociare il backend dello storage con l'istanza di vCenter Server
+== Associare o dissociare i backend di storage con l'istanza di vCenter Server
 
-La pagina dell'elenco di vCenter Server mostra il numero associato di backend storage. Ogni istanza di vCenter Server ha la possibilità di associare o disassociare un backend di storage
-Questo task ti aiuta a creare la mappatura tra il back-end dello storage e l'istanza vCenter Server integrata a livello globale.
+La pagina dell'elenco di vCenter Server mostra il numero associato di backend storage. Ogni istanza di vCenter Server ha la possibilità di associare o disassociare un backend dello storage. Questo task ti aiuta a creare la mappatura tra il back-end dello storage e l'istanza vCenter Server integrata a livello globale.
 
 *Fasi*
 

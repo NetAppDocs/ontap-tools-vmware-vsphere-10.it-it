@@ -2,7 +2,7 @@
 permalink: upgrade/upgrade-ontap-tools.html 
 sidebar: sidebar 
 keywords: upgrade 
-summary: 'Eseguendo l"upgrade dai tool di ONTAP per VMware vSphere 10,0 a 10,1, viene creato un volume di recovery e verranno inserite tutte le informazioni necessarie nel volume di recovery.' 
+summary: 'Eseguendo l"upgrade dai tool di ONTAP per VMware vSphere 10,0 e 10,1 alla versione 10,2, viene creato un volume di recovery e verranno inserite tutte le informazioni necessarie nel volume di recovery.' 
 ---
 = Effettua l'aggiornamento alla versione più recente dei tool ONTAP
 :allow-uri-read: 
@@ -11,8 +11,7 @@ summary: 'Eseguendo l"upgrade dai tool di ONTAP per VMware vSphere 10,0 a 10,1, 
 
 
 [role="lead"]
-Eseguendo l'upgrade dai tool di ONTAP per VMware vSphere 10,0 a 10,1, viene creato un volume di recovery e verranno inserite tutte le informazioni necessarie nel volume di recovery. Se è necessario ripristinare la configurazione, il volume di ripristino può essere utilizzato per ripristinare i tool ONTAP per la configurazione di VMware vSphere. Se stai eseguendo un aggiornamento a livello di patch dei tool ONTAP per VMware vSphere 10,1, viene utilizzato lo stesso volume di recovery e i dettagli vengono aggiornati.
-L'aggiornamento è supportato per le implementazioni ha e non ha.
+Eseguendo l'upgrade dai tool di ONTAP per VMware vSphere 10,0 e 10,1 alla versione 10,2, viene creato un volume di recovery e verranno inserite tutte le informazioni necessarie nel volume di recovery. Se è necessario ripristinare la configurazione, il volume di ripristino può essere utilizzato per ripristinare i tool ONTAP per la configurazione di VMware vSphere. Se stai eseguendo un aggiornamento a livello di patch dei tool ONTAP per VMware vSphere 10,2, viene utilizzato lo stesso volume di recovery e i dettagli vengono aggiornati. L'aggiornamento è supportato per le implementazioni ha e non ha.
 
 *Prima di iniziare*
 
@@ -50,7 +49,7 @@ Esegui i seguenti comandi per eseguire un backup di MongoDB:
 
 
 
-*Istantanea degli strumenti ONTAP per le VM VMware vSphere in vCenter (3VMs in caso di implementazione ha, 1 VM in caso di implementazione non ha)*
+*Istantanea degli strumenti ONTAP per le VM VMware vSphere in vCenter (3VMs in caso di implementazione ha, 1 VM in caso di distribuzione non ha)*
 
 * Nell'interfaccia utente del client vSphere, selezionare la VM.
 * Andare alla scheda istantanee e fare clic sul pulsante *scatta istantanea*.
