@@ -47,7 +47,7 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 | Storage, host e applicazioni | Requisiti minimi di versione 
 
 
-| ONTAP | Ultima versione delle patch di ONTAP 9.13.1, 9.14.1 e 9.15.1. 
+| ONTAP | Ultima versione della patch di ONTAP 9.12.1, 9.13.1 o 9.14.1 
 
 
 | Host ESXi | ESXi 7.0.3 
@@ -59,7 +59,7 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 | Provider VASA | 3,0 
 
 
-| Applicazione OVA | 10,2 
+| Applicazione OVA | 10,1 
 |===
 L'Interoperability Matrix Tool (IMT) contiene le informazioni più recenti sulle versioni supportate di ONTAP, vCenter Server, gli host ESXi e le applicazioni plug-in.
 

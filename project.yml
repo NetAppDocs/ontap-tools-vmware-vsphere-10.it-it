@@ -1,6 +1,6 @@
 ---
 settings:
-  name: ONTAP tools for VMware vSphere 10.2
+  name: ONTAP tools for VMware vSphere 10.1
   internal:
     pdf_enabled: true
   prod:
@@ -9,7 +9,7 @@ settings:
   langs: it-it,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,fr-fr
 sidebar:
   entries:
-  - title: Tool ONTAP per documenti VMware vSphere 10,2
+  - title: Tool ONTAP per documenti VMware vSphere 10,1
     url: "/index.html"
   - title: Note di rilascio
     url: "/release-notes.html"

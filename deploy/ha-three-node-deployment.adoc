@@ -83,7 +83,7 @@ image:../media/ha-deploy-config.png["Configurazione di distribuzione"]
 
 NOTE: Una volta abilitato l'ambito SVM, dovresti aver già abilitato il supporto SVM con l'indirizzo IP di gestione.
 
-.. Selezionare NFS, iSCSI, NVME/TCP o NVME/FC nel campo *protocollo*.
+.. Selezionare NFS o iSCSI nel campo *protocollo*.
 .. Inserisci il cluster ONTAP o l'indirizzo IP di gestione SVM nel campo *LIF di gestione ONTAP/SVM*.
 .. Entra nel cluster ONTAP o nella SVM ONTAP/SVM Data LIF. La LIF dati deve appartenere al protocollo selezionato. Ad esempio, se si seleziona il protocollo iSCSI, deve essere fornita una LIF dati iSCSI.
 .. Per Storage VM, puoi scegliere di fornire i dettagli relativi alla Storage VM predefinita di ONTAP o creare una nuova Storage VM. Non immettere il valore nel campo *Storage VM* quando è selezionata l'opzione Enable SVM scoping (attiva ambito SVM), poiché questo campo viene ignorato.
