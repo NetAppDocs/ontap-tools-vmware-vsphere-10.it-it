@@ -67,7 +67,7 @@ NOTE: Una volta abilitato l'ambito SVM, dovresti aver già abilitato il supporto
 . Entra nel cluster ONTAP o nella SVM ONTAP/SVM Data LIF. La LIF dati deve appartenere al protocollo selezionato. Ad esempio, se si seleziona il protocollo iSCSI, deve essere fornita una LIF dati iSCSI.
 . Per Storage VM, puoi scegliere di fornire i dettagli relativi alla Storage VM predefinita di ONTAP o creare una nuova Storage VM. Non immettere il valore nel campo *Storage VM* quando è selezionata l'opzione Enable SVM scoping (attiva ambito SVM), poiché questo campo viene ignorato.
 . Inserisci il nome utente di ONTAP/SVM. Trident richiede username e password di ONTAP/SVM per creare volumi per memorizzare i dati dei servizi in caso di implementazione avanzata o ha e per recuperare i dati dai volumi durante il guasto dei nodi.
-. Inserisci la password ONTAP/SVM. La password di login di ONTAP/SVM per questa Storage VM non deve contenere questi caratteri speciali ($,',").
+. Inserisci la password ONTAP/SVM.
 . La macchina virtuale primaria è abilitata per impostazione predefinita. Non modificare questa scelta.
 +
 .. Nella finestra *Personalizza modello* > *Configurazione nodo* immettere le proprietà di rete dell'OVA.

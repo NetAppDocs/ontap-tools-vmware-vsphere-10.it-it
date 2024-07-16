@@ -188,10 +188,6 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">Invio<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> Per selezionare Support and Diagnostics (supporto e diagnostica).</block>
   <block id="ef7a1860bfa2c5f2ea33155989f85ee5" category="list-text">Invio<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block> Per selezionare Accedi alla shell diagnostica.</block>
   <block id="78efad1f6bb75b53e0c5236fd154c135" category="list-text">Invio<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> per procedere.</block>
-  <block id="6e1ee8250e4dc3ce6e26c0ebdbaab54a" category="list-text">Aggiornare le credenziali come richiesto:</block>
-  <block id="512e6df6579ba9be187fcdaf015cd5e6" category="paragraph">otv-update --ontapUsername &lt;new username&gt; --ontapPassword &lt;new password&gt;</block>
-  <block id="7291058dd83795e1ab1d74629e7b59d5" category="paragraph">otv-update --vcenterUsername &lt;new username&gt; --vcenterPassword &lt;new password&gt;</block>
-  <block id="1c7a1c71a372b297fb2ddde652f24fcc" category="paragraph">otv-update --dataLif &lt;new Datalif IP&gt;</block>
   <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">Pulsante Play (Riproduci)</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">*Menu console*</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">*Opzioni*</block>
@@ -1696,7 +1692,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
 . Accendere la macchina virtuale dopo il completamento dell'attività.</block>
   <block id="a84fd12354047a6ec2a5b6b1711524f5" category="cell">VCenter 7.0U3</block>
-  <block id="b5a405460149721025d3f0b33b133321" category="list-text">Inserisci la password ONTAP/SVM. La password di login di ONTAP/SVM per questa Storage VM non deve contenere questi caratteri speciali ($,',").</block>
   <block id="b8237d978365427c8b91b5f11293f5e5" category="paragraph">+
 <block ref="89d79dbcc89ba4076180d653020a5110" category="inline-image-macro-rx" type="image"></block></block>
   <block id="99126fb772977a83acb4723e429a29c0" category="admonition">Non implementare la macchina virtuale VMware vSphere con tool ONTAP in un datastore vVol gestito dal reparto IT.</block>
@@ -1825,9 +1820,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="62d979a8af29380891d017376cb44c65" category="section-title">Rimuovere i backend di stoccaggio</block>
   <block id="9ca9be4cf1830049310642af0d8597cf" category="paragraph">Prima di rimuovere il backend dello storage, occorre eliminare tutti gli archivi dati collegati al back-end dello storage. Per rimuovere un backend dello storage, procedere come segue.</block>
   <block id="492536f303a280d3ebdae80179b9c31a" category="list-text">Fare clic sulla scheda *Configura* nel riquadro di destra.</block>
-  <block id="167eaea484341a685fe24829668ec35c" category="list-text">Per aggiornare le credenziali ONTAP, eseguire il comando:</block>
-  <block id="a2e55f135d38f547623aac8e3523ca89" category="list-text">Per aggiornare le credenziali vCenter, eseguire il comando:</block>
-  <block id="4b2505432ca227b6c7b2991e5b223d7d" category="list-text">Per aggiornare la LIF dati esegui il comando:</block>
   <block id="d8fadf5b37e6090e5c48155442e6dd13" category="list-text">Fare clic sulla scheda *Monitor* nel riquadro di destra.</block>
   <block id="3afd1d6d6eee36d82c692f7555428de3" category="list-text">Aggiungi i tool ONTAP per lo storage provider di VMware vSphere a vCenter Server e <block ref="5d4adca70c5644b1b13c61d5e49e1ff7" category="inline-link-macro-rx"></block>.</block>
   <block id="e93b5d3770694f17c18a300557f18fd2" category="paragraph">Una volta arrestato il vecchio provider VASA, vCenter Server esegue il failover sui tool ONTAP per VMware vSphere. Tutti i datastore e le macchine virtuali sono accessibili e vengono serviti dai tool ONTAP per VMware vSphere.</block>
@@ -1867,4 +1859,8 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="33857256a63a7aef7c5bdd248e2cbd12" category="summary">Eseguendo l'upgrade dai tool di ONTAP per VMware vSphere 10,0 e 10,1 alla versione 10,1, viene creato un volume di recovery e verranno inserite tutte le informazioni necessarie nel volume di recovery.</block>
   <block id="05138d33f74ef24966432b76ee85d18f" category="paragraph">Eseguendo l'upgrade dai tool di ONTAP per VMware vSphere 10,0 e 10,1 alla versione 10,1, viene creato un volume di recovery e verranno inserite tutte le informazioni necessarie nel volume di recovery. Se è necessario ripristinare la configurazione, il volume di ripristino può essere utilizzato per ripristinare i tool ONTAP per la configurazione di VMware vSphere. Se stai eseguendo un aggiornamento a livello di patch dei tool ONTAP per VMware vSphere 10,1, viene utilizzato lo stesso volume di recovery e i dettagli vengono aggiornati. L'aggiornamento è supportato per le implementazioni ha e non ha.</block>
   <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">Tool ONTAP per documenti VMware vSphere 10,1</block>
+  <block id="344e7fea24fbe3dae5345953d18ee85c" category="list-text">Inserisci la password ONTAP/SVM.</block>
+  <block id="cea5a13834803a12adaeb249165351df" category="list-text">Inserire<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> per selezionare il menu Configurazione di sistema.</block>
+  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Immettere<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> per modificare le credenziali ONTAP.</block>
+  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Immettere<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> per modificare le credenziali vCenter.</block>
 </blocks>
