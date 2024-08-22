@@ -11,7 +11,7 @@ summary: 'In ONTAP, le policy di esportazione vengono utilizzate per fornire l"a
 
 
 [role="lead"]
-In ONTAP, le policy di esportazione vengono utilizzate per fornire l'accesso al percorso dei dati del volume agli host, mentre gli igroup (Initiator group) vengono utilizzati per fornire l'accesso al percorso dei dati LUN (Logical Unit Number) agli host ESXi.
+In ONTAP, le policy di esportazione vengono utilizzate per fornire l'accesso al percorso dei dati del volume agli host, mentre gli igroup (Initiator group) vengono utilizzati per fornire l'accesso al percorso dei dati LUN (Logical Unit Number) agli host ESXi. Gli strumenti ONTAP per VMware vSphere rendono semplice e intuitiva la creazione di igroup e offrono flussi di lavoro end-to-end completi. Per garantire la coerenza, la creazione diretta di iGroup sulle piattaforme di storage non è supportata.
 
 Quando i datastore di volumi virtuali vengono creati o montati sugli host in vCenter Server, gli host devono poter accedere ai volumi (NFS) o alle LUN (iSCSI), a seconda del tipo di protocollo del datastore.
 

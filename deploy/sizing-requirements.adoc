@@ -28,7 +28,7 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 |===
 
 
-| Tipo di implementazione | CPU | Memoria (GB) 
+| *Tipo di distribuzione* | *CPU* | *Memoria (GB)* 
 
 
 | Piccolo (S) | 8 | 16 
@@ -39,6 +39,8 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 
 | Grande (L) | 16 | 32 
 |===
+Per link:../deploy/config-limits.html["Limiti di configurazione per l'implementazione dei tool ONTAP per VMware vSphere"]ulteriori dettagli, fare riferimento a.
+
 
 
 == Requisiti minimi di archiviazione e applicazione

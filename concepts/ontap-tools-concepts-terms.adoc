@@ -21,6 +21,12 @@ CA è un'entità attendibile che emette certificati SSL (Secure Sockets Layer).
 
 
 
+=== Stack doppio
+
+Una rete dual-stack è un ambiente di rete che supporta l'utilizzo simultaneo di indirizzi IPv4 e IPv6.
+
+
+
 === Alta disponibilità (ha)
 
 I nodi del cluster sono configurati in coppie ha per operazioni senza interruzioni.

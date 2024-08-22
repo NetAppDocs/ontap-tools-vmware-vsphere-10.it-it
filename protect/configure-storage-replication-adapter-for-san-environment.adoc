@@ -26,11 +26,11 @@ Nel sito protetto e nel sito di ripristino devono essere installati i seguenti p
 La documentazione sull'installazione di SRM è disponibile sul sito VMware.
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["Documentazione di VMware Site Recovery Manager"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["Documentazione di VMware Site Recovery Manager"]
 
 * SRA
 +
-L'adattatore viene installato su SRM.
+L'adattatore è installato su SRM.
 
 
 
@@ -58,7 +58,7 @@ Nel sito protetto e nel sito di ripristino devono essere installati i seguenti p
 La documentazione sull'installazione di SRM è disponibile sul sito VMware.
 
 +
-https://www.vmware.com/support/pubs/srm_pubs.html["Documentazione di VMware Site Recovery Manager"]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html["Documentazione di VMware Site Recovery Manager"]
 
 * SRA
 +

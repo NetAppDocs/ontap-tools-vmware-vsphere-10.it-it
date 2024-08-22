@@ -23,7 +23,7 @@ indexpage:
       url: "/concepts/vcenter-server-role-based-access-control-features.html"
     - title: Configurare la diagnostica remota
       url: "/manage/configure-remote-diagnostic-access.html"
-    - title: Configurare la disponibilità elevata
+    - title: Alta disponibilità per i tool ONTAP per VMware vSphere
       url: "/concepts/high-availability.html"
     - title: Proteggi i tuoi datastore
       url: "/protect/enable-storage-replication-adapter.html"

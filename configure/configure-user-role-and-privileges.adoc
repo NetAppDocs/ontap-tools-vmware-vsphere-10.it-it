@@ -24,9 +24,6 @@ NOTE: È possibile creare utenti a livello di cluster o direttamente a livello d
 * È necessario aver effettuato l'accesso con i privilegi di amministratore per il backend di archiviazione.
 
 
-
-NOTE: Puoi creare utenti a livello di cluster o a livello di SVM. Puoi anche creare utenti senza utilizzare il file user_roles.json e, in tal caso, devi disporre di un set minimo di privilegi a livello di SVM.
-
 *Fasi*
 
 . Estrarre il file scaricato _\https://<loadbalancerIP>:8443/Virtualization/user-privileges/users_roles.zip_.
