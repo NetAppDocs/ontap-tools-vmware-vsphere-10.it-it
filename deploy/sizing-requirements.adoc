@@ -49,7 +49,7 @@ Per link:../deploy/config-limits.html["Limiti di configurazione per l'implementa
 | Storage, host e applicazioni | Requisiti minimi di versione 
 
 
-| ONTAP | Ultima versione della patch di ONTAP 9.12.1, 9.13.1 o 9.14.1 
+| ONTAP | Ultima versione delle patch di ONTAP 9.12,1, 9.13.1, 9.14.1 e 9.15.1. 
 
 
 | Host ESXi | ESXi 7.0.3 

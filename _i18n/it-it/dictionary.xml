@@ -1550,8 +1550,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Eseguire il comando Perl per configurare SRA con le nuove credenziali:</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Selezionare la coppia di array richiesta e verificare i dettagli corrispondenti.</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*Istantanea degli strumenti ONTAP per le VM VMware vSphere in vCenter (3VMs in caso di implementazione ha, 1 VM in caso di distribuzione non ha)*</block>
-  <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">Ultima versione della patch di ONTAP 9.12.1, 9.13.1 o 9.14.1</block>
-  <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">La migrazione è supportata dai tool ONTAP per le release VMware vSphere 9.10D2, 9.11D4, 9,12 e 9,13 alla release 10,1.</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,1.</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">Installare i tool ONTAP per l'adattatore SRA VMware vSphere 10,1 sui siti di protezione e ripristino seguendo i passaggi descritti in <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">Dopo aver eseguito correttamente la migrazione e aver registrato gli strumenti ONTAP 10,1 in vCenter Server, procedere come segue:</block>
@@ -1581,7 +1579,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="72fa3a55085ed575e69d7aaa8847dce6" category="cell">circa 50k mb</block>
   <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
   <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">circa 100k mb</block>
-  <block id="4817fc1db77ffd3d9559878c1947be09" category="paragraph">Per informazioni dettagliate sui requisiti di dimensionamento del sistema host per nodo, fare riferimento alla <block ref="6def0b647efb922e7343ea3e904763b4" category="inline-link-macro-rx"></block>.</block>
   <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">Tool ONTAP per VMware vSphere - Storage Replication Adapter (SRA)</block>
   <block id="747389dd88507b473bef28a38f605585" category="paragraph">La tabella seguente mostra i numeri supportati per istanza di SRM utilizzando i tool ONTAP per VMware vSphere.</block>
   <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">*Dimensione della distribuzione vCenter*</block>
@@ -1634,7 +1631,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="adbcecad06ff22a439836e6c9002cc82" category="section-title">VSphere Metro Storage Cluster</block>
   <block id="fdaedd61903be1be2102df0b95fd62f8" category="inline-link">Cluster di storage VMware vSphere Metro</block>
   <block id="ab214a77aca7f1a5595c69a10b7f0c9d" category="paragraph">VSphere Metro Storage Cluster (vMSC) è una tecnologia che consente e supporta vSphere in un'implementazione cluster estesa. Le soluzioni vMSC sono supportate con la sincronizzazione attiva di NetApp MetroCluster e SnapMirror (in precedenza SMBC). Queste soluzioni forniscono una migliore business continuity in caso di errore del dominio. Il modello di resilienza si basa sulle tue scelte specifiche di configurazione. Ulteriori informazioni su<block ref="fae35a77d8fa39590c619f954aeac240" category="inline-link-rx"></block>.</block>
-  <block id="becce2ec351a7286510e90f70f5d4890" category="paragraph">I tool ONTAP per VMware vSphere sono un set di strumenti per la gestione del ciclo di vita delle macchine virtuali. Si integra con l'ecosistema VMware per consentire il provisioning dei datastore e fornire una protezione di base per le macchine virtuali. I tool ONTAP per VMware vSphere sono una raccolta di microservizi scalabili orizzontalmente, basati sugli eventi e implementati come Open Virtual Appliance (OVA). Questa versione è dotata di integrazione API REST con ONTAP.</block>
   <block id="743bb9eba37e39241a186d033a7c1e5d" category="list-text">Fare clic con il pulsante destro del mouse su un host e selezionare *NetApp ONTAP tools* &gt; *Aggiorna dati host*.</block>
   <block id="7da745ff746553dfa65f8ae5fbe4b8ff" category="list-text">È possibile creare solo datastore VMFS su un cluster protetto. Quando si aggiunge un datastore VMFS a un cluster protetto, il datastore viene protetto automaticamente.</block>
   <block id="7f4eeeb7066fc64c51f02eba557a897f" category="list-text">Non è possibile creare un datastore in un data center con uno o più cluster host protetti.</block>
@@ -1846,4 +1842,8 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Modifica della protezione dei cluster di host</block>
   <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10,2</block>
   <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">Tool ONTAP per documenti VMware vSphere 10,2</block>
+  <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">I tool ONTAP per VMware vSphere sono un set di strumenti per la gestione del ciclo di vita delle macchine virtuali. Si integra con l'ecosistema VMware per consentire il provisioning dei datastore e fornire una protezione di base per le macchine virtuali.</block>
+  <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">I tool ONTAP per VMware vSphere sono una raccolta di microservizi scalabili orizzontalmente, basati sugli eventi e implementati come Open Virtual Appliance (OVA). Questa versione è dotata di integrazione API REST con ONTAP.</block>
+  <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">Ultima versione delle patch di ONTAP 9.12,1, 9.13.1, 9.14.1 e 9.15.1.</block>
+  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">La migrazione è supportata dai tool ONTAP per le release VMware vSphere 9.10D2, 9.11D4, 9,12 e 9,13 alla release 10,2.</block>
 </blocks>

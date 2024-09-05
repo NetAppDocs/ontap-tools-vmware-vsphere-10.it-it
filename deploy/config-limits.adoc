@@ -42,28 +42,6 @@ Per informazioni dettagliate sui requisiti di dimensionamento del sistema host p
 La tabella seguente mostra i numeri supportati per istanza di SRM utilizzando i tool ONTAP per VMware vSphere.
 
 |===
-
-
-| Numero totale di macchine virtuali configurate per la protezione mediante replica basata su array | 5000 
-
-
-| Numero totale di gruppi di protezione da replica basati su array | 250 
-
-
-| Numero totale di gruppi di protezione per piano di ripristino | 50 
-
-
-| Numero di datastore replicati | 255 
-|===
-Per informazioni dettagliate sui requisiti di dimensionamento del sistema host per nodo, fare riferimento alla link:../deploy/sizing-requirements.html["Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere"].
-
-
-
-== Tool ONTAP per VMware vSphere - Storage Replication Adapter (SRA)
-
-La tabella seguente mostra i numeri supportati per istanza di SRM utilizzando i tool ONTAP per VMware vSphere.
-
-|===
 | *Dimensione della distribuzione vCenter* | *Piccolo* | *Medio* 
 
 
