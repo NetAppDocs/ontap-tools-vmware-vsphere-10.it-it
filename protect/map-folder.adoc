@@ -20,7 +20,7 @@ summary: È necessario mappare le cartelle sul sito protetto e sul sito di ripri
 *Fasi*
 
 . Accedere a vCenter Server e fare clic su *Site Recovery* > *Sites*.
-. Selezionare il sito protetto, quindi fare clic su *Gestisci*.
+. Selezionare il sito protetto e fare clic su *Gestisci*.
 . Nella scheda Gestisci, selezionare *Mapping cartelle*.
 . Selezionare l'icona *cartella* per creare una nuova mappatura di cartelle.
 +

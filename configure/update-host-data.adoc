@@ -16,6 +16,6 @@ summary: 'È possibile eseguire un rilevamento on-demand sull"host ESXi per otte
 *Fasi*
 
 . Nella home page del client Web VMware vSphere, fare clic su *host e cluster*.
-. Fare clic con il pulsante destro del mouse su un host, quindi selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
+. Fare clic con il pulsante destro del mouse su un host e selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
 . Nella finestra a comparsa *Aggiorna dati host*, selezionare *Sì* per riavviare il rilevamento di tutti i sistemi di archiviazione connessi.
 

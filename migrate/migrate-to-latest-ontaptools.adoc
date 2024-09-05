@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate 
 summary: Durante la migrazione dei dati di storage, i backend di storage vengono inseriti manualmente utilizzando le API REST. Durante la migrazione dei dati dei provider VASA, i dati vengono esportati dal database Derby esistente e importati nel database MongoDB. 
 ---
-= Eseguire la migrazione alla versione più recente dei tool ONTAP
+= Migrazione dai tool ONTAP per VMware vSphere 9.x a 10,2
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: Durante la migrazione dei dati di storage, i backend di storage vengono
 Durante la migrazione dei dati di storage, i backend di storage vengono inseriti manualmente utilizzando le API REST. Durante la migrazione dei dati dei provider VASA, i dati vengono esportati dal database Derby esistente e importati nel database MongoDB.
 
 
-NOTE: Si consiglia di eseguire la migrazione dei tool ONTAP per il setup di VMware vSphere 9.xx solo se il setup utilizza solo la funzione del provider VASA. Se disponi di datastore NVMe e di replica vVol, non è consigliato migrare ai tool ONTAP per VMware vSphere 10,1.
+NOTE: Si consiglia di eseguire la migrazione dei tool ONTAP per il setup di VMware vSphere 9.xx solo se il setup utilizza solo la funzione del provider VASA.
 
 *A proposito di questa attività*
 
@@ -27,6 +27,10 @@ NOTE: Come utente esistente, è necessario eseguire il backup OVA dalla versione
 
 == Passaggi comuni di migrazione
 
+. Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,2.
+. Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,2. Vedere link:../configure/add-vcenter.html["Aggiungere e gestire le istanze di vCenter Server"]
+. Back-end dello storage integrato a livello locale dai tool ONTAP per le API del server vCenter del plug-in VMware vSphere. Aggiungere storage come storage per la migrazione a livello locale.
+. I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xx sono visibili nei tool ONTAP per VMware vSphere 10,2 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti per l'attivazione. Verificare se gli archivi dati sono visibili nella pagina Panoramica della pagina dell'interfaccia utente degli strumenti di ONTAP per VMware vSphere Plugin.
 . Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,1.
 . Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,1. Vedere link:../configure/add-vcenter.html["Aggiungere e gestire le istanze di vCenter Server"]
 . Back-end dello storage integrato a livello locale dai tool ONTAP per le API vCenter del plug-in VMware vSphere. Aggiungere storage come storage per la migrazione a livello locale.
@@ -70,9 +74,9 @@ Eseguire queste operazioni sui siti di protezione e ripristino.
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,1.
-. Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,1. Vedere link:../configure/add-vcenter.html["Aggiungere un'istanza di vCenter Server"].
-. Back-end dello storage integrato locale dalle API vCenter del plug-in remoto. Aggiungi storage come ambito locale per la migrazione.
+. Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,2.
+. Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,2. Vedere link:../configure/add-vcenter.html["Aggiungere un'istanza di vCenter Server"].
+. Back-end dello storage integrato in locale dalle API del server vCenter del plug-in remoto. Aggiungi storage come ambito locale per la migrazione.
 . Eseguire la seguente chiamata API per la migrazione:
 +
 []

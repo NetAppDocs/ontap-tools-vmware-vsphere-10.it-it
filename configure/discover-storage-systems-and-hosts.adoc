@@ -28,7 +28,7 @@ Durante il rilevamento dei sistemi storage, i tool di ONTAP per VMware vSphere r
 *Fasi*
 
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
-. Fare clic con il pulsante destro del mouse sul data center desiderato, quindi selezionare *NetApp ONTAP tools* > *Update host Data* (Strumenti *aggiornamento dati host*).
+. Fare clic con il pulsante destro del mouse sul data center desiderato e selezionare *NetApp ONTAP tools* > *Update host Data* (Strumenti * > Aggiorna dati host).
 +
 Gli strumenti ONTAP per VMware vSphere visualizzano una finestra di dialogo *Conferma* con il seguente messaggio:
 
@@ -36,7 +36,7 @@ Gli strumenti ONTAP per VMware vSphere visualizzano una finestra di dialogo *Con
 "Questa azione riavvierà il rilevamento di tutti i sistemi di archiviazione connessi e potrebbe richiedere alcuni minuti. Vuoi continuare?"
 
 . Fare clic su *Sì*.
-. Selezionare i controller di storage rilevati con lo stato `Authentication Failure`, Quindi fare clic su *azioni* > *Modifica*.
+. Selezionare i controller di archiviazione rilevati che hanno lo stato `Authentication Failure` e fare clic su *azioni* > *Modifica*.
 . Inserire le informazioni richieste nella finestra di dialogo *Modify Storage System* (Modifica sistema di storage).
 . Ripetere i passaggi 4 e 5 per tutti i controller storage con `Authentication Failure` stato.
 

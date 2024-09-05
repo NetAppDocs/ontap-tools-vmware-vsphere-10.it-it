@@ -125,5 +125,23 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 
 
 | 088 | La configurazione della rotazione del registro per il giornale non è riuscita | Riprovare a eseguire l'aggiornamento. 
+
+
+| 089 | La modifica della proprietà del file di configurazione rotazione del registro di riepilogo non è riuscita | Riprovare a eseguire l'aggiornamento. 
+
+
+| 091 | Aggiornamento iSCSI non riuscito | Riprovare a eseguire l'aggiornamento. 
+
+
+| 092 | Rollback iSCSI non riuscito | Riprovare a eseguire l'aggiornamento. 
+
+
+| 093 | aggiornamento Trident non riuscito | Riprovare a eseguire l'aggiornamento. 
+
+
+| 094 | ripristino Trident non riuscito | Riprovare a eseguire l'aggiornamento. 
+
+
+| 095 | Aggiornamento Debian non riuscito | Nessun recupero per l'aggiornamento debian. I servizi vengono aggiornati e saranno in esecuzione nuovi pod 
 |===
 Scopri di più https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1["Come ripristinare i tool ONTAP per VMware vSphere se l'aggiornamento non riesce dalla versione 10,0 alla 10,1"]

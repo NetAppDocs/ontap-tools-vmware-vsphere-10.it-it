@@ -20,7 +20,7 @@ Questo processo potrebbe richiedere molto tempo, a seconda della configurazione 
 *Fasi*
 
 . Nella home page del client Web VMware vSphere, fare clic su *host e cluster*.
-. Fare clic con il pulsante destro del mouse su un host, quindi selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
+. Fare clic con il pulsante destro del mouse su un host e selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
 . Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
 . Accedere alla scheda di conformità host ESXi nella Panoramica (dashboard) dei tool ONTAP per il plug-in VMware vSphere.
 . Selezionare il collegamento *Applica impostazioni consigliate*.

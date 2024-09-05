@@ -25,7 +25,7 @@ SRA supporta la gestione a livello di cluster e la gestione a livello di SVM. Ag
 
 *Fasi*
 
-. In SRM, fare clic su *Array Manager*, quindi su *Add Array Manager*.
+. In SRM, fare clic su *Array Managers*, quindi su *Add Array Manager*.
 . Immettere le seguenti informazioni per descrivere l'array in SRM:
 +
 .. Immettere un nome per identificare il gestore array nel campo *Display Name*.

@@ -19,9 +19,9 @@ NOTE: Non puoi ripristinare i tool ONTAP per la configurazione di VMware vSphere
 *Fasi*
 
 . Accedere al server vSphere.
-. Accedere al pool di risorse, al cluster di nodi o all'host in cui si desidera distribuire l'OVA.
+. Passare al pool di risorse creato o al cluster di nodi o all'host in cui si desidera distribuire l'OVA.
 . Fare clic con il pulsante destro del mouse sulla posizione desiderata e selezionare *Deploy OVF template* (distribuire modello OVF*).
-. È possibile immettere l'URL del file _.ova_ o navigare alla cartella in cui è stato salvato il file _.ova_, quindi selezionare *Avanti*.
+. Selezionare il file OVA tramite l'URL per il file _.ova_ o navigare alla cartella in cui è stato salvato il file _.ova_, quindi fare clic su *Avanti*.
 +
 
 NOTE: È necessario utilizzare la stessa build OVA utilizzata per l'installazione della configurazione di ripristino.
@@ -37,26 +37,25 @@ NOTE: È necessario utilizzare la stessa build OVA utilizzata per l'installazion
 
 NOTE: Devi mantenere l'indirizzo IP del bilanciatore del carico e l'indirizzo IP del Kubernetes API Server. È possibile modificare l'indirizzo IP del nodo oppure mantenere lo stesso indirizzo IP.
 
-. Selezionare la finestra *Personalizza modello* > *Configurazione di sistema*. Inserire i seguenti dati:
+. Nella finestra *Personalizza modello*, immettere i dettagli richiesti e fare clic su *Avanti*
 +
-.. Nome utente e password dell'applicazione: Questo nome utente e password vengono utilizzati per registrare sia il provider VASA che SRA in vCenter Server. Questo può essere diverso dal nome utente e dalla password forniti durante la distribuzione iniziale.
-.. La casella di controllo *Abilita ASUP* è selezionata per impostazione predefinita.
 
+NOTE: Una volta abilitato l'ambito SVM, dovresti aver già abilitato il supporto SVM con l'indirizzo IP di gestione.
 
-
-
-AutoSupport può essere attivato o disattivato solo durante l'implementazione. .. Nel campo *ASUP Proxy URL*, fornire questo URL per evitare il blocco del firewall per la trasmissione dei dati AutoSupport. .. Nome utente amministratore e password amministratore: Password utilizzata per accedere a Gestione strumenti ONTAP. Questo può essere diverso dal nome utente e dalla password forniti durante la distribuzione iniziale. .. Immettere le informazioni sul server NTP nel campo *Server NTP*. .. Maintenance user password (Password utente di manutenzione): Questa opzione consente di accedere alle opzioni della console di manutenzione. . Nella finestra *Personalizza modello* > *Configurazione distribuzione*, immettere i dettagli forniti durante la distribuzione. Tutti i valori di questa sezione devono essere uguali a quelli forniti durante l'implementazione iniziale, ad eccezione del valore di LIF dei dati.
-
-
-NOTE: Non modificare il nome della SVM storage, in quanto su cui sono archiviati i dati di recovery. Ciò si applica anche all'account utente SVM aggiunto direttamente.
-. Nel caso di recovery ha-deployment, fornisci i seguenti dettagli:
-.. Dettagli della libreria di contenuti.
-.. Dettagli di configurazione di vCenter.
-. Nella finestra *Customize template* > *Node Configuration* (Personalizza modello* > *Configurazione nodo*) immettere i dettagli come da impostazione che si sta tentando di ripristinare, non ha o ha.
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
-
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
-. Accendere la macchina virtuale dopo il completamento dell'attività.
 
-+ l'installazione ha inizio. È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM. Come parte dell'installazione, le configurazioni dei nodi sono validate. Gli input forniti nelle diverse sezioni del modello Personalizza nel modulo OVF vengono convalidati. In caso di discrepanze, viene visualizzata una finestra di dialogo che richiede di intraprendere un'azione correttiva. . Apportare le modifiche necessarie nella finestra di dialogo. Utilizzare il pulsante Tab per spostarsi all'interno del pannello per immettere i valori, *OK* o *Annulla*. . Selezionando *OK* o *Annulla*, i valori forniti verranno nuovamente convalidati. Strumenti ONTAP per VMware consente tre tentativi di correggere eventuali valori non validi. Se dopo tre tentativi non è possibile risolvere i problemi, l'installazione del prodotto si interrompe e si consiglia di provare a eseguire l'installazione su una nuova VM. . Una volta completata l'installazione, la console Web mostra lo stato degli strumenti ONTAP per VMware vSphere. Una volta completata l'installazione, è necessario modificare manualmente i requisiti hardware in base alle linee guida riportate nella link:../deploy/sizing-requirements.html["Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere"] pagina.
+. Accendere la macchina virtuale dopo il completamento dell'attività.
++
+L'installazione viene avviata. È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM. Come parte dell'installazione, le configurazioni dei nodi sono validate. Gli input forniti nelle diverse sezioni del modello Personalizza nel modulo OVF vengono convalidati. In caso di discrepanze, viene visualizzata una finestra di dialogo che richiede di intraprendere un'azione correttiva.
+
+. Apportare le modifiche necessarie nella finestra di dialogo. Utilizzare il pulsante Tab per spostarsi all'interno del pannello e selezionare *OK*.
++
+I valori forniti vengono nuovamente convalidati. Gli strumenti ONTAP per VMware vSphere consentono di correggere tre tentativi di valori non validi. Se dopo tre tentativi non è possibile risolvere i problemi, l'installazione del prodotto si interrompe e si consiglia di provare a eseguire l'installazione su una nuova VM.
+
+
+
+Una volta completata l'installazione, la console Web mostra lo stato degli strumenti ONTAP per VMware vSphere.
+
+Una volta completata l'installazione, è necessario modificare manualmente i requisiti hardware in base alle linee guida riportate nella link:../deploy/sizing-requirements.html["Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere"] pagina.

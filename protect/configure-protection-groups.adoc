@@ -27,7 +27,7 @@ Assicurarsi che i siti di origine e di destinazione siano configurati per:
 
 . Accedere a vCenter Server e fare clic su *Site Recovery* > *gruppi di protezione*.
 . Nel riquadro *Protection Groups* (gruppi di protezione), fare clic su *New* (nuovo).
-. Specificare un nome e una descrizione per il gruppo protezione, direzione, quindi fare clic su *Avanti*.
+. Specificare un nome e una descrizione per il gruppo protezione, direzione e fare clic su *Avanti*.
 . Nel campo *Type*, selezionare l'opzione *Type Field...* come gruppi di datastore (replica basata su array) per NFS e datastore VMFS.
 Il dominio degli errori non è altro che SVM con replica abilitata. Vengono visualizzate le SVM che hanno implementato solo il peering e che non hanno problemi.
 . Nella scheda gruppi di replica, selezionare la coppia di array abilitata o i gruppi di replica che hanno configurato la macchina virtuale, quindi fare clic su *Avanti*.

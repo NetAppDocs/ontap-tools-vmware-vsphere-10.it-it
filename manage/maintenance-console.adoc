@@ -41,7 +41,7 @@ Configurazione del sistema
  a| 
 . Riavviare la macchina virtuale
 . Arrestare la macchina virtuale
-. Genera token per reimpostare la password dell'interfaccia utente del gestore
+. Modificare la password utente "maint"
 . Modificare il fuso orario
 . Aggiungere un nuovo server NTP
 . Aumentare la dimensione del disco jail (/jail)

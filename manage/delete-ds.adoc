@@ -1,5 +1,5 @@
 ---
-permalink: manage/delete-vvols.html 
+permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
 summary: 'L"azione Elimina archivio dati elimina il datastore. Nel caso del datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l"elenco delle macchine virtuali che utilizzano il datastore.' 
@@ -27,10 +27,10 @@ Segui i passaggi riportati di seguito per eliminare il datastore NFS, VMFS o vVO
 
 .Fasi
 . Accedere al client vSphere utilizzando `\https://vcenterip/ui`
-. Fare clic con il pulsante destro del mouse su un sistema host, un cluster host o un datastore, quindi selezionare *NetApp ONTAP tools* > *Delete datastore*.
+. Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un datastore e selezionare *NetApp ONTAP tools* > *Elimina archivio dati*.
 +
 
-NOTE: Non è possibile eliminare gli archivi dati se ci sono macchine virtuali che utilizzano tale archivio dati. Prima di eliminare l'archivio dati, è necessario spostare le macchine virtuali in un altro datastore.
+NOTE: Non è possibile eliminare gli archivi dati se ci sono macchine virtuali che utilizzano tale archivio dati. Prima di eliminare l'archivio dati, è necessario spostare le macchine virtuali in un altro datastore. Non è possibile selezionare la casella di controllo Elimina volume se il datastore appartiene a un cluster di host protetto.
 
 +
 .. Nel caso del datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l'elenco delle macchine virtuali che utilizzano il datastore.
@@ -38,4 +38,8 @@ NOTE: Non è possibile eliminare gli archivi dati se ci sono macchine virtuali c
 
 
 . Per eliminare i volumi di backup sull'archiviazione ONTAP, selezionare *Elimina volumi sul cluster ONTAP*.
++
+
+NOTE: Impossibile eliminare il volume sul cluster ONTAP per un datastore VMFS che fa parte del cluster host protetto.
+
 

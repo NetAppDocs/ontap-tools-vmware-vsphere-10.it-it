@@ -22,10 +22,10 @@ summary: 'È necessario configurare un datastore segnaposto in modo che conservi
 *Fasi*
 
 . Accedere a vCenter Server e fare clic su *Site Recovery* > *Sites*.
-. Selezionare il sito protetto, quindi fare clic su *Gestisci*.
+. Selezionare il sito protetto e fare clic su *Gestisci*.
 . Nella scheda Manage (Gestisci), selezionare *Placeholder Datastore*.
 . Fare clic su *nuovo* per creare un nuovo archivio dati segnaposto.
-. Selezionare l'archivio dati appropriato, quindi fare clic su *OK*.
+. Selezionare l'archivio dati appropriato e fare clic su *OK*.
 +
 
 NOTE: Gli archivi dati segnaposto possono essere locali o remoti e non devono essere replicati.

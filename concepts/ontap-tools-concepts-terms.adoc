@@ -21,6 +21,12 @@ CA è un'entità attendibile che emette certificati SSL (Secure Sockets Layer).
 
 
 
+=== Gruppo di coerenza
+
+Un gruppo di coerenza è un insieme di volumi gestiti come singola unità. In ONTAP, i gruppi di coerenza offrono una gestione semplice e una garanzia di protezione per un carico di lavoro applicativo che copre più volumi. Ulteriori informazioni su https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["gruppo di coerenza"].
+
+
+
 === Stack doppio
 
 Una rete dual-stack è un ambiente di rete che supporta l'utilizzo simultaneo di indirizzi IPv4 e IPv6.
@@ -39,6 +45,12 @@ Un LUN è un numero utilizzato per identificare un'unità logica all'interno di 
 
 
 
+=== Namespace e sottosistema NVMe
+
+Uno spazio dei nomi NVMe è una quantità di memoria non volatile che può essere formattata in blocchi logici. Gli spazi dei nomi sono l'equivalente dei LUN per i protocolli FC e iSCSI e un sottosistema NVMe è analogo a un igroup. Un sottosistema NVMe può essere associato agli iniziatori in modo che gli iniziatori associati possano accedere agli spazi dei nomi all'interno del sottosistema.
+
+
+
 === Gestione strumenti ONTAP
 
 ONTAP Tools Manager offre un maggiore controllo ai tool ONTAP per l'amministratore di VMware vSphere sulle istanze di vCenter Server gestite e sui backend storage integrati. ONTAP tools Manager aiuta nella gestione di istanze di vCenter Server, backend di storage, certificati, password e download di bundle di log.
@@ -51,9 +63,9 @@ OVA è uno standard aperto per il packaging e la distribuzione di appliance virt
 
 
 
-=== SnapMirror attivo (SMAS)
+=== SnapMirror Active Sync (SMAS)
 
-SnapMirror Active Sync consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando le applicazioni per il failover in modo trasparente con una copia secondaria. Per attivare un failover con la sincronizzazione attiva di SnapMirror sono necessari un intervento manuale e script personalizzato.
+SnapMirror Active Sync consente ai servizi di business di continuare a funzionare anche in caso di guasto completo del sito, supportando le applicazioni per il failover in modo trasparente con una copia secondaria. Per attivare un failover con la sincronizzazione attiva di SnapMirror sono necessari un intervento manuale e script personalizzato. Ulteriori informazioni su https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["Sincronizzazione attiva di SnapMirror"].
 
 
 
@@ -66,6 +78,18 @@ SRA è il software specifico del vendor di soluzioni storage installato all'inte
 === Storage Virtual Machine (SVM)
 
 Come una macchina virtuale in esecuzione su un hypervisor, la SVM è un'entità logica che astrae le risorse fisiche. SVM contiene volumi di dati e una o più LIF attraverso i quali distribuiscono dati ai client.
+
+
+
+=== Configurazione uniforme e non uniforme
+
+* *Accesso uniforme all'host* significa che gli host di entrambi i siti sono connessi a tutti i percorsi ai cluster di storage su entrambi i siti. I percorsi tra siti trasversali sono estesi a ogni distanza.
+* *Accesso host non uniforme* significa che gli host in ogni sito sono connessi solo al cluster nello stesso sito. I percorsi tra siti e quelli estesi non sono connessi.
++
+
+NOTE: È supportato un accesso host uniforme per qualsiasi implementazione SnapMirror Active Sync; l'accesso host non uniforme è supportato solo per le implementazioni Active/Active simmetriche.
+
+
 
 
 
@@ -102,6 +126,12 @@ VASA è un set di API che integrano gli storage array con vCenter Server per la 
 === API storage di VMware vSphere: Integrazione degli array (VAAI)
 
 VAAI è un set di API che consente la comunicazione tra gli host di VMware vSphere ESXi e i dispositivi storage. Le API comprendono un set di operazioni primitive utilizzate dagli host per scaricare operazioni di storage sull'array. VAAI può offrire miglioramenti significativi delle performance per i task a uso intensivo di storage.
+
+
+
+=== VSphere Metro Storage Cluster
+
+VSphere Metro Storage Cluster (vMSC) è una tecnologia che consente e supporta vSphere in un'implementazione cluster estesa. Le soluzioni vMSC sono supportate con la sincronizzazione attiva di NetApp MetroCluster e SnapMirror (in precedenza SMBC). Queste soluzioni forniscono una migliore business continuity in caso di errore del dominio. Il modello di resilienza si basa sulle tue scelte specifiche di configurazione. Ulteriori informazioni su https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["Cluster di storage VMware vSphere Metro"].
 
 
 

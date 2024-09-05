@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore 
 summary: 'L"azione Elimina archivio dati elimina il datastore quando non sono presenti vVol nel datastore selezionato.' 
 ---
-= Ridurre i datastore vVol
+= Restringere il datastore vVol
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
