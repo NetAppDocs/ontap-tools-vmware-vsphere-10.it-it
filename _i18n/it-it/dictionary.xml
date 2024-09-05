@@ -1551,14 +1551,10 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Selezionare la coppia di array richiesta e verificare i dettagli corrispondenti.</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*Istantanea degli strumenti ONTAP per le VM VMware vSphere in vCenter (3VMs in caso di implementazione ha, 1 VM in caso di distribuzione non ha)*</block>
   <block id="2402f961ea404a2d19f517d27391d5ce" category="cell">Ultima versione della patch di ONTAP 9.12.1, 9.13.1 o 9.14.1</block>
-  <block id="88d1955de012defb14b2db6f4797ff20" category="cell">10,1</block>
   <block id="246912033b1b0195389ee2e1bbbb4194" category="paragraph">La migrazione è supportata dai tool ONTAP per le release VMware vSphere 9.10D2, 9.11D4, 9,12 e 9,13 alla release 10,1.</block>
   <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,1.</block>
-  <block id="9f24f41794806941dd2aeb79a4491cc8" category="list-text">Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,1. Vedere <block ref="28e8d51b831bb2b416c05f461b67f7df" category="inline-link-macro-rx"></block></block>
-  <block id="4a03a1c1f0cc7fc87194ca50c15f95d1" category="list-text">I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xx sono visibili nei tool ONTAP per VMware vSphere 10,1 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti per l'attivazione. Verificare se gli archivi dati sono visibili nella pagina Panoramica della pagina dell'interfaccia utente degli strumenti di ONTAP per VMware vSphere Plugin.</block>
   <block id="84f820da6ba65a6cab821392a70f4e42" category="list-text">Installare i tool ONTAP per l'adattatore SRA VMware vSphere 10,1 sui siti di protezione e ripristino seguendo i passaggi descritti in <block ref="c2b5ee5d8065c08146407751d4d3a3d6" category="inline-link-macro-rx"></block></block>
   <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">Dopo aver eseguito correttamente la migrazione e aver registrato gli strumenti ONTAP 10,1 in vCenter Server, procedere come segue:</block>
-  <block id="2a18716f8022631c1d2fd79a8fbb75e8" category="sidebar">Tool ONTAP per documenti VMware vSphere 10,1</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Inserire<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> per selezionare il menu Configurazione di sistema.</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Immettere<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> per modificare le credenziali ONTAP.</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Immettere<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> per modificare le credenziali vCenter.</block>
@@ -1848,4 +1844,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">Aggiornare il server vCenter e le credenziali ONTAP</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">Gestire la protezione dei cluster di host</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Modifica della protezione dei cluster di host</block>
+  <block id="a9d9d1b0257dda96d595bd00149cccdb" category="cell">10,2</block>
+  <block id="bcb59ed8656cede47cff74ddfd5a154f" category="sidebar">Tool ONTAP per documenti VMware vSphere 10,2</block>
 </blocks>
