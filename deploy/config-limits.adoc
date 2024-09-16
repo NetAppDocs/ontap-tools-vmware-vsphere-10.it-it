@@ -39,7 +39,7 @@ Per informazioni dettagliate sui requisiti di dimensionamento del sistema host p
 
 == Tool ONTAP per VMware vSphere - Storage Replication Adapter (SRA)
 
-La tabella seguente mostra i numeri supportati per istanza di SRM utilizzando i tool ONTAP per VMware vSphere.
+La tabella seguente mostra i numeri supportati per istanza di VMware Live Site Recovery utilizzando gli strumenti ONTAP per VMware vSphere.
 
 |===
 | *Dimensione della distribuzione vCenter* | *Piccolo* | *Medio* 
@@ -59,12 +59,12 @@ La tabella seguente mostra i numeri supportati per istanza di SRM utilizzando i 
 
 | Numero di macchine virtuali | 4000 | 7000 
 |===
-La tabella seguente mostra il numero di SRM e i corrispondenti tool ONTAP per le dimensioni della distribuzione di VMware vSphere.
+La tabella seguente mostra il numero di VMware Live Site Recovery e i corrispondenti strumenti ONTAP per le dimensioni della distribuzione di VMware vSphere.
 
 |===
 
 
-| *Numero di istanze SRM* | *Dimensioni di distribuzione degli strumenti ONTAP* 
+| *Numero di istanze di VMware Live Site Recovery* | *Dimensioni di distribuzione degli strumenti ONTAP* 
 
 
 | Fino a 4 | Piccolo 

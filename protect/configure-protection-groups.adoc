@@ -17,7 +17,7 @@ summary: È necessario creare gruppi di protezione per proteggere un gruppo di m
 
 Assicurarsi che i siti di origine e di destinazione siano configurati per:
 
-* Stessa versione di SRM installata
+* È installata la stessa versione di VMware Live Site Recovery
 * Macchine virtuali
 * Siti di ripristino e protezione associati
 * Gli archivi dati di origine e di destinazione devono essere montati sui rispettivi siti

@@ -16,7 +16,7 @@ summary: 'È necessario verificare che il sito protetto e il sito di ripristino 
 *Cosa ti serve*
 
 * È necessario aver configurato il sistema di archiviazione.
-* È necessario abbinare il sito protetto e il sito di ripristino utilizzando il gestore array SRM.
+* È necessario abbinare il sito protetto e il sito di ripristino utilizzando il gestore dell'array VMware Live Site Recovery.
 * Prima di eseguire l'operazione di test failover e di failover per SRA, è necessario aver attivato la licenza FlexClone e la licenza SnapMirror.
 
 

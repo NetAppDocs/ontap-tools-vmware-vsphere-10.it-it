@@ -17,7 +17,7 @@ summary: 'È necessario configurare gli intervalli di timeout della memoria in b
 
 == Impostazioni del provider di storage
 
-Impostare i seguenti valori di timeout su SRM per l'ambiente in scala:
+È necessario impostare i seguenti valori di timeout su VMware Live Site Recovery per l'ambiente scalato:
 
 |===
 
@@ -56,7 +56,7 @@ Attivare anche il `StorageProvider.autoResignatureMode` opzione.
 
 Per ulteriori informazioni sulla modifica delle impostazioni del provider di storage, consultare la documentazione di VMware.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentazione VMware vSphere: Modifica delle impostazioni dello Storage Provider"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentazione VMware vSphere: Modifica delle impostazioni dello Storage Provider"]
 
 
 
@@ -69,4 +69,4 @@ NOTE: L'intervallo di timeout specificato è il valore massimo. Non è necessari
 
 Per ulteriori informazioni, consultare la documentazione VMware sulla modifica delle impostazioni del provider SAN.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentazione di VMware Site Recovery Manager: Modifica delle impostazioni di storage"]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentazione di VMware Site Recovery Manager: Modifica delle impostazioni di storage"]

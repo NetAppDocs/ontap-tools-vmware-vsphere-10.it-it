@@ -18,7 +18,7 @@ summary: 'È necessario mappare le risorse sul sito protetto e sul sito di ripri
 È necessario aver collegato i siti protetti e di ripristino.
 
 
-NOTE: In Site Recovery Manager (SRM), le risorse possono essere pool di risorse, host ESXi o cluster vSphere.
+NOTE: In VMware Live Site Recovery, le risorse possono essere pool di risorse, host ESXi o cluster vSphere.
 
 *Fasi*
 

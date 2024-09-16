@@ -49,9 +49,9 @@ Prima di eseguire la migrazione, assicurarsi che uno dei siti sia in uno stato p
 NOTE: Non eseguire la migrazione se il failover è stato appena completato e la funzione di protezione è in sospeso. Completare la protezione e quindi eseguire la migrazione.
 Lo stesso vale per la verifica del piano di ripristino. Una volta completato il test del piano di ripristino, ripulire il ripristino di prova e avviare la migrazione.
 
-. Per eliminare gli strumenti ONTAP per VMware vSphere 9.xx release dell'adattatore SRA nell'interfaccia utente SRM, attenersi alla seguente procedura:
+. Per eliminare gli strumenti ONTAP per VMware vSphere 9.xx release SRA adapter in VMware Live Site Recovery UI, attenersi alla seguente procedura:
 +
-.. Andare alla pagina di gestione della configurazione SRM
+.. Accedere alla pagina di gestione della configurazione di VMware Live Site Recovery
 .. Consultare la sezione Storage Replication Adapter
 .. Fare clic sul menu Kebab, quindi su *Reimposta configurazione*
 .. Fare clic sul menu Kebab e selezionare *Elimina*
@@ -60,8 +60,8 @@ Eseguire queste operazioni sui siti di protezione e ripristino.
 
 
 
-. Installare i tool ONTAP per l'adattatore SRA VMware vSphere 10,1 sui siti di protezione e ripristino seguendo i passaggi descritti in link:../protect/configure-on-srm-appliance.html["Configurare SRA sull'appliance SRM"]
-. Nella pagina dell'interfaccia utente SRM, eseguire le operazioni *Discover Arrays* e *Discover Devices* e verificare che i dispositivi siano visualizzati come prima della migrazione.
+. Installare i tool ONTAP per l'adattatore SRA VMware vSphere 10,1 sui siti di protezione e ripristino seguendo i passaggi descritti in link:../protect/configure-on-srm-appliance.html["Configurare SRA sull'appliance VMware Live Site Recovery"]
+. Nella pagina dell'interfaccia utente di VMware Live Site Recovery, eseguire le operazioni *Discover Arrays* e *Discover Devices* e verificare che i dispositivi siano visualizzati come prima della migrazione.
 
 
 
