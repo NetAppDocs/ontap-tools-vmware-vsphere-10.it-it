@@ -1208,7 +1208,6 @@ Ad esempio, se la configurazione del gestore degli array ha un ambito SVM, occor
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">La pagina Network Mappings (Mapping di rete) visualizza le risorse protette del sito e le risorse del sito di ripristino. È possibile seguire la stessa procedura per le altre reti del proprio ambiente.</block>
   <block id="3dd0b6cbf926605abe281a83613cb23c" category="admonition">Come utente esistente, è necessario eseguire il backup OVA dalla versione corrente prima di eseguire l'aggiornamento alle versioni delle patch.</block>
   <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">Passaggi comuni di migrazione</block>
-  <block id="eece6ba8141877366a154b925c32a9f5" category="list-text">Back-end dello storage integrato a livello locale dai tool ONTAP per le API vCenter del plug-in VMware vSphere. Aggiungere storage come storage per la migrazione a livello locale.</block>
   <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">Fasi di migrazione SRA</block>
   <block id="37470572c4c0d1df68b6e2c9cf86ecf9" category="paragraph">Prima di eseguire la migrazione, assicurarsi che uno dei siti sia in uno stato protetto e l'altro sia in uno stato di recupero.</block>
   <block id="064e145ea2f6bfb5bc6045ba1fb3a818" category="admonition">Non eseguire la migrazione se il failover è stato appena completato e la funzione di protezione è in sospeso. Completare la protezione e quindi eseguire la migrazione.
@@ -1504,8 +1503,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Eseguire il comando Perl per configurare SRA con le nuove credenziali:</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Selezionare la coppia di array richiesta e verificare i dettagli corrispondenti.</block>
   <block id="a780a238f22a802c24a2182aea27323f" category="paragraph">*Istantanea degli strumenti ONTAP per le VM VMware vSphere in vCenter (3VMs in caso di implementazione ha, 1 VM in caso di distribuzione non ha)*</block>
-  <block id="2e2a1bc69765f559199ac318acd2a7d7" category="list-text">Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,1.</block>
-  <block id="d3f31e51d90c6cd2652af74dae461781" category="paragraph">Dopo aver eseguito correttamente la migrazione e aver registrato gli strumenti ONTAP 10,1 in vCenter Server, procedere come segue:</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Inserire<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> per selezionare il menu Configurazione di sistema.</block>
   <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Immettere<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> per modificare le credenziali ONTAP.</block>
   <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Immettere<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> per modificare le credenziali vCenter.</block>
@@ -1587,7 +1584,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="2b1af6f75eb17029e34abc0a1219ad91" category="list-text">Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un data center e selezionare *NetApp ONTAP Tools* &gt; *Create Datastore*.</block>
   <block id="f72f57410286ed6d906bcd47b23e2804" category="list-text">Nel riquadro *Storage*, selezionare *Platform* e *Storage VM*. Nella sezione *Opzioni avanzate*, selezionare criterio di esportazione personalizzato (per il protocollo NFS) o nome gruppo iniziatore personalizzato (per il protocollo iSCSI amd FC), a seconda dei casi.</block>
   <block id="a78a02bb1fc75e90c0aa8b7d5ee977d3" category="list-text">Fare clic con il pulsante destro del mouse su un sistema host o un cluster host o un data center e selezionare *NetApp ONTAP tools* &gt; *Create Datastore*.</block>
-  <block id="cf15c96a94a1c3b116a75ddc813146c7" category="paragraph">Virtual Machine file System (VMFS) è un file system in cluster appositamente progettato per l'archiviazione dei file delle macchine virtuali negli ambienti VMware vSphere. Consente a più host ESXi di accedere contemporaneamente ai file della stessa macchina virtuale, abilitando funzionalità come vMotion e High Availability. .Prima di iniziare, controllare quanto segue prima di procedere:</block>
   <block id="5574a2ea8c4feb96a776c4e8ce8a26dd" category="list-text">Per ogni protocollo dallo storage ONTAP, è necessario abilitare i rispettivi servizi e LIF.</block>
   <block id="00e94fd17e3b9474f70e512906843f21" category="list-text">Se si utilizza il protocollo NVMe/TCP, attenersi alla seguente procedura per configurare l'host ESXi:</block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">Guida alla compatibilità VMware</block>
@@ -1843,7 +1839,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="d6efc4dcb0d701b8153c2ef1af6e22b9" category="list-text">Per eliminare gli strumenti ONTAP per VMware vSphere 9.xx release SRA adapter in VMware Live Site Recovery UI, attenersi alla seguente procedura:</block>
   <block id="de7cd16aa682868ad900edd519b06059" category="list-text">Accedere alla pagina di gestione della configurazione di VMware Live Site Recovery</block>
   <block id="e6af441b9194db7f4427a1199ae8c274" category="inline-link-macro">Configurare SRA sull'appliance VMware Live Site Recovery</block>
-  <block id="9bf06b478ac6a48afec45b6081899c00" category="list-text">Installare i tool ONTAP per l'adattatore SRA VMware vSphere 10,1 sui siti di protezione e ripristino seguendo i passaggi descritti in <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
   <block id="f24af9463aafeb0a644c3f3baddedb00" category="list-text">Nella pagina dell'interfaccia utente di VMware Live Site Recovery, eseguire le operazioni *Discover Arrays* e *Discover Devices* e verificare che i dispositivi siano visualizzati come prima della migrazione.</block>
   <block id="0b3582622e579cb352e246015d6ca171" category="summary">È possibile configurare Storage Replication Adapter \(SRA\) utilizzando la procedura guidata Array Manager di VMware Live Site Recovery per abilitare le interazioni tra VMware Live Site Recovery e le Storage Virtual Machine \(SVM\).</block>
   <block id="fe3a4c2227170fc60976b4e12c53d157" category="paragraph">È possibile configurare Storage Replication Adapter (SRA) utilizzando la procedura guidata Array Manager di VMware Live Site Recovery per abilitare le interazioni tra VMware Live Site Recovery e le Storage Virtual Machine (SVM).</block>
@@ -1885,4 +1880,8 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="c8af2a359991324c5027f67981fcf118" category="sidebar">Documentazione dei tool ONTAP per VMware vSphere 10,1</block>
   <block id="425e3f9f511fc3cc32fb57688da1ec81" category="sidebar">Documentazione per le versioni precedenti dei tool ONTAP per VMware vSphere 9</block>
   <block id="ee3ab12b14efcd93221e2e76410a3142" category="sidebar">Ulteriori informazioni su VMware vSphere con ONTAP</block>
+  <block id="c81176933931ab131bb0e0556e02bad1" category="paragraph">Virtual Machine file System (VMFS) è un file system in cluster appositamente progettato per l'archiviazione dei file delle macchine virtuali negli ambienti VMware vSphere. Consente a più host ESXi di accedere contemporaneamente ai file della stessa macchina virtuale, abilitando funzionalità come vMotion e High Availability.</block>
+  <block id="5482792d8f62d9c636f95fc96476727d" category="paragraph">Prima di procedere, controllare quanto segue:</block>
+  <block id="2557cccd5218f319091e35b938bd9d10" category="list-text">Installare i tool ONTAP per l'adattatore SRA VMware vSphere 10,2 sui siti di protezione e ripristino seguendo i passaggi descritti in <block ref="200275c92830164958f040bec21a478e" category="inline-link-macro-rx"></block></block>
+  <block id="910d7f663c0ecfbd5ffa3a1f61a9f541" category="paragraph">Dopo aver eseguito correttamente la migrazione e aver registrato gli strumenti ONTAP 10,2 in vCenter Server, procedere come segue:</block>
 </blocks>
