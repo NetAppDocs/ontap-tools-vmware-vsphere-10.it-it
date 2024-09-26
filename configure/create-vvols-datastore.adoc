@@ -21,10 +21,10 @@ La procedura guidata di creazione dell'archivio dati supporta la creazione di da
 * È possibile creare un datastore VMFS su un host, solo quando ha una relazione asincrona.
 
 
-
-
-== Creare un datastore vVol
-
+[role="tabbed-block"]
+====
+.Creare un datastore vVol
+--
 Puoi creare un datastore vVol con nuovi volumi o volumi esistenti. Non è possibile creare un datastore vVol con un mix di volumi esistenti e nuovi.
 
 
@@ -49,10 +49,9 @@ Assicurarsi che il provider VASA sia registrato con il vCenter selezionato.
 . Controllare la selezione nel riquadro *Riepilogo* e fare clic su *fine*. Il datastore vVols viene creato e montato su tutti gli host.
 
 
-
-
-== Creare un datastore NFS
-
+--
+.Creare un datastore NFS
+--
 Un datastore NFS (Network file System) di VMware utilizza il protocollo NFS per connettere gli host ESXi a un dispositivo di storage condiviso in una rete. I datastore NFS sono comunemente utilizzati negli ambienti VMware vSphere e offrono diversi vantaggi, come semplicità e flessibilità.
 
 .Fasi
@@ -76,10 +75,9 @@ NOTE: L'autenticazione Kerberos è disponibile solo quando è selezionato il pro
 
 Il datastore NFS viene creato e montato su tutti gli host.
 
-
-
-== Creare un datastore VMFS
-
+--
+.Creare un datastore VMFS
+--
 Virtual Machine file System (VMFS) è un file system in cluster appositamente progettato per l'archiviazione dei file delle macchine virtuali negli ambienti VMware vSphere. Consente a più host ESXi di accedere contemporaneamente ai file della stessa macchina virtuale, abilitando funzionalità come vMotion e High Availability.
 
 .Prima di iniziare
@@ -129,11 +127,12 @@ Se si sceglie l'opzione *any* nel menu a discesa delle piattaforme, è possibile
 
 NOTE: Per la creazione di datastore VMFS con i protocolli NVMe/FC o NVMe/TCP non puoi utilizzare il volume esistente, devi creare un nuovo volume.
 
-
-
 . Rivedere i dettagli del datastore nel riquadro *Riepilogo* e fare clic su *fine*.
 +
 
 NOTE: Se si crea il datastore su un cluster protetto, viene visualizzato un messaggio di sola lettura che informa che il datastore è stato montato su un cluster protetto. Il datastore VMFS viene creato e montato su tutti gli host.
 
 
+
+--
+====

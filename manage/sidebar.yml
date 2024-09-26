@@ -22,11 +22,11 @@ entries:
     url: "/manage/storage-view-datastore.html"
   - title: Vista dello storage della macchina virtuale
     url: "/manage/virtual-machine-storage-view-datastore.html"
-- title: Gestire la soglia di archiviazione
+- title: Gestire le soglie di storage
   url: "/manage/manage-storage-threshold.html"
-- title: Gestione del backend dello storage
+- title: Gestire i back-end dello storage
   url: "/manage/storage-backend.html"
-- title: Gestire l'istanza di vCenter Server
+- title: Gestire le istanze di vCenter Server
   url: "/manage/manage-vcenter.html"
 - title: Gestire i certificati
   url: "/manage/certificate-manage.html"

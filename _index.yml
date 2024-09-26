@@ -11,7 +11,7 @@ indexpage:
     - title: Scopri i tool ONTAP per VMware vSphere
       url: "/concepts/ontap-tools-overview.html"
     - title: Implementa i tool ONTAP per VMware vSphere
-      url: "/deploy/prepare-deployment.html"
+      url: "/deploy/ontap-tools-deployment.html"
     - title: Effettua l'upgrade alla versione più recente dei tool ONTAP per VMware
         vSphere
       url: "/upgrade/upgrade-ontap-tools.html"
