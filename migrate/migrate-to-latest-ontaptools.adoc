@@ -18,7 +18,7 @@ NOTE: Si consiglia di eseguire la migrazione dei tool ONTAP per il setup di VMwa
 
 *A proposito di questa attività*
 
-La migrazione è supportata dai tool ONTAP per le release VMware vSphere 9.10D2, 9.11D4, 9,12 e 9,13 alla release 10,2.
+La migrazione è supportata dai tool ONTAP per le versioni VMware vSphere 9.10D2, 9.11D4, 9.12D1 e 9.13D2 alla versione 10,2.
 
 
 NOTE: Come utente esistente, è necessario eseguire il backup OVA dalla versione corrente prima di eseguire l'aggiornamento alle versioni delle patch.

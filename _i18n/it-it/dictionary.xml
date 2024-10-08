@@ -21,7 +21,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">I file di avviso forniscono informazioni sul copyright e sulle licenze di terze parti utilizzate nel software NetApp.</block>
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">Fornisce importanti informazioni su questa release di strumenti ONTAP per VMware vSphere, tra cui nuove funzionalità e miglioramenti, problemi risolti, problemi noti, precauzioni e limitazioni.</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">Note di rilascio</block>
-  <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">Fornisce importanti informazioni su questa release di strumenti ONTAP per VMware vSphere, inclusi problemi risolti, problemi noti, precauzioni e limitazioni.</block>
   <block id="9918cd46976715deff1f5b36e3f39bea" category="list-text">*Requisiti di spazio per il pacchetto di installazione per nodo*</block>
   <block id="98f2fde112dbbbfa4faf3948eb59905c" category="list-text">10 GB per le installazioni con thin provisioning</block>
   <block id="9c2ad9332e9d21d6c8fadbc51425c55b" category="list-text">*Requisiti di dimensionamento del sistema host per nodo*
@@ -1680,7 +1679,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="74b27627165f74c84a8f31981da59bce" category="list-text">Specificare un nome e una descrizione per il gruppo protezione, direzione e fare clic su *Avanti*.</block>
   <block id="aa204271b3b654aa91947cf038f3e150" category="list-text">Fare doppio clic su *Site Recovery* nella home page di vSphere Client e fare clic su *Sites*.</block>
   <block id="41dd8791118d286f9dd16dda93fb4676" category="inline-link">Note sulla versione dei tool ONTAP per VMware vSphere 10,2</block>
-  <block id="c801e65ec97aa4aa423dadb596e0ae66" category="paragraph">Per ulteriori informazioni, vedere<block ref="4c445cf2a5e8fa11ece1f426d363bfb8" category="inline-link-rx"></block>.</block>
   <block id="d2716515bd05082789a31002d4bbc958" category="cell">091</block>
   <block id="43474d50dc285d06ee8ee53c42bd7425" category="cell">Aggiornamento iSCSI non riuscito</block>
   <block id="e64770ac6bac05626b4f59b6a03e2ff8" category="cell">092</block>
@@ -1697,8 +1695,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="cd93511e96156295ce407e7171040058" category="admonition">Per eseguire l'upgrade dai tool ONTAP per VMware vSphere 10,0 alla release 10,2, è necessario prima eseguire l'upgrade ai tool ONTAP per VMware vSphere 10,1, quindi alla release 10,2.</block>
   <block id="7504b99fb3697e6b7b59cd3c56ab26b7" category="paragraph">Se si esegue l'aggiornamento dagli strumenti ONTAP per VMware vSphere 10,0 a 10,1, è necessario completare i seguenti passaggi prima di procedere con l'attività di aggiornamento:</block>
   <block id="aadafc361893326b48d9ad9299ddff34" category="list-text">Nella finestra di modifica delle impostazioni sotto il campo *unità CD/DVD*, selezionare file ISO della libreria di contenuti.</block>
-  <block id="afa5543a0b0f6f0ebaeb44f21a75df52" category="doc">Novità di questa release</block>
-  <block id="4d4c4bd87a75920c82f20ee9d507ffc3" category="paragraph">Fornisce importanti informazioni su questa versione degli strumenti ONTAP per VMware vSphere.</block>
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">Montare il datastore NFS e VMFS</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Smontare il datastore NFS e VMFS</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">Espandere il datastore vVol</block>
@@ -1710,7 +1706,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="3b5ecbf19ef44926d9273018c28f7e3c" category="paragraph">I tool ONTAP per VMware vSphere sono un set di strumenti per la gestione del ciclo di vita delle macchine virtuali. Si integra con l'ecosistema VMware per consentire il provisioning dei datastore e fornire una protezione di base per le macchine virtuali.</block>
   <block id="9b69ea2dc9e7a75dc2e6d51a798b7c4e" category="paragraph">I tool ONTAP per VMware vSphere sono una raccolta di microservizi scalabili orizzontalmente, basati sugli eventi e implementati come Open Virtual Appliance (OVA). Questa versione è dotata di integrazione API REST con ONTAP.</block>
   <block id="5cf2ee241dad8c2f06781c1f8cde814d" category="cell">Ultima versione delle patch di ONTAP 9.12,1, 9.13.1, 9.14.1 e 9.15.1.</block>
-  <block id="c20372b10311b40a3f12981f90015dec" category="paragraph">La migrazione è supportata dai tool ONTAP per le release VMware vSphere 9.10D2, 9.11D4, 9,12 e 9,13 alla release 10,2.</block>
   <block id="9c914c30102fcf893634491740cba696" category="paragraph">ONTAP Tools Manager offre un maggiore controllo ai tool ONTAP per l'amministratore di VMware vSphere sulle istanze di vCenter Server gestite e sui backend storage integrati. ONTAP tools Manager aiuta nella gestione di istanze di vCenter Server, backend di storage, certificati, password e download di bundle di log.</block>
   <block id="81d59d981388d591597f0840a1778f7c" category="paragraph">SRA è il software specifico del fornitore di soluzioni di storage installato all'interno dell'appliance VMware Live Site Recovery. L'adattatore abilita la comunicazione tra Site Recovery Manager e uno storage controller a livello di Storage Virtual Machine (SVM) e la configurazione a livello del cluster.</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">Ripristino sito live di VMware</block>
@@ -1849,4 +1844,63 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">Implementare gli strumenti ONTAP</block>
   <block id="4b10c0328f31fc426beffe86fb80aa8e" category="sidebar">Ripristino degli strumenti ONTAP</block>
   <block id="d3dc6537536e641facaa2e80efee8fc5" category="sidebar">Ripristino degli strumenti ONTAP</block>
+  <block id="65411d7178112726bcaf549fb0afd1f2" category="paragraph">La migrazione è supportata dai tool ONTAP per le versioni VMware vSphere 9.10D2, 9.11D4, 9.12D1 e 9.13D2 alla versione 10,2.</block>
+  <block id="7cf21d459cdbb9c2a1e4864da9f56b5a" category="summary">Scopri i tool ONTAP per i tool VMware vSphere 9 e ONTAP per il confronto delle funzionalità di VMware vSphere 10</block>
+  <block id="8db6f8bda67c3085df85aeea7d620ac7" category="doc">Confronto tra i tool ONTAP per i tool VMware vSphere 9 e ONTAP per le funzionalità VMware vSphere 10</block>
+  <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">Tool di matrice di interoperabilità NetApp</block>
+  <block id="71581c0be7a347807a5d3847fde7ec18" category="paragraph">Scopri se la migrazione dai tool ONTAP per VMware vSphere 9 ai tool ONTAP per VMware vSphere 10,1 o VMware vSphere 10,2 è la soluzione giusta per te. Per informazioni aggiornate sulla compatibilità, vedere<block ref="0aaf04254af18646f3d246cd4a4b417d" category="inline-link-rx"></block>.</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">Funzione</block>
+  <block id="e2e5efdc8b340ced50733afbe15a4fad" category="cell">Strumenti ONTAP 9,13</block>
+  <block id="ec00f002c530dcfbc3a0e06a58d47937" category="cell">Strumenti ONTAP 10,1</block>
+  <block id="8192138c7b90bb4854daa73842003f2c" category="cell">Strumenti ONTAP 10,2</block>
+  <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">Proposta di valore chiave</block>
+  <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">Ottimizza e semplifica le operazioni quotidiane da 0 a 2 con funzionalità di sicurezza, conformità e automazione migliorate</block>
+  <block id="798f5d4722c6982593d6671eef46371d" category="cell">Evoluzione degli strumenti ONTAP 10.x verso la parità 9.x e estensione dei limiti di high Availability, performance e scalabilità</block>
+  <block id="b96b395121ebad86d9a5850232e77183" category="cell">Supporto esteso per includere FC per VMFS e vVol e NVMe-of/FC, NVMe-of/TCP solo per VMFS. Facilità di utilizzo per NetApp SnapMirror, semplice configurazione dei cluster di storage vSphere metro e supporto SRM a tre siti</block>
+  <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">Qualifica delle release di ONTAP</block>
+  <block id="f69940d2c889c5ba58609514e4ec4bff" category="cell">Da ONTAP 9.9,1 a ONTAP 9.15,1</block>
+  <block id="d4dcb3d0be17e55a6784a2f961f93bc2" category="cell">Da ONTAP 9.12,1 a ONTAP 9.14,1</block>
+  <block id="aaf6e1251cbc7e7b17911496f89b36fe" category="cell">Da ONTAP 9.12,1 a ONTAP 9.15,1</block>
+  <block id="d67ece44624c7aa69b0f38715d1ac2fb" category="cell">Supporto alla release VMware</block>
+  <block id="af0223f5c63fe0b5a6e75d3087868abd" category="cell">VSphere 7.x-8.x da VMware Site Recovery Manager (SRM) 8,5 a VMware Live Site Recovery 9,0</block>
+  <block id="170ea24c94c478abd1871386c2d1ec72" category="cell">VSphere 7.x-8.x da VMware Site Recovery Manager (SRM) 8,7 a VMware Live Site Recovery 9,0</block>
+  <block id="30388d1a3ab1a01f6930553a577eb80b" category="cell">Supporto del protocollo</block>
+  <block id="e810af0cb36135a5b8e6f2da4440d6cb" category="cell">Datastore NFS e VMFS: Datastore vVol NFS (v3 e v4,1), VMFS (iSCSI ed FCP): ISCSI, FCP, NVMe/FC, NFS v3</block>
+  <block id="8bc8491da19ddf762b07de3144d61829" category="cell">Datastore NFS e VMFS: Datastore vVol NFS (v3 e v4,1), VMFS (iSCSI): ISCSI, NFS v3</block>
+  <block id="945e5bf339d57e18c8160e2e3df16d62" category="cell">Datastore NFS e VMFS: Datastore vVol NFS (v3 e v4,1), VMFS (iSCSI/FCP/NVMe-of): ISCSI, FCP, NFS v3</block>
+  <block id="2d215ebfc0280f8163d071454ec7ce01" category="cell">Scalabilità</block>
+  <block id="1dc64c16edbea8bc4c02d8fc9f91793e" category="cell">Host e VM: 300 host, fino a 10K VM datastore: 600 NFS, fino a 50 VMFS, fino a 250 vVol vVol: Fino a 14.000</block>
+  <block id="1cd0e9deda1f8d2ec1d07623c8de9dd3" category="cell">Host e macchine virtuali: 600 host vVol: Fino a 140.000</block>
+  <block id="31fd0c2c8d388a4cd2c6459234743476" category="cell">Osservabilità</block>
+  <block id="0ae86707597758caa42797b966846966" category="cell">Dashboard su performance, capacità e compliance host Report dinamici di VM e datastore</block>
+  <block id="e48d3655de549622076e6823dc5953da" category="cell">Dashboard aggiornate su performance, capacità e compliance dell'host Report dinamici di VM e datastore</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="cell">Protezione dei dati</block>
+  <block id="efee7a2d070a492110e424ced07a5cb4" category="cell">Replica SRA per replica basata su VMFS e NFS FlexVols per integrazione vVols SCV e interoperabile per il backup</block>
+  <block id="15449f9a7ac234221e11423d597b85d4" category="cell">Replica SRA per datastore iSCSI VMFS e NFS v3</block>
+  <block id="60d68cab51d9c8a782f647a80a3dc658" category="cell">Replica SRA per archivi dati iSCSI VMFS e NFS v3 protezione su tre siti che combina SMAS e SRM.</block>
+  <block id="b3dc8af7a4f134b177b24282d77ca3eb" category="cell">Supporto di provider VASA</block>
+  <block id="8fc79c740ab04e88f200d7eddd9e1931" category="cell">VASA 4,0</block>
+  <block id="5638860cdd6d2160f1889c6659867484" category="cell">VASA 3,0</block>
+  <block id="620a99069ca21ddda63311030de128d1" category="paragraph">Scopri le nuove e migliorate funzioni disponibili nei tool ONTAP per VMware vSphere 10,2.</block>
+  <block id="a0f2f641913db0ffffab76fafad81203" category="inline-xref-macro">Novità dei tool ONTAP per VMware vSphere 10,2</block>
+  <block id="c796cc4c6989b5a604c6eef24c2de84d" category="paragraph">Per un elenco completo delle nuove funzioni e dei miglioramenti, vedere <block ref="815f650045efcb134f42d68a8e4fca4c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="66e41f837b141c5c933d4281f7abe97c" category="paragraph">Per ulteriori informazioni sull'opportunità di eseguire la migrazione dagli strumenti ONTAP per VMware vSphere 9 agli strumenti ONTAP 10,2, consultare <block ref="947428ca1064f8d19137fb8976698998" category="inline-xref-macro-rx"></block>. La migrazione è supportata dai tool ONTAP per le release VMware vSphere 9.10D2, 9.11D4, 9,12 e 9,13 agli strumenti ONTAP 10,2.</block>
+  <block id="bb8eb6c356c3f564a1613f6389297778" category="paragraph">Per ulteriori informazioni, vedere<block ref="4c445cf2a5e8fa11ece1f426d363bfb8" category="inline-link-rx"></block>. Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.</block>
+  <block id="0d43955405fcb8a6a71cf0abd21c3e42" category="summary">Scopri le nuove funzionalità disponibili nei tool ONTAP per VMware vSphere 10,2.</block>
+  <block id="e326cb748235539f45a016f59b087724" category="doc">Novità dei tool ONTAP per VMware vSphere 10,2</block>
+  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">Aggiornare</block>
+  <block id="f9c5165567b26fd44d26cca28ae989f8" category="inline-xref-macro">Supporto del protocollo NVMe</block>
+  <block id="4348c73f2f4a3114c481b101d6c05b63" category="paragraph"><block ref="4348c73f2f4a3114c481b101d6c05b63" category="inline-xref-macro-rx"></block></block>
+  <block id="5a0b2b57fe55f878474bb1c7fe15d781" category="paragraph">I tool ONTAP per VMware vSphere 10,2 supportano sia i protocolli NVMe/FC che NVMe/TCP per il provisioning dei datastore VMFS. I workflow integrati senza problemi all'interno dell'interfaccia vCenter semplificano il provisioning dei datastore. I vantaggi dell'utilizzo dei protocolli NVMe/FC e NVMe/TCP per il provisioning dei datastore VMFS includono performance ottimizzate, elevata scalabilità e gestione efficiente di richieste di dati multiple, significative riduzioni della latenza e una gestione delle risorse efficiente. L'io storage basato su NVMe ha un utilizzo della CPU inferiore fino al 50% rispetto ai protocolli dati legacy.</block>
+  <block id="7d8b9f8f245933a3f23753f3aa1969c9" category="inline-xref-macro">Supporto del protocollo Fibre Channel (FC)</block>
+  <block id="3c85cd96a35bb2b0e89ca5aa4ed84c95" category="paragraph"><block ref="3c85cd96a35bb2b0e89ca5aa4ed84c95" category="inline-xref-macro-rx"></block></block>
+  <block id="5dea3d6458f352c0baabcd90a7577765" category="paragraph">I tool ONTAP per VMware vSphere 10,2 supportano il protocollo FC per il provisioning di datastore vVol e VMFS. I vantaggi del supporto del protocollo FC includono prestazioni elevate, affidabilità e stabilità, scalabilità, protezione avanzata e gestione efficiente delle risorse.</block>
+  <block id="b0152c6ea6956b36bce225d922d832c9" category="paragraph"><block ref="b0152c6ea6956b36bce225d922d832c9" category="inline-xref-macro-rx"></block></block>
+  <block id="e7dc7e22d370d773fbdac05c041a62da" category="paragraph">Il supporto della sincronizzazione attiva di SnapMirror con i tool ONTAP per VMware vSphere 10,2 include una funzionalità del cluster di protezione completamente nuova che fornisce un workflow di configurazione end-to-end per la costruzione di un vSphere Metro Storage all'interno dell'interfaccia utente di vCenter. Ciò consente configurazioni cluster stretched in cui i servizi business continuano a operare anche attraverso un guasto completo del sito, supportando il failover delle applicazioni in modo trasparente utilizzando una copia secondaria.</block>
+  <block id="282017cc6c0ad4ab6de03aa6f4cdbd64" category="paragraph">La procedura guidata SnapMirror può configurare SnapMirror asincrono e sincronizzato oltre alla sincronizzazione attiva di SnapMirror.</block>
+  <block id="1d8dd3cdaea3514d2aa5572ad597f0ca" category="inline-xref-macro">Miglioramenti di Storage Replication Adapter (SRA)</block>
+  <block id="118d400244411eadc174437736f63aef" category="paragraph"><block ref="118d400244411eadc174437736f63aef" category="inline-xref-macro-rx"></block></block>
+  <block id="bcb303519e38c6fa54f97973b5fa43ac" category="paragraph">SRA implementa la soluzione di disaster recovery (DR) basata sulle specifiche di VMware Site Recovery Manager (SRM). La sincronizzazione attiva di SnapMirror tramite l'integrazione di SRM supporta la pianificazione del disaster recovery e la soluzione di orchestrazione per fornire un failover dell'applicazione trasparente.</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Note di rilascio</block>
+  <block id="ed8359854c43609fca7bc8a46cca9eac" category="sidebar">Confronto tra le funzionalità di ONTAP Tools 9 e ONTAP Tools 10</block>
 </blocks>
