@@ -43,7 +43,7 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 
 | Grande (L) | 16 | 32 
 |===
-Per link:../deploy/config-limits.html["Limiti di configurazione per l'implementazione dei tool ONTAP per VMware vSphere"]ulteriori dettagli, fare riferimento a.
+Per ulteriori informazioni, consultare la sezione _limiti di configurazione per l'implementazione degli strumenti ONTAP per VMware vSphere_ riportata di seguito.
 
 
 
