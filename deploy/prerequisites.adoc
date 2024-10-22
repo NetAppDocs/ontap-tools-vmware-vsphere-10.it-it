@@ -156,6 +156,8 @@ NOTE: La password di vCenter Server padre non deve contenere questi caratteri sp
 
 * Si dispone delle credenziali di accesso per l'istanza di vCenter Server a cui si connetteranno gli strumenti ONTAP per VMware vSphere dopo la distribuzione, per la registrazione.
 * La cache del browser è stata eliminata.
-* Assicurati di disporre di tre indirizzi IP gratuiti per l'implementazione non ha: Un indirizzo IP gratuito per il bilanciamento del carico e un indirizzo IP gratuito per il piano di controllo Kubernetes e un indirizzo IP per il nodo. Per l'implementazione ha, insieme a questi tre indirizzi IP, saranno necessari altri due indirizzi IP per il secondo e il terzo nodo. I nomi host devono essere mappati agli indirizzi IP liberi sul DNS prima dell'assegnazione. Tutti e cinque gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
+* Assicurati di disporre di tre indirizzi IP gratuiti per l'implementazione non ha: Un indirizzo IP gratuito per il bilanciamento del carico e un indirizzo IP gratuito per il piano di controllo Kubernetes e un indirizzo IP per il nodo. Per l'implementazione ha, insieme a questi tre indirizzi IP, saranno necessari altri due indirizzi IP per il secondo e il terzo nodo. I nomi host devono essere mappati agli indirizzi IP liberi sul DNS prima di assegnare le implementazioni ha e non ha. Tutti e cinque gli indirizzi IP nella distribuzione ha devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
+
+
 * Assicurarsi che il nome di dominio su cui viene emesso il certificato sia mappato all'indirizzo IP virtuale in una distribuzione multi-vCenter in cui i certificati CA personalizzati sono obbligatori. _Nslookup_ viene eseguito un controllo sul nome di dominio per verificare se il dominio viene risolto all'indirizzo IP desiderato. I certificati devono essere creati con il nome di dominio e l'indirizzo IP dell'indirizzo IP del bilanciatore del carico.
 

@@ -26,7 +26,7 @@ NOTE: Storage Replication Adapter (SRA) non supporta le configurazioni di SnapMi
 
 . Fare doppio clic su *Site Recovery* nella home page di vSphere Client e fare clic su *Sites*.
 . Fare clic su *oggetti* > *azioni* > *Associa siti*.
-. Nella finestra di dialogo Pair Site Recovery Manager Servers, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi fare clic su *Avanti*.
+. Nella finestra di dialogo *Pair Site Recovery Manager Servers*, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi fare clic su *Next*.
 . Nella sezione Select vCenter Server (Seleziona server vCenter), procedere come segue:
 +
 .. Verificare che vCenter Server del sito protetto venga visualizzato come candidato corrispondente per l'associazione.
