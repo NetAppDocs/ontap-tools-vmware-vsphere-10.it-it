@@ -6,8 +6,6 @@ entries:
   url: "/configure/add-vcenter.html"
 - title: Registrare il provider VASA su vCenter Server
   url: "/configure/registration-process.html"
-- title: Verificare il provider VASA registrato
-  url: "/configure/verify-registration.html"
 - title: Installare il plug-in NFS VAAI
   url: "/configure/install-nfs-vaai-plug-in.html"
 - title: Configurare le impostazioni dell'host ESXi
