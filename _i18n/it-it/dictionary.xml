@@ -1901,4 +1901,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="d8ddfdd9298e5862ca00168195c4be29" category="sidebar">Proteggere utilizzando la protezione SRA</block>
   <block id="f6af7ed15ad67767270b003672cdfdbb" category="sidebar">Ripristina la configurazione degli strumenti ONTAP</block>
   <block id="a2635d75789f249837881cc5136979e1" category="paragraph">*Al termine*</block>
+  <block id="7770bd163d7ff3ef18fb8fde03d271ba" category="list-text">In modalità di implementazione ha, non rinominare i nomi delle VM dopo l'implementazione.</block>
+  <block id="c1d3c828ba9f7365c33657c18574ce0d" category="admonition">Se si utilizzano strumenti ONTAP per VMware vSphere 9.13P1, è necessario eseguire l'aggiornamento a 9.13D2 prima della migrazione alla versione 10,2.</block>
 </blocks>

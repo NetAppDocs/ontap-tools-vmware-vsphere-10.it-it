@@ -24,6 +24,9 @@ NOTE: Dopo la migrazione da tool ONTAP per VMware vSphere 9.x a 10,2, i datastor
 La migrazione è supportata dai tool ONTAP per le versioni VMware vSphere 9.10D2, 9.11D4, 9.12D1 e 9.13D2 alla versione 10,2.
 
 
+NOTE: Se si utilizzano strumenti ONTAP per VMware vSphere 9.13P1, è necessario eseguire l'aggiornamento a 9.13D2 prima della migrazione alla versione 10,2.
+
+
 NOTE: Come utente esistente, è necessario eseguire il backup OVA dalla versione corrente prima di eseguire l'aggiornamento alle versioni delle patch.
 
 

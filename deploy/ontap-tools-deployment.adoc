@@ -135,6 +135,7 @@ NOTE: Non implementare i tool ONTAP per la macchina virtuale VMware vSphere in u
 . Selezionare la rete di destinazione per ciascuna rete di origine e fare clic su *Avanti*.
 . Nella finestra *Personalizza modello*, compilare i campi obbligatori e fare clic su *Avanti*.
 +
+** In modalità di implementazione ha, non rinominare i nomi delle VM dopo l'implementazione.
 ** Una volta abilitato l'ambito SVM, dovresti aver già abilitato il supporto SVM con l'indirizzo IP di gestione.
 ** Le informazioni qui fornite sono convalidate per i modelli corretti durante il processo di installazione. In caso di discrepanza, viene visualizzato un messaggio di errore sulla console Web e viene richiesto di correggere eventuali informazioni errate fornite.
 ** I nomi host devono essere costituiti da lettere maiuscole (A-Z), lettere minuscole (a-z), cifre (0-9) o dal trattino (-). Se si desidera configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
