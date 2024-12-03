@@ -28,20 +28,24 @@ NOTE: È possibile creare utenti a livello di cluster o direttamente a livello d
 
 . Estrarre il file scaricato _\https://<loadbalancerIP>:8443/Virtualization/user-privileges/users_roles.zip_.
 . Accedere a ONTAP System Manager utilizzando l'indirizzo IP di gestione del cluster del cluster.
-. Effettua l'accesso come cluster o utente SVM.
-. Selezionare *Cluster* > *Impostazioni* > *pannello utenti e ruoli*.
-. Selezionare *Aggiungi* in utenti.
-. Nella finestra di dialogo *Aggiungi utente*, selezionare *prodotti di virtualizzazione*.
-. *Sfoglia* per selezionare e caricare il file JSON con privilegi ONTAP.
+. Accedi al cluster con admin Privileges. Per configurare un utente, attenersi alla procedura illustrata di seguito:
++
+.. Per configurare l'utente degli strumenti ONTAP del cluster, selezionare *cluster* > *Impostazioni* > *pannello utenti e ruoli*.
+.. Per configurare l'utente degli strumenti di SVM ONTAP, selezionare *Storage SVM* > *Impostazioni* > *pannello utenti e ruoli*.
+.. Selezionare *Aggiungi* in utenti.
+.. Nella finestra di dialogo *Aggiungi utente*, selezionare *prodotti di virtualizzazione*.
+.. *Sfoglia* per selezionare e caricare il file JSON con privilegi ONTAP.
 +
 Il campo prodotto viene compilato automaticamente.
 
-. Selezionare la funzionalità desiderata dal menu a discesa funzionalità prodotto.
+.. Selezionare la funzionalità desiderata dal menu a discesa funzionalità prodotto.
 +
 Il campo *ruolo* viene compilato automaticamente in base alla capacità del prodotto selezionata.
 
-. Immettere il nome utente e la password richiesti.
-. Selezionare i privilegi (rilevamento, Crea archivio, Modifica archivio, archiviazione distrutta, ruolo NAS/SAN) richiesti per l'utente, quindi fare clic su *Aggiungi*.
+.. Immettere il nome utente e la password richiesti.
+.. Selezionare i privilegi (rilevamento, Crea archivio, Modifica archivio, archiviazione distrutta, ruolo NAS/SAN) richiesti per l'utente, quindi fare clic su *Aggiungi*.
+
+
 
 
 Vengono aggiunti il nuovo ruolo e l'utente e vengono visualizzati i privilegi dettagliati nel ruolo configurato.
@@ -74,8 +78,12 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 Seguire le istruzioni in questa sezione per creare manualmente l'utente e i ruoli senza utilizzare il file JSON.
 
 . Accedere a ONTAP System Manager utilizzando l'indirizzo IP di gestione del cluster del cluster.
-. Effettua l'accesso come cluster o utente SVM.
-. Selezionare *Cluster* > *Impostazioni* > *pannello utenti e ruoli*.
+. Accedi al cluster con admin Privileges.
++
+.. Per configurare i ruoli degli strumenti ONTAP del cluster, selezionare *cluster* > *Impostazioni* > *utenti e ruoli*.
+.. Per configurare i ruoli degli strumenti di SVM ONTAP del cluster, selezionare *Storage SVM* > *Impostazioni* > *pannello utenti e ruoli*
+
+
 . Crea ruoli:
 +
 .. Selezionare *Aggiungi* nella tabella *ruoli*.
