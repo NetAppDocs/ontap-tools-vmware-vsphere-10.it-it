@@ -1907,4 +1907,6 @@ Eseguire il seguente comando per trovare il primo nome igroup:</block>
   <block id="2000e83d945563ce0118bc3b5c5f6fbc" category="list-text">Accedi al cluster con admin Privileges.</block>
   <block id="9d65b5cebe69c5a066b9142b67334767" category="list-text">Per configurare i ruoli degli strumenti ONTAP del cluster, selezionare *cluster* &gt; *Impostazioni* &gt; *utenti e ruoli*.</block>
   <block id="5aa0457cc95965b125467f8be60fadcf" category="list-text">Per configurare i ruoli degli strumenti di SVM ONTAP del cluster, selezionare *Storage SVM* &gt; *Impostazioni* &gt; *pannello utenti e ruoli*</block>
+  <block id="f6e2644fce556a8207829c90c0760e9e" category="inline-link">Prerequisiti per la configurazione ha e avanzata non-ha</block>
+  <block id="e919c4d13d770923e879fa844b30c21a" category="list-text">Prima di installare gli strumenti ONTAP per VMware vSphere 10,2 nella configurazione non ha avanzata e ha, consultare l'articolo della Knowledge base:<block ref="e4dee65de4069a83bb14c7c7d5ee3ead" category="inline-link-rx"></block></block>
 </blocks>
