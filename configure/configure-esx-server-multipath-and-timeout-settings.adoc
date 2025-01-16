@@ -15,14 +15,14 @@ I tool ONTAP per VMware vSphere controllano e impostano le impostazioni di multi
 
 *A proposito di questa attività*
 
-Questo processo potrebbe richiedere molto tempo, a seconda della configurazione e del carico di sistema. L'avanzamento dell'attività viene visualizzato nel pannello Recent Tasks (attività recenti). Una volta completate le attività, l'icona Avviso di stato dell'host viene sostituita dall'icona normale o dall'icona di riavvio in sospeso.
+Questo processo potrebbe richiedere molto tempo, a seconda della configurazione e del carico di sistema. L'avanzamento dell'attività viene visualizzato nel pannello *attività recenti*. Al termine delle attività, l'icona di avviso dello stato dell'host viene sostituita dall'icona normale o dall'icona di riavvio in sospeso.
 
 *Fasi*
 
-. Nella home page del client Web VMware vSphere, fare clic su *host e cluster*.
+. Dalla home page del client Web VMware vSphere, fare clic su *host e cluster*.
 . Fare clic con il pulsante destro del mouse su un host e selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
 . Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
-. Accedere alla scheda di conformità host ESXi nella Panoramica (dashboard) dei tool ONTAP per il plug-in VMware vSphere.
+. Andare alla scheda *ESXi host compliance* nella panoramica (dashboard) degli strumenti ONTAP per il plug-in VMware vSphere.
 . Selezionare il collegamento *Applica impostazioni consigliate*.
 . Nella finestra *Apply Recommended host settings* (Applica impostazioni host consigliate), selezionare gli host che si desidera rispettare con le impostazioni dell'host consigliate da NetApp e fare clic su *Next* (Avanti).
 +

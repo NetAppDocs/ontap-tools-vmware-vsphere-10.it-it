@@ -15,7 +15,10 @@ I backend dello storage sono sistemi utilizzati dagli host ESXi per lo storage d
 
 *A proposito di questa attività*
 
-Questo task ti aiuta a integrare un cluster ONTAP. Quando Aggiungi il backend dello storage utilizzando ONTAP Tools Manager, il back-end dello storage viene aggiunto al cluster globale. Associare il cluster globale a un'istanza di vCenter Server per consentire a un utente SVM il provisioning del datastore vVol.
+Questo task ti aiuta a integrare un cluster ONTAP. Quando Aggiungi il backend dello storage utilizzando ONTAP Tools Manager, il back-end dello storage viene aggiunto al cluster globale. Associare il cluster globale a un'istanza di vCenter Server per consentire a un utente SVM il provisioning del datastore vVol. Puoi aggiungere storage solo in vCenter utilizzando la SVM.
+
+
+NOTE: Per i flussi di lavoro multi-tenant, è necessario aggiungere cluster ONTAP a livello globale utilizzando ONTAP Tools Manager e associare i cluster ai tenant vCenter desiderati. Il tenant di vCenter deve quindi integrare le Storage Virtual Machine (SVM) desiderate. Se non hai bisogno di multi-tenancy, devi aggiungere i tuoi sistemi ONTAP direttamente utilizzando solo l'interfaccia utente di vCenter.
 
 [role="tabbed-block"]
 ====
@@ -49,7 +52,7 @@ NOTE: Quando si aggiunge un backend storage utilizzando l'interfaccia utente del
 . Nella finestra *Aggiungi backend archiviazione*, specificare l'indirizzo IP del server, il nome utente, la password e i dettagli della porta e fare clic su *Aggiungi*.
 +
 
-NOTE: Puoi aggiungere credenziali basate sul cluster e LIF DI gestione IPv4 e IPv6 o credenziali basate su SVM con una LIF di gestione SVM per aggiungere direttamente un utente SVM.
+NOTE: Puoi aggiungere credenziali basate sul cluster e LIF di gestione indirizzi IPv4 e IPv6 o credenziali basate su SVM con una LIF di gestione SVM per aggiungere direttamente un utente SVM.
 
 
 

@@ -21,4 +21,4 @@ summary: 'È possibile montare un datastore VMware Virtual Volumes/vVol su uno o
 . Nella finestra di dialogo *Mount Datastore on hosts*, selezionare gli host su cui si desidera montare il datastore, quindi fare clic su *Mount*.
 
 
-È possibile tenere traccia dell'avanzamento nel pannello attività recente.
+È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.

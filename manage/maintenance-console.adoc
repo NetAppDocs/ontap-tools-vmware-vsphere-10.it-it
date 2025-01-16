@@ -32,6 +32,7 @@ Configurazione dell'applicazione
 . Visualizza il riepilogo dello stato del server
 . Modificare il livello di REGISTRAZIONE per servizi provider VASA e servizi SRA
 . Disattiva AutoSupport
+. Aggiorna URL proxy AutoSupport
 
 
 
@@ -71,6 +72,8 @@ Supporto e diagnostica
  a| 
 . Accedere alla shell di diagnostica
 . Abilitare l'accesso remoto alla diagnostica
+. Fornisci le credenziali vCenter per il backup
+. Esegui backup
 
 
 |===

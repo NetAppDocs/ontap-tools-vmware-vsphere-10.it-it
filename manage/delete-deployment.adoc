@@ -30,14 +30,4 @@ _Kubectl describe persistentvolumes | grep internalName | awk -F'=' '{print $2}'
 . Eliminazione di macchine virtuali da vCenter Server, vedere https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html["Rimozione di macchine virtuali o modelli di macchine virtuali da vCenter Server o dal datastore"]
 . Eliminazione di volumi da ONTAP System Manager, vedere https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Eliminare un volume FlexVol"]. Fornire il nome esatto di FlexVolume nel comando cli per eliminare il volume.
 . In caso di distribuzione iSCSI, eliminare gli igroup SAN da ONTAP, vedere https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Visualizza e gestisci GLI iniziatori SAN e igroups"].
-+
-Nell'implementazione ha, vengono creati quattro igroup e, nell'implementazione non ha, vengono creati due igroup.
-Eseguire il seguente comando per trovare il primo nome igroup:
-
-+
-_Kubectl -n tridente get tbc tridente-backend -o yaml| grep igroupName: | awk -F':' '{print $2}'_
-
-+
-Gli altri nomi igroup iniziano con il nome host della VM.
-
 

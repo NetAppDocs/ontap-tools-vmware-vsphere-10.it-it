@@ -13,9 +13,6 @@ summary: 'È necessario associare i siti protetti e di ripristino creati utilizz
 [role="lead"]
 È necessario associare i siti protetti e di ripristino creati utilizzando il client vSphere per consentire l'individuazione dei sistemi di storage mediante Storage Replication Adapter (SRA).
 
-
-NOTE: Storage Replication Adapter (SRA) non supporta le configurazioni di SnapMirror fan-out. Le configurazioni fan-out di SnapMirror sono quelle in cui un volume di origine viene replicato in due diverse destinazioni. Questi creano un problema durante il ripristino quando VMware Live Site Recovery deve ripristinare la macchina virtuale dalla sua destinazione.
-
 *Cosa ti serve*
 
 * È necessario che VMware Live Site Recovery sia installato sui siti protetti e di ripristino.

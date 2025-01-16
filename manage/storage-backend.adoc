@@ -39,8 +39,7 @@ Per modificare un backend di archiviazione, attenersi alla procedura descritta i
 . Accedere al client vSphere utilizzando `\https://vcenterip/ui`
 . Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
 . Nel riquadro sinistro degli strumenti di ONTAP, accedere a *backend di archiviazione* e selezionare un backend di archiviazione.
-. Fare clic sul menu ellissi verticali e selezionare *Modifica* per modificare le credenziali o il nome della porta.
-È possibile tenere traccia dell'avanzamento nel pannello attività recenti.
+. Fare clic sul menu ellissi verticali e selezionare *Modifica* per modificare le credenziali o il nome della porta. È possibile tenere traccia dell'avanzamento nel pannello attività recenti.
 
 
 È possibile eseguire l'operazione di modifica per i cluster ONTAP globali utilizzando ONTAP Tools Manager seguendo la procedura riportata di seguito.
@@ -62,8 +61,7 @@ Prima di rimuovere il backend dello storage, occorre eliminare tutti gli archivi
 . Accedere al client vSphere utilizzando `\https://vcenterip/ui`
 . Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
 . Nel riquadro sinistro degli strumenti di ONTAP, accedere a *backend di archiviazione* e selezionare un backend di archiviazione.
-. Fare clic sul menu ellissi verticali e selezionare *Rimuovi*. Assicurarsi che lo storage backend non contenga datastore.
-È possibile tenere traccia dell'avanzamento nel pannello attività recenti.
+. Fare clic sul menu ellissi verticali e selezionare *Rimuovi*. Assicurarsi che lo storage backend non contenga datastore. È possibile tenere traccia dell'avanzamento nel pannello attività recenti.
 
 
 Puoi eseguire l'operazione di rimozione per i cluster ONTAP globali usando ONTAP tools Manager.
@@ -79,9 +77,9 @@ Puoi eseguire l'operazione di rimozione per i cluster ONTAP globali usando ONTAP
 
 == Drill-down del backend dello storage
 
-La pagina del backend di archiviazione elenca tutti i backend di archiviazione. È possibile eseguire operazioni di rilevamento dello storage, modifica e rimozione sui backend dello storage aggiunti, non su un singolo figlio sotto il cluster.
+La pagina del backend di archiviazione elenca tutti i backend di archiviazione. Puoi eseguire operazioni di rilevamento dello storage, modifica e rimozione sui backend dello storage aggiunti, non su una singola SVM figlio sotto il cluster.
 
-Facendo clic sul cluster padre o su quello figlio nel back-end dello storage è possibile visualizzare il riepilogo generale del componente. Facendo clic sul cluster padre, è disponibile il menu a discesa delle azioni da cui è possibile eseguire le operazioni di rilevamento, modifica e rimozione. Questa opzione non è disponibile quando si fa clic su SVM figlio.
+Facendo clic sul cluster padre o su quello figlio nel back-end dello storage è possibile visualizzare il riepilogo generale del componente. Facendo clic sul cluster padre, è disponibile il menu a discesa delle azioni da cui è possibile eseguire le operazioni di rilevamento, modifica e rimozione.
 
 La pagina di riepilogo fornisce i seguenti dettagli:
 
@@ -90,8 +88,11 @@ La pagina di riepilogo fornisce i seguenti dettagli:
 * Informazioni di base sulla macchina virtuale
 * Informazioni di rete quali l'indirizzo IP e la porta della rete. Per la SVM secondaria, le informazioni saranno identiche al back-end dello storage di origine.
 * Privilegi consentiti e limitati per il backend di archiviazione. Per la SVM secondaria, le informazioni saranno identiche al back-end dello storage di origine. I privilegi vengono visualizzati solo nei backend di storage basati su cluster. Se Aggiungi SVM come back-end dello storage, le informazioni sui privilegi non verranno visualizzate.
+* La vista dettagliata del cluster di ASA R2 non include la scheda dei Tier locali quando la proprietà disaggregata viene impostata su "true" per la SVM o il cluster.
+* Per i sistemi SVM ASA R2, il portlet della capacità non è mostrato. Il portale della capacità è richiesto solo quando la proprietà disaggregata è impostata su "true" per la SVM o il cluster.
+* Per i sistemi ASA R2 SVM, la sezione delle informazioni di base mostra il tipo di piattaforma.
 
 
-La scheda Interface (interfaccia) fornisce informazioni dettagliate sull'interfaccia.
+La scheda interfaccia fornisce informazioni dettagliate sull'interfaccia.
 
 La scheda livelli locali fornisce informazioni dettagliate sull'elenco aggregato.

@@ -35,11 +35,12 @@ La vista dello storage ONTAP nella scheda Configure dei tool ONTAP per VMware vS
 .Fasi
 . Dal client vSphere, accedere al datastore VMFS.
 . Fare clic sulla scheda *Configura* nel riquadro di destra.
-. Selezionare *NetApp ONTAP tools* > *archiviazione ONTAP*. Nel riquadro destro vengono visualizzati i dettagli *Storage details* e *LUN details* o *namespace details* in caso di protocollo NVMe/TCP o NVMe/FC.
+. Selezionare *NetApp ONTAP tools* > *archiviazione ONTAP*. Nel riquadro destro vengono visualizzati i dettagli *Storage details* e *LUN details* o *namespace details* a seconda del protocollo.
 +
 ** Questa pagina contiene informazioni sui backend, gli aggregati e i volumi di storage.
 ** La pagina dei dettagli LUN contiene i dati correlati al LUN.
 ** Quando si utilizza il protocollo NVMe/TCP o NVMe/FC per il datastore VMFS, la pagina dei dettagli del namespace contiene dati correlati al namespace.
+** I dettagli relativi a volume e aggregato non vengono visualizzati per i datastore basati sul sistema ASA R2.
 
 
 
@@ -47,6 +48,9 @@ La vista dello storage ONTAP nella scheda Configure dei tool ONTAP per VMware vS
 
 
 == Viste dello storage ONTAP per i datastore vVol
+
+
+NOTE: Questa vista non è supportata per il datastore vVol basato su ASA R2.
 
 .Fasi
 . Dal client vSphere, accedere al datastore vVols.

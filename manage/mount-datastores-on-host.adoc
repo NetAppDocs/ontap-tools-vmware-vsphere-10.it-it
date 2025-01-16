@@ -27,4 +27,4 @@ Il montaggio di un datastore fornisce accesso allo storage a host aggiuntivi (NF
 . Selezionare gli archivi dati che si desidera montare e fare clic su *Mount*.
 
 
-È possibile tenere traccia dell'avanzamento nel pannello attività recente.
+È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.

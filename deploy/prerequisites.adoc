@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di distribuzione e alcuni requisiti di base del sistema host. 
 ---
-= Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere
+= Prerequisiti per gli strumenti ONTAP per la distribuzione di VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,8 +21,8 @@ Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual 
 
 * *Requisiti di spazio per il pacchetto di installazione per nodo*
 +
-** 10 GB per le installazioni con thin provisioning
-** 248 GB per installazioni con thick provisioning
+** 15 GB per le installazioni con thin provisioning
+** 348 GB per installazioni con thick provisioning
 
 
 * *Requisiti di dimensionamento del sistema host per nodo*
@@ -32,19 +32,23 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 |===
 
 
-| *Tipo di distribuzione* | *CPU* | *Memoria (GB)* 
+| *Tipo di distribuzione* | *CPU* | *Memoria (GB)* | *Spazio su disco (GB) con thick provisioning* 
 
 
-| Piccolo (S) | 8 | 16 
+| Non ha piccolo | 9 | 18 | 350 
 
 
-| Medio (M) | 12 | 24 
+| Terreno non ha | 13 | 26 | 350 
 
 
-| Grande (L) | 16 | 32 
+| HA piccolo | 27 | 54 | 1050 
+
+
+| HA medio | 39 | 78 | 1050 
+
+
+| HA grande | 51 | 102 | 1050 
 |===
-Per ulteriori informazioni, consultare la sezione _limiti di configurazione per l'implementazione degli strumenti ONTAP per VMware vSphere_ riportata di seguito.
-
 
 
 == Requisiti minimi di archiviazione e applicazione
@@ -53,7 +57,7 @@ Per ulteriori informazioni, consultare la sezione _limiti di configurazione per 
 | Storage, host e applicazioni | Requisiti minimi di versione 
 
 
-| ONTAP | Ultima versione delle patch di ONTAP 9.12,1, 9.13.1, 9.14.1 e 9.15.1. 
+| ONTAP | 9.14.1, 9.15.1 e 9.16.0. FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series e ASA R2. 
 
 
 | Host ESXi | ESXi 7.0.3 
@@ -65,7 +69,7 @@ Per ulteriori informazioni, consultare la sezione _limiti di configurazione per 
 | Provider VASA | 3,0 
 
 
-| Applicazione OVA | 10,2 
+| Applicazione OVA | 10,3 
 |===
 L'Interoperability Matrix Tool (IMT) contiene le informazioni più recenti sulle versioni supportate di ONTAP, vCenter Server, gli host ESXi e le applicazioni plug-in.
 
@@ -80,22 +84,22 @@ La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere
 |===
 
 
-| *Implementazione* | *Tipo* | *Numero di vVol* | *Numero di host* | *Tipo di protocollo* 
+| *Implementazione* | *Tipo* | *Numero di vVol* | *Numero di host* 
 
 
-| Implementazione semplice | Piccolo (S) | CIRCA 12K MB | 32 | NFS, iSCSI 
+| Non ha | Piccolo (S) | CIRCA 12K MB | 32 
 
 
-| Implementazione semplice | Medio (M) | CIRCA 24K MB | 64 | NFS, iSCSI 
+| Non ha | Medio (M) | CIRCA 24K MB | 64 
 
 
-| Alta disponibilità | Piccolo (S) | CIRCA 24K MB | 64 | NFS, iSCSI 
+| Alta disponibilità | Piccolo (S) | CIRCA 24K MB | 64 
 
 
-| Alta disponibilità | Medio (M) | circa 50k mb | 128 | NFS, iSCSI 
+| Alta disponibilità | Medio (M) | circa 50k mb | 128 
 
 
-| Alta disponibilità | Grande (L) | circa 100k mb | 256 [NOTA] il numero di host nella tabella mostra il numero totale di host da più vCenter. | NFS, iSCSI 
+| Alta disponibilità | Grande (L) | circa 100k mb | 256 [NOTA] il numero di host nella tabella mostra il numero totale di host da più vCenter. 
 |===
 Per informazioni dettagliate sui requisiti di dimensionamento del sistema host per nodo, fare riferimento alla link:../deploy/prerequisites.html["Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere"].
 
@@ -143,22 +147,70 @@ Per ulteriori informazioni, fare riferimento a https://docs.vmware.com/en/VMware
 
 
 
+== Requisiti delle porte
+
+Nella tabella seguente sono descritte le porte di rete utilizzate da NetApp e le relative finalità. Assicurarsi che queste porte siano aperte e accessibili per facilitare il corretto funzionamento e la comunicazione all'interno del sistema. Verificare che siano state configurate le configurazioni di rete necessarie per consentire il corretto funzionamento del traffico su queste porte per i servizi associati. A seconda dei criteri di protezione in uso, potrebbe essere necessario configurare firewall o altri dispositivi di protezione per consentire questo traffico all'interno della rete.
+
+|===
+
+
+| *Porta* | *Descrizione* 
+
+
+| 22 (TCP) | Ansible utilizza questa porta SSH per la comunicazione durante il provisioning del cluster. Questa porta è necessaria per funzionalità come la modifica della password utente di manutenzione, i messaggi di stato e per aggiornare i valori su tutti e tre i nodi in caso di configurazione ha. 
+
+
+| 443 (TCP) | Questa è la porta pass-through per le comunicazioni in entrata per il servizio del provider VASA. Il certificato autofirmato del provider VASA e il certificato CA personalizzato sono ospitati su questa porta. 
+
+
+| 8443 (TCP) | Questa porta ospita la documentazione API tramite swagger e l'applicazione dell'interfaccia utente di Manager. 
+
+
+| 2379 (TCP) | Questa è la porta predefinita per le richieste client, ad esempio Get, put, DELETE o Watch for keys nell'archivio valori chiavi etcd. 
+
+
+| 2380 (TCP) | Questa è la porta predefinita per la comunicazione server-server per il cluster etcd utilizzato per l'algoritmo di consenso raft su cui si basa etcd per la replica e la coerenza dei dati. 
+
+
+| 7472 (TCP+UDP) | Questa è la porta di servizio delle metriche prometheus. 
+
+
+| 7946 (TCP+UDP) | Questa porta viene utilizzata per il rilevamento della rete dei container del docker. 
+
+
+| 9083 (TCP) | Questa porta è una porta di servizio utilizzata internamente per il servizio di provider VASA. 
+
+
+| 1162 (UDP) | Questa è la porta dei pacchetti trap SNMP. 
+
+
+| 6443 (TCP) | Fonte: RKE2 nodi agenti. Destinazione: REK2 nodi server. Descrizione: API Kubernetes 
+
+
+| 9345 (TCP) | Fonte: RKE2 nodi agenti. Destinazione: REK2 nodi server. Descrizione: API supervisore REK2 
+
+
+| 8472 (TCP+UDP) | Tutti i nodi devono essere in grado di raggiungere gli altri nodi sulla porta UDP 8472 quando si utilizza VXLAN flanel. Fonte: Tutti e RKE2 i nodi. Destinazione: Tutti e REK2 i nodi. Descrizione: Canal CNI con VXLAN 
+
+
+| 10250 (TCP) | Fonte: Tutti e RKE2 i nodi. Destinazione: Tutti e REK2 i nodi. Descrizione: Kubelet metriche 
+
+
+| 30000-32767 (TCP) | Fonte: Tutti e RKE2 i nodi. Destinazione: Tutti e REK2 i nodi. Descrizione: Intervallo porta NodePort 
+
+
+| 123 (TCP) | Ntpd utilizza questa porta per eseguire la convalida del server ntp. 
+|===
+
+
 == Controlli pre-implementazione
 
 Prima di procedere con la distribuzione, accertarsi che siano presenti i seguenti elementi:
 
 * L'ambiente vCenter Server è configurato e configurato.
-* (Facoltativo) per l'utente di automazione - NetApp ha fornito Postman collezioni il file JSON è raccolto.
 * Le credenziali vCenter Server padre per la distribuzione dell'OVA sono state implementate.
-+
-
-NOTE: La password di vCenter Server padre non deve contenere questi caratteri speciali ($, ', ").
-
 * Si dispone delle credenziali di accesso per l'istanza di vCenter Server a cui si connetteranno gli strumenti ONTAP per VMware vSphere dopo la distribuzione, per la registrazione.
 * La cache del browser è stata eliminata.
-* Assicurati di disporre di tre indirizzi IP gratuiti per l'implementazione non ha: Un indirizzo IP gratuito per il bilanciamento del carico e un indirizzo IP gratuito per il piano di controllo Kubernetes e un indirizzo IP per il nodo. Per l'implementazione ha, insieme a questi tre indirizzi IP, saranno necessari altri due indirizzi IP per il secondo e il terzo nodo. I nomi host devono essere mappati agli indirizzi IP liberi sul DNS prima di assegnare le implementazioni ha e non ha. Tutti i cinque indirizzi IP nell'implementazione ha e i tre indirizzi IP nell'implementazione non ha devono trovarsi sulla stessa VLAN selezionata per l'implementazione.
-
-
+* Assicurati di disporre di tre indirizzi IP gratuiti per l'implementazione non ha: Un indirizzo IP gratuito per il bilanciamento del carico e un indirizzo IP gratuito per il piano di controllo Kubernetes e un indirizzo IP per il nodo. Per l'implementazione ha, insieme a questi tre indirizzi IP, saranno necessari altri due indirizzi IP per il secondo e il terzo nodo. I nomi host devono essere mappati agli indirizzi IP liberi sul DNS prima dell'assegnazione. Tutti e cinque gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
 * Assicurarsi che il nome di dominio su cui viene emesso il certificato sia mappato all'indirizzo IP virtuale in una distribuzione multi-vCenter in cui i certificati CA personalizzati sono obbligatori. _Nslookup_ viene eseguito un controllo sul nome di dominio per verificare se il dominio viene risolto all'indirizzo IP desiderato. I certificati devono essere creati con il nome di dominio e l'indirizzo IP dell'indirizzo IP del bilanciatore del carico.
-* Prima di installare gli strumenti ONTAP per VMware vSphere 10,2 nella configurazione non ha avanzata e ha, consultare l'articolo della Knowledge base: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA["Prerequisiti per la configurazione ha e avanzata non-ha"]
 

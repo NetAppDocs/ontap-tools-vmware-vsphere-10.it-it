@@ -2,8 +2,12 @@
 section: manage
 title: Gestire gli strumenti ONTAP
 entries:
-- title: Panoramica dei tool NetApp ONTAP per la dashboard dei plug-in di VMware vSphere
+- title: Panoramica dei tool ONTAP per la dashboard di VMware vSphere
   url: "/configure/dashboard-overview.html"
+- title: Interfaccia utente di ONTAP tools Manager
+  url: "/configure/manager-user-interface.html"
+- title: Modificare le impostazioni del dispositivo
+  url: "/manage/edit-appliance-settings.html"
 - title: Gestire i datastore
   entries:
   - title: Creare un datastore
@@ -34,8 +38,6 @@ entries:
   url: "/manage/manage-vcenter.html"
 - title: Gestire i certificati
   url: "/manage/certificate-manage.html"
-- title: Gestire gli igroup e i criteri di esportazione
-  url: "/manage/igroup-management.html"
 - title: Accedi ai tool ONTAP per la console di manutenzione di VMware vSphere
   entries:
   - title: Panoramica dei tool ONTAP per la console di manutenzione VMware vSphere
@@ -80,3 +82,5 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: Rimozione della protezione del cluster host
     url: "/manage/delete-hostcluster-protection.html"
+- title: RPO prossimo allo zero
+  url: "/manage/enable-backup.html"

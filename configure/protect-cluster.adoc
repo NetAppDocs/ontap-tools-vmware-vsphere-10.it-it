@@ -8,12 +8,9 @@ summary: I tool ONTAP per VMware vSphere gestiscono la protezione dei cluster di
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
-:firstname: [.lead]
-:author: [.lead]
-:authorinitials: [
-:authors: [.lead]
 
 
+[role="lead"]
 I tool ONTAP per VMware vSphere gestiscono la protezione dei cluster di host. Tutti i datastore appartenenti alla SVM selezionata e montati su uno o più host del cluster sono protetti in un cluster di host.
 
 .Prerequisiti
@@ -21,7 +18,7 @@ Assicurarsi che siano soddisfatti i seguenti prerequisiti:
 
 * Il cluster host contiene datastore provenienti da una sola SVM.
 * Il datastore montato sul cluster host non deve essere montato su nessun host esterno al cluster.
-* Tutti i datastore montati sul cluster host devono essere datastore VMFS con protocollo iSCSI/FC. Gli archivi dati VMFS con protocolli NVMe/FC e NVMe/TCP non sono supportati.
+* Tutti i datastore montati sul cluster host devono essere datastore VMFS con protocollo iSCSI/FC. I datastore vVol, NFS o VMFS con protocolli NVMe/FC e NVMe/TCP non sono supportati.
 * Gli archivi dati FlexVol/LUN Form montati sul cluster host non devono far parte di alcun gruppo di coerenza (CG) esistente.
 * Gli archivi dati FlexVol/LUN Forming montati sul cluster host non devono far parte di alcun rapporto SnapMirror esistente.
 * Il cluster host deve avere almeno un datastore.
@@ -45,7 +42,7 @@ Nel tipo di criterio AutomatedFailOverDuplex è presente una configurazione host
 
 . Se si sceglie di avere una configurazione host non uniforme, selezionare l'accesso host (origine/destinazione) per ogni host all'interno di quel cluster.
 . Selezionare *Aggiungi*.
-. Nella finestra *Protect cluster*, durante l'operazione di creazione, è supportata solo l'azione di eliminazione. È possibile eliminare e aggiungere nuovamente la protezione. Durante l'operazione di modifica della protezione del cluster host, è disponibile l'opzione di modifica. È possibile modificare o eliminare le relazioni utilizzando le opzioni del menu kebab.
+. Nella finestra *Protect cluster*, durante l'operazione di creazione, è supportata solo l'azione di eliminazione. È possibile eliminare e aggiungere nuovamente la protezione. Durante l'operazione di modifica della protezione del cluster host, è disponibile l'opzione di modifica. È possibile modificare o eliminare le relazioni utilizzando le opzioni del menu puntini di sospensione.
 . Selezionare il pulsante *Proteggi*.
 +
 Viene creata un'attività vCenter con i dettagli dell'ID lavoro e l'avanzamento viene visualizzato nel pannello attività recenti. Si tratta di un'attività asincrona, l'interfaccia utente mostra solo lo stato di inoltro della richiesta e non attende il completamento dell'attività.

@@ -22,3 +22,5 @@ entries:
   url: "/configure/associate-storage-backend.html"
 - title: Configurare l'accesso alla rete
   url: "/configure/configure-network-access.html"
+- title: Creare un datastore
+  url: "/configure/create-vvols-datastore.html"

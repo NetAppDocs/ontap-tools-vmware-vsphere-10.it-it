@@ -13,6 +13,9 @@ summary: 'L"azione Elimina archivio dati elimina il datastore quando non sono pr
 [role="lead"]
 L'azione Elimina archivio dati elimina il datastore quando non sono presenti vVol nel datastore selezionato.
 
+
+NOTE: L'operazione del datastore Shrink vVol non è supportata per il datastore vVol basato su ASA R2.
+
 .Fasi
 . Dalla home page del client vSphere, fare clic su *host e cluster*.
 . Nel riquadro di navigazione, selezionare il data center che contiene il datastore.
