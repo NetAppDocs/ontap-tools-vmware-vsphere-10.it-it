@@ -19,22 +19,24 @@ ONTAP Tools Manager aiuta a:
 * Gestione backend dello storage - Aggiungi e gestisci i cluster di storage ONTAP ai tool ONTAP per VMware vSphere e mappali alle istanze vCenter Server integrate a livello globale.
 * Download dei bundle di log: Raccolta dei file di log per gli strumenti ONTAP per VMware vSphere.
 * Gestione certificati - consente di modificare il certificato autofirmato in un certificato CA personalizzato e di rinnovare o aggiornare tutti i certificati del provider VASA e degli strumenti ONTAP.
-* Gestione password - Reimposta la password dell'applicazione OVA per l'utente.
+* Gestione password - consente di reimpostare la password dell'applicazione OVA dell'utente.
 
 
 Per accedere a Gestione strumenti ONTAP, avviare `\https://loadBalanceIP:8443/virtualization/ui/` Dal browser e accedi con gli strumenti ONTAP per le credenziali di amministratore di VMware vSphere fornite durante la distribuzione.
 
-La sezione Panoramica su ONTAP tools Manager aiuta a gestire la configurazione dell'appliance, come la gestione dei servizi, la scalabilità verticale delle dimensioni dei nodi e l'abilitazione ha (High Availability). Inoltre, puoi monitorare le informazioni generali sugli strumenti ONTAP relative ai nodi, come lo stato, i dettagli della rete e gli avvisi. image:../media/ontap-tools-manager-overview.png["Panoramica della dashboard di ONTAP Tools Manager"]
+La sezione Panoramica su ONTAP tools Manager aiuta a gestire la configurazione dell'appliance, come la gestione dei servizi, l'upscaling delle dimensioni dei nodi e l'abilitazione ha (High Availability). Puoi anche monitorare le informazioni generali dei tool ONTAP relativi ai nodi, come lo stato di salute, i dettagli di rete e gli avvisi.
+
+image:../media/ontap-tools-manager-overview.png["Panoramica della dashboard di ONTAP Tools Manager"]
 
 |===
 | *Carta* | *Descrizione* 
 
 
-| Scheda dell'appliance | La scheda dell'appliance fornisce lo stato generale dell'appliance ONTAP Tools. Mostra i dettagli di configurazione del dispositivo e lo stato dei servizi abilitati. Per ulteriori dettagli relativi all'appliance ONTAP Tools, fare clic sul collegamento *DETTAGLI*. Quando è in corso un processo di azione per l'impostazione del dispositivo di modifica, il portlet del dispositivo mostra lo stato e i dettagli del processo. 
+| Scheda dell'appliance | La scheda dell'appliance fornisce lo stato generale dell'appliance ONTAP Tools. Mostra i dettagli di configurazione del dispositivo e lo stato dei servizi abilitati. Per ulteriori informazioni sull'appliance ONTAP Tools, fare clic sul collegamento *Visualizza dettagli*. Quando è in corso un processo di azione di modifica delle impostazioni del dispositivo, il portlet del dispositivo mostra lo stato e i dettagli del processo. 
 
 
-| Scheda avvisi | La scheda Alert elenca gli alert dei tool ONTAP in base ai tipi, inclusi gli alert a livello di nodo ha. È possibile visualizzare l'elenco degli avvisi facendo clic sul testo del conteggio (collegamento ipertestuale). Il collegamento indirizza l'utente alla pagina di visualizzazione degli avvisi filtrata con il tipo selezionato. 
+| Scheda avvisi | La scheda Alerts elenca gli alert dei tool ONTAP in base al tipo, compresi gli alert a livello di nodo di ha. È possibile visualizzare l'elenco degli avvisi facendo clic sul testo del conteggio (collegamento ipertestuale). Il collegamento indirizza l'utente alla pagina di visualizzazione degli avvisi filtrata in base al tipo selezionato. 
 
 
-| Scheda nodi strumenti ONTAP | La scheda dei nodi dei tool ONTAP mostra l'elenco dei nodi con nome del nodo, nome della macchina virtuale del nodo, stato e tutti i dati relativi alla rete. È possibile fare clic su *DETTAGLI VISTA* per visualizzare i dettagli aggiuntivi relativi al nodo selezionato. [NOTA] in caso di setup non ha, viene visualizzato un solo nodo. In caso di ha, vengono mostrati tre nodi. 
+| Scheda nodi strumenti ONTAP | La scheda dei nodi dei tool ONTAP mostra l'elenco dei nodi con nome del nodo, nome della macchina virtuale del nodo, stato e tutti i dati relativi alla rete. È possibile fare clic su *Visualizza dettagli* per visualizzare i dettagli aggiuntivi relativi al nodo selezionato. [NOTA] in un setup non ha viene visualizzato un solo nodo. Nel setup ha sono mostrati tre nodi. 
 |===
