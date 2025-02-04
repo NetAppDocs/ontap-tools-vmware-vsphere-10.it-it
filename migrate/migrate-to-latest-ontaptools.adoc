@@ -244,3 +244,7 @@ In *conformità ai criteri di archiviazione VM*, è possibile visualizzare lo st
 Lo stato di conformità in *conformità ai criteri di archiviazione VM* è ora visualizzato come conforme.
 
 
+
+*Informazioni correlate*
+
+link:../upgrade/upgrade-ontap-tools.html["Aggiornamento dai tool ONTAP per VMware vSphere 10.x alla 10,3"]
