@@ -26,7 +26,7 @@ Eliminare l'attività del datastore dai tool ONTAP per VMware vSphere in vCenter
 Segui i passaggi riportati di seguito per eliminare il datastore NFS, VMFS o vVOL dagli strumenti ONTAP da vCenter Server:
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un datastore e selezionare *NetApp ONTAP tools* > *Elimina archivio dati*.
 +
 

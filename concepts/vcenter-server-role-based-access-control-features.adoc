@@ -55,7 +55,7 @@ Se si modificano i privilegi all'interno di un ruolo, l'utente associato a tale 
 
 Per semplificare l'utilizzo dei privilegi di vCenter Server e RBAC, i tool ONTAP per VMware vSphere forniscono tool ONTAP standard per i ruoli VMware vSphere che consentono di eseguire tool ONTAP chiave per i task VMware vSphere. Esiste anche un ruolo di sola lettura che consente di visualizzare le informazioni, ma non di eseguire attività.
 
-È possibile visualizzare gli strumenti ONTAP per i ruoli standard di VMware vSphere facendo clic su *ruoli* nella home page del client vSphere. I ruoli forniti dai tool ONTAP per VMware vSphere consentono di eseguire le seguenti attività:
+È possibile visualizzare gli strumenti ONTAP per i ruoli standard di VMware vSphere selezionando *ruoli* nella home page del client vSphere. I ruoli forniti dai tool ONTAP per VMware vSphere consentono di eseguire le seguenti attività:
 
 |===
 

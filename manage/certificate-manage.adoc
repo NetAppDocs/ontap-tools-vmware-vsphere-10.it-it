@@ -26,7 +26,7 @@ La scheda Strumenti di ONTAP mostra dettagli quali il tipo di certificato (autof
 
 *Fasi*
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *certificati* > *ONTAP tools* > *Rinnova* per rinnovare i certificati.
 +
@@ -56,7 +56,7 @@ I tool ONTAP per VMware vSphere vengono implementati con un certificato autofirm
 
 *Fasi*
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *certificati* > *Provider VASA* o *ONTAP tools* > *Rinnova* per rinnovare i certificati.
 . Per aggiornare il certificato autofirmato al certificato CA personalizzato, selezionare l'opzione *certificati* > *Provider VASA* o *Strumenti ONTAP* > *Aggiorna a CA*.

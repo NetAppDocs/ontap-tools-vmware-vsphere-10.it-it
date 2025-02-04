@@ -19,10 +19,10 @@ Questo task ti aiuta a creare la mappatura tra il back-end dello storage e l'ist
 
 *Fasi*
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona vCenter dalla barra laterale.
-. Fare clic sulle ellissi verticali sul vCenter che si desidera associare ai backend dello storage.
+. Seleziona i ellissi verticali sul vCenter da associare ai backend dello storage.
 . Selezionare il backend di archiviazione dal menu a discesa nella finestra a comparsa.
 . Selezionare l'opzione *Associa backend archiviazione* per associare l'istanza di vCenter Server al backend di archiviazione richiesto.
 

@@ -147,7 +147,7 @@ L'autenticazione di un client all'API REST viene eseguita utilizzando un token d
 * Le richieste API da un client devono includere il token nell' `x-auth`intestazione della richiesta.
 
 
-Vedere link:../automation/first-call.html["La prima chiamata API REST"] per un esempio di richiesta e utilizzo di un token di accesso.
+Fare riferimento alla link:../automation/first-call.html["La prima chiamata API REST"] per un esempio di richiesta e utilizzo di un token di accesso.
 
 
 

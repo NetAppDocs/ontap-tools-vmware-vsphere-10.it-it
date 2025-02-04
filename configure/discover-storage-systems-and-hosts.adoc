@@ -36,7 +36,7 @@ Gli strumenti ONTAP per VMware vSphere visualizzano una finestra di dialogo *Con
 "Questa azione riavvierà il rilevamento di tutti i sistemi di archiviazione connessi e potrebbe richiedere alcuni minuti. Vuoi continuare?"
 
 . Fare clic su *Sì*.
-. Selezionare i controller di archiviazione rilevati che hanno lo stato `Authentication Failure` e fare clic su *azioni* > *Modifica*.
+. Selezionare i controller di archiviazione rilevati che hanno lo stato `Authentication Failure` e selezionare *azioni* > *Modifica*.
 . Inserire le informazioni richieste nella finestra di dialogo *Modify Storage System* (Modifica sistema di storage).
 . Ripetere i passaggi 4 e 5 per tutti i controller storage con `Authentication Failure` stato.
 

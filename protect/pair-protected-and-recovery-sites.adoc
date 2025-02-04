@@ -21,16 +21,16 @@ summary: 'È necessario associare i siti protetti e di ripristino creati utilizz
 
 *Fasi*
 
-. Fare doppio clic su *Site Recovery* nella home page di vSphere Client e fare clic su *Sites*.
+. Fare doppio clic su *Site Recovery* nella home page di vSphere Client e selezionare *Sites*.
 . Fare clic su *oggetti* > *azioni* > *Associa siti*.
-. Nella finestra di dialogo *Pair Site Recovery Manager Servers*, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi fare clic su *Next*.
+. Nella finestra di dialogo *Associa server di Site Recovery Manager*, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi selezionare *Avanti*.
 . Nella sezione Select vCenter Server (Seleziona server vCenter), procedere come segue:
 +
 .. Verificare che vCenter Server del sito protetto venga visualizzato come candidato corrispondente per l'associazione.
-.. Immettere le credenziali amministrative SSO, quindi fare clic su *fine*.
+.. Immettere le credenziali amministrative SSO, quindi selezionare *fine*.
 
 
-. Se richiesto, fare clic su *Sì* per accettare i certificati di protezione.
+. Se richiesto, selezionare *Sì* per accettare i certificati di protezione.
 
 
 *Risultato*

@@ -21,48 +21,48 @@ Assicurarsi che il modello OVA fornito abbia la stessa versione OVA del primo no
 
 *Fasi*
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
-. Fare clic su *Modifica impostazioni appliance* nella sezione Panoramica.
-. Nella sezione *servizi* è possibile abilitare servizi opzionali come il provider VASA, l'importazione della configurazione vVol e il disaster recovery (SRA) in base alle proprie esigenze.
+. Selezionare *Modifica impostazioni appliance* nella sezione Panoramica.
+. Nella sezione *servizi*, è possibile abilitare servizi opzionali come il provider VASA, l'importazione della configurazione vVol e il disaster recovery (SRA) in base alle proprie esigenze.
 +
 Quando si abilitano i servizi per la prima volta, è necessario creare credenziali VASA Provider/SRA. Viene utilizzato per registrare o abilitare i servizi VASA Provider/SRA su vCenter Server.
 
 +
 
-NOTE: Per disattivare i servizi opzionali, verificare che nessun server vCenter gestito dagli strumenti ONTAP stia utilizzando questi servizi.
+NOTE: Per disattivare i servizi opzionali, assicurati che nessun server vCenter gestito dagli strumenti ONTAP li stia utilizzando.
 
 +
 *L'opzione Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio VASA Provider è abilitato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.x agli strumenti ONTAP 10,3.
 
-. Nella sezione *Configurazione* è possibile scalare le dimensioni di ogni nodo degli strumenti ONTAP e abilitare la configurazione ha in base alle proprie esigenze. Sono necessarie le credenziali vCenter Server per apportare eventuali modifiche.
+. Nella sezione *Configurazione*, è possibile scalare le dimensioni di ogni nodo degli strumenti ONTAP e abilitare la configurazione ha in base alle proprie esigenze. Sono necessarie le credenziali vCenter Server per apportare eventuali modifiche.
 +
-Quando gli strumenti ONTAP sono nella configurazione ha, puoi modificare i dettagli della libreria di contenuti. È necessario fornire nuovamente la password per l'invio di nuove modifiche.
+Quando gli strumenti ONTAP sono nella configurazione ha, puoi modificare i dettagli della libreria di contenuti. È necessario fornire nuovamente la password per la nuova modifica.
 
 +
 
-NOTE: Ti è consentito solo lo scale-up delle dimensioni del nodo di ONTAP Tools. Non è possibile ridimensionare il nodo dalla dimensione corrente a una dimensione inferiore. Per la configurazione massima non ha supportata è media. Per l'ha sono supportate le configurazioni di medie e grandi dimensioni.
+NOTE: Lo scale-up delle dimensioni del nodo di ONTAP Tools è consentito solo. Non è possibile ridurre le dimensioni del nodo dalla dimensione corrente a quella più piccola. La configurazione massima supportata per i sistemi non ha è media. Per l'ha sono supportate le configurazioni di medie e grandi dimensioni.
 
 . Utilizzare il pulsante di commutazione ha per abilitare la configurazione ha. Quando si sceglie la configurazione ha, viene visualizzata una pagina aggiuntiva *impostazioni ha* per gli input correlati ad ha.
 +
 ** La libreria di contenuti deve appartenere allo stesso vCenter Server in cui sono in esecuzione le macchine virtuali del nodo degli strumenti ONTAP. Le credenziali vCenter Server vengono utilizzate per convalidare e scaricare il modello OVA per le modifiche all'appliance.
-** Per consentire l'implementazione ha, la macchina virtuale che ospita i tool ONTAP non deve essere implementata direttamente su un host ESXi. Ma deve essere implementata in un cluster o in un pool di risorse.
+** Per abilitare l'implementazione ha, la macchina virtuale che ospita i tool ONTAP non deve essere implementata direttamente su un host ESXi. Ma deve essere implementata in un cluster o in un pool di risorse.
 ** Una volta attivata, non è possibile passare dalla configurazione ha alla configurazione a nodo singolo non ha.
 
 
 . Nella sezione *ha settings* della finestra *Edit Appliance Settings*, è possibile immettere i dettagli del nodo 2 e del nodo 3. Il nodo 1 è il nodo predefinito degli strumenti ONTAP implementato come parte dell'OVA. I tool ONTAP per VMware vSphere supportano tre nodi nel setup ha.
 +
 
-NOTE: La maggior parte delle opzioni di input sono precompilate con i dettagli della rete del nodo 1 per semplificare il flusso di lavoro. Tuttavia, è possibile modificare i dati di input prima di passare alla pagina finale della procedura guidata. Solo quando l'indirizzo IPv6 in è abilitato sul primo nodo, è possibile immettere i dettagli IPv6 per gli altri due nodi.
+NOTE: La maggior parte delle opzioni di input sono precompilate con i dettagli della rete del nodo 1 per semplificare il flusso di lavoro. Tuttavia, è possibile modificare i dati di input prima di passare alla pagina finale della procedura guidata. Solo quando l'indirizzo IPv6 è attivato sul primo nodo è possibile immettere i dettagli IPv6 per gli altri due nodi.
 
 +
 Assicurarsi che un host ESXi contenga solo una VM di strumenti ONTAP. I dati immessi vengono convalidati ogni volta che si passa alla finestra successiva.
 
-. Nella sezione *riepilogo* rivedere i dettagli e fare clic su *Salva* per applicare le modifiche.
+. Nella sezione *riepilogo*, rivedere i dettagli e selezionare *Salva* per applicare le modifiche.
 
 
-La pagina *Panoramica* mostra lo stato della distribuzione. È inoltre possibile tenere traccia dello stato del processo di modifica delle impostazioni del dispositivo dalla vista processi utilizzando l'ID processo.
+La pagina *Panoramica* mostra lo stato della distribuzione. Utilizzando l'ID lavoro, è anche possibile tenere traccia dello stato del lavoro di modifica delle impostazioni del dispositivo dalla vista processi.
 
-In caso di errore dell'implementazione ha e il nuovo stato dei nodi indica "New", elimina la nuova VM nel vCenter prima di riprovare l'operazione di ha.
+In caso di errore dell'implementazione ha e lo stato del nuovo nodo diventa "nuovo", elimina la nuova VM in vCenter prima di riprovare l'operazione di abilitazione ha.
 
 La scheda *Avvisi* sul pannello di sinistra elenca gli avvisi per gli strumenti ONTAP per VMware vSphere.

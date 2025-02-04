@@ -16,8 +16,8 @@ Se si dispone di più indirizzi IP dell'host ESXi, tutti gli indirizzi IP rileva
 È possibile scegliere di consentire alcuni indirizzi host ESXi specifici per l'operazione di montaggio del datastore. Se l'impostazione non viene fornita, il criterio di esportazione aggiunge tutti gli indirizzi IP rilevati nella fase di pre-montaggio. Se viene fornita l'impostazione, gli strumenti ONTAP per VMware vSphere aggiungono solo quelli che rientrano nell'intervallo o negli indirizzi IP elencati. Se nessuno degli indirizzi IP di un host appartiene agli indirizzi IP elencati, il montaggio su tale host non riesce.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
-. Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Nella pagina Collegamenti, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
 . Nel riquadro sinistro degli strumenti di ONTAP, selezionare *Impostazioni* > *Gestisci accesso alla rete* > *Modifica*.
 +
 Utilizzare una virgola (,) per separare gli indirizzi IP. È possibile specificare un indirizzo IP specifico, un intervallo di indirizzi IP o IPv6.

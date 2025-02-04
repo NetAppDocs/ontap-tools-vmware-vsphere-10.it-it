@@ -25,7 +25,7 @@ SRA supporta la gestione a livello di cluster e la gestione a livello di SVM. Ag
 
 *Fasi*
 
-. In VMware Live Site Recovery, fare clic su *Array Managers*, quindi su *Add Array Manager*.
+. In VMware Live Site Recovery, selezionare *Array Managers* > *Add Array Manager*.
 . Immettere le seguenti informazioni per descrivere l'array in VMware Live Site Recovery:
 +
 .. Immettere un nome per identificare il gestore array nel campo *Display Name*.
@@ -62,7 +62,7 @@ Ad esempio, se si desidera escludere il volume _src_vol1_ che si trova in una re
 
 
 . Fare clic su *Avanti*.
-. Verificare che l'array sia rilevato e visualizzato nella parte inferiore della finestra Add Array Manager (Aggiungi array) e fare clic su *Finish* (fine).
+. Verificare che l'array sia rilevato e visualizzato nella parte inferiore della finestra Add Array Manager (Aggiungi array) e selezionare *Finish* (fine).
 
 
 È possibile seguire gli stessi passaggi per il sito di ripristino utilizzando gli indirizzi IP e le credenziali di gestione SVM appropriati. Nella schermata Enable Array Pairs (Abilita coppie di array) della procedura guidata Add Array Manager (Aggiungi gestore array), verificare che sia selezionata la coppia di array corretta e che sia visualizzata come pronta per essere abilitata.

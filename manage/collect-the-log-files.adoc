@@ -18,7 +18,7 @@ NOTE: La generazione di log da ONTAP Tools Manager include tutti i log per tutte
 
 *Fasi*
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalanceIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *Log Bundle* dalla barra laterale.
 +
@@ -34,7 +34,7 @@ Scaricare il file tar.gz e inviarlo all'assistenza tecnica.
 Per generare il bundle di log utilizzando l'interfaccia utente del client vCenter, procedere come segue:
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Dalla home page di vSphere Client, andare a *supporto* > *pacchetto di registrazione* > *genera*.
 . Fornire l'etichetta del bundle di log e generare il bundle di log.
 È possibile visualizzare l'opzione di download quando vengono generati i file. Il download potrebbe richiedere del tempo.

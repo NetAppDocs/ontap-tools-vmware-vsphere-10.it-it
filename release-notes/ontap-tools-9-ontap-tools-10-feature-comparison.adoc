@@ -18,7 +18,7 @@ Scopri se la migrazione dai tool ONTAP per VMware vSphere 9 ai tool ONTAP per VM
 | Funzione | Strumenti ONTAP 9,13 | Strumenti ONTAP 10,1 | Attrezzi ONTAP da 10,2 in poi 
 
 
-| Proposta di valore chiave | Ottimizza e semplifica le operazioni quotidiane da 0 a 2 con funzionalità di sicurezza, conformità e automazione migliorate | Evoluzione degli strumenti ONTAP 10.x verso la parità 9.x e estensione dei limiti di high Availability, performance e scalabilità | Supporto esteso per includere FC per VMFS e vVol e NVMe-of/FC, NVMe-of/TCP solo per VMFS. Facilità di utilizzo per NetApp SnapMirror, semplice configurazione dei cluster di storage vSphere metro e supporto SRM a tre siti 
+| Proposta di valore chiave | Ottimizza e semplifica le operazioni quotidiane da 0 a 2 con funzionalità di sicurezza, conformità e automazione migliorate | Evoluzione degli strumenti ONTAP 10.x verso la parità 9.x e estensione dei limiti di high Availability, performance e scalabilità | Supporto esteso per includere FC per VMFS e vVol e NVMe-of/FC, NVMe-of/TCP solo per VMFS. Facilità di utilizzo per NetApp SnapMirror, semplice configurazione dei cluster di storage vSphere metro e supporto per il ripristino di tre siti VMware Live Site 
 
 
 | Qualifica delle release di ONTAP | Da ONTAP 9.9,1 a ONTAP 9.15,1 | Da ONTAP 9.12,1 a ONTAP 9.14,1 | Da ONTAP 9.12.1 a ONTAP 9.15.1 per gli strumenti ONTAP 10,2 ONTAP 9.14.1, 9.15.1 e 9.16.0 per gli strumenti ONTAP 10,3. 
@@ -36,7 +36,7 @@ Scopri se la migrazione dai tool ONTAP per VMware vSphere 9 ai tool ONTAP per VM
 | Osservabilità | Dashboard su performance, capacità e compliance host Report dinamici di VM e datastore | Dashboard aggiornate su performance, capacità e compliance dell'host Report dinamici di VM e datastore | Dashboard aggiornate su performance, capacità e compliance dell'host Report dinamici di VM e datastore 
 
 
-| Protezione dei dati | Replica SRA per replica basata su VMFS e NFS FlexVols per integrazione vVols SCV e interoperabile per il backup | Replica SRA per datastore iSCSI VMFS e NFS v3 | Replica SRA per archivi dati iSCSI VMFS e NFS v3 protezione su tre siti che combina SMAS e SRM. 
+| Protezione dei dati | Replica SRA per replica basata su VMFS e NFS FlexVols per integrazione vVols SCV e interoperabile per il backup | Replica SRA per datastore iSCSI VMFS e NFS v3 | Replica SRA per archivi dati iSCSI VMFS e NFS v3 protezione su tre siti che combina SMAS e VMware Live Site Recovery. 
 
 
 | Supporto provider VASA | VASA 4,0 | VASA 3,0 | VASA 3,0 

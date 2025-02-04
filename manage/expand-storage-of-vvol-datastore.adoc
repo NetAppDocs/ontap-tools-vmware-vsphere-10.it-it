@@ -18,9 +18,9 @@ NOTE: L'operazione del datastore Expand vVol non è applicabile al datastore vVo
 
 *Fasi*
 
-. Dalla home page del client vSphere, fare clic su *host e cluster*.
+. Dalla home page di vSphere Client, selezionare *host e cluster*.
 . Nel riquadro di navigazione, selezionare il data center che contiene il datastore.
 . Fare clic con il pulsante destro del mouse sul datastore e selezionare *Strumenti NetApp ONTAP* > *Aggiungi storage al datastore*.
 . Nella finestra *crea o Seleziona volumi*, è possibile creare nuovi volumi o scegliere tra quelli esistenti. L'interfaccia utente è autoesplicativa. Seguire le istruzioni a scelta.
-. Nella finestra *Riepilogo*, rivedere le selezioni e fare clic su *Espandi*. È possibile tenere traccia dell'avanzamento nel pannello attività recenti.
+. Nella finestra *Riepilogo*, rivedere le selezioni e selezionare *Espandi*. È possibile tenere traccia dell'avanzamento nel pannello attività recenti.
 

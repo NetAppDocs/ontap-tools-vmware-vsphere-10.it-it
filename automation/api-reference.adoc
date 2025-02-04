@@ -29,5 +29,5 @@ Il riferimento all'API REST dei tool ONTAP per VMware vSphere 10 contiene dettag
 +
 `\https://10.61.25.33:8443/`
 
-. Come esempio di una singola chiamata API, scorrere verso il basso fino alla categoria *vCenters* e fare clic su *GET* accanto all'endpoint `/virtualization/api/v1/vcenters`
+. Come esempio di una singola chiamata API, scorrere verso il basso fino alla categoria *vCenters* e selezionare *GET* accanto all'endpoint `/virtualization/api/v1/vcenters`
 

@@ -20,11 +20,11 @@ Il montaggio di un datastore fornisce accesso allo storage a host aggiuntivi (NF
 
 *Fasi*
 
-. Dalla home page del client vSphere, fare clic su *host e cluster*.
+. Dalla home page di vSphere Client, selezionare *host e cluster*.
 . Nel riquadro di navigazione, selezionare il data center che contiene l'host.
 . Ripetere il passaggio 2 per tutti gli host aggiuntivi.
 . Per montare i datastore NFS/VMFS su host o cluster host, fate clic con il pulsante destro del mouse su di esso e selezionate *NetApp ONTAP tools* > *Mount Datastores*.
-. Selezionare gli archivi dati che si desidera montare e fare clic su *Mount*.
+. Selezionare gli archivi dati che si desidera montare e selezionare *Mount*.
 
 
 È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.

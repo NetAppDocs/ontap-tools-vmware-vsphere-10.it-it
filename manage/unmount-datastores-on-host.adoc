@@ -15,7 +15,7 @@ L'azione del datastore smonta un datastore NFS o VMFS dagli host ESXi. L'azione 
 
 *Fasi*
 
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Fare clic con il pulsante destro del mouse su un oggetto datastore NFS o VMFS e selezionare *Unmount datastore*.
 +
 Viene visualizzata una finestra di dialogo che elenca gli host ESXi su cui è montato il datastore. Quando l'operazione viene eseguita su un archivio dati protetto, sullo schermo viene visualizzato un messaggio di avviso.

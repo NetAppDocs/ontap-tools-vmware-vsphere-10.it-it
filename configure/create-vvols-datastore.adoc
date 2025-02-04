@@ -38,7 +38,7 @@ A partire dai tool ONTAP per VMware vSphere 10,3, è possibile creare un datasto
 
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un data center e selezionare *NetApp ONTAP Tools* > *Create Datastore*.
 . Nel riquadro *tipo*, selezionare vVol in *tipo datastore*.
 . Nel riquadro *Nome e protocollo*, fornire le informazioni *Nome archivio dati* e *protocollo*.
@@ -52,7 +52,7 @@ NOTE: Il tipo di storage ASA R2 supporta solo iSCSI e il protocollo FC per vVol.
 NOTE: In SVM di tipo storage ASA R2, le unità storage (LUN/namespace) non vengono create in quanto il datastore è solo un container logico.
 
 . Nel riquadro *attributi archiviazione* è possibile creare nuovi volumi o utilizzare i volumi esistenti. Durante la creazione di un nuovo volume, puoi abilitare la QoS nel datastore. Questo passaggio non è applicabile ai datastore vVol che utilizzano il tipo di storage ONTAP ASA R2 poiché il datastore vVol non ha volumi di backup. Per impostazione predefinita, ogni richiesta di creazione LUN dovrebbe creare un volume.
-. Controllare la selezione nel riquadro *Riepilogo* e fare clic su *fine*. Il datastore vVols viene creato e montato su tutti gli host.
+. Controllare la selezione nel riquadro *Riepilogo* e selezionare *fine*. Il datastore vVols viene creato e montato su tutti gli host.
 
 
 --
@@ -61,7 +61,7 @@ NOTE: In SVM di tipo storage ASA R2, le unità storage (LUN/namespace) non vengo
 Un datastore NFS (Network file System) di VMware utilizza il protocollo NFS per connettere gli host ESXi a un dispositivo di storage condiviso in una rete. I datastore NFS sono comunemente utilizzati negli ambienti VMware vSphere e offrono diversi vantaggi, come semplicità e flessibilità.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Fare clic con il pulsante destro del mouse su un sistema host o un cluster host o un data center e selezionare *NetApp ONTAP tools* > *Create Datastore*.
 . Nel riquadro *Type*, selezionare NFS in *Datastore Type*.
 . Nel riquadro *Nome e protocollo*, immettere il nome del datastore, le dimensioni e le informazioni sul protocollo. Nelle opzioni avanzate, selezionare *Datastore cluster* e *autenticazione Kerberos*.
@@ -76,7 +76,7 @@ NOTE: L'autenticazione Kerberos è disponibile solo quando è selezionato il pro
 
 
 . Nel riquadro *attributi archiviazione*, selezionare l'aggregato per la creazione del volume. Nelle opzioni avanzate scegliere *Riserva spazio* e *attiva QoS* come richiesto.
-. Rivedere le selezioni nel riquadro *Riepilogo* e fare clic su *fine*.
+. Controllare le selezioni nel riquadro *Riepilogo* e selezionare *fine*.
 
 
 Il datastore NFS viene creato e montato su tutti gli host.
@@ -121,7 +121,7 @@ Per ulteriori informazioni sull'utilizzo del protocollo NVMe/FC con VMware vSphe
 Per ulteriori informazioni sull'utilizzo di NVMe/FC con VMware vSphere 7,0, consultare https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["Guida alla configurazione degli host NVMe/FC di ONTAP"] e http://www.netapp.com/us/media/tr-4684.pdf["TR-4684"].
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Fare clic con il pulsante destro del mouse su un sistema host o un cluster host o un datastore e selezionare *NetApp ONTAP Tools* > *Create Datastore*.
 . Nel riquadro *tipo*, selezionare VMFS in *tipo datastore*.
 . Nel riquadro *Nome e protocollo*, immettere il nome del datastore, le dimensioni e le informazioni sul protocollo. Se si sceglie di aggiungere il nuovo datastore a un cluster di datastore VMFS esistente, selezionare il selettore del cluster di datastore in *Opzioni avanzate*.
@@ -148,7 +148,7 @@ NOTE: Per la creazione di datastore VMFS con i protocolli NVMe/FC o NVMe/TCP non
 
 
 
-. Rivedere i dettagli del datastore nel riquadro *Riepilogo* e fare clic su *fine*.
+. Rivedere i dettagli del datastore nel riquadro *Riepilogo* e selezionare *fine*.
 
 
 

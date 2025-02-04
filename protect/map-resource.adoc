@@ -22,8 +22,8 @@ NOTE: In VMware Live Site Recovery, le risorse possono essere pool di risorse, h
 
 *Fasi*
 
-. Accedere a vCenter Server e fare clic su *Site Recovery* > *Sites*.
-. Selezionare il sito protetto e fare clic su *Gestisci*.
+. Accedere a vCenter Server e selezionare *Site Recovery* > *Sites*.
+. Selezionare il sito protetto e selezionare *Gestisci*.
 . Nella scheda Manage (Gestisci), selezionare *Resource Mapping*.
 . Fare clic su *nuovo* per creare una nuova mappatura delle risorse.
 +
@@ -31,10 +31,10 @@ Viene visualizzata la procedura guidata Create Resource Mapping.
 
 . Nella procedura guidata Create Resource Mapping (Crea mappatura risorse), eseguire le seguenti operazioni:
 +
-.. Selezionare *prepara automaticamente mappature per risorsa con nomi corrispondenti* e fare clic su *Avanti*.
-.. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e fare clic su *Aggiungi mappature*.
+.. Selezionare *prepara automaticamente mappature per risorsa con nomi corrispondenti* e selezionare *Avanti*.
+.. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e selezionare *Aggiungi mappature*.
 .. Fare clic su *Avanti* dopo aver creato correttamente le mappature.
-.. Selezionare l'oggetto utilizzato in precedenza per creare la mappatura inversa, quindi fare clic su *fine*.
+.. Selezionare l'oggetto utilizzato in precedenza per creare la mappatura inversa, quindi selezionare *fine*.
 
 
 

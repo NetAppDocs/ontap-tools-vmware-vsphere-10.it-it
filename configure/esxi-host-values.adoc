@@ -21,24 +21,21 @@ summary: È possibile impostare timeout e altri valori sugli host ESXi utilizzan
 
 Consente di impostare le impostazioni di timeout dell'HBA consigliate per i sistemi di archiviazione NetApp.
 
-* *Disk.QFullSampleSize*
-+
-Impostare questo valore su 32 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O.
-
-* *Disk.QFullThreshold*
-+
-Impostare questo valore su 8 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O.
-
-* *Timeout HBA FC Emulex*
-+
-Utilizzare il valore predefinito.
-
-* *Timeout HBA FC QLogic*
-+
-Utilizzare il valore predefinito.
+|===
+| Parametri | Impostare questo valore su... 
 
 
+| Disk.QFullSampleSize | 32 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O. 
 
+
+| Disk.QFullThreshold | 8 per tutte le configurazioni. L'impostazione di questo valore aiuta a prevenire gli errori di i/O. 
+
+
+| Timeout HBA FC Emulex | Valore predefinito. 
+
+
+| Timeout HBA FC QLogic | Valore predefinito. 
+|===
 
 
 == Impostazioni MPIO
@@ -51,36 +48,32 @@ Negli ambienti a performance elevate o quando si eseguono test delle performance
 
 == Impostazioni NFS
 
-* *Net.TcpipelHeapSize*
-+
-Impostare questo valore su 32.
-
-* *Net.TcpipelHeapMax*
-+
-Impostare questo valore su 1024 MB.
-
-* *NFS.MaxVolumes*
-+
-Impostare questo valore su 256.
-
-* *NFS41.MaxVolumes*
-+
-Impostare questo valore su 256.
-
-* *NFS.MaxQueueDepth*
-+
-Impostare questo valore su 128 o superiore per evitare colli di bottiglia in coda.
-
-* *NFS.HeartbeatMaxFailures*
-+
-Impostare questo valore su 10 per tutte le configurazioni NFS.
-
-* *NFS.HeartbeatFrequency*
-+
-Impostare questo valore su 12 per tutte le configurazioni NFS.
-
-* *NFS.HeartbeatTimeout*
-+
-Impostare questo valore su 5 per tutte le configurazioni NFS.
+|===
 
 
+| Parametro | Impostare questo valore su... 
+
+
+| NET.TcpipelHeapSize | 32 
+
+
+| NET.TcpipelHeapMax | 1024 MB 
+
+
+| NFS.MaxVolumes | 256 
+
+
+| NFS41.MaxVolumes | 256 
+
+
+| NFS.MaxQueueDepth | 128 o superiore 
+
+
+| NFS.HeartbeatMaxFailures | 10 
+
+
+| NFS.HeartbeatFrequency | 12 
+
+
+| NFS.HeartbeatTimeout | 5 
+|===

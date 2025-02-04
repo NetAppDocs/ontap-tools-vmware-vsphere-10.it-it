@@ -18,5 +18,5 @@ Quando si rimuove la protezione dei cluster di host, i datastore diventano non p
 +
 In questa pagina, puoi monitorare i cluster host protetti insieme al relativo stato di protezione, alla relazione SnapMirror e al relativo stato SnapMirror.
 
-. Nella finestra *protezione cluster host*, fare clic sul menu puntini di sospensione del cluster, quindi selezionare *Rimuovi protezione*.
+. Nella finestra *protezione cluster host*, selezionare il menu puntini di sospensione sul cluster, quindi selezionare *Rimuovi protezione*.
 

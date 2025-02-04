@@ -51,8 +51,8 @@ NOTE: Non eseguire la migrazione se il failover è stato appena completato e la 
 +
 .. Accedere alla pagina di gestione della configurazione di VMware Live Site Recovery
 .. Andare alla sezione *Storage Replication Adapter*
-.. Fare clic sul menu puntini di sospensione e selezionare *Reimposta configurazione*
-.. Fare clic sul menu puntini di sospensione e selezionare *Elimina*
+.. Selezionare il menu puntini di sospensione e selezionare *Reimposta configurazione*
+.. Selezionare il menu puntini di sospensione e selezionare *Elimina*
 +
 Eseguire queste operazioni sui siti di protezione e ripristino.
 
@@ -231,8 +231,6 @@ Dopo aver eseguito correttamente la migrazione e aver registrato gli strumenti O
 
 
 *Al termine*
-
-Dopo aver eseguito la migrazione da versioni precedenti degli strumenti ONTAP per VMware vSphere a 10,3, eseguire nuovamente la scansione degli adattatori SRA per verificare che i dettagli siano aggiornati nella pagina adattatori di replica dello storage per il ripristino dei siti live di VMware.
 
 Dopo l'aggiornamento, se lo stato di conformità della macchina virtuale non è aggiornato, riapplicare il criterio di archiviazione della macchina virtuale attenendosi alla seguente procedura:
 

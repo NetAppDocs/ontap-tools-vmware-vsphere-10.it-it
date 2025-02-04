@@ -15,19 +15,19 @@ summary: 'È possibile utilizzare la dashboard dei tool ONTAP per VMware vSphere
 
 *Cosa ti serve*
 
-Se si verifica un problema con le impostazioni dell'host ESXi, il problema viene visualizzato nel portlet dei sistemi host ESXi della dashboard. Fare clic sul problema per visualizzare il nome host o l'indirizzo IP dell'host ESXi che ha il problema.
+Se si verifica un problema con le impostazioni dell'host ESXi, il problema viene visualizzato nel portlet dei sistemi host ESXi della dashboard. È possibile selezionare il problema per visualizzare il nome host o l'indirizzo IP dell'host ESXi che presenta il problema.
 
 *Fasi*
 
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
-. Nella pagina dei collegamenti, fare clic su *NetApp ONTAP tools* nella sezione dei plug-in.
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Nella pagina Collegamenti, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
 . Accedere al portlet *ESXi host compliance* nella Panoramica (dashboard) degli strumenti ONTAP per il plug-in VMware vSphere.
 . Selezionare il collegamento *Applica impostazioni consigliate*.
-. Nella finestra *Apply Recommended host settings* (Applica impostazioni host consigliate), selezionare gli host che si desidera rispettare con le impostazioni dell'host consigliate da NetApp e fare clic su *Next* (Avanti).
+. Nella finestra *Apply Recommended host settings* (Applica impostazioni host consigliate), selezionare gli host che si desidera rispettare con le impostazioni dell'host consigliate da NetApp e selezionare *Next* (Avanti).
 +
 
 NOTE: È possibile espandere l'host ESXi per visualizzare i valori correnti.
 
 . Nella pagina delle impostazioni, selezionare i valori consigliati secondo necessità.
-. Nel riquadro di riepilogo, controllare i valori e fare clic su *fine*. È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.
+. Nel pannello di riepilogo, controllare i valori e selezionare *fine*. È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.
 

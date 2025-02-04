@@ -43,7 +43,7 @@ Il campo prodotto viene compilato automaticamente.
 Il campo *ruolo* viene compilato automaticamente in base alla capacità del prodotto selezionata.
 
 .. Immettere il nome utente e la password richiesti.
-.. Selezionare i privilegi (rilevamento, Crea archivio, Modifica archivio, archiviazione distrutta, ruolo NAS/SAN) richiesti per l'utente, quindi fare clic su *Aggiungi*.
+.. Selezionare il ruolo Privileges (rilevamento, creazione archivio, Modifica archivio, distruzione archivio, NAS/SAN) richiesto per l'utente, quindi selezionare *Aggiungi*.
 
 
 

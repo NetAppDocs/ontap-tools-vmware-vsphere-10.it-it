@@ -18,7 +18,7 @@ summary: È possibile gestire applicazioni, sistemi e configurazioni di rete uti
 
 NOTE: Impostare una password per `diag` utente durante l'attivazione della diagnostica remota.
 
-Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degli strumenti ONTAP per VMware vSphere distribuiti. Quando si fa clic su image:../media/launch-maintenance-console.gif["Pulsante Play (Riproduci)"], viene avviata la console di manutenzione.
+Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degli strumenti ONTAP per VMware vSphere distribuiti. Quando si seleziona image:../media/launch-maintenance-console.gif["Pulsante Play (Riproduci)"], viene avviata la console di manutenzione.
 
 |===
 

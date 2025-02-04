@@ -29,7 +29,7 @@ Se non si dispone già di una libreria di contenuti adatta, crearne una utilizza
 NOTE: Se si intende utilizzare solo una distribuzione con un singolo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
 
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sito di supporto NetApp"^] .
-. Accedere al client vSphere utilizzando `\https://vcenterip/ui`
+. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Selezionare i puntini di sospensione orizzontali accanto al client vSphere e selezionare *Libreria di contenuti*.
 . Selezionare *Crea* a destra della pagina.
 . Fornire un nome per la libreria e creare la libreria di contenuti.
@@ -55,20 +55,20 @@ NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Res
 
 NOTE: Non memorizzare mai tool ONTAP per macchine virtuali VMware vSphere su datastore vVol gestiti.
 
-. Selezionare il file OVA tramite l'URL per il file _.ova_ o navigare alla cartella in cui è stato salvato il file _.ova_, quindi fare clic su *Avanti*.
+. Selezionare il file OVA tramite l'URL per il file _.ova_ oppure selezionare la cartella in cui è stato salvato il file _.ova_, quindi selezionare *Avanti*.
 . Per implementare i tool ONTAP per VMware vSphere dall'archivio di contenuti:
 +
-.. Vai alla tua libreria di contenuti e fai clic sull'elemento della libreria che desideri distribuire.
-.. Fare clic su *azioni* > *Nuova VM da questo modello*
+.. Vai alla tua libreria di contenuti e seleziona l'elemento della libreria che desideri distribuire.
+.. Selezionare *azioni* > *Nuova VM da questo modello*
 
 
 . Nella finestra *Select a name and folder* for the virtual machine (Seleziona un nome e una cartella* per la macchina virtuale), immettere il nome della macchina virtuale e selezionare la posizione per la macchina virtuale. Se si seleziona la casella di controllo *Personalizza l'hardware di questa macchina virtuale*, viene attivata una procedura chiamata *Personalizza hardware* prima di raggiungere la finestra *Pronto per il completamento*.
-. Selezionare una risorsa di computer e fare clic su *Avanti*. Puoi scegliere di selezionare la casella di controllo per *accendere automaticamente la VM distribuita*.
-. Esaminare i dettagli del modello e fare clic su *Avanti*.
-. Leggere e accettare il contratto di licenza e fare clic su *Avanti*.
-. Selezionare lo spazio di archiviazione per la configurazione e i file del disco e fare clic su *Avanti*.
-. Selezionare la rete di destinazione per ciascuna rete di origine e fare clic su *Avanti*.
-. Nella finestra *Personalizza modello*, compilare i campi obbligatori e fare clic su *Avanti*.
+. Selezionare una risorsa di computer e selezionare *Avanti*. Puoi scegliere di selezionare la casella di controllo per *accendere automaticamente la VM distribuita*.
+. Esaminare i dettagli del modello e selezionare *Avanti*.
+. Leggere e accettare il contratto di licenza e selezionare *Avanti*.
+. Selezionare lo spazio di archiviazione per la configurazione e i file del disco e selezionare *Avanti*.
+. Selezionare la rete di destinazione per ciascuna rete di origine e selezionare *Avanti*.
+. Nella finestra *Personalizza modello*, compilare i campi obbligatori e selezionare *Avanti*.
 +
 ** Le informazioni qui fornite sono convalidate per i modelli corretti durante il processo di installazione. In caso di discrepanza, viene visualizzato un messaggio di errore sulla console Web e viene richiesto di correggere eventuali informazioni errate fornite.
 ** I nomi host devono essere costituiti da lettere maiuscole (A-Z), lettere minuscole (a-z), cifre (0-9) o dal trattino (-). Se si desidera configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.

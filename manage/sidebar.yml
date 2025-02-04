@@ -74,8 +74,6 @@ entries:
     url: "/manage/reset-app-password.html"
   - title: Reimpostare la password utente della console di manutenzione
     url: "/manage/reset-maint-password.html"
-- title: Pulire i volumi
-  url: "/manage/delete-deployment.html"
 - title: Gestire la protezione dei cluster di host
   entries:
   - title: Modifica della protezione dei cluster di host
@@ -84,3 +82,7 @@ entries:
     url: "/manage/delete-hostcluster-protection.html"
 - title: RPO prossimo allo zero
   url: "/manage/enable-backup.html"
+- title: Terminare la distribuzione degli strumenti ONTAP
+  url: "/manage/uninstall-deployment.html"
+- title: Pulire i volumi
+  url: "/manage/delete-deployment.html"
