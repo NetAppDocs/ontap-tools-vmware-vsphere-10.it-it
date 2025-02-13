@@ -22,5 +22,5 @@ Se si dispone di più indirizzi IP dell'host ESXi, tutti gli indirizzi IP rileva
 +
 Utilizzare una virgola (,) per separare gli indirizzi IP. È possibile specificare un indirizzo IP specifico, un intervallo di indirizzi IP o IPv6.
 
-. Fare clic su *Save* (Salva).
+. Selezionare *Salva*.
 

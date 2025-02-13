@@ -54,9 +54,7 @@ Impostare un valore alto (ad esempio: 99999)
 |===
 Attivare anche il `StorageProvider.autoResignatureMode` opzione.
 
-Per ulteriori informazioni sulla modifica delle impostazioni del provider di storage, consultare la documentazione di VMware.
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Documentazione VMware vSphere: Modifica delle impostazioni dello Storage Provider"]
+Per ulteriori informazioni sulla modifica delle impostazioni del provider di archiviazione, fare riferimento alla https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-provider-settings.html["Modificare le impostazioni del provider di storage"] .
 
 
 
@@ -67,6 +65,4 @@ Quando si preme un timeout, aumentare i valori di `storage.commandTimeout` e. `s
 
 NOTE: L'intervallo di timeout specificato è il valore massimo. Non è necessario attendere il raggiungimento del timeout massimo. La maggior parte dei comandi termina entro l'intervallo di timeout massimo impostato.
 
-Per ulteriori informazioni, consultare la documentazione VMware sulla modifica delle impostazioni del provider SAN.
-
-https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Documentazione di VMware Site Recovery Manager: Modifica delle impostazioni di storage"]
+Per modificare le impostazioni dei provider SAN, consultare la sezione https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Modificare le impostazioni di archiviazione"].

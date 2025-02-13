@@ -25,8 +25,7 @@ Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual 
 ** 348 GB per installazioni con thick provisioning
 
 
-* *Requisiti di dimensionamento del sistema host per nodo*
-La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo, è illustrata nella tabella seguente:
+* *Requisiti di dimensionamento del sistema host* la memoria consigliata in base alle dimensioni di distribuzione è illustrata nella tabella seguente:
 
 
 |===
@@ -41,13 +40,13 @@ La memoria consigliata, in base alle dimensioni dell'implementazione e per nodo,
 | Terreno non ha | 13 | 26 | 350 
 
 
-| HA piccolo | 27 | 54 | 1050 
+| HA Small (cumulativo di tre nodi) | 27 | 54 | 1050 
 
 
-| HA medio | 39 | 78 | 1050 
+| Supporto HA (cumulativo di tre nodi) | 39 | 78 | 1050 
 
 
-| HA grande | 51 | 102 | 1050 
+| HA Large (cumulativo di tre nodi) | 51 | 102 | 1050 
 |===
 
 
@@ -143,7 +142,7 @@ La tabella seguente mostra il numero di VMware Live Site Recovery e i corrispond
 
 | Più di 8 | Grande 
 |===
-Per ulteriori informazioni, fare riferimento a https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html["Limiti operativi di VMware Live Site Recovery"].
+Per ulteriori informazioni, fare riferimento a https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html["Limiti operativi di VMware Live Site Recovery"].
 
 
 

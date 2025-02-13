@@ -13,18 +13,15 @@ summary: 'È necessario configurare un datastore segnaposto in modo che conservi
 [role="lead"]
 È necessario configurare un datastore segnaposto in modo che conservi un posto nell'inventario vCenter nel sito di ripristino per la macchina virtuale protetta (VM). Non è necessario che l'archivio dati segnaposto sia grande, in quanto le macchine virtuali segnaposto sono piccole e utilizzano solo poche centinaia o meno di kilobyte.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario aver collegato i siti protetti e di ripristino.
 * È necessario configurare le mappature delle risorse.
 
 
-*Fasi*
-
+.Fasi
 . Accedere a vCenter Server e selezionare *Site Recovery* > *Sites*.
 . Selezionare il sito protetto e selezionare *Gestisci*.
-. Nella scheda Manage (Gestisci), selezionare *Placeholder Datastore*.
-. Fare clic su *nuovo* per creare un nuovo archivio dati segnaposto.
+. Selezionare *segnaposto datastore* > *nuovo* nella scheda Gestisci per creare un nuovo archivio dati segnaposto.
 . Selezionare l'archivio dati appropriato e selezionare *OK*.
 +
 

@@ -19,8 +19,7 @@ I tool ONTAP per VMware vSphere controllano e impostano le impostazioni di multi
 
 A seconda della configurazione e del carico di sistema, questo processo potrebbe richiedere molto tempo. L'avanzamento dell'attività viene visualizzato nel pannello Recent Tasks (attività recenti).
 
-*Fasi*
-
+.Fasi
 . Dalla home page del client Web VMware vSphere, selezionare *host e cluster*.
 . Fare clic con il pulsante destro del mouse su un host e selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
 . Nella pagina dei collegamenti del client Web VMware vSphere, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.

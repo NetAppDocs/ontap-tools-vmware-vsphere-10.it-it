@@ -17,8 +17,7 @@ Aggiungi le istanze di vCenter Server ai tool ONTAP per VMware vSphere per confi
 
 Attraverso l'integrazione con vCenter, gli strumenti ONTAP ti consentono di eseguire task di storage come provisioning, snapshot e data Protection direttamente dal client vSphere, eliminando la necessità di passare a console di gestione dello storage separate.
 
-*Fasi*
-
+.Fasi
 . Aprire un browser Web e accedere all'URL: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *vCenters* > *Add* per integrare le istanze di vCenter Server. Fornisci l'indirizzo IP vCenter o il nome host, il nome utente, la password e i dettagli della porta.

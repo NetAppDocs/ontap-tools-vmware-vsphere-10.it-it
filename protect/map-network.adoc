@@ -21,29 +21,22 @@ summary: È necessario mappare le reti nel sito protetto e nel sito di ripristin
 * Datastore segnaposto
 
 
-*Cosa ti serve*
-
+.Prima di iniziare
 È necessario aver collegato i siti protetti e di ripristino.
 
-*Fasi*
-
+.Fasi
 . Accedere a vCenter Server e selezionare *Site Recovery* > *Sites*.
 . Selezionare il sito protetto e selezionare *Gestisci*.
-. Nella scheda Manage (Gestisci), selezionare *Network Mappings* (Mapping di rete).
-. Fare clic su *nuovo* per creare una nuova mappatura di rete.
-+
-Viene visualizzata la procedura guidata Create Network Mapping.
-
-. Nella procedura guidata Create Network Mapping (Crea mappatura di rete), eseguire le seguenti operazioni:
+. Selezionare *mappature di rete* > *nuovo* nella scheda Gestisci per creare una nuova mappatura di rete.
+. Nella procedura guidata Crea mappatura di rete, effettuare le seguenti operazioni:
 +
 .. Selezionare *prepara automaticamente mappature per reti con nomi corrispondenti* e selezionare *Avanti*.
 .. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e selezionare *Aggiungi mappature*.
-.. Fare clic su *Avanti* dopo aver creato correttamente le mappature.
+.. Selezionare *Avanti* dopo aver creato correttamente le mappature.
 .. Selezionare l'oggetto utilizzato in precedenza per creare la mappatura inversa, quindi selezionare *fine*.
 
 
 
 
-*Risultato*
-
+.Risultato
 La pagina Network Mappings (Mapping di rete) visualizza le risorse protette del sito e le risorse del sito di ripristino. È possibile seguire la stessa procedura per le altre reti del proprio ambiente.

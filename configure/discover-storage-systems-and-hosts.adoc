@@ -13,8 +13,7 @@ summary: Quando si eseguono per la prima volta i tool ONTAP per VMware vSphere i
 [role="lead"]
 Quando si eseguono per la prima volta i tool ONTAP per VMware vSphere in un client vSphere, i tool ONTAP rilevano gli host ESXi, le loro LUN e le esportazioni NFS e i sistemi storage NetApp che gestiscono tali LUN ed esportazioni.
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * Tutti gli host ESXi devono essere accesi e connessi.
 * Tutte le Storage Virtual Machine (SVM) da rilevare devono essere in esecuzione e ogni nodo del cluster deve avere almeno una LIF dati configurata per il protocollo storage in uso (NFS o iSCSI).
 
@@ -25,17 +24,12 @@ Quando si eseguono per la prima volta i tool ONTAP per VMware vSphere in un clie
 
 Durante il rilevamento dei sistemi storage, i tool di ONTAP per VMware vSphere raccolgono informazioni dagli host ESXi gestiti dall'istanza di vCenter Server.
 
-*Fasi*
-
+.Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
 . Fare clic con il pulsante destro del mouse sul data center desiderato e selezionare *NetApp ONTAP tools* > *Update host Data* (Strumenti * > Aggiorna dati host).
 +
-Gli strumenti ONTAP per VMware vSphere visualizzano una finestra di dialogo *Conferma* con il seguente messaggio:
+Nella finestra di dialogo *Conferma*, confermare la scelta.
 
-+
-"Questa azione riavvierà il rilevamento di tutti i sistemi di archiviazione connessi e potrebbe richiedere alcuni minuti. Vuoi continuare?"
-
-. Fare clic su *Sì*.
 . Selezionare i controller di archiviazione rilevati che hanno lo stato `Authentication Failure` e selezionare *azioni* > *Modifica*.
 . Inserire le informazioni richieste nella finestra di dialogo *Modify Storage System* (Modifica sistema di storage).
 . Ripetere i passaggi 4 e 5 per tutti i controller storage con `Authentication Failure` stato.

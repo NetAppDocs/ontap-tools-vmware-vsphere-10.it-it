@@ -45,8 +45,7 @@ Assicurarsi di aver importato l'OVA nella libreria di contenuti.
 
 NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Resource Scheduler) del cluster sull'inventario su 'Conservative' durante l'installazione degli strumenti ONTAP. In questo modo si garantisce che le VM non vengano migrate durante l'installazione.
 
-*Fasi*
-
+.Fasi
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo in quanto è possibile eseguire la distribuzione direttamente dalla libreria di contenuti.
 . Accedere al server vSphere.
 . Passare al pool di risorse creato, al cluster o all'host in cui si desidera distribuire l'OVA.

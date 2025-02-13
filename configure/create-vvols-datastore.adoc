@@ -62,7 +62,7 @@ Un datastore NFS (Network file System) di VMware utilizza il protocollo NFS per 
 
 .Fasi
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
-. Fare clic con il pulsante destro del mouse su un sistema host o un cluster host o un data center e selezionare *NetApp ONTAP tools* > *Create Datastore*.
+. Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un data center e selezionare *NetApp ONTAP Tools* > *Create Datastore*.
 . Nel riquadro *Type*, selezionare NFS in *Datastore Type*.
 . Nel riquadro *Nome e protocollo*, immettere il nome del datastore, le dimensioni e le informazioni sul protocollo. Nelle opzioni avanzate, selezionare *Datastore cluster* e *autenticazione Kerberos*.
 +
@@ -100,9 +100,9 @@ NOTE: VMware vSphere 7,0 U3 e le versioni successive supportano il protocollo NV
 
 .. Verificare se il vendor della scheda di interfaccia di rete (NIC) supporta ESXi NIC con protocollo NVMe/TCP.
 .. Configurare la scheda di rete ESXi per NVMe/TCP in base alle specifiche del fornitore della scheda di rete.
-.. Quando si utilizza VMware vSphere 7 release, seguire le istruzioni sul sito VMware https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D047AFDD-BC68-498B-8488-321753C408C2.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2["Configurare il binding VMkernel per NVMe over TCP Adapter"] per configurare il binding della porta NVMe/TCP. Quando si utilizza VMware vSphere 8 release, seguire https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-5F776E6E-62B1-445D-854C-BEA689DD4C92.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2["Configurazione di NVMe su TCP su ESXi"], per configurare il binding della porta NVMe/TCP.
-.. Per VMware vSphere 7 release, seguire le istruzioni sul sito VMware https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E.html["Abilita gli adattatori software NVMe su RDMA o NVMe su TCP"] per configurare gli adattatori software NVMe/TCP. Per la release di VMware vSphere 8, seguire https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F4B42510-9E6D-4446-816A-5012866E0038.html#GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E["Aggiunta di adattatori software NVMe su RDMA o NVMe su TCP"] questa procedura per configurare gli adattatori software NVMe/TCP.
-.. Eseguire link:../configure/discover-storage-systems-and-hosts.html["Rilevamento di host e sistemi storage"] l'azione sull'host ESXi. Per ulteriori informazioni, fare riferimento a. https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Come configurare NVMe/TCP con vSphere 8,0 Update 1 e ONTAP 9.13,1 per datastore VMFS"]
+.. Quando si utilizza VMware vSphere 7 release, seguire le istruzioni sul sito VMware https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html["Configurare il binding VMkernel per NVMe over TCP Adapter"] per configurare il binding della porta NVMe/TCP. Quando si utilizza VMware vSphere 8 release, seguire https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html["Configurazione di NVMe su TCP su ESXi"], per configurare il binding della porta NVMe/TCP.
+.. Per VMware vSphere 7 release, seguire le istruzioni a pagina https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Abilita gli adattatori software NVMe su RDMA o NVMe su TCP"] per configurare gli adattatori software NVMe/TCP. Per la release di VMware vSphere 8, seguire https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html["Aggiunta di adattatori software NVMe su RDMA o NVMe su TCP"] questa procedura per configurare gli adattatori software NVMe/TCP.
+.. Eseguire link:../configure/discover-storage-systems-and-hosts.html["Rilevamento di host e sistemi storage"] l'azione sull'host ESXi. Per ulteriori informazioni, fare riferimento a https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429["Come configurare NVMe/TCP con vSphere 8,0 Update 1 e ONTAP 9.13,1 per datastore VMFS"].
 
 
 * Se si utilizza il protocollo NVME/FC, attenersi alla seguente procedura per configurare l'host ESXi:
@@ -122,12 +122,12 @@ Per ulteriori informazioni sull'utilizzo di NVMe/FC con VMware vSphere 7,0, cons
 
 .Fasi
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
-. Fare clic con il pulsante destro del mouse su un sistema host o un cluster host o un datastore e selezionare *NetApp ONTAP Tools* > *Create Datastore*.
-. Nel riquadro *tipo*, selezionare VMFS in *tipo datastore*.
-. Nel riquadro *Nome e protocollo*, immettere il nome del datastore, le dimensioni e le informazioni sul protocollo. Se si sceglie di aggiungere il nuovo datastore a un cluster di datastore VMFS esistente, selezionare il selettore del cluster di datastore in *Opzioni avanzate*.
-. Selezionare Storage VM nel riquadro *Storage*. Specificare il nome del gruppo *personalizzato iniziatore* nella sezione *Opzioni avanzate* del riquadro (facoltativo). È possibile scegliere un igroup esistente per l'archivio dati o creare un nuovo igroup con un nome personalizzato.
+. Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un data center e selezionare *NetApp ONTAP Tools* > *Create Datastore*.
+. Selezionare il tipo di datastore VMFS.
+. Immettere il nome del datastore, le dimensioni e le informazioni sul protocollo nel riquadro *Nome e protocollo*. Se si sceglie di aggiungere il nuovo datastore a un cluster di datastore VMFS esistente, selezionare il selettore del cluster di datastore in *Opzioni avanzate*.
+. Selezionare Storage VM nel riquadro *Storage*. Specificare il nome del gruppo *personalizzato iniziatore* nella sezione *Opzioni avanzate* del riquadro (facoltativo). È possibile scegliere un igroup esistente per il datastore o creare un nuovo igroup con un nome personalizzato.
 +
-Quando si seleziona il protocollo come NVMe/FC o NVMe/TCP, viene creato un nuovo sottosistema di namespace e utilizzato per la mappatura dei namespace. Per impostazione predefinita, il sottosistema dello spazio dei nomi viene creato utilizzando il nome generato automaticamente che include il nome del datastore. È possibile rinominare il sottosistema dello spazio dei nomi nel campo *nome sottosistema dello spazio dei nomi personalizzato* nelle opzioni avanzate del riquadro *Storage*.
+Quando si seleziona il protocollo come NVMe/FC o NVMe/TCP, viene creato un nuovo sottosistema di namespace e utilizzato per la mappatura dei namespace. Per impostazione predefinita, il sottosistema dello spazio dei nomi viene creato utilizzando il nome generato automaticamente, compreso il nome del datastore. È possibile rinominare il sottosistema dello spazio dei nomi nel campo *nome sottosistema dello spazio dei nomi personalizzato* delle opzioni avanzate del riquadro *Storage*.
 
 . Dal riquadro *attributi di archiviazione*:
 +
@@ -136,15 +136,15 @@ Quando si seleziona il protocollo come NVMe/FC o NVMe/TCP, viene creato un nuovo
 
 NOTE: Per i sistemi di storage ASA R2, l'opzione *aggregato* non è necessaria poiché lo storage ASA R2 è uno storage disaggregato. Scegliendo ASA R2 tipo SVM, nella pagina degli attributi dello storage vengono visualizzate le opzioni per l'abilitazione della qualità del servizio.
 
-.. Secondo il protocollo selezionato, viene creata un'unità di storage (LUN/namespace) con riserva di spazio di tipo Thin.
-.. Selezionare *Usa volume esistente* e *attiva QoS* come richiesto e fornire i dettagli come richiesto.
+.. Secondo il protocollo selezionato, viene creata un'unità di storage (LUN/namespace) con una riserva di spazio di tipo Thin.
+.. Selezionare *Usa volume esistente*, *attiva QoS* come richiesto e fornire i dettagli come richiesto.
 +
 
-NOTE: Nel tipo di storage ASA R2, la creazione o la selezione del volume non è applicabile per la creazione di unità di storage (LUN/namespace), pertanto queste opzioni non vengono visualizzate.
+NOTE: Nel tipo di storage ASA R2, la creazione o la selezione del volume non è applicabile per la creazione di unità di storage (LUN/namespace). Pertanto, queste opzioni non sono mostrate.
 
 +
 
-NOTE: Per la creazione di datastore VMFS con i protocolli NVMe/FC o NVMe/TCP non puoi utilizzare il volume esistente, devi creare un nuovo volume.
+NOTE: Per la creazione di datastore VMFS con protocollo NVMe/FC o NVMe/TCP, non puoi utilizzare il volume esistente, devi creare un nuovo volume.
 
 
 

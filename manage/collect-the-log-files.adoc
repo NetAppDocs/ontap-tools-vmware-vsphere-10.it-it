@@ -16,8 +16,7 @@ summary: 'È possibile raccogliere i file di log per gli strumenti ONTAP per VMw
 
 NOTE: La generazione di log da ONTAP Tools Manager include tutti i log per tutte le istanze di vCenter Server. La generazione di log dall'interfaccia utente del client vCenter è prevista per vCenter Server selezionato.
 
-*Fasi*
-
+.Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *Log Bundle* dalla barra laterale.

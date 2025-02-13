@@ -13,16 +13,14 @@ summary: 'È necessario associare i siti protetti e di ripristino creati utilizz
 [role="lead"]
 È necessario associare i siti protetti e di ripristino creati utilizzando il client vSphere per consentire l'individuazione dei sistemi di storage mediante Storage Replication Adapter (SRA).
 
-*Cosa ti serve*
-
+.Prima di iniziare
 * È necessario che VMware Live Site Recovery sia installato sui siti protetti e di ripristino.
 * È necessario che SRA sia installato nei siti protetti e di ripristino.
 
 
-*Fasi*
-
+.Fasi
 . Fare doppio clic su *Site Recovery* nella home page di vSphere Client e selezionare *Sites*.
-. Fare clic su *oggetti* > *azioni* > *Associa siti*.
+. Selezionare *oggetti* > *azioni* > *abbina siti*.
 . Nella finestra di dialogo *Associa server di Site Recovery Manager*, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi selezionare *Avanti*.
 . Nella sezione Select vCenter Server (Seleziona server vCenter), procedere come segue:
 +
@@ -33,6 +31,5 @@ summary: 'È necessario associare i siti protetti e di ripristino creati utilizz
 . Se richiesto, selezionare *Sì* per accettare i certificati di protezione.
 
 
-*Risultato*
-
+.Risultato
 I siti protetti e di ripristino vengono visualizzati nella finestra di dialogo oggetti.

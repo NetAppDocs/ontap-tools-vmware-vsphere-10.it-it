@@ -54,7 +54,7 @@ Utilizzare questa procedura per proteggere gli archivi dati o gli host appena ag
 
 NOTE: In caso di relazione di tipo asincrono, l'azione di modifica non è supportata in quanto non è possibile aggiungere la SVM di destinazione per il terzo sito alla stessa istanza dei tool ONTAP. Tuttavia, puoi utilizzare il System Manager o l'interfaccia a riga di comando della SVM di destinazione per modificare la configurazione della relazione.
 
-. Fare clic su *Salva* dopo aver apportato le modifiche necessarie.
+. Selezionare *Salva* dopo aver apportato le modifiche necessarie.
 . Le modifiche sono visibili nella finestra *Proteggi cluster*.
 
 
@@ -74,8 +74,10 @@ Viene creata un'attività vCenter ed è possibile tenere traccia dell'avanzament
 
 . Selezionare *Aggiungi relazione*.
 . Aggiungere una nuova relazione come tipo di criterio *Asynchronous* o *AutomatedFailOverDuplex*.
-. Fare clic su *Protect* (protezione).
-. Le modifiche sono visibili nella finestra *Proteggi cluster*.
+. Selezionare *Proteggi*.
++
+Le modifiche sono visibili nella finestra *Proteggi cluster*.
+
 
 
 Viene creata un'attività vCenter ed è possibile tenere traccia dell'avanzamento nel pannello *attività recente*.

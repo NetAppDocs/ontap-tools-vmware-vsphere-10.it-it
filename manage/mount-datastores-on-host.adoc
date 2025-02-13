@@ -18,8 +18,7 @@ Il montaggio di un datastore fornisce accesso allo storage a host aggiuntivi (NF
 * Il datastore mount è disattivato quando il cluster di host è protetto con configurazioni uniformi.
 
 
-*Fasi*
-
+.Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
 . Nel riquadro di navigazione, selezionare il data center che contiene l'host.
 . Ripetere il passaggio 2 per tutti gli host aggiuntivi.

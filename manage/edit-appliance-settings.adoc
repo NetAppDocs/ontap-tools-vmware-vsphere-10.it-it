@@ -19,8 +19,7 @@ L'appliance dei tool ONTAP viene inizialmente implementata in una configurazione
 
 Assicurarsi che il modello OVA fornito abbia la stessa versione OVA del primo nodo.
 
-*Fasi*
-
+.Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *Modifica impostazioni appliance* nella sezione Panoramica.

@@ -27,7 +27,7 @@ Segui i passaggi riportati di seguito per eliminare il datastore NFS, VMFS o vVO
 
 .Fasi
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
-. Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un datastore e selezionare *NetApp ONTAP tools* > *Elimina archivio dati*.
+. Fare clic con il pulsante destro del mouse su un sistema host o su un cluster host o su un data center e selezionare *Strumenti NetApp ONTAP* > *Elimina archivio dati*.
 +
 
 NOTE: Non è possibile eliminare gli archivi dati se ci sono macchine virtuali che utilizzano tale archivio dati. Prima di eliminare l'archivio dati, è necessario spostare le macchine virtuali in un altro datastore. Non è possibile selezionare la casella di controllo Elimina volume se il datastore appartiene a un cluster di host protetto.

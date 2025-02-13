@@ -109,7 +109,7 @@ Esegui i seguenti comandi per eseguire un backup di MongoDB:
 *Istantanea degli strumenti ONTAP per le VM VMware vSphere in vCenter (3VMs in caso di implementazione ha, 1 VM in caso di distribuzione non ha)*
 
 * Nell'interfaccia utente del client vSphere, selezionare la VM.
-* Andare alla scheda istantanee e selezionare il pulsante *scatta istantanea*. Creare un'istantanea inattiva della VM. Per ulteriori dettagli, fare riferimento https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html["Scattare una fotografia istantanea di una macchina virtuale"^] a.
+* Andare alla scheda istantanee e selezionare il pulsante *scatta istantanea*. Creare un'istantanea inattiva della VM. Per ulteriori informazioni, fare riferimento alla https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html["Scattare una fotografia istantanea di una macchina virtuale"^] sezione.
 
 
 Prima di eseguire l'aggiornamento, eliminare i pod completati dal bundle di log con il prefisso "generate-support-bundle-job". Se è in corso la generazione del bundle di supporto, attendere che venga completato, quindi eliminare il pod.
@@ -119,15 +119,14 @@ Per qualsiasi tipo di aggiornamento, è necessario aggiungere un'unità disco ri
 . Seleziona la macchina virtuale in configurazione a nodo singolo o in tutte e tre le macchine virtuali nella configurazione ha.
 . Fare clic con il pulsante destro del mouse sulla macchina virtuale e selezionare *Aggiungi nuovo dispositivo* > *disco rigido*
 . Aggiungere un disco rigido da 100 GB nel campo *nuovo disco rigido*.
-. Fare clic su *Applica*
+. Selezionare *Applica*
 
 
 Dopo aver aggiunto il disco rigido, aggiornare le risorse della VM per le rispettive configurazioni e riavviare la VM primaria.
 
 Verrà creato un nuovo disco rigido. Il provisioner dinamico dello storage utilizza questo HDD per generare o replicare i volumi.
 
-*Fasi*
-
+.Fasi
 . Carica gli strumenti ONTAP per l'aggiornamento ISO di VMware vSphere nella libreria di contenuti.
 . Nella pagina principale della macchina virtuale, selezionare *azioni* > *Modifica impostazioni*
 . Selezionare il file ISO della libreria di contenuti nella finestra di modifica delle impostazioni nel campo *unità CD/DVD*.

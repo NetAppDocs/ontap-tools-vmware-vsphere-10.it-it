@@ -16,8 +16,7 @@ Quando si fa clic con il pulsante destro del mouse sull'oggetto del datastore ne
 
 NOTE: L'operazione del datastore Expand vVol non è applicabile al datastore vVol basato su ASA R2.
 
-*Fasi*
-
+.Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
 . Nel riquadro di navigazione, selezionare il data center che contiene il datastore.
 . Fare clic con il pulsante destro del mouse sul datastore e selezionare *Strumenti NetApp ONTAP* > *Aggiungi storage al datastore*.

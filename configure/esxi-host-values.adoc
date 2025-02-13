@@ -11,7 +11,7 @@ summary: È possibile impostare timeout e altri valori sugli host ESXi utilizzan
 
 
 [role="lead"]
-È possibile impostare timeout e altri valori sugli host ESXi utilizzando gli strumenti ONTAP per VMware vSphere per garantire le migliori performance e il failover corretto. I valori dei tool ONTAP per i set VMware vSphere si basano su test NetApp interni.
+Utilizzando gli strumenti ONTAP per VMware vSphere, è possibile impostare timeout e altri valori sugli host ESXi per garantire le migliori prestazioni e il successo del failover. I valori dei tool ONTAP per i set VMware vSphere si basano su test NetApp interni.
 
 È possibile impostare i seguenti valori su un host ESXi:
 
@@ -40,7 +40,7 @@ Consente di impostare le impostazioni di timeout dell'HBA consigliate per i sist
 
 == Impostazioni MPIO
 
-Le impostazioni MPIO definiscono i percorsi preferiti per i sistemi storage NetApp. Le impostazioni MPIO determinano quali percorsi disponibili sono ottimizzati (rispetto ai percorsi non ottimizzati che attraversano il cavo di interconnessione) e impostano il percorso preferito verso uno di tali percorsi.
+Le impostazioni MPIO definiscono i percorsi preferiti per i sistemi storage NetApp. Determinano quali percorsi disponibili sono ottimizzati (rispetto a quelli non ottimizzati che attraversano il cavo di interconnessione) e impostano il percorso preferito su uno di tali percorsi.
 
 Negli ambienti a performance elevate o quando si eseguono test delle performance con un singolo datastore LUN, prendere in considerazione la possibilità di modificare l'impostazione del bilanciamento del carico della policy di selezione del percorso psp (round-robin) VMW_PSP_RR (Path Selection Policy) dall'impostazione IOPS predefinita di 1000 a un valore di 1.
 

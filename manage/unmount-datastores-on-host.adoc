@@ -13,8 +13,7 @@ summary: 'L"azione del datastore smonta un datastore NFS o VMFS dagli host ESXi.
 [role="lead"]
 L'azione del datastore smonta un datastore NFS o VMFS dagli host ESXi. L'azione di disinstallazione del datastore è abilitata per i datastore NFS e VMFS, rilevati o gestiti dai tool ONTAP per VMware vSphere.
 
-*Fasi*
-
+.Fasi
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Fare clic con il pulsante destro del mouse su un oggetto datastore NFS o VMFS e selezionare *Unmount datastore*.
 +
