@@ -33,7 +33,7 @@ La sessione di accesso rimane valida solo fino alla mezzanotte del giorno succes
 
 
 .Fasi
-. Da vCenter Server, aprire una console al provider VASA.
+. Dal server vCenter, aprire una console per il provider VASA.
 . Accedere come utente di manutenzione.
 . Invio `4` Per selezionare Support and Diagnostics (supporto e diagnostica).
 . Inserire `2` per selezionare attiva accesso diagnostica remota.

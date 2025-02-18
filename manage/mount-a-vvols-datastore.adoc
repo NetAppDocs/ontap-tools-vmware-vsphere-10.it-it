@@ -15,7 +15,7 @@ summary: 'È possibile montare un datastore VMware Virtual Volumes/vVol su uno o
 
 .Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
-. Nel riquadro di navigazione, selezionare il data center che contiene il datastore.
+. Nel riquadro di navigazione, selezionare il centro dati che contiene l'archivio dati.
 . Fare clic con il pulsante destro del mouse sul datastore e selezionare *NetApp ONTAP tools* > *Mount datastore*.
 . Nella finestra di dialogo *Mount Datastore on hosts*, selezionare gli host su cui si desidera montare il datastore, quindi selezionare *Mount*.
 

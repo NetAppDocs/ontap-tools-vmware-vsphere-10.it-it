@@ -41,12 +41,12 @@ NOTE: Sono supportate le interfacce LIF di gestione indirizzi IPv4 e IPv6.
 .Utilizzo dell'interfaccia utente del client vSphere
 --
 
-NOTE: Quando Aggiungi un backend storage utilizzando l'interfaccia utente del client vSphere, il datastore vVol non supporta l'aggiunta diretta di un utente SVM.
+NOTE: Quando Aggiungi un backend storage utilizzando l'interfaccia utente client vSphere, il datastore vVol non supporta l'aggiunta diretta di un utente SVM.
 
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
 . Nella pagina Collegamenti, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
 . Selezionare *backend di archiviazione* dalla barra laterale.
-. Aggiungere il backend di archiviazione e fornire i dettagli relativi a indirizzo IP del server, nome utente, password e porta.
+. Aggiungere il backend di archiviazione e fornire l'indirizzo IP del server, il nome utente, la password e i dettagli della porta.
 +
 
 NOTE: Per aggiungere direttamente un utente SVM, puoi aggiungere credenziali basate sul cluster e LIF di gestione indirizzi IPv4 e IPv6 o fornire credenziali basate su SVM con un LIF di gestione SVM.

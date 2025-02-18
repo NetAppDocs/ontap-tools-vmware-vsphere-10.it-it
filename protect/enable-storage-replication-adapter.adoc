@@ -15,7 +15,7 @@ I tool ONTAP per VMware vSphere offrono la possibilità di abilitare la funziona
 
 .Prima di iniziare
 * È necessario aver configurato l'istanza di vCenter Server e l'host ESXi configurato.
-* Dovresti aver distribuito gli strumenti ONTAP.
+* Devi aver implementato tool ONTAP per VMware vSphere.
 * L'adattatore SRA dovrebbe essere stato scaricato `.tar.gz` dal https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sito di supporto NetApp"^].
 * I cluster ONTAP di origine e di destinazione devono avere le stesse pianificazioni SnapMirror personalizzate prima di eseguire i flussi di lavoro SRA.
 

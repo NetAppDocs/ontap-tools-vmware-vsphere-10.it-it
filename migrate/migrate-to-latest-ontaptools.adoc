@@ -33,7 +33,7 @@ NOTE: È necessario eseguire il backup OVA dalla versione corrente prima di eseg
 . Distribuzione di OVA per strumenti ONTAP per VMware vSphere 10,3.
 . Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,3. Fare riferimento a link:../configure/add-vcenter.html["Aggiungere istanze di vCenter Server"].
 . Back-end dello storage integrato a livello locale dai tool ONTAP per le API del server vCenter del plug-in VMware vSphere. Aggiungere storage come storage per la migrazione a livello locale.
-. I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xx sono visibili nei tool ONTAP per VMware vSphere 10,3 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti per l'attivazione. Verificare se gli archivi dati sono visibili nella pagina Panoramica degli strumenti di ONTAP per la pagina dell'interfaccia utente del plug-in di VMware vSphere.
+. I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xx sono visibili nei tool ONTAP per VMware vSphere 10,3 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti per l'attivazione. Verificare se gli archivi dati sono visibili nella pagina Panoramica degli strumenti di ONTAP per la pagina dell'interfaccia utente del plugin VMware vSphere.
 
 
 
@@ -47,7 +47,7 @@ Prima della migrazione, verificare che uno dei siti sia in uno stato protetto e 
 
 NOTE: Non eseguire la migrazione se il failover è stato appena completato e la nuova protezione è in sospeso. Completare la nuova protezione ed eseguire la migrazione. Dopo aver completato il test del piano di ripristino, ripulire il ripristino di prova e avviare la migrazione.
 
-. Per eliminare gli strumenti ONTAP per VMware vSphere 9.xx release SRA adapter in VMware Live Site Recovery UI, attenersi alla seguente procedura:
+. Per eliminare gli strumenti ONTAP per VMware vSphere 9.xx release dell'adattatore SRA nell'interfaccia utente di VMware Live Site Recovery, attenersi alla seguente procedura:
 +
 .. Accedere alla pagina di gestione della configurazione di VMware Live Site Recovery
 .. Andare alla sezione *Storage Replication Adapter*

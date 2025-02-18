@@ -61,7 +61,7 @@ Se si modificano i privilegi all'interno di un'autorizzazione, l'utente associat
 
 == Oggetti vSphere
 
-Le autorizzazioni sono associate agli oggetti vSphere, come vCenter Server, host ESXi, macchine virtuali, datastore, data center, e cartelle. È possibile assegnare autorizzazioni a qualsiasi oggetto vSphere. In base all'autorizzazione assegnata a un oggetto vSphere, vCenter Server determina chi può eseguire le attività su tale oggetto. Per gli strumenti ONTAP per attività specifiche di VMware vSphere, le autorizzazioni vengono assegnate e convalidate solo a livello di cartella principale (vCenter Server) e non su altre entità. Ad eccezione del funzionamento del plug-in VAAI, in cui le autorizzazioni vengono convalidate per l'host ESXi interessato.
+Le autorizzazioni sono associate agli oggetti vSphere, come vCenter Server, host ESXi, macchine virtuali, datastore, data center e cartelle. È possibile assegnare autorizzazioni a qualsiasi oggetto vSphere. In base all'autorizzazione assegnata a un oggetto vSphere, vCenter Server determina chi può eseguire le attività su tale oggetto. Per gli strumenti ONTAP per attività specifiche di VMware vSphere, le autorizzazioni vengono assegnate e convalidate solo a livello di cartella principale (vCenter Server) e non su altre entità. Ad eccezione del funzionamento del plug-in VAAI, in cui le autorizzazioni vengono convalidate per l'host ESXi interessato.
 
 
 

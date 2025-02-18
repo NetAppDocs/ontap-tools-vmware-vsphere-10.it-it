@@ -18,7 +18,7 @@ NOTE: L'operazione del datastore Shrink vVol non è supportata per il datastore 
 
 .Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
-. Nel riquadro di navigazione, selezionare il data center che contiene il datastore.
+. Nel riquadro di navigazione, selezionare il centro dati che contiene l'archivio dati.
 . Fare clic con il pulsante destro del mouse sul datastore vVol e selezionare *Strumenti NetApp ONTAP* > *Rimuovi storage dal datastore*.
 . Selezionare i volumi che non dispongono di vVol e selezionare *Rimuovi*.
 +

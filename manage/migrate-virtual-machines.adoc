@@ -2,7 +2,7 @@
 permalink: manage/migrate-virtual-machines.html 
 sidebar: sidebar 
 keywords:  
-summary: È necessario tenere presenti alcune considerazioni durante la migrazione delle macchine virtuali nel data center. 
+summary: Dovresti essere consapevole di alcune considerazioni durante la migrazione di macchine virtuali esistenti nel tuo data center. 
 ---
 = Considerazioni per migrare o clonare macchine virtuali
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: È necessario tenere presenti alcune considerazioni durante la migrazio
 
 
 [role="lead"]
-È necessario tenere presenti alcune considerazioni durante la migrazione delle macchine virtuali esistenti nel data center.
+È importante tenere presenti alcune considerazioni relative alla migrazione delle macchine virtuali esistenti nel data center.
 
 
 
