@@ -32,4 +32,4 @@ NOTE: È possibile espandere l'host ESXi per visualizzare i valori correnti.
 
 *Informazioni correlate*
 
-link:../configure/esxi-host-values.html["Impostare i valori dell'host ESXi"]
+link:../configure/configure-esx-server-multipath-and-timeout-settings.html["Configurare le impostazioni dell'host ESXi"]

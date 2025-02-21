@@ -35,7 +35,7 @@ NOTE: È necessario fornire il valore della password tra virgolette singole per 
 
 +
 
-NOTE: Il nome utente e la password dell'applicazione vengono impostati durante la distribuzione di ONTAP Tools. Questo è necessario per la registrazione del provider VASA/SRA.
+NOTE: Il nome utente e la password dell'applicazione vengono impostati durante la distribuzione di ONTAP Tools. Questo è necessario per la registrazione VASA Provider/SRA.
 
 . Eseguire nuovamente la scansione delle schede di rete per verificare che i dettagli siano aggiornati nella pagina VMware Live Site Recovery Storage Replication Adapters (schede di replica storage di VMware Live Site Recovery).
 

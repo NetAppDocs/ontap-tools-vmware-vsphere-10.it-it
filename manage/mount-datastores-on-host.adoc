@@ -30,4 +30,5 @@ Il montaggio di un datastore fornisce l'accesso allo storage a host aggiuntivi. 
 . Selezionare gli archivi dati che si desidera montare e selezionare *Mount*.
 
 
+.Quali sono le prossime novità?
 È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.

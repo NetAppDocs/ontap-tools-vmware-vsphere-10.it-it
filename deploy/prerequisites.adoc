@@ -177,7 +177,7 @@ Nella tabella seguente sono descritte le porte di rete utilizzate da NetApp e le
 | 7946 (TCP+UDP) | Questa porta viene utilizzata per il rilevamento della rete dei container del docker. 
 
 
-| 9083 (TCP) | Questa porta è una porta di servizio utilizzata internamente per il servizio di provider VASA. 
+| 9083 (TCP) | Questa porta è una porta di servizio utilizzata internamente per il servizio del provider VASA. 
 
 
 | 1162 (UDP) | Questa è la porta dei pacchetti trap SNMP. 
