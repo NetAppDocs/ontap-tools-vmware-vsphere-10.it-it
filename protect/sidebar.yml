@@ -3,9 +3,7 @@ section: protect
 title: Protezione di datastore e macchine virtuali
 entries:
 - title: Proteggere utilizzando la protezione del cluster host
-  entries:
-  - title: Creazione della protezione dei cluster di host
-    url: "/configure/protect-cluster.html"
+  url: "/configure/protect-cluster.html"
 - title: Proteggere utilizzando la protezione SRA
   entries:
   - title: Abilitare SRA per proteggere i datastore
@@ -19,11 +17,7 @@ entries:
   - title: Aggiornare le credenziali SRA
     url: "/protect/update-credentials.html"
   - title: Configurare siti protetti e di ripristino
-    entries:
-    - title: Configurare i gruppi di protezione
-      url: "/protect/configure-protection-groups.html"
-    - title: Associare siti protetti e di ripristino
-      url: "/protect/pair-protected-and-recovery-sites.html"
+    url: "/protect/configure-protection-groups.html"
   - title: Configurare le risorse protette e del sito di ripristino
     entries:
     - title: Configurare le mappature di rete

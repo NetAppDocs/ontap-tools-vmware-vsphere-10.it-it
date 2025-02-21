@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È necessario creare gruppi di protezione per proteggere un gruppo di macchine virtuali sul sito protetto. 
 ---
-= Configurare i gruppi di protezione
+= Configurare siti protetti e di ripristino
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,10 @@ summary: È necessario creare gruppi di protezione per proteggere un gruppo di m
 
 [role="lead"]
 È necessario creare gruppi di protezione per proteggere un gruppo di macchine virtuali sul sito protetto.
+
+
+
+== Configurare i gruppi di protezione
 
 .Prima di iniziare
 Assicurarsi che i siti di origine e di destinazione siano configurati per:
@@ -35,3 +39,30 @@ Tutte le macchine virtuali presenti nel gruppo di replica vengono aggiunte al gr
 . Selezionare il piano di ripristino esistente o crearne uno nuovo selezionando *Aggiungi al nuovo piano di ripristino*.
 . Nella scheda Pronto per il completamento, esaminare i dettagli del gruppo di protezione creato, quindi selezionare *fine*.
 
+
+
+
+== Associare siti protetti e di ripristino
+
+È necessario associare i siti protetti e di ripristino creati utilizzando il client vSphere per consentire l'individuazione dei sistemi di storage mediante Storage Replication Adapter (SRA).
+
+.Prima di iniziare
+* È necessario che VMware Live Site Recovery sia installato sui siti protetti e di ripristino.
+* È necessario che SRA sia installato nei siti protetti e di ripristino.
+
+
+.Fasi
+. Fare doppio clic su *Site Recovery* nella home page di vSphere Client e selezionare *Sites*.
+. Selezionare *oggetti* > *azioni* > *abbina siti*.
+. Nella finestra di dialogo *Associa server di Site Recovery Manager*, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi selezionare *Avanti*.
+. Nella sezione Select vCenter Server (Seleziona server vCenter), procedere come segue:
++
+.. Verificare che vCenter Server del sito protetto venga visualizzato come candidato corrispondente per l'associazione.
+.. Immettere le credenziali amministrative SSO, quindi selezionare *fine*.
+
+
+. Se richiesto, selezionare *Sì* per accettare i certificati di protezione.
+
+
+.Risultato
+I siti protetti e di ripristino vengono visualizzati nella finestra di dialogo oggetti.
