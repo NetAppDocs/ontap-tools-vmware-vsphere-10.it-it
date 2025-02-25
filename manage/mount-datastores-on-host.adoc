@@ -20,7 +20,7 @@ Il montaggio di un datastore fornisce l'accesso allo storage a host aggiuntivi. 
 ** Dalle versioni di vSphere 7.0U3 a vSphere 8,0, anche se vengono visualizzate le opzioni, l'azione verrà disattivata.
 
 
-* L'opzione Mount datastore è disattivata quando il cluster host è protetto con configurazioni uniformi.
+* L'opzione mount datastore è disabilitata quando il cluster di host è protetto con configurazioni uniformi.
 
 
 .Fasi
