@@ -25,8 +25,7 @@ NOTE: Per consentire in un secondo momento l'implementazione ha, la macchina vir
 
 Se non si dispone già di una libreria di contenuti adatta, crearne una utilizzando i seguenti passaggi:
 
-
-NOTE: Se si intende utilizzare solo una distribuzione con un singolo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
+*Crea libreria di contenuti* se si intende utilizzare solo una distribuzione con un singolo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
 
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["Sito di supporto NetApp"^] .
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`

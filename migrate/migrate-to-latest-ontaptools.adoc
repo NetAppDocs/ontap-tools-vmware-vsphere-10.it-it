@@ -199,35 +199,14 @@ NOTE: uuid è l'uuid di migrazione restituito nella risposta dell'API post-migra
 Una volta eseguita correttamente l'API di migrazione delle patch, tutte le VM sono conformi al criterio di storage.
 
 ====
-. L'API di eliminazione per la migrazione è:
 +
-[]
-====
-|===
-
-
-| *Metodo HTTP* | *Percorso* 
-
-
-| ELIMINARE | /api/v1 
-|===
-*Tipo di lavorazione*
-
-Asincrono
-
-*Esempio Curl*
-
-/api/v1/vcenter/{vcguid}/migration-jobs/{migration_id}
-
-Questa API elimina la migrazione tramite ID migrazione ed elimina la migrazione su vCenter Server specificato.
-
-====
-
-
 Dopo aver eseguito correttamente la migrazione e aver registrato gli strumenti ONTAP 10,3 in vCenter Server, procedere come segue:
 
-* Aggiornare il certificato su tutti gli host.
-* Attendere qualche istante prima di eseguire le operazioni di DataStore (DS) e Virtual Machine (VM). Il tempo di attesa dipende dal numero di host, DS e VM nel setup. Quando non si attende, le operazioni potrebbero non riuscire in modo intermittente.
++
+** Aggiornare il certificato su tutti gli host.
+** Attendere qualche istante prima di eseguire le operazioni di DataStore (DS) e Virtual Machine (VM). Il tempo di attesa dipende dal numero di host, DS e VM nel setup. Quando non si attende, le operazioni potrebbero non riuscire in modo intermittente.
+
+
 
 
 *Al termine*

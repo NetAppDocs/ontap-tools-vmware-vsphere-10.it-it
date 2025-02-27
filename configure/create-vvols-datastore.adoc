@@ -11,9 +11,7 @@ summary: 'Quando si crea un datastore a livello di cluster host, il datastore vi
 
 
 [role="lead"]
-Quando si crea un datastore a livello di cluster host, il datastore viene creato e montato su tutti gli host della destinazione e l'azione viene attivata solo se l'utente corrente dispone dei privilegi necessari per l'esecuzione.
-
-La procedura guidata di creazione delle azioni del datastore supporta la creazione di datastore NFS, VMFS e vVol.
+Quando si crea un datastore a livello di cluster host, questo viene creato e montato su tutti gli host di destinazione. È possibile visualizzare questa opzione solo se si dispone del Privileges richiesto.
 
 * È possibile creare solo datastore VMFS su un cluster protetto. Quando si aggiunge un datastore VMFS a un cluster protetto, il datastore viene protetto automaticamente.
 * Non è possibile creare un datastore in un data center dotato di uno o più cluster host protetti.
