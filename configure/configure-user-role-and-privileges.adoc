@@ -49,9 +49,6 @@ Il campo *ruolo* viene compilato automaticamente in base alla capacità del prod
 Vengono aggiunti il nuovo ruolo e l'utente e vengono visualizzati i privilegi dettagliati nel ruolo configurato.
 
 
-NOTE: L'operazione di disinstallazione non rimuove i ruoli degli strumenti di ONTAP, ma rimuove i nomi localizzati per Privileges specifici degli strumenti di ONTAP e aggiunge il prefisso `XXX missing privilege`. Quando si reinstallano gli strumenti ONTAP per VMware vSphere o si esegue l'aggiornamento a una versione più recente, vengono ripristinati tutti gli strumenti ONTAP standard per i ruoli VMware vSphere e i privilegi specifici degli strumenti ONTAP.
-
-
 
 == Requisiti di mappatura degli aggregati delle SVM
 
