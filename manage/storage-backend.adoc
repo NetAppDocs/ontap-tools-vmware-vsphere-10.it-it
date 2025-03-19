@@ -44,7 +44,7 @@ Per modificare un backend di archiviazione, attenersi alla procedura descritta i
 
 È possibile eseguire l'operazione di modifica per i cluster ONTAP globali utilizzando ONTAP Tools Manager seguendo la procedura riportata di seguito.
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona i backend di storage dalla barra laterale.
 . Selezionare il backend di archiviazione che si desidera modificare.
@@ -66,7 +66,7 @@ Prima di rimuovere il backend dello storage, occorre eliminare tutti gli archivi
 
 Puoi eseguire l'operazione di rimozione per i cluster ONTAP globali usando ONTAP tools Manager.
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *backend di archiviazione* dalla barra laterale.
 . Selezionare il backend di archiviazione che si desidera rimuovere

@@ -14,7 +14,7 @@ summary: 'Associare un backend dello storage con vCenter Server per creare una m
 Associare un backend dello storage con vCenter Server per creare una mappatura tra il backend dello storage e l'istanza di vCenter Server integrata a livello globale.
 
 .Fasi
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona vCenter dalla barra laterale.
 . Seleziona i puntini di sospensione verticali rispetto all'istanza di vCenter Server da associare ai backend dello storage.

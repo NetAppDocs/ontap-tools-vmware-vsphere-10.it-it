@@ -22,7 +22,7 @@ ONTAP Tools Manager aiuta a:
 * Gestione password - consente di reimpostare la password dell'applicazione OVA dell'utente.
 
 
-Per accedere a ONTAP Tools Manager, avviare il `\https://loadBalancerIP:8443/virtualization/ui/` sistema dal browser e accedere con gli strumenti ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
+Per accedere a ONTAP Tools Manager, avviare il `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` sistema dal browser e accedere con gli strumenti ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 
 La sezione Panoramica su ONTAP tools Manager aiuta a gestire la configurazione dell'appliance, come la gestione dei servizi, l'upscaling delle dimensioni dei nodi e l'abilitazione ha (High Availability). Puoi anche monitorare le informazioni generali dei tool ONTAP relativi ai nodi, come lo stato di salute, i dettagli di rete e gli avvisi.
 

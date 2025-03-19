@@ -20,7 +20,7 @@ Le istanze di vCenter Server sono piattaforme di gestione centrali che consenton
 La pagina dell'elenco di vCenter Server mostra il numero associato di backend storage. Ogni istanza di vCenter Server può essere associata o dissociata da un backend dello storage.
 
 .Fasi
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona l'istanza vCenter Server richiesta dalla barra laterale.
 . Seleziona i puntini di sospensione verticali su vCenter Server che desideri associare o dissociare dai backend di storage.
@@ -33,7 +33,7 @@ La pagina dell'elenco di vCenter Server mostra il numero associato di backend st
 
 Per modificare le istanze di vCenter Server, procedere come segue.
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona l'istanza vCenter Server applicabile dalla barra laterale
 . Selezionare le ellissi verticali a fronte di vCenter Server che si desidera modificare e selezionare *Modifica*.
@@ -46,7 +46,7 @@ Per modificare le istanze di vCenter Server, procedere come segue.
 
 Prima di rimuoverlo, devi rimuovere tutti i backend dello storage collegati a vCenter Server.
 
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona le istanze vCenter Server applicabili dalla barra laterale
 . Selezionare le ellissi verticali sul vCenter Server che si desidera rimuovere e selezionare *Rimuovi*.

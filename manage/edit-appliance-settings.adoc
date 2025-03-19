@@ -18,7 +18,7 @@ Utilizzando ONTAP tools Manager, scala in verticale i tool ONTAP per la configur
 Assicurarsi che il modello OVA fornito abbia la stessa versione OVA del nodo 1. Il nodo 1 è il nodo predefinito in cui vengono inizialmente implementati i tool ONTAP per VMware vSphere OVA.
 
 .Fasi
-. Avviare Gestione strumenti ONTAP da un browser Web: `\https://loadBalancerIP:8443/virtualization/ui/`
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *Modifica impostazioni appliance* nella sezione Panoramica.
 . Nella sezione *Configurazione*, è possibile scalare in verticale per aumentare le dimensioni del nodo e abilitare la configurazione ha in base alle proprie esigenze. Sono necessarie le credenziali vCenter Server per apportare eventuali modifiche.
