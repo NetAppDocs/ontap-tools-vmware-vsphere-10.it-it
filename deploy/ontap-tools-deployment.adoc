@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'I tool ONTAP per l"appliance VMware vSphere sono sempre implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS/VMFS.' 
+summary: 'I tool ONTAP per l"appliance VMware vSphere sono implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS e VMFS.' 
 ---
 = Implementa i tool ONTAP per VMware vSphere
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: 'I tool ONTAP per l"appliance VMware vSphere sono sempre implementati c
 
 
 [role="lead"]
-I tool ONTAP per l'appliance VMware vSphere sono sempre implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS/VMFS.
+I tool ONTAP per l'appliance VMware vSphere sono implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS e VMFS.
 
 *Prima di iniziare*
 
 Una libreria di contenuti in VMware è un oggetto contenitore che memorizza modelli di VM, modelli di vApp e altri tipi di file. La distribuzione con la libreria di contenuti offre un'esperienza senza problemi poiché non dipende dalla connettività di rete.
 
 
-NOTE: È necessario archiviare la libreria di contenuti in un datastore condiviso, in modo che tutti gli host di un cluster possano accedervi. È necessario creare una libreria di contenuti per memorizzare l'OVA prima di modificare le impostazioni dell'appliance in configurazione ha. Il modello della libreria di contenuti una volta caricato non deve essere eliminato dopo la distribuzione.
+NOTE: È necessario archiviare la libreria di contenuti in un datastore condiviso in modo che tutti gli host all'interno di un cluster possano accedervi. Creare una libreria di contenuti per memorizzare l'OVA prima di configurare l'appliance sulla configurazione ha. Non eliminare il modello della libreria di contenuti dopo la distribuzione.
 
 
-NOTE: Per consentire in un secondo momento l'implementazione ha, la macchina virtuale che ospita gli strumenti ONTAP non deve essere implementata direttamente su un host ESXi. Ma deve essere implementata in un cluster o in un pool di risorse.
+NOTE: Per consentire l'implementazione ha in un secondo momento, non implementare la macchina virtuale che ospita i tool ONTAP direttamente su un host ESXi. Implementarlo invece su un cluster o un pool di risorse.
 
-Se non si dispone già di una libreria di contenuti adatta, crearne una utilizzando i seguenti passaggi:
+Se non disponi di una libreria di contenuti, segui questi passaggi per crearne una:
 
-*Crea libreria di contenuti* se si intende utilizzare solo una distribuzione con un singolo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
+*Creare una libreria di contenuti* in un'implementazione con un solo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
 
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
@@ -39,55 +39,49 @@ Se non si dispone già di una libreria di contenuti adatta, crearne una utilizza
 
 NOTE: Per ulteriori informazioni, consulta il https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html["Creazione e utilizzo della libreria di contenuti"] blog.
 
-Assicurarsi di aver importato l'OVA nella libreria di contenuti.
 
-
-NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Resource Scheduler) del cluster sull'inventario su 'Conservative' durante l'installazione degli strumenti ONTAP. In questo modo si garantisce che le VM non vengano migrate durante l'installazione.
+NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Resource Scheduler) del cluster sull'inventario su 'Conservative'. In questo modo, le VM non vengono migrate durante l'installazione.
 
 .Fasi
-. Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo in quanto è possibile eseguire la distribuzione direttamente dalla libreria di contenuti.
+. Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.
 . Accedere al server vSphere.
-. Passare al pool di risorse creato, al cluster o all'host in cui si desidera distribuire l'OVA.
+. Passare al pool di risorse, al cluster o all'host in cui si intende distribuire l'OVA.
 . Fare clic con il pulsante destro del mouse sulla posizione desiderata e selezionare *Deploy OVF template...* (distribuire modello OVF...).
 +
 
-NOTE: Non memorizzare mai tool ONTAP per macchine virtuali VMware vSphere su datastore vVol gestiti.
+NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere nei datastore vVol gestiti.
 
-. Selezionare il file OVA tramite l'URL per il file _.ova_ oppure selezionare la cartella in cui è stato salvato il file _.ova_, quindi selezionare *Avanti*.
+. Scegliere il file OVA dall'URL o navigare alla sua posizione, quindi selezionare *Avanti*.
 . Per implementare i tool ONTAP per VMware vSphere dall'archivio di contenuti:
 +
 .. Vai alla tua libreria di contenuti e seleziona l'elemento della libreria che desideri distribuire.
 .. Selezionare *azioni* > *Nuova VM da questo modello*
 
 
-. Nella finestra *Select a name and folder* for the virtual machine (Seleziona un nome e una cartella* per la macchina virtuale), immettere il nome della macchina virtuale e selezionare la posizione per la macchina virtuale. Se si seleziona la casella di controllo *Personalizza l'hardware di questa macchina virtuale*, viene attivata una procedura chiamata *Personalizza hardware* prima di raggiungere la finestra *Pronto per il completamento*.
-. Selezionare una risorsa di computer e selezionare *Avanti*. Puoi scegliere di selezionare la casella di controllo per *accendere automaticamente la VM distribuita*.
+. Nel campo *Select a name and folder* (Seleziona un nome e una cartella*), immettere il nome della macchina virtuale e sceglierne la posizione. Se si seleziona la casella di controllo *Personalizza l'hardware di questa macchina virtuale*, viene attivata un'ulteriore operazione denominata *Personalizza hardware* prima di raggiungere la finestra *Pronto per il completamento*.
+. Selezionare una risorsa di computer e selezionare *Avanti*. Se lo si desidera, selezionare la casella *Accendi automaticamente VM distribuita*.
 . Esaminare i dettagli del modello e selezionare *Avanti*.
 . Leggere e accettare il contratto di licenza e selezionare *Avanti*.
 . Selezionare lo spazio di archiviazione per la configurazione e i file del disco e selezionare *Avanti*.
 . Selezionare la rete di destinazione per ciascuna rete di origine e selezionare *Avanti*.
 . Nella finestra *Personalizza modello*, compilare i campi obbligatori e selezionare *Avanti*.
 +
-** Le informazioni qui fornite sono convalidate per i modelli corretti durante il processo di installazione. In caso di discrepanza, viene visualizzato un messaggio di errore sulla console Web e viene richiesto di correggere eventuali informazioni errate fornite.
-** I nomi host devono essere costituiti da lettere maiuscole (A-Z), lettere minuscole (a-z), cifre (0-9) o dal trattino (-). Se si desidera configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
+** Le informazioni vengono convalidate durante l'installazione. In caso di discrepanza, viene visualizzato un messaggio di errore sulla console Web e viene richiesto di correggerla.
+** I nomi host devono includere lettere (A-Z, a-z), cifre (0-9) e trattini (-). Per configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
 +
 
-NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN con indirizzi IPv6 e IPv4.
+NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN contenente indirizzi IPv6 e IPv4.
 
 
 
-. Nella finestra *Customize hardware* (Personalizza hardware*) si dovrebbe abilitare l'aggiunta a caldo della CPU e l'hot plug della memoria.
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
 
+. Nella finestra *Customize hardware* (Personalizza hardware*), abilitare l'aggiunta a caldo della CPU e l'hot plug-in della memoria.
 . Accendere la macchina virtuale dopo il completamento dell'attività.
-+
-
-NOTE: Prima di accendere la macchina virtuale, assicurarsi che gli hot plug-in siano abilitati sia per la CPU che per la memoria.
-
 
 
 È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM.
 
-In caso di discrepanze nei valori immessi nel modulo OVF, viene visualizzata una finestra di dialogo che richiede di intraprendere un'azione correttiva. Apportare le modifiche necessarie all'interno della finestra di dialogo, utilizzando il pulsante Tab per navigare e selezionare "OK". Hai tre tentativi per risolvere eventuali problemi. Se i problemi persistono dopo tre tentativi, il processo di installazione verrà interrotto e si consiglia di riprovare l'installazione su una nuova VM.
+In caso di discrepanze nel modulo OVF, viene visualizzata una finestra di dialogo che richiede l'azione correttiva. Utilizzare il pulsante Tab per spostarsi, apportare le modifiche necessarie e selezionare "OK.sono disponibili tre tentativi per risolvere eventuali problemi. Se i problemi persistono dopo tre tentativi, il processo di installazione si interrompe e si consiglia di riprovare l'installazione su una nuova macchina virtuale.

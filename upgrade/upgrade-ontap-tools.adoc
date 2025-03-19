@@ -101,7 +101,7 @@ Esegui i seguenti comandi per eseguire un backup di MongoDB:
 * Acquisire snapshot di tutti i volumi uno alla volta utilizzando uno dei seguenti metodi:
 +
 ** Dalla CLI, eseguire il comando _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
-** Dall'interfaccia utente di ONTAP System Manager, cercare il volume in base al nome nella barra di ricerca, quindi aprire il volume selezionando il nome. Andare allo snapshot e aggiungere lo snapshot di quel volume.
+** Dall'interfaccia utente di ONTAP System Manager, cercare il volume in base al nome nella barra di ricerca, quindi aprirlo selezionando il nome. Andare allo snapshot e aggiungere lo snapshot di quel volume.
 
 
 

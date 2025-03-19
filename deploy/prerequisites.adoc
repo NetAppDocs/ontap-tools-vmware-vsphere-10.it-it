@@ -100,8 +100,6 @@ La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere
 
 | Alta disponibilità | Grande (L) | circa 100k mb | 256 [NOTA] il numero di host nella tabella mostra il numero totale di host da più vCenter. 
 |===
-Per informazioni dettagliate sui requisiti di dimensionamento del sistema host per nodo, fare riferimento alla link:../deploy/prerequisites.html["Prerequisiti per la distribuzione degli strumenti ONTAP per VMware vSphere"].
-
 
 
 == Tool ONTAP per VMware vSphere - Storage Replication Adapter (SRA)
@@ -200,16 +198,3 @@ Nella tabella seguente sono descritte le porte di rete utilizzate da NetApp e le
 
 | 123 (TCP) | Ntpd utilizza questa porta per eseguire la convalida del server ntp. 
 |===
-
-
-== Controlli pre-implementazione
-
-Prima di procedere con la distribuzione, accertarsi che siano presenti i seguenti elementi:
-
-* L'ambiente vCenter Server è configurato e configurato.
-* Le credenziali vCenter Server padre per la distribuzione dell'OVA sono state implementate.
-* Si dispone delle credenziali di accesso per l'istanza di vCenter Server a cui si connetteranno gli strumenti ONTAP per VMware vSphere dopo la distribuzione, per la registrazione.
-* La cache del browser è stata eliminata.
-* Assicurati di disporre di tre indirizzi IP gratuiti per l'implementazione non ha: Un indirizzo IP gratuito per il bilanciamento del carico e un indirizzo IP gratuito per il piano di controllo Kubernetes e un indirizzo IP per il nodo. Per l'implementazione ha, insieme a questi tre indirizzi IP, saranno necessari altri due indirizzi IP per il secondo e il terzo nodo. I nomi host devono essere mappati agli indirizzi IP liberi sul DNS prima dell'assegnazione. Tutti e cinque gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
-* Assicurarsi che il nome di dominio su cui viene emesso il certificato sia mappato all'indirizzo IP virtuale in una distribuzione multi-vCenter in cui i certificati CA personalizzati sono obbligatori. _Nslookup_ viene eseguito un controllo sul nome di dominio per verificare se il dominio viene risolto all'indirizzo IP desiderato. I certificati devono essere creati con il nome di dominio e l'indirizzo IP dell'indirizzo IP del bilanciatore del carico.
-

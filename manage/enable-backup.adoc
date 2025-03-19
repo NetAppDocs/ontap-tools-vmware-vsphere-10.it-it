@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Poiché i tool ONTAP per VMware vSphere 10,3 utilizzano il provisioner di storage dinamico, non puoi ottenere un RPO pari a zero. Tuttavia, puoi ottenere un RPO prossimo allo zero. 
 ---
-= RPO prossimo allo zero
+= Creare un backup e ripristinare la configurazione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
