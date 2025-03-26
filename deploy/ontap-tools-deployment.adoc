@@ -29,7 +29,7 @@ Se non disponi di una libreria di contenuti, segui questi passaggi per crearne u
 
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
 . Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
-. Selezionare i puntini di sospensione orizzontali accanto al client vSphere e selezionare *Libreria di contenuti*.
+. Selezionare il menu del client vSphere e selezionare *Libreria di contenuti*.
 . Selezionare *Crea* a destra della pagina.
 . Fornire un nome per la libreria e creare la libreria di contenuti.
 . Accedere alla libreria di contenuti creata.
@@ -42,27 +42,31 @@ NOTE: Per ulteriori informazioni, consulta il https://blogs.vmware.com/vsphere/2
 
 NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Resource Scheduler) del cluster sull'inventario su 'Conservative'. In questo modo, le VM non vengono migrate durante l'installazione.
 
+All'inizio, i tool ONTAP per VMware vSphere vengono implementati come configurazione non ha. Per scalare l'implementazione ha, è necessario abilitare il plug-in hot della CPU e il plug-in hot della memoria. È possibile eseguire questo passaggio come parte del processo di distribuzione o modificare le impostazioni della macchina virtuale dopo la distribuzione.
+
 .Fasi
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.
 . Accedere al server vSphere.
 . Passare al pool di risorse, al cluster o all'host in cui si intende distribuire l'OVA.
-. Fare clic con il pulsante destro del mouse sulla posizione desiderata e selezionare *Deploy OVF template...* (distribuire modello OVF...).
 +
 
 NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere nei datastore vVol gestiti.
 
-. Scegliere il file OVA dall'URL o navigare alla sua posizione, quindi selezionare *Avanti*.
-. Per implementare i tool ONTAP per VMware vSphere dall'archivio di contenuti:
+. È possibile distribuire l'OVA dalla libreria di contenuti o dal sistema locale.
 +
-.. Vai alla tua libreria di contenuti e seleziona l'elemento della libreria che desideri distribuire.
-.. Selezionare *azioni* > *Nuova VM da questo modello*
+|===
 
 
-. Nel campo *Select a name and folder* (Seleziona un nome e una cartella*), immettere il nome della macchina virtuale e sceglierne la posizione. Se si seleziona la casella di controllo *Personalizza l'hardware di questa macchina virtuale*, viene attivata un'ulteriore operazione denominata *Personalizza hardware* prima di raggiungere la finestra *Pronto per il completamento*.
+| Dal sistema locale | Dalla libreria di contenuti 
+
+
+| a. fare clic con il pulsante destro del mouse e selezionare *Deploy OVF template...*. b. scegliere il file OVA dall'URL o navigare fino alla posizione desiderata, quindi selezionare *Next*. | a. accedere alla libreria di contenuti e selezionare l'elemento della libreria che si desidera distribuire. b. selezionare *azioni* > *Nuova VM da questo modello* 
+|===
+. Nel campo *Select a name and folder* (Seleziona un nome e una cartella*), immettere il nome della macchina virtuale e sceglierne la posizione. Per abilitare l'utilizzo della funzione ha, selezionare l'opzione *Personalizza l'hardware di questa macchina virtuale*, che attiverà un'ulteriore fase chiamata *Personalizza hardware* prima di passare alla finestra *Pronto per il completamento*.
 . Selezionare una risorsa di computer e selezionare *Avanti*. Se lo si desidera, selezionare la casella *Accendi automaticamente VM distribuita*.
 . Esaminare i dettagli del modello e selezionare *Avanti*.
 . Leggere e accettare il contratto di licenza e selezionare *Avanti*.
-. Selezionare lo spazio di archiviazione per la configurazione e i file del disco e selezionare *Avanti*.
+. Selezionare lo spazio di archiviazione per la configurazione e il formato del disco, quindi selezionare *Avanti*.
 . Selezionare la rete di destinazione per ciascuna rete di origine e selezionare *Avanti*.
 . Nella finestra *Personalizza modello*, compilare i campi obbligatori e selezionare *Avanti*.
 +
@@ -74,11 +78,11 @@ NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN con
 
 
 
+. Nella finestra *Customize hardware* (Personalizza hardware*), abilitare le opzioni *CPU hot add* e *Memory hot plug* per consentire la funzionalità ha.
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
 
-. Nella finestra *Customize hardware* (Personalizza hardware*), abilitare l'aggiunta a caldo della CPU e l'hot plug-in della memoria.
 . Accendere la macchina virtuale dopo il completamento dell'attività.
 
 

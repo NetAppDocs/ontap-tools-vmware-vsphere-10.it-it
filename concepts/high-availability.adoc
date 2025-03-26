@@ -29,3 +29,5 @@ Non sono richieste configurazioni aggiuntive per i tool ONTAP per VMware vSphere
 
 
 NOTE: I tool ONTAP per VMware vSphere non supportano vCenter ha.
+
+Per abilitare la funzionalità ha, l'hot add della CPU e l'hot plug della memoria devono essere abilitati durante l'implementazione o in un secondo momento nei tool ONTAP per le impostazioni della VM di VMware vSphere.
