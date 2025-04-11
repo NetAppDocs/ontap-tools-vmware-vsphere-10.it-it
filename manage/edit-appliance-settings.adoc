@@ -16,13 +16,7 @@ Utilizzando ONTAP tools Manager, scala in verticale i tool ONTAP per la configur
 *Prima di iniziare*
 
 * Assicurarsi che il modello OVA abbia la stessa versione OVA del nodo 1. Il nodo 1 è il nodo predefinito in cui vengono inizialmente implementati i tool ONTAP per VMware vSphere OVA.
-* Assicurarsi che l'aggiunta a caldo della CPU e l'hot plug della memoria siano attivati durante l'implementazione. È possibile abilitarli nel menu del client vCenter se non sono stati abilitati durante la distribuzione. Segui queste istruzioni per abilitarle dal client vCenter:
-+
-** Accedere agli strumenti ONTAP per la macchina virtuale VMware vSphere in *inventari* e selezionare *Modifica impostazioni*.
-** Nelle opzioni *CPU*, selezionare la casella di controllo *Abilita aggiunta a caldo CPU*
-** Nelle opzioni *memoria*, selezionare la casella di controllo *Abilita* in *Memory hot plug*.
-
-
+* Assicurarsi che l'hot add della CPU e l'hot plug della memoria siano abilitati.
 
 
 .Fasi

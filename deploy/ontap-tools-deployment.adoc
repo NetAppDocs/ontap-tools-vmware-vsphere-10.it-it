@@ -62,7 +62,12 @@ NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere n
 
 | a. fare clic con il pulsante destro del mouse e selezionare *Deploy OVF template...*. b. scegliere il file OVA dall'URL o navigare fino alla posizione desiderata, quindi selezionare *Next*. | a. accedere alla libreria di contenuti e selezionare l'elemento della libreria che si desidera distribuire. b. selezionare *azioni* > *Nuova VM da questo modello* 
 |===
-. Nel campo *Select a name and folder* (Seleziona un nome e una cartella*), immettere il nome della macchina virtuale e sceglierne la posizione. Per abilitare l'utilizzo della funzione ha, selezionare l'opzione *Personalizza l'hardware di questa macchina virtuale*, che attiverà un'ulteriore fase chiamata *Personalizza hardware* prima di passare alla finestra *Pronto per il completamento*.
+. Nel campo *Select a name and folder* (Seleziona un nome e una cartella*), immettere il nome della macchina virtuale e sceglierne la posizione.
++
+** Se si utilizza la versione vCenter Server 8.0.3, selezionare l'opzione *Personalizza l'hardware di questa macchina virtuale*, che attiverà un'ulteriore fase chiamata *Personalizza hardware* prima di passare alla finestra *Pronto per il completamento*.
+** Se si utilizza la versione vCenter Server 7.0.3, seguire la procedura descritta nella sezione *What's next?* al termine della distribuzione.
+
+
 . Selezionare una risorsa di computer e selezionare *Avanti*. Se lo si desidera, selezionare la casella *Accendi automaticamente VM distribuita*.
 . Esaminare i dettagli del modello e selezionare *Avanti*.
 . Leggere e accettare il contratto di licenza e selezionare *Avanti*.
@@ -78,7 +83,7 @@ NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN con
 
 
 
-. Nella finestra *Customize hardware* (Personalizza hardware*), abilitare le opzioni *CPU hot add* e *Memory hot plug* per consentire la funzionalità ha.
+. Quando si utilizza la versione vCenter Server 8.0.3, nella finestra *Customize hardware* (Personalizza hardware*), abilitare le opzioni *CPU hot add* e *Memory hot plug* per consentire la funzionalità ha.
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
@@ -89,3 +94,12 @@ Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizza
 È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM.
 
 In caso di discrepanze nel modulo OVF, viene visualizzata una finestra di dialogo che richiede l'azione correttiva. Utilizzare il pulsante Tab per spostarsi, apportare le modifiche necessarie e selezionare "OK.sono disponibili tre tentativi per risolvere eventuali problemi. Se i problemi persistono dopo tre tentativi, il processo di installazione si interrompe e si consiglia di riprovare l'installazione su una nuova macchina virtuale.
+
+.Cosa succederà?
+Se disponi di strumenti ONTAP per VMware vSphere con vCenter Server 7,0.3, segui questi passaggi dopo l'implementazione.
+
+. Accedere al client vCenter
+. Accedere agli strumenti ONTAP per la macchina virtuale VMware vSphere in *inventari* e selezionare l'opzione *Modifica impostazioni*.
+. Nelle opzioni *CPU*, selezionare la casella di controllo *Abilita aggiunta a caldo CPU*
+. Nelle opzioni *memoria*, selezionare la casella di controllo *Abilita* in *Memory hot plug*.
+
