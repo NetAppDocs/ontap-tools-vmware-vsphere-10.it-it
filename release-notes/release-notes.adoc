@@ -11,10 +11,10 @@ summary: Fornisce importanti informazioni su questa release di strumenti ONTAP p
 
 
 [role="lead"]
-Scopri le nuove e migliorate funzioni disponibili nei tool ONTAP per VMware vSphere 10,3.
+Scopri le nuove e migliorate funzioni disponibili nei tool ONTAP per VMware vSphere 10,4.
 
-Per un elenco completo delle nuove funzioni e dei miglioramenti, fare riferimento a xref:whats-new.adoc[Novità dei tool ONTAP per VMware vSphere 10,3].
+Per un elenco completo delle nuove funzioni e dei miglioramenti, fare riferimento a xref:whats-new.adoc[Novità dei tool ONTAP per VMware vSphere 10,4].
 
-Per ulteriori informazioni sull'opportunità di eseguire la migrazione dagli strumenti ONTAP per VMware vSphere 9 agli strumenti ONTAP 10,3, consultare xref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[Confronto tra i tool ONTAP per i tool VMware vSphere 9 e ONTAP per le funzionalità VMware vSphere 10]. La migrazione è supportata dai tool ONTAP per VMware vSphere 9,12-D e le release 9,13-D agli strumenti ONTAP per VMware vSphere 10,3.
+Per ulteriori informazioni sull'opportunità di eseguire la migrazione dagli strumenti ONTAP per VMware vSphere 9 agli strumenti ONTAP 10,4, consultare xref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[Confronto tra i tool ONTAP per i tool VMware vSphere 9 e ONTAP per le funzionalità VMware vSphere 10]. La migrazione è supportata dai tool ONTAP per VMware vSphere 9,12-D e le release 9,13-D agli strumenti ONTAP per VMware vSphere 10,4.
 
-Per ulteriori informazioni, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864["Note sulla versione dei tool ONTAP per VMware vSphere 10,3"^]. Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.
+Per ulteriori informazioni, fare riferimento alla https://library.netapp.com/ecm/ecm_download_file/ECMLP3343864["Note sulla versione dei tool ONTAP per VMware vSphere 10,4"^]. Per accedere alle Note di rilascio, è necessario accedere con l'account NetApp o creare un account.

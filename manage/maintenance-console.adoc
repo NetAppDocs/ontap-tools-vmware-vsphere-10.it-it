@@ -31,8 +31,6 @@ Configurazione dell'applicazione
  a| 
 . Visualizza il riepilogo dello stato del server
 . Modificare il livello di REGISTRAZIONE per servizi provider VASA e servizi SRA
-. Disattiva AutoSupport
-. Aggiorna URL proxy AutoSupport
 
 
 
@@ -44,7 +42,6 @@ Configurazione del sistema
 . Arrestare la macchina virtuale
 . Modificare la password utente "maint"
 . Modificare il fuso orario
-. Aggiungere un nuovo server NTP
 . Aumentare la dimensione del disco jail (/jail)
 . Eseguire l'upgrade
 . Installare VMware Tools

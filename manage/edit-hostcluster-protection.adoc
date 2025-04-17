@@ -26,7 +26,7 @@ summary: È possibile modificare le relazioni SnapMirror del cluster host protet
 Utilizzare questa procedura per monitorare lo stato della protezione del cluster host. Puoi monitorare ogni cluster host protetto insieme al relativo stato di protezione, ai rapporti SnapMirror, ai datastore e allo stato SnapMirror corrispondente.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Accedere a *NetApp ONTAP tools* > *protezione* > *host cluster relations*.
 +
 L'icona sotto la colonna protezione mostra lo stato della protezione
@@ -41,7 +41,7 @@ L'icona sotto la colonna protezione mostra lo stato della protezione
 Utilizzare questa procedura per proteggere gli archivi dati o gli host appena aggiunti. È possibile aggiungere nuovi host al cluster protetto o creare nuovi datastore nel cluster host utilizzando l'interfaccia utente nativa di vCenter.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Per modificare le proprietà di un cluster protetto, è possibile effettuare una delle seguenti operazioni
 +
 .. Accedere a *NetApp ONTAP tools* > *protezione* > *host cluster relations*, selezionare il menu puntini di sospensione sul cluster e selezionare *Modifica* o.
@@ -65,7 +65,7 @@ Viene creata un'attività vCenter ed è possibile tenere traccia dell'avanzament
 == Aggiungi una nuova relazione SnapMirror
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Per modificare le proprietà di un cluster protetto, è possibile effettuare una delle seguenti operazioni
 +
 .. Accedere a *NetApp ONTAP tools* > *protezione* > *host cluster relations*, selezionare il menu puntini di sospensione sul cluster e selezionare *Modifica* o.
@@ -91,7 +91,7 @@ Per eliminare una relazione SnapMirror asincrona, occorre aggiungere una SVM o u
 L'eliminazione della relazione attiva una nuova scansione sul sito secondario per rimuovere il LUN non mappato come percorso attivo dagli host.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Per modificare le proprietà di un cluster protetto, è possibile effettuare una delle seguenti operazioni
 +
 .. Accedere a *NetApp ONTAP tools* > *protezione* > *host cluster relations*, selezionare il menu puntini di sospensione sul cluster e selezionare *Modifica* o.
@@ -113,7 +113,7 @@ Per modificare una relazione di SnapMirror asincrona, occorre aggiungere la SVM 
 NOTE: Non è possibile modificare una relazione SnapMirror asincrona esistente.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Per modificare le proprietà di un cluster protetto, è possibile effettuare una delle seguenti operazioni
 +
 .. Accedere a *NetApp ONTAP tools* > *protezione* > *host cluster relations*, selezionare il menu puntini di sospensione sul cluster e selezionare *Modifica* o.

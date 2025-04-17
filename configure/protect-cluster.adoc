@@ -25,7 +25,7 @@ Assicurarsi che siano soddisfatti i seguenti prerequisiti:
 
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Fare clic con il pulsante destro del mouse su un cluster host e selezionare *NetApp ONTAP tools* > *Protect Cluster*.
 . Nella finestra di protezione del cluster, il tipo di datastore e le informazioni della Storage Virtual Machine (VM) di origine vengono popolate automaticamente. Seleziona il collegamento dei datastore per visualizzare i datastore protetti.
 . Immettere il *nome del gruppo di coerenza*.

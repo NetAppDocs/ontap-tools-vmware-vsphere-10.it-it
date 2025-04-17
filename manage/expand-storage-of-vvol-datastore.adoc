@@ -14,7 +14,7 @@ summary: 'Quando si fa clic con il pulsante destro del mouse sull"oggetto del da
 Quando si fa clic con il pulsante destro del mouse sull'oggetto del datastore nella vista oggetto vCenter, gli strumenti ONTAP per le azioni supportate da VMware vSphere vengono visualizzati nella sezione del plug-in. Le azioni specifiche vengono attivate in base al tipo di datastore e ai privilegi dell'utente corrente.
 
 
-NOTE: L'operazione del datastore Expand vVol non è applicabile al datastore vVol basato su ASA R2.
+NOTE: L'operazione del datastore Expand vVol non è applicabile al datastore vVol basato sul sistema ASA R2.
 
 .Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.

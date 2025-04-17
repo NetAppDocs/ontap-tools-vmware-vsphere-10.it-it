@@ -2,7 +2,7 @@
 permalink: manage/enable-services.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È possibile modificare la password dell"amministratore utilizzando ONTAP Tools Manager.' 
+summary: 'È possibile modificare la password dell"amministratore utilizzando Gestione strumenti ONTAP per abilitare servizi come provider VASA, importazione della configurazione vVol e disaster recovery (SRA) utilizzando Gestione strumenti ONTAP.' 
 ---
 = Abilita i tool ONTAP per i servizi VMware vSphere
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È possibile modificare la password dell"amministratore utilizzando ON
 
 
 [role="lead"]
-Manager consente di abilitare servizi come provider VASA, importare la configurazione vVol e il disaster recovery (SRA) utilizzando ONTAP tools Manager.
+È possibile modificare la password dell'amministratore utilizzando Gestione strumenti ONTAP per abilitare servizi come provider VASA, importazione della configurazione vVol e disaster recovery (SRA) utilizzando Gestione strumenti ONTAP.
 
 .Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -26,6 +26,6 @@ Quando si abilitano i servizi per la prima volta, è necessario creare le creden
 NOTE: Prima di disabilitare i servizi opzionali, assicurarsi che i server vCenter gestiti dagli strumenti ONTAP non li utilizzino.
 
 +
-L'opzione *Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio provider VASA è attivato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.x agli strumenti ONTAP 10,3.
+L'opzione *Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio provider VASA è attivato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.x agli strumenti ONTAP 10,4.
 
 

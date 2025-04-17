@@ -14,8 +14,8 @@ summary: È possibile configurare nuovi ruoli utente per la gestione dei backend
 È possibile configurare nuovi ruoli e privilegi utente per la gestione dei backend di storage utilizzando il file JSON fornito con gli strumenti ONTAP per VMware vSphere e ONTAP System Manager.
 
 .Prima di iniziare
-* È necessario aver scaricato il file dei privilegi di ONTAP da ONTAP Tools per VMware vSphere utilizzando _\https://<loadbalancerIP>:8443/Virtualization/user-Privileges/users_roles.zip_.
-* Il file dei privilegi di ONTAP dovrebbe essere stato scaricato da ONTAP Tools utilizzando `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
+* È necessario aver scaricato il file ONTAP Privileges dagli strumenti ONTAP per VMware vSphere utilizzando _\https://<ONTAPtoolsIP>:8443/Virtualization/user-privileges/users_roles.zip_.
+* Il file ONTAP Privileges dovrebbe essere stato scaricato da ONTAP Tools utilizzando `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 
 NOTE: È possibile creare utenti a livello di cluster o direttamente a livello di Storage Virtual Machine (SVM). Puoi anche creare utenti senza utilizzare il file user_roles.json e, in tal caso, devi disporre di un set minimo di privilegi a livello di SVM.
@@ -24,7 +24,7 @@ NOTE: È possibile creare utenti a livello di cluster o direttamente a livello d
 
 
 .Fasi
-. Estrarre il file scaricato _\https://<loadbalancerIP>:8443/Virtualization/user-privileges/users_roles.zip_.
+. Estrarre il file scaricato _\https://<ONTAPtoolsIP>:8443/Virtualization/user-privileges/users_roles.zip_.
 . Accedere a ONTAP System Manager utilizzando l'indirizzo IP di gestione del cluster del cluster.
 . Accedere al cluster con admin Privileges. Per configurare un utente, attenersi alla procedura illustrata di seguito:
 +
@@ -36,7 +36,7 @@ NOTE: È possibile creare utenti a livello di cluster o direttamente a livello d
 +
 Il campo prodotto viene compilato automaticamente.
 
-.. Selezionare la funzionalità desiderata dal menu a discesa funzionalità prodotto.
+.. Seleziona le funzionalità del prodotto come VSC, provider VASA o SRA dal menu a discesa.
 +
 Il campo *ruolo* viene compilato automaticamente in base alla capacità del prodotto selezionata.
 
@@ -146,6 +146,9 @@ Utilizzo delle API:
 
 
 | /api/network/ip/interfaces | Sola lettura | Aggiunta del backend dello storage - per identificare l'ambito della LIF di gestione è Cluster/SVM 
+
+
+| /api/storage/availability-zones | Sola lettura | SAZ Discovery. Applicabile ai sistemi ONTAP 9.16.1 e ASA R2. 
 |===
 
 
@@ -257,6 +260,12 @@ Inoltre, per ONTAP versione 9.16.0 e successive, eseguire il seguente comando:
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
+----
+Per i sistemi ASA R2 su ONTAP versione 9.16.1 e successive, eseguire il seguente comando:
+
+[listing]
+----
+security login rest-role create -role <role-name> -api /api/storage/availability-zones -access readonly
 ----
 
 
@@ -376,7 +385,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 
 == Aggiorna i tool ONTAP per VMware vSphere 10,1 a un utente 10,3
 
-Se i tool di ONTAP per l'utente di VMware vSphere 10,1 sono un utente con ambito cluster creato utilizzando il file json, esegui i seguenti comandi nell'interfaccia dell'interfaccia dell'interfaccia dell'interfaccia dell'utente di ONTAP utilizzando l'utente di amministrazione per l'upgrade alla release 10,3.
+Per i tool ONTAP per gli utenti di VMware vSphere 10,1 con un utente impostato su cluster creato utilizzando il file JSON, utilizzare i seguenti comandi dell'interfaccia della riga di comando di ONTAP con l'Privileges dell'amministratore utente per eseguire l'aggiornamento alla release 10,3.
 
 Per le funzionalità del prodotto:
 
@@ -410,7 +419,7 @@ _security login role create -role <existing-role-name> -cmddirname "vserver nvme
 
 _security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all_
 
-Se i tool di ONTAP per l'utente di VMware vSphere 10,1 sono un utente con ambito SVM creato utilizzando il file json, esegui i seguenti comandi nell'interfaccia dell'interfaccia dell'interfaccia dell'interfaccia dell'interfaccia utente di ONTAP utilizzando l'utente di amministrazione per l'upgrade alla release 10,3.
+Per i tool ONTAP per l'utente di VMware vSphere 10,1 con un utente con ambito SVM creato utilizzando il file json, utilizza i comandi dell'interfaccia della riga di comando di ONTAP con l'utente admin Privileges per eseguire l'upgrade alla release 10,3.
 
 Privileges SVM:
 
@@ -448,4 +457,26 @@ vserver nvme subsystem create
 
 vserver nvme subsystem modify
 
+----
+
+
+== Aggiorna i tool ONTAP per VMware vSphere 10,3 a un utente 10,4
+
+A partire da ONTAP 9.16.1, aggiornare i tool ONTAP per l'utente VMware vSphere 10,3 a 10,4 utente.
+
+Per i tool ONTAP per l'utente VMware vSphere 10,3 con un utente sottoposto a cluster creato utilizzando il file JSON e ONTAP versione 9.16.1 o successiva, utilizza il comando CLI ONTAP con admin user Privileges per eseguire l'upgrade alla release 10,4.
+
+Per le funzionalità del prodotto:
+
+* VSC
+* Provider VSC e VASA
+* VSC e SRA
+* VSC, VASA Provider e SRA.
+
+
+Privileges cluster:
+
+[listing]
+----
+security login role create -role <existing-role-name> -cmddirname "storage availability-zone show" -access all
 ----

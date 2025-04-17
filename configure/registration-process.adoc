@@ -14,7 +14,7 @@ summary: 'Puoi registrare il provider VASA con un"istanza di vCenter Server util
 Puoi registrare il provider VASA con un'istanza di vCenter Server utilizzando i tool ONTAP per VMware vSphere. La sezione Impostazioni provider VASA visualizza lo stato di registrazione provider VASA per vCenter Server selezionato.
 
 .Fasi
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere.
 . Selezionare *tasti di scelta rapida* > *NetApp ONTAP tools* nella sezione dei plug-in.
 . Selezionare *Impostazioni* > *Impostazioni provider VASA*. Lo stato di registrazione del provider VASA viene visualizzato come non registrato.
 . Selezionare il pulsante *Registra* per registrare il provider VASA.
@@ -22,8 +22,7 @@ Puoi registrare il provider VASA con un'istanza di vCenter Server utilizzando i 
 . Dopo aver completato la registrazione e l'aggiornamento della pagina, vengono visualizzati lo stato, il nome e la versione del provider VASA registrato. Dopo la registrazione, viene attivata l'azione di annullamento della registrazione.
 
 
-*Al termine*
-
+.Cosa succederà
 Verificare che il provider VASA integrato sia elencato sotto VASA Provider dal client vCenter:
 
 .Fasi

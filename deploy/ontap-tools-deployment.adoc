@@ -11,10 +11,9 @@ summary: 'I tool ONTAP per l"appliance VMware vSphere sono implementati come nod
 
 
 [role="lead"]
-I tool ONTAP per l'appliance VMware vSphere sono implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS e VMFS.
+I tool ONTAP per l'appliance VMware vSphere sono implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS e VMFS. Il processo di distribuzione degli strumenti ONTAP può richiedere fino a 45 minuti.
 
-*Prima di iniziare*
-
+.Prima di iniziare
 Una libreria di contenuti in VMware è un oggetto contenitore che memorizza modelli di VM, modelli di vApp e altri tipi di file. La distribuzione con la libreria di contenuti offre un'esperienza senza problemi poiché non dipende dalla connettività di rete.
 
 
@@ -28,7 +27,7 @@ Se non disponi di una libreria di contenuti, segui questi passaggi per crearne u
 *Creare una libreria di contenuti* in un'implementazione con un solo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
 
 . Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
-. Accedere al client vSphere utilizzando `\https://<vcenterip>/<ui>`
+. Accedere al client vSphere
 . Selezionare il menu del client vSphere e selezionare *Libreria di contenuti*.
 . Selezionare *Crea* a destra della pagina.
 . Fornire un nome per la libreria e creare la libreria di contenuti.
@@ -88,7 +87,7 @@ NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN con
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
 
-. Accendere la macchina virtuale dopo il completamento dell'attività.
+. Accendere la macchina virtuale dopo aver completato l'attività se non è stata selezionata l'opzione di accensione automatica della macchina virtuale.
 
 
 È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM.
@@ -99,6 +98,7 @@ In caso di discrepanze nel modulo OVF, viene visualizzata una finestra di dialog
 Se disponi di strumenti ONTAP per VMware vSphere con vCenter Server 7,0.3, segui questi passaggi dopo l'implementazione.
 
 . Accedere al client vCenter
+. Spegnere il nodo ONTAP Tools.
 . Accedere agli strumenti ONTAP per la macchina virtuale VMware vSphere in *inventari* e selezionare l'opzione *Modifica impostazioni*.
 . Nelle opzioni *CPU*, selezionare la casella di controllo *Abilita aggiunta a caldo CPU*
 . Nelle opzioni *memoria*, selezionare la casella di controllo *Abilita* in *Memory hot plug*.

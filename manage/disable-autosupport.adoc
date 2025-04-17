@@ -14,12 +14,11 @@ summary: 'Quando si configura il sistema di archiviazione per la prima volta, Au
 Quando si configura il sistema di archiviazione per la prima volta, AutoSupport viene attivato per impostazione predefinita. Invia messaggi al supporto tecnico 24 ore dopo l'attivazione. Quando disabiliti AutoSupport, non riceverai più supporto e monitoraggio proattivi.
 
 
-NOTE: Si consiglia di tenere attivato AutoSupport. Aiuta a velocizzare il rilevamento e la risoluzione dei problemi. Il sistema raccoglie le informazioni AutoSupport e le memorizza localmente, anche quando è disattivato.
+NOTE: Si consiglia di mantenere attivato AutoSupport. Aiuta a velocizzare il rilevamento e la risoluzione dei problemi. Il sistema raccoglie le informazioni AutoSupport e le memorizza localmente, anche quando è disattivato. Tuttavia, non invia il rapporto a nessuna rete.
 
 .Fasi
-. Da vCenter Server, aprire la console di manutenzione.
-. Accedere come utente di manutenzione.
-. Immettere 1 per selezionare *Configurazione applicazione*.
-. Immettere 3 per selezionare *Disattiva AutoSupport*.
-. Immettere y nella finestra di dialogo di conferma.
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
+. Selezionare l'opzione *Impostazioni* > *Telemetria* > *Modifica*.
+. Deselezionare l'opzione *AutoSupport* e salvare le modifiche.
 

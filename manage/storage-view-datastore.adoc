@@ -25,10 +25,10 @@ I tool ONTAP per VMware vSphere mostrano la vista laterale dello storage ONTAP d
 | *Tipo datastore* | *Informazioni disponibili* 
 
 
-| Datastore NFS | La pagina *Dettagli archiviazione* contiene backend di archiviazione, informazioni di aggregazione e volume. La pagina dei dettagli di NFS contiene dati correlati al datastore NFS. 
+| Datastore NFS | La pagina *Dettagli archiviazione* contiene backend di archiviazione, informazioni di aggregazione e volume. La pagina *dettagli NFS* contiene dati relativi al datastore NFS. 
 
 
-| Datastore VMFS | La pagina *Dettagli archiviazione* contiene informazioni di backend, aggregato e volume di archiviazione. La pagina *dettagli LUN* contiene i dati relativi al LUN. La pagina *namespace details* contiene dati relativi al namespace quando il datastore VMFS utilizza il protocollo NVMe/TCP o NVMe/FC. I dettagli del volume e dell'aggregato non vengono visualizzati per i datastore basati sul sistema storage ASA R2. 
+| Datastore VMFS | La pagina *Dettagli archiviazione* contiene i dettagli relativi al backend, all'aggregato, al volume e alla zona di disponibilità dello storage (SAZ). La pagina *Dettagli unità di archiviazione* contiene i dettagli dell'unità di archiviazione. 
 
 
 | Datastore vVol | Elenca tutti i volumi. È possibile espandere o rimuovere lo spazio di archiviazione dal riquadro di archiviazione di ONTAP. Questa vista non è supportata per il datastore vVol basato sul sistema ASA R2. 

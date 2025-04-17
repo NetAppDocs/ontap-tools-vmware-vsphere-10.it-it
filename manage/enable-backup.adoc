@@ -2,16 +2,19 @@
 permalink: manage/enable-backup.html 
 sidebar: sidebar 
 keywords:  
-summary: Poiché i tool ONTAP per VMware vSphere 10,3 utilizzano il provisioner di storage dinamico, non puoi ottenere un RPO pari a zero. Tuttavia, puoi ottenere un RPO prossimo allo zero. 
+summary: 'A partire dai tool ONTAP per VMware vSphere 10,3, l"appliance utilizza il provisioner di storage dinamico, non puoi raggiungere RPO pari a zero. Tuttavia, puoi ottenere un RPO prossimo allo zero.' 
 ---
-= Creare un backup e ripristinare la configurazione
+= Creare una copia di backup e ripristinare la configurazione degli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Poiché i tool ONTAP per VMware vSphere 10,3 utilizzano il provisioner di storage dinamico, non puoi ottenere RPO pari a zero. Tuttavia, puoi ottenere un RPO prossimo allo zero. Per ottenere un RPO prossimo allo zero, è necessario creare un backup del setup e ripristinarlo su una nuova macchina virtuale.
+A partire dai tool ONTAP per VMware vSphere 10,3, l'appliance utilizza il provisioner di storage dinamico, non puoi raggiungere RPO pari a zero. Tuttavia, puoi ottenere un RPO prossimo allo zero. Per ottenere un RPO prossimo allo zero, è necessario creare un backup del setup e ripristinarlo su una nuova macchina virtuale.
+
+
+NOTE: Per migrare ad alta disponibilità quando è abilitato il backup non ha, disabilitare prima il backup e riabilitarlo dopo la migrazione.
 
 
 
@@ -42,7 +45,7 @@ Nella sezione file, è possibile visualizzare la directory. Il nome della direct
 
 Per ripristinare la configurazione, spegnere la macchina virtuale esistente e installare una nuova macchina virtuale utilizzando l'OVA utilizzato nella distribuzione iniziale.
 
-Devi utilizzare lo stesso indirizzo IP degli strumenti ONTAP (IP del bilanciamento del carico) per la nuova macchina virtuale e la configurazione del sistema come i servizi abilitati, le dimensioni del nodo e la modalità ha deve essere uguale all'implementazione iniziale.
+È necessario utilizzare lo stesso indirizzo IP degli strumenti ONTAP per la nuova macchina virtuale e la configurazione del sistema, ad esempio i servizi abilitati, le dimensioni del nodo e la modalità ha, deve corrispondere all'implementazione iniziale.
 
 Per ripristinare la configurazione dal file di backup, procedere come segue.
 

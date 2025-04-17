@@ -64,6 +64,9 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | *Codice errore di distribuzione* | *Flusso di lavoro* | *Risoluzione* 
 
 
+| 049 | Per la rete e la convalida, lo script perl li assegnerà a breve | - 
+
+
 | 050 | Generazione chiave SSH non riuscita | Riavviare la macchina virtuale primaria (VM). 
 
 
@@ -78,7 +81,7 @@ Sudo rke2-uninstall.sh (tutte le VM).
 | 055 | Distribuzione del registro non riuscita | Se il pod del Registro di sistema è presente, attendere che il pod sia pronto, quindi riavviare la macchina virtuale primaria oppure ridistribuirla. 
 
 
-| 059 | La distribuzione di KubeVip non è riuscita | Garantire che l'indirizzo IP virtuale per il piano di controllo di Kubernetes e l'indirizzo IP del bilanciatore di carico fornito durante l'implementazione appartengano alla stessa VLAN e sono indirizzi IP gratuiti. Riavviare se tutti i punti precedenti sono corretti. Altrimenti, ridistribuzione. 
+| 059 | La distribuzione di KubeVip non è riuscita | Assicurati che l'indirizzo IP virtuale per il piano di controllo di Kubernetes e l'indirizzo IP degli strumenti ONTAP forniti durante l'implementazione appartengano alla stessa VLAN e siano indirizzi IP gratuiti. Riavviare se tutti i punti precedenti sono corretti. Altrimenti, ridistribuzione. 
 
 
 | 060 | L'implementazione dell'operatore non è riuscita | Riavviare 

@@ -13,8 +13,10 @@ summary: 'È possibile modificare la password dell"amministratore utilizzando ON
 [role="lead"]
 Utilizzando ONTAP tools Manager, scala in verticale i tool ONTAP per la configurazione di VMware vSphere per aumentare il numero di nodi nell'implementazione o modificare la configurazione in impostazione ha (High Availability). I tool ONTAP per l'appliance VMware vSphere vengono inizialmente implementati in una configurazione non ha a nodo singolo.
 
-*Prima di iniziare*
 
+NOTE: Per migrare ad alta disponibilità quando è abilitato il backup non ha, disabilitare prima il backup e riabilitarlo dopo la migrazione.
+
+.Prima di iniziare
 * Assicurarsi che il modello OVA abbia la stessa versione OVA del nodo 1. Il nodo 1 è il nodo predefinito in cui vengono inizialmente implementati i tool ONTAP per VMware vSphere OVA.
 * Assicurarsi che l'hot add della CPU e l'hot plug della memoria siano abilitati.
 

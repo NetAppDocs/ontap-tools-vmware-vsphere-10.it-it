@@ -38,5 +38,11 @@ image:../media/ontap-tools-manager-overview.png["Panoramica della dashboard di O
 | Scheda avvisi | La scheda Alerts elenca gli alert dei tool ONTAP in base al tipo, compresi gli alert a livello di nodo di ha. È possibile visualizzare l'elenco degli avvisi selezionando il testo del conteggio (collegamento ipertestuale). Il collegamento indirizza l'utente alla pagina di visualizzazione degli avvisi filtrata in base al tipo selezionato. 
 
 
+| Centri virtuali | La scheda vCenter mostra lo stato di integrità dei vCenter nel sistema. 
+
+
+| Back-end dello storage | La scheda archiviazione backends mostra lo stato di integrità dei backend di archiviazione nel sistema. 
+
+
 | Scheda nodi strumenti ONTAP | La scheda dei nodi dei tool ONTAP mostra l'elenco dei nodi con nome del nodo, nome della macchina virtuale del nodo, stato e tutti i dati relativi alla rete. È possibile selezionare on *Visualizza dettagli* per visualizzare i dettagli aggiuntivi relativi al nodo selezionato. [NOTA] in un setup non ha viene visualizzato un solo nodo. Nel setup ha sono mostrati tre nodi. 
 |===
