@@ -38,6 +38,8 @@ Esempio:
 
 
 |===
+Il diagramma seguente mostra la configurazione di protezione ventola in uscita: image:../media/fan-out-protection.png["Configurazione protezione uscita ventola"] image:../media/fan-out-protection-relationship.png["Relazione di protezione fan out"]
+
 *Fasi*
 
 . Creare un nuovo archivio dati segnaposto. Fare riferimento a. https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Selezionare un datastore segnaposto"]
