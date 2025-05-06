@@ -23,7 +23,7 @@ Attraverso l'integrazione con vCenter, gli strumenti ONTAP ti consentono di eseg
 . Selezionare *vCenters* > *Add* per integrare le istanze di vCenter Server. Fornisci l'indirizzo IP vCenter o il nome host, il nome utente, la password e i dettagli della porta.
 +
 
-NOTE: Senza l'account amministratore, è possibile creare un ruolo personalizzato con autorizzazioni limitate. Per ulteriori informazioni, fare riferimento alla link:../concepts/rbac-vcenter-use.html["USA vCenter Server RBAC con i tool ONTAP per VMware vSphere 10"] sezione.
+NOTE: Non occorre un account di amministratore per aggiungere istanze vCenter agli strumenti ONTAP. È possibile creare un ruolo personalizzato senza l'account admin con autorizzazioni limitate. Per ulteriori informazioni, fare riferimento alla link:../concepts/rbac-vcenter-use.html["USA vCenter Server RBAC con i tool ONTAP per VMware vSphere 10"] sezione.
 
 
 

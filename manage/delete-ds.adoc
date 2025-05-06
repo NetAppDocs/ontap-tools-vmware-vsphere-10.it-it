@@ -11,7 +11,7 @@ summary: 'L"azione Elimina archivio dati elimina il datastore. Nel caso del data
 
 
 [role="lead"]
-La rimozione dello storage dall'azione del datastore è supportata su tutti i tool ONTAP per i datastore vVol VMware vSphere rilevati o gestiti in vCenter Server. Questa azione consente la rimozione di volumi dal datastore vVol.
+La rimozione dello storage dall'azione del datastore è supportata su tutti i tool ONTAP per i datastore vVol VMware vSphere rilevati o gestiti in vCenter Server. Questa azione consente la rimozione di volumi dai datastore vVol.
 
 L'opzione di rimozione è disattivata quando sono presenti vVol su un volume specifico. Oltre a rimuovere i volumi dal datastore, puoi eliminare il volume selezionato sullo storage ONTAP.
 
@@ -35,8 +35,8 @@ NOTE: Non è possibile eliminare gli archivi dati se ci sono macchine virtuali c
 +
 .. Nel caso del datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l'elenco delle macchine virtuali che utilizzano il datastore.
 .. Se il datastore VMFS viene creato sui sistemi ASA R2 e fa parte della protezione, devi rimuovere la protezione dal datastore prima di eliminarlo.
-.. Nel caso dell'archivio dati vVol, l'azione Elimina archivio dati elimina l'archivio dati solo quando non vi sono vVol associati. La finestra di dialogo Elimina datastore offre un'opzione per eliminare i volumi dal cluster ONTAP.
-.. Nel caso del datastore vVol basato su sistemi ASA R2, la casella di controllo per eliminare i volumi di backup non è applicabile.
+.. Nel caso di datastore vVol, l'azione di eliminazione del datastore elimina il datastore solo quando non vi sono vVol associati. La finestra di dialogo Elimina datastore offre un'opzione per eliminare i volumi dal cluster ONTAP.
+.. Nel caso dei datastore vVol basati su sistemi ASA R2, la casella di controllo per eliminare i volumi di backup non è applicabile.
 
 
 . Per eliminare i volumi di backup sull'archiviazione ONTAP, selezionare *Elimina volumi sul cluster ONTAP*.

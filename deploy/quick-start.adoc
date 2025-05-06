@@ -13,7 +13,7 @@ summary: La guida introduttiva ai tool ONTAP per VMware vSphere include alcuni p
 [role="lead"]
 La guida introduttiva ai tool ONTAP per VMware vSphere include alcuni passaggi. Questa guida rapida illustra la configurazione iniziale degli strumenti ONTAP per VMware vSphere.
 
-Inizialmente, implementerai tool ONTAP per VMware vSphere come configurazione di piccole dimensioni a nodo singolo che offre servizi chiave per supportare i datastore NFS e VMFS. Se devi espandere la configurazione per utilizzare il datastore vVol e l'alta disponibilità (ha), ti basterà completare questo workflow. Per ulteriori informazioni, fare riferimento alla link:../deploy/ha-workflow.html["Workflow di implementazione HA"].
+Inizialmente, implementerai tool ONTAP per VMware vSphere come configurazione di piccole dimensioni a nodo singolo che offre servizi chiave per supportare i datastore NFS e VMFS. Se devi espandere la configurazione per utilizzare i datastore vVol e l'alta disponibilità (ha), dopo aver completato questo workflow dovrai farlo. Per ulteriori informazioni, fare riferimento alla link:../deploy/ha-workflow.html["Workflow di implementazione HA"].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Pianificare la distribuzione
 [role="quick-margin-para"]

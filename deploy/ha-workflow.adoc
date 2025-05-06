@@ -23,7 +23,7 @@ Puoi scalare in verticale i tool di ONTAP per la configurazione di VMware vSpher
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Attivare i servizi
 [role="quick-margin-para"]
-Per configurare il datastore vVol è necessario abilitare il servizio Provider VASA. Registra il provider VASA con vCenter e assicurati che le policy storage soddisfino i requisiti di ha, incluse le configurazioni di storage e rete appropriate.
+Per configurare i datastore vVol, è necessario abilitare il servizio Provider VASA. Registra il provider VASA con vCenter e assicurati che le policy storage soddisfino i requisiti di ha, incluse le configurazioni di storage e rete appropriate.
 
 [role="quick-margin-para"]
 Abilitare i servizi SRA a utilizzare gli strumenti ONTAP Storage Replication Adapter (SRA) per VMware Site Recovery Manager (SRM) o VMware Live Site Recovery (VLSR).
