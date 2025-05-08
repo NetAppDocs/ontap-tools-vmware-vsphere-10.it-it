@@ -18,14 +18,14 @@ Scopri le nuove funzionalità disponibili nei tool ONTAP per VMware vSphere 10,4
 | Aggiornare | Descrizione 
 
 
-| Supporto per il sistema ASA R2 con 12 nodi per cluster | I tool ONTAP per VMware vSphere 10,4 supportano i flussi di lavoro per i sistemi storage ASA R2 con un massimo di 12 nodi per cluster, migliorando così l'efficienza e la scalabilità della gestione dei dati. Supporta datastore vVol con protocollo iSCSI e FC e datastore VMFS con protocollo iSCSI, FC e NVMe, per opzioni di storage flessibili e migliorate. 
+| link:../configure/create-datastore.html["Supporto per il sistema ASA R2 con 12 nodi per cluster"] | I tool ONTAP per VMware vSphere 10,4 supportano i flussi di lavoro per i sistemi storage ASA R2 con un massimo di 12 nodi per cluster, migliorando così l'efficienza e la scalabilità della gestione dei dati. Supporta datastore vVol con protocollo iSCSI e FC e datastore VMFS con protocollo iSCSI, FC e NVMe, per opzioni di storage flessibili e migliorate. 
 
 
-| Miglioramenti all'interfaccia utente di ONTAP tools Manager | È ora possibile abilitare il server NTP per una sincronizzazione precisa dell'ora nell'ambiente e configurare le impostazioni di telemetria per monitorare e analizzare le prestazioni del sistema dall'interfaccia di gestione degli strumenti ONTAP. Queste impostazioni non sono più disponibili nella console di manutenzione. 
+| link:../manage/add-ntpserver.html["Miglioramenti all'interfaccia utente di ONTAP tools Manager"] | È ora possibile abilitare il server NTP per una sincronizzazione precisa dell'ora nell'ambiente e configurare le impostazioni di telemetria per monitorare e analizzare le prestazioni del sistema dall'interfaccia di gestione degli strumenti ONTAP. Queste impostazioni non sono più disponibili nella console di manutenzione. 
 
 
 | Funzionalità di sicurezza avanzate | Le funzioni di sicurezza offrono ora protezione e conformità migliorate agli standard del settore, fornendo un'esperienza solida e intuitiva per aiutare gli amministratori a gestire gli ambienti VMware in modo più efficiente. 
 
 
-| Funzionalità di disaster recovery SRA avanzate | Gli strumenti ONTAP per VMware vSphere 10,4 ora supportano le operazioni di disaster recovery con Site Recovery Appliance (SRA) con snapshot con nome personalizzato, oltre alle copie snapshot pianificate da SnapMirror. 
+| link:../protect/enable-storage-replication-adapter.html["Funzionalità di disaster recovery SRA avanzate"] | Gli strumenti ONTAP per VMware vSphere 10,4 ora supportano le operazioni di disaster recovery con Site Recovery Appliance (SRA) con snapshot con nome personalizzato, oltre alle copie snapshot pianificate da SnapMirror. 
 |===

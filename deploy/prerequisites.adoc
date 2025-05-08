@@ -25,28 +25,22 @@ Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual 
 ** 348 GB per installazioni con thick provisioning
 
 
-* *Requisiti di dimensionamento del sistema host* la memoria consigliata in base alle dimensioni di distribuzione è illustrata nella tabella seguente:
+* *Requisiti di dimensionamento del sistema host* la memoria consigliata in base alle dimensioni di distribuzione è illustrata nella tabella seguente. Per implementare l'high Availability (ha), occorrono dimensioni triplicate rispetto a quelle specificate nella tabella.
 
 
 |===
 
 
-| *Tipo di distribuzione* | *CPU* | *Memoria (GB)* | *Spazio su disco (GB) con thick provisioning* 
+| *Tipo di distribuzione* | *CPU per nodo* | *Memoria (GB) per nodo* | *Spazio su disco (GB) con thick provisioning per nodo* 
 
 
-| Non ha piccolo | 9 | 18 | 350 
+| Piccolo | 9 | 18 | 350 
 
 
-| Terreno non ha | 13 | 26 | 350 
+| Medio | 13 | 26 | 350 
 
 
-| HA Small (cumulativo di tre nodi) | 27 | 54 | 1050 
-
-
-| Supporto HA (cumulativo di tre nodi) | 39 | 78 | 1050 
-
-
-| HA Large (cumulativo di tre nodi) | 51 | 102 | 1050 
+| NOTA BENE: L'implementazione estesa è solo per la configurazione ha. | 17 | 34 | 350 
 |===
 
 NOTE: Una volta abilitato il backup, ogni cluster di tool ONTAP necessita di altri 50GB di spazio nel datastore in cui vengono implementate le macchine virtuali. Pertanto, una piattaforma non ha richiede 400 GB e ha richiede 1100 GB di spazio in totale.
