@@ -19,6 +19,8 @@ NOTE: Per migrare ad alta disponibilità quando è abilitato il backup non ha, d
 .Prima di iniziare
 * Assicurarsi che il modello OVA abbia la stessa versione OVA del nodo 1. Il nodo 1 è il nodo predefinito in cui vengono inizialmente implementati i tool ONTAP per VMware vSphere OVA.
 * Assicurarsi che l'hot add della CPU e l'hot plug della memoria siano abilitati.
+* Nel vCenter Server, imposta il livello di automazione del Disaster Recovery Service (DRS) su parzialmente automatizzato. Dopo aver implementato HA, ripristinalo su completamente automatizzato.
+* I nomi host dei nodi nella configurazione HA devono essere in minuscolo.
 
 
 .Fasi

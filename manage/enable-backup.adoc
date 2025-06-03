@@ -26,7 +26,7 @@ NOTE: Per migrare ad alta disponibilità quando è abilitato il backup non ha, d
 . Immettere `4` per selezionare *supporto e diagnostica*.
 . Immettere `3` per selezionare l'opzione *Abilita backup di sistema*.
 . In caso di non ha, immettere le credenziali vCenter in cui viene implementata la macchina virtuale degli strumenti ONTAP.
-. Immettere il valore della frequenza di backup compreso tra 5-60 minuti.
+. Immettere il valore della frequenza di backup compreso tra 10-60 minuti.
 . Premere *Invio*
 +
 Questo crea il backup e lo invia all'archivio dati della macchina virtuale a intervalli regolari.
