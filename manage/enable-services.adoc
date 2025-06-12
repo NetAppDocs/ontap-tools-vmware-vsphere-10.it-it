@@ -26,6 +26,6 @@ Quando si abilitano i servizi per la prima volta, è necessario creare le creden
 NOTE: Prima di disabilitare i servizi opzionali, assicurarsi che i server vCenter gestiti dagli strumenti ONTAP non li utilizzino.
 
 +
-L'opzione *Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio provider VASA è attivato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.x agli strumenti ONTAP 10,4.
+L'opzione *Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio provider VASA è attivato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.xx agli strumenti ONTAP 10,4.
 
 

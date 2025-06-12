@@ -26,7 +26,7 @@ Se non disponi di una libreria di contenuti, segui questi passaggi per crearne u
 
 *Creare una libreria di contenuti* in un'implementazione con un solo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
 
-. Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
+. Scarica il  `.zip` file che contiene i binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere da  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
 . Accedere al client vSphere
 . Selezionare il menu del client vSphere e selezionare *Libreria di contenuti*.
 . Selezionare *Crea* a destra della pagina.
@@ -41,10 +41,10 @@ NOTE: Per ulteriori informazioni, consulta il https://blogs.vmware.com/vsphere/2
 
 NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Resource Scheduler) del cluster sull'inventario su 'Conservative'. In questo modo, le VM non vengono migrate durante l'installazione.
 
-All'inizio, i tool ONTAP per VMware vSphere vengono implementati come configurazione non ha. Per scalare l'implementazione ha, è necessario abilitare il plug-in hot della CPU e il plug-in hot della memoria. È possibile eseguire questo passaggio come parte del processo di distribuzione o modificare le impostazioni della macchina virtuale dopo la distribuzione.
+Inizialmente, gli strumenti ONTAP per VMware vSphere vengono distribuiti come configurazione non HA. Per scalare l'implementazione ha, è necessario abilitare il plug-in hot della CPU e il plug-in hot della memoria. È possibile eseguire questo passaggio come parte del processo di distribuzione o modificare le impostazioni della macchina virtuale dopo la distribuzione.
 
 .Fasi
-. Scaricare il `.zip` file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.
+. Scarica il  `.zip` file che contiene i binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere da  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.
 . Accedere al server vSphere.
 . Passare al pool di risorse, al cluster o all'host in cui si intende distribuire l'OVA.
 +

@@ -281,9 +281,7 @@ La password viene aggiornata sulla macchina virtuale.</block>
   <block id="7ac3113c1b6737c7529a9d0b23af02fb" category="paragraph">Se hai dimenticato la password di ONTAP Tools Manager, puoi reimpostare le credenziali di amministratore utilizzando il token generato dagli strumenti ONTAP per la console di manutenzione di VMware vSphere.</block>
   <block id="7b5d5a72aa33a2b11a9a331250d66471" category="list-text">Nella schermata di accesso, selezionare l'opzione *Reimposta password*.</block>
   <block id="ca6ef544de910ada8f9334d21c77dd5e" category="list-text">Nella finestra a comparsa di modifica della password, immettere il token di reimpostazione della password, il nome utente e i dettagli della nuova password.</block>
-  <block id="24e33ece3722557577533666c712c8a7" category="summary">È possibile gestire applicazioni, sistemi e configurazioni di rete utilizzando la console di manutenzione degli strumenti ONTAP. È possibile modificare la password di amministratore e la password di manutenzione. È inoltre possibile generare pacchetti di supporto, impostare diversi livelli di log, visualizzare e gestire le configurazioni TLS e avviare la diagnostica remota.</block>
   <block id="6de1d606334a744ef35a27bdd474a0c6" category="doc">Panoramica dei tool ONTAP per la console di manutenzione VMware vSphere</block>
-  <block id="98e3bea019c371a7308c43a4583f8138" category="paragraph">È necessario disporre di strumenti VMware installati dopo la distribuzione degli strumenti ONTAP per VMware vSphere per accedere alla console di manutenzione. Si consiglia di utilizzare<block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> Nome utente e password configurati durante la distribuzione per accedere alla console di manutenzione degli strumenti ONTAP. Si consiglia di utilizzare *nano* per modificare i file in manutenzione o nella console di login principale.</block>
   <block id="234b4e4f9ae67097596aecf827e76c96" category="admonition">Impostare una password per<block ref="776e6c3d14fd9df9fc13e130d598c448" prefix=" " category="inline-code"></block> utente durante l'attivazione della diagnostica remota.</block>
   <block id="477e80d80b2fc511da8499af4d9d38a6" category="list-text">Modificare il livello di REGISTRAZIONE per servizi provider VASA e servizi SRA</block>
   <block id="905caaa103479b6c14b498a6d296af1e" category="list-text">Disattiva AutoSupport</block>
@@ -339,7 +337,6 @@ La password viene aggiornata sulla macchina virtuale.</block>
   <block id="0ca6560aa88bd22fa1b3bb69d8594555" category="list-title">Fasi:</block>
   <block id="c0714b594de6bdb767078508cfc29726" category="summary">La vista dello storage ONTAP nella scheda Configure di un tool ONTAP per VMware vSphere mette a disposizione dati relativi al datastore e al relativo volume.</block>
   <block id="eefb401515606432e535b2c010ca31a1" category="doc">Viste dello storage ONTAP per datastore</block>
-  <block id="c3e54de1629f4b952a428aa7d2126621" category="summary">Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di distribuzione e alcuni requisiti di base del sistema host.</block>
   <block id="d2a731e17e932f5e2185dd4d0230dace" category="paragraph">Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual Appliance (vCSA). È necessario implementare i tool ONTAP per VMware vSphere su un client vSphere supportato che include il sistema ESXi.</block>
   <block id="3c69aed3fe79d658207798783104200f" category="inline-link">Creazione e utilizzo della libreria di contenuti</block>
   <block id="310f705969896b4d59368edab71d1d87" category="list-text">Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.</block>
@@ -553,8 +550,6 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="3f175fe208931c674dc6c6252477f69b" category="list-text">Mappature delle risorse</block>
   <block id="7cb2c88a440a03e13d32d94f6c048340" category="list-text">Datastore segnaposto</block>
   <block id="a00d4477c9c1974aff09f6ea5b44859d" category="paragraph">La pagina Network Mappings (Mapping di rete) visualizza le risorse protette del sito e le risorse del sito di ripristino. È possibile seguire la stessa procedura per le altre reti del proprio ambiente.</block>
-  <block id="135dda3ac3096b9bd31ceb04b513c216" category="section-title">Passaggi comuni di migrazione</block>
-  <block id="a556515aafd07bfe4c2dfa6abbaa4ccb" category="section-title">Fasi di migrazione SRA</block>
   <block id="77efba168b5a2059c2d20a1e2673f5d1" category="paragraph">Eseguire queste operazioni sui siti di protezione e ripristino.</block>
   <block id="4b2e39d58448cd6246edaab6e2789245" category="paragraph">*Metodo HTTP ed endpoint*</block>
   <block id="0b0231c1815d06ad4701a091ce91a740" category="paragraph">Questa chiamata API REST utilizza il metodo e l'endpoint seguenti.</block>
@@ -564,22 +559,7 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="b46b241331d5bfe90afd25ec36605c07" category="paragraph">*Tipo di lavorazione*</block>
   <block id="288aae25bc408055f50c21c991903a44" category="paragraph">Asincrono</block>
   <block id="a62fbfbe1fa2fbcd3ff1ab71d9f0cf7a" category="paragraph">*Esempio Curl*</block>
-  <block id="80e56be2a784c57e6087b3af6db66ad9" category="paragraph">{
-  "otv_ip": "10.12.13.45",
-  "credenziali_provider_vasa": {
-    "nome utente": "vasauser",
-    "password": "******* "
-  }
-  "database_password": "******* "
-}</block>
   <block id="654a9186fe9a47c1397903b9228f2c36" category="paragraph">Corpo della richiesta per un'altra migrazione delle release:</block>
-  <block id="5cda9daf0baf81a9f615b94e32abb4a8" category="paragraph">{
-  "otv_ip": "10.12.13.45",
-  "credenziali_provider_vasa": {
-    "nome utente": "vasauser",
-    "password": "******* "
-  }
-}</block>
   <block id="18009c9216d59118fb460184e2ec0a3d" category="paragraph">*Esempio di output JSON*</block>
   <block id="492fdcd87814cf3c979a27709fc29350" category="paragraph">Viene restituito un oggetto lavoro. È necessario salvare l'identificatore del lavoro per utilizzarlo nel passo successivo.</block>
   <block id="372ff7cae2da4e0d6205af97a48a61eb" category="paragraph">{
@@ -589,7 +569,6 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
 }</block>
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Registrare il provider VASA su vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">PATCH</block>
-  <block id="bdfee7ad87d9004e1091e6e1762d0e84" category="paragraph">*Esempio di input JSON*</block>
   <block id="589c4957e1e0bb7b0bf55fa835dbaf3d" category="list-text">Immettere *y* per impostare la password desiderata.</block>
   <block id="0a01c0c2d00b20ff323dc6b25ceb30a5" category="list-text">kn exec -it ntv-mongodb-0 sh - kn è un alias di kubectl -n ntv-system.</block>
   <block id="bfc1d4c138c87f77e5b639193ca91674" category="list-text">Acquisire snapshot di tutti i volumi uno alla volta utilizzando uno dei seguenti metodi:</block>
@@ -949,7 +928,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="ec00f002c530dcfbc3a0e06a58d47937" category="cell">Strumenti ONTAP 10,1</block>
   <block id="ab83860ed087a089d00a21810f2a0bf7" category="cell">Proposta di valore chiave</block>
   <block id="4273cb76acdc3e1de02819d037c77ad4" category="cell">Ottimizza e semplifica le operazioni quotidiane da 0 a 2 con funzionalità di sicurezza, conformità e automazione migliorate</block>
-  <block id="798f5d4722c6982593d6671eef46371d" category="cell">Evoluzione degli strumenti ONTAP 10.x verso la parità 9.x e estensione dei limiti di high Availability, performance e scalabilità</block>
   <block id="92d3c85edd0fa69062ef2c7cca594814" category="cell">Qualifica delle release di ONTAP</block>
   <block id="f69940d2c889c5ba58609514e4ec4bff" category="cell">Da ONTAP 9.9,1 a ONTAP 9.15,1</block>
   <block id="d4dcb3d0be17e55a6784a2f961f93bc2" category="cell">Da ONTAP 9.12,1 a ONTAP 9.14,1</block>
@@ -1110,7 +1088,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="623a19a9d92512b6c3a5932066325ffa" category="paragraph">La scheda interfaccia fornisce informazioni dettagliate sull'interfaccia.</block>
   <block id="bbf638168b43bf582cecf10177afc3d2" category="paragraph">La scheda livelli locali fornisce informazioni dettagliate sull'elenco aggregato.</block>
   <block id="c46965d55afff0a89c0bb3bd26c0a653" category="summary">Durante la migrazione dei dati di storage, i backend di storage vengono inseriti manualmente utilizzando le API REST. Durante la migrazione dei dati del provider VASA, i dati vengono esportati dal database Derby esistente e importati nel database MongoDB.</block>
-  <block id="b7b423b5e37e418ae4659bcf83c729b5" category="section-title">Fasi di migrazione del provider VASA</block>
   <block id="ffdec42d5d13cecca850e153f75748ec" category="paragraph">Non eliminare il provider VASA.</block>
   <block id="073983521d52887782f4ac8fcd628e60" category="cell">Attrezzi ONTAP da 10,2 in poi</block>
   <block id="f995a81db9639d1f6676a86caa7c78e5" category="cell">Supporto provider VASA</block>
@@ -1629,7 +1606,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="f75d6048a8fcc9f4822dcc0f5eef23d2" category="inline-link-macro">Configurare SRA sull'appliance VMware Live Site Recovery</block>
   <block id="0789cade62ba5a348d7e1ed5a15e5429" category="summary">Dopo aver implementato l'appliance VMware Live Site Recovery, è necessario configurare SRA sull'appliance VMware Live Site Recovery. La corretta configurazione di SRA consente all'appliance VMware Live Site Recovery di comunicare con SRA per la gestione del disaster recovery. È necessario archiviare gli strumenti ONTAP per le credenziali VMware vSphere \(indirizzo IP e password amministratore\) nell'appliance VMware Live Site Recovery per consentire la comunicazione tra l'appliance VMware Live Site Recovery e SRA.</block>
   <block id="ca19ccb681ec240b3ba2bef453f35015" category="paragraph">Dopo aver implementato l'appliance VMware Live Site Recovery, è necessario configurare SRA sull'appliance VMware Live Site Recovery. La corretta configurazione di SRA consente all'appliance VMware Live Site Recovery di comunicare con SRA per la gestione del disaster recovery. È necessario memorizzare gli strumenti ONTAP per le credenziali VMware vSphere (indirizzo IP) nell'appliance VMware Live Site Recovery per consentire la comunicazione tra l'appliance VMware Live Site Recovery e SRA.</block>
-  <block id="16f65f1a2c3859080a448540a2f81494" category="list-text">Scaricare il<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> .</block>
   <block id="b0dfff6a1c3e295ea3b778c18fd97c19" category="paragraph">Il file _tar.gz_ dovrebbe essere stato scaricato da<block ref="2daaad32389df9c23111b0df1c3a53df" category="inline-link-rx"></block>.</block>
   <block id="7f17c0be45130bf2b12d5bf5ec2ead98" category="list-text">Il<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> file dell'adattatore SRA dovrebbe essere stato scaricato dal<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> .</block>
   <block id="92b0e7888dea318ff0d52ecace485e8b" category="summary">RBAC (role-based access control) è un framework di sicurezza per controllare l'accesso alle risorse all'interno di un'organizzazione. RBAC semplifica l'amministrazione definendo ruoli con specifici livelli di autorizzazione per eseguire azioni, invece di assegnare autorizzazioni a singoli utenti. I ruoli definiti vengono assegnati agli utenti, riducendo così il rischio di errori e semplificando la gestione del controllo degli accessi all'interno dell'organizzazione.</block>
@@ -1771,7 +1747,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="b9307f5638c31e98c11df5ab9355ebc8" category="paragraph">Se non disponi di una libreria di contenuti, segui questi passaggi per crearne una:</block>
   <block id="bff5af523c0c362efa94459dbb9bc8f3" category="paragraph">*Creare una libreria di contenuti* in un'implementazione con un solo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.</block>
   <block id="359966f79d38ac8700101ef368573a16" category="admonition">Prima di procedere con la distribuzione, impostare il DRS (Distributed Resource Scheduler) del cluster sull'inventario su 'Conservative'. In questo modo, le VM non vengono migrate durante l'installazione.</block>
-  <block id="af0ada25f4fd07661e572cca28b961df" category="list-text">Scaricare il<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> file contenente i file binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere dal<block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.</block>
   <block id="8e872493652df7e9ffefc076dc59c381" category="list-text">Passare al pool di risorse, al cluster o all'host in cui si intende distribuire l'OVA.</block>
   <block id="49e56c9b53ad658c96d55bc65668259a" category="admonition">Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere nei datastore vVol gestiti.</block>
   <block id="413560adb5f032ce013265b1080e4df5" category="list-text">Selezionare una risorsa di computer e selezionare *Avanti*. Se lo si desidera, selezionare la casella *Accendi automaticamente VM distribuita*.</block>
@@ -1806,7 +1781,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="d74a40c70cc0ce39ee0a63d9809a8cb2" category="paragraph">Per abilitare la funzionalità ha, l'hot add della CPU e l'hot plug della memoria devono essere abilitati durante l'implementazione o in un secondo momento nei tool ONTAP per le impostazioni della VM di VMware vSphere.</block>
   <block id="0d8e6f4e10df466752fe81f2900011de" category="summary">Se l'accesso alla rete non è stato configurato, tutti gli indirizzi IP rilevati dall'host ESXi vengono aggiunti al criterio di esportazione per impostazione predefinita.</block>
   <block id="9a68ed4eca42d8b38ad99492d29e8ab3" category="list-text">Selezionare il menu del client vSphere e selezionare *Libreria di contenuti*.</block>
-  <block id="82b1e70d021d2ae63524015247494128" category="paragraph">All'inizio, i tool ONTAP per VMware vSphere vengono implementati come configurazione non ha. Per scalare l'implementazione ha, è necessario abilitare il plug-in hot della CPU e il plug-in hot della memoria. È possibile eseguire questo passaggio come parte del processo di distribuzione o modificare le impostazioni della macchina virtuale dopo la distribuzione.</block>
   <block id="6868e47bbc3a8cf87041d4fea17b993d" category="list-text">È possibile distribuire l'OVA dalla libreria di contenuti o dal sistema locale.</block>
   <block id="0b044bf45314e5d20c59ab7b578f7495" category="cell">Dal sistema locale</block>
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">Dalla libreria di contenuti</block>
@@ -2024,7 +1998,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="2917babee976ddb7acae4385de8ea868" category="cell">Da 7.0U3</block>
   <block id="669ce1d03d9fa934e3a84459db318586" category="cell">10,4</block>
   <block id="1354535f18a2310447c0fd43d952244c" category="cell">Host ESXi per implementare la macchina virtuale degli strumenti ONTAP</block>
-  <block id="127d69665f43c1c73050a4cc7dc6e0da" category="cell">7,0, 7.0U1, 7.0U2, 7.0U3, 8,0, 8.0U1 E 8.0U3</block>
   <block id="4c2e2546fd73ce517decb920a7fda907" category="cell">VCenter Server per implementare la macchina virtuale degli strumenti ONTAP</block>
   <block id="c9aa6778e894ec4b3dcffe7a4940f428" category="cell">7.0 e 8.0</block>
   <block id="74de20ed3426be46891750a9fda8af0e" category="admonition">A partire dai tool ONTAP per VMware vSphere 10,4, l'hardware della macchina virtuale viene modificato dalla versione 10 alla 17.</block>
@@ -2106,7 +2079,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="26b7a24c2fb682cdde72ced3aadfb1fc" category="paragraph">A partire dai tool ONTAP per VMware vSphere 10,3, l'appliance utilizza il provisioner di storage dinamico, non puoi raggiungere RPO pari a zero. Tuttavia, puoi ottenere un RPO prossimo allo zero. Per ottenere un RPO prossimo allo zero, è necessario creare un backup del setup e ripristinarlo su una nuova macchina virtuale.</block>
   <block id="ac7b715393b89bac4b710e7aea826fbb" category="paragraph">È necessario utilizzare lo stesso indirizzo IP degli strumenti ONTAP per la nuova macchina virtuale e la configurazione del sistema, ad esempio i servizi abilitati, le dimensioni del nodo e la modalità ha, deve corrispondere all'implementazione iniziale.</block>
   <block id="9388b8f101226e86df67ddf2f1f8f8c5" category="summary">È possibile modificare la password dell'amministratore utilizzando Gestione strumenti ONTAP per abilitare servizi come provider VASA, importazione della configurazione vVol e disaster recovery (SRA) utilizzando Gestione strumenti ONTAP.</block>
-  <block id="ae80821bc04ea97412a103f5a9cdea58" category="paragraph">L'opzione *Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio provider VASA è attivato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.x agli strumenti ONTAP 10,4.</block>
   <block id="fff6f63a28676182cb9ee6c87c52911e" category="paragraph">Per ulteriori dettagli, fare riferimento<block ref="74392a6ed560b64c3e452acc2a7ab97a" category="inline-link-rx"></block> a.</block>
   <block id="7846abe7ddf5ac39a4f1d59f03a61e7d" category="admonition">L'operazione del datastore Shrink vVol non è supportata per il datastore vVol basato sul sistema ASA R2.</block>
   <block id="7e80b22daba2fc98d372c1fedd3205c6" category="list-text">La vista di dettaglio del cluster del sistema ASA R2 non include la scheda dei Tier locali quando la proprietà disaggregata viene impostata su "true" per la SVM o il cluster.</block>
@@ -2114,7 +2086,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="142b92f8974022c41936ada0973434a6" category="cell">La pagina *Dettagli archiviazione* contiene i dettagli relativi al backend, all'aggregato, al volume e alla zona di disponibilità dello storage (SAZ). La pagina *Dettagli unità di archiviazione* contiene i dettagli dell'unità di archiviazione.</block>
   <block id="d49d8a5effc0a522fa72d0ff457066df" category="list-text">Immettere un *URL proxy* valido e salvare le modifiche.</block>
   <block id="eb587ff6958c1e65b721306af8fa8e3b" category="paragraph">Se si disattiva AutoSupport, anche l'URL proxy viene disattivato.</block>
-  <block id="936e3c96334eb643e687697ecc2f0c86" category="doc">Migrazione dai tool ONTAP per VMware vSphere 9.x a 10,4</block>
   <block id="305675e418fa7f87d5c522fec4e29a3d" category="list-text">Implementazione di OVA per tool ONTAP per VMware vSphere 10,4.</block>
   <block id="472d4465d1363ede67b4fdb4c6e0e1ff" category="inline-link-macro">Aggiornamento dai tool ONTAP per VMware vSphere 10.x alla 10,4</block>
   <block id="601dd8c7000a195659d470e737339c2d" category="paragraph"><block ref="601dd8c7000a195659d470e737339c2d" category="inline-link-macro-rx"></block></block>
@@ -2181,16 +2152,10 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="5c8bff2565556a46ee36cdd1e107b4be" category="paragraph">Se si esegue l'aggiornamento dagli strumenti ONTAP per VMware vSphere 10,0 a 10,1, è necessario completare i seguenti passaggi prima di procedere con l'attività di aggiornamento: *Attiva diagnostica*</block>
   <block id="cb702676cfcf110ca7a10beaa4efb62a" category="paragraph">Dopo l'aggiornamento ai tool ONTAP per VMware vSphere 10,4, puoi:</block>
   <block id="d8f7e97e3245c4d37ee67ab9e2dc4485" category="paragraph">Dopo aver eseguito l'aggiornamento dalle versioni precedenti degli strumenti ONTAP per VMware vSphere alla versione 10,4, eseguire nuovamente la scansione degli adattatori SRA per verificare che i dettagli vengano aggiornati nella pagina adattatori di replica dello storage per il ripristino dei siti live di VMware.</block>
-  <block id="d3b3106ef8139d93f3b29ebcc961808a" category="paragraph"><block ref="d3b3106ef8139d93f3b29ebcc961808a" category="inline-link-macro-rx"></block></block>
   <block id="fb029c6d9932bd7c5642df65930dc178" category="sidebar">Tool ONTAP per VMware vSphere 10,4</block>
   <block id="0857bfd766eab16b4130e4efc5375da1" category="sidebar">Creare un backup e ripristinare la configurazione degli strumenti ONTAP</block>
-  <block id="4a0289525221cf8ff283b68c2151b26c" category="sidebar">Esegui la migrazione dei tool ONTAP per VMware vSphere dalla 9.x alla 10,4</block>
   <block id="0c72f5748e7c096b829fa8c13bdb6b7f" category="list-text">IPv4 è il componente dell'indirizzo IP della configurazione del nodo, che può essere utilizzato per abilitare la shell diagnostica e l'accesso SSH sul nodo ai fini del debug e della manutenzione.</block>
-  <block id="a9919517205886b598c13e9032a09059" category="paragraph">Durante la migrazione dei dati dello storage, i back-end dello storage vengono gestiti manualmente attraverso le API REST. La migrazione dei dati del provider VASA implica l'esportazione dei dati dal database Derby esistente e l'importazione nel database MongoDB.</block>
   <block id="38376c135168fabdcdde30ebd8337b3c" category="paragraph">Puoi eseguire la migrazione dai tool ONTAP per le release VMware vSphere 9.12D1, 9.13D2 e 9.13P2 ai tool ONTAP per VMware vSphere 10,4.</block>
-  <block id="8b8b53606264e9f2f6b3466d202a79e7" category="admonition">È necessario eseguire il backup della distribuzione degli attuali strumenti ONTAP prima di eseguire l'aggiornamento alle versioni delle patch.</block>
-  <block id="bf24d37a98e4819aab4f021ae207e4a2" category="list-text">Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,4. Per ulteriori informazioni, fare riferimento <block ref="fbc3413db4202f1fe331f16af6b38f13" category="inline-link-macro-rx"></block> a.</block>
-  <block id="87e126829123fea19e6f12abbe92d154" category="paragraph">Prima della migrazione, verificare che un sito sia nello stato protetto e l'altro sia nello stato di ripristino.</block>
   <block id="46ec37b71ccf8c993dcbf7cb78fe2af7" category="admonition">Non iniziare la migrazione se il failover è stato completato ma la nuova protezione è in sospeso. Prima di procedere con la migrazione, assicurarsi che il processo di protezione sia completato. Se è in corso un failover di test, ripulire il failover di test e avviare la migrazione.</block>
   <block id="da2f48d729eae4ca1010b4a077b66b02" category="list-text">Per eliminare l'adattatore SRA degli strumenti ONTAP per VMware vSphere 9.xx in VMware Site Recovery, procedere come segue:</block>
   <block id="b2c26a87d051d5889e6d2e4ab1fc79de" category="list-text">Andare alla sezione *Storage Replication Adapter*.</block>
@@ -2199,11 +2164,8 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="e3e32085ef48d00b185f9ae05a428520" category="list-text">Nella pagina dell'interfaccia utente di VMware Live Site Recovery, eseguire le operazioni *Discover Arrays* e *Discover Devices* e verificare che i dispositivi vengano visualizzati come prima della migrazione.</block>
   <block id="6136a81a0ac0e402d6b510c2488f1d36" category="list-text">Per abilitare la PORTA Derby 1527 sugli strumenti ONTAP esistenti per VMware vSphere, abilitare l'utente root e accedere alla CLI tramite SSH. Quindi, eseguire il seguente comando:</block>
   <block id="3b89ab69ad47240835c0cd31ab9230d1" category="list-text">Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,4. Per ulteriori informazioni, fare riferimento <block ref="946669e64e0e42585f18099dec81ec03" category="inline-link-macro-rx"></block> a.</block>
-  <block id="04cb9537a1b5aeb2f489acc8a6af2479" category="list-text">Back-end dello storage integrato a livello locale dalle API del server vCenter per il plug-in degli strumenti ONTAP.</block>
-  <block id="40e0776d71fd5d591d53e451a6006fa9" category="paragraph">Corpo della richiesta per la migrazione da 9,12 e 9,13:</block>
   <block id="b02dd8a7793406878f54951af581d6f2" category="paragraph">Dopo aver completato il processo, esaminare il rapporto sulla migrazione. Questo rapporto è incluso nei dati del lavoro ed è accessibile dalla risposta del lavoro.</block>
   <block id="4551975cd29f0bfb98cd73d6f5cb8388" category="inline-link-macro">Registrare il provider VASA</block>
-  <block id="0edd46e4487a559e489864eebe825e64" category="list-text">Aggiungi i tool ONTAP per lo storage provider VMware vSphere a vCenter Server e <block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> con i tool ONTAP per VMware vSphere.</block>
   <block id="588348e2b65e0439aeb5d92799e13781" category="inline-link-macro">Attiva provider VASA</block>
   <block id="8c6bc1d231b93b5d6466c303391dba0b" category="list-text"><block ref="3f0f412beb77bd4bc4dc7f97f661a149" category="inline-link-macro-rx"></block> Servizio sui tool ONTAP per VMware vSphere 10,4.</block>
   <block id="84a75f6b0a005e405f2680d9ab007b12" category="admonition">UUID è l'UUID di migrazione restituito in risposta all'API post-migrazione.</block>
@@ -2227,10 +2189,7 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="8bd4742720d0b535334c005ff20fb5b9" category="list-text">Nel caso dei datastore vVol basati su sistemi ASA R2, la casella di controllo per eliminare i volumi di backup non è applicabile.</block>
   <block id="6a9f1ff4ac0e0c970407817908ab7071" category="doc">Espandere i datastore vVol</block>
   <block id="c61ac620cee1003679fdaa462dbeaede" category="admonition">Il funzionamento del datastore Expand vVol non è applicabile ai datastore vVol basati sul sistema ASA R2.</block>
-  <block id="7949ac5c6b3d4313dd4d5969af832925" category="list-text">Integrare il backend di storage localmente utilizzando il plug-in di strumenti ONTAP sul server vCenter. Aggiungi lo storage come storage per la migrazione a livello locale.</block>
   <block id="b5bf1eb9fc501e53457cde004db09086" category="list-text">Eseguire la seguente API da Swagger o in Postman per la migrazione.</block>
-  <block id="45b4835ddd7ad16076afa0b51bf12d2a" category="paragraph">Curl -X POST<block ref="a9f22201e72a1b8e399b24ae5e861616" category="inline-link-rx"></block></block>
-  <block id="d15764d5088db3a571ec9ccf86341552" category="paragraph">Si può accedere a Swagger tramite questo URL: `https://$FQDN_IP_PORT/, per esempio:<block ref="1f852f41a6044590b385b39eaef5531e" category="inline-link-rx"></block>.</block>
   <block id="54caf31d7246402cdcb6cd5c255c5c64" category="paragraph">Curl -X POST<block ref="4042f1acb8fe47ca556f8b938a8d6e08" category="inline-link-rx"></block></block>
   <block id="91377d2edc3d930017c1b8c4679bdb89" category="list-text">Utilizzare il seguente URI in Swagger per controllare lo stato:</block>
   <block id="96b2fedcc932770f843418dedfe7f004" category="list-text">Eseguire la migrazione delle patch utilizzando la seguente API in Swagger o in Postman:</block>
@@ -2250,10 +2209,8 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="ef3669e38cbe7dbc2c1702bdcefb324a" category="list-text">Immettere un nome e le credenziali per il provider VASA. Il nome utente può contenere solo lettere, numeri e caratteri di sottolineatura. La lunghezza della password deve essere compresa tra 8 e 256 caratteri.</block>
   <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">Selezionare *Registra*.</block>
   <block id="7589490ed5e2b68e2f28beb45ecf3fca" category="paragraph">Quando si abilitano i servizi per la prima volta, è necessario creare le credenziali del provider VASA e SRA. Vengono utilizzati per registrare o abilitare i servizi VASA Provider e SRA su vCenter Server. Il nome utente può contenere solo lettere, numeri e caratteri di sottolineatura. La lunghezza della password deve essere compresa tra 8 e 256 caratteri.</block>
-  <block id="67b08defea5ec6059f6e7c54a1da7e7d" category="admonition">Dopo la migrazione da tool ONTAP per VMware vSphere 9 a 10,4, i datastore vVol che utilizzano il protocollo NVMe/FC diventano non operativi, perché gli strumenti ONTAP 10,4 supportano il protocollo NVMe-of solo con i datastore VMFS.</block>
   <block id="7c4cc8f57df0d72a910b2adf9c1dfc8a" category="list-text">Andare alla pagina di gestione della configurazione di VMware Live Site Recovery</block>
   <block id="3f6debbe365887c1e9cead81caac7ed5" category="list-text">Dal menu puntini di sospensione, selezionare *Reimposta configurazione*.</block>
-  <block id="89262eb49fd08637032ae5b8afc51a41" category="admonition">La migrazione dai tool ONTAP per VMware vSphere 9 è necessaria solo quando si utilizzano VASA Provider e vVol. Gli archivi dati NFS e VMFS vengono rilevati durante il processo di rilevamento dello storage.</block>
   <block id="395ddb6ca1b9948e32145f8fa1a9201e" category="paragraph">Imposta i seguenti parametri sui valori predefiniti:</block>
   <block id="be34be4d53796d7420ca7e08ae84df3e" category="list-text">In Opzioni avanzate:</block>
   <block id="bb18d56459266886917f70dbe8e01ef4" category="list-text">Se si seleziona *criterio di esportazione personalizzato*, assicurarsi di eseguire la ricerca in vCenter per tutti gli oggetti. Si consiglia di non utilizzare questa opzione.</block>
@@ -2270,7 +2227,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="e4365b2f9588eb138888d2bae6c6ac55" category="list-text">Quando si utilizza VMware vSphere 7 release, seguire le istruzioni sul sito VMware<block ref="6b6e21be7e83380915b7a93b5de98cc6" category="inline-link-rx"></block> per configurare il binding della porta NVMe/TCP. Quando si utilizza VMware vSphere 8 release, seguire<block ref="5075091467dfddb38b411ec1bb554877" category="inline-link-rx"></block>, per configurare il binding della porta NVMe/TCP.</block>
   <block id="d6e530451ec429932fcb540369b5619d" category="list-text">Per VMware vSphere 7 release, seguire le istruzioni a pagina<block ref="562342ed7eb0295ae9f7a72ea788d31d" category="inline-link-rx"></block> per configurare gli adattatori software NVMe/TCP. Per la release VMware vSphere 8, seguire<block ref="1f8f8787602f2f92045aa29b0a3fa467" category="inline-link-rx"></block> questa procedura per configurare gli adattatori software NVMe/TCP.</block>
   <block id="9d596e014ec247e8a36a9d698795a54f" category="list-text">Eseguire <block ref="c076a6b54534640d64418e3f25ccabbb" category="inline-link-macro-rx"></block> l'azione sull'host ESXi. Per ulteriori informazioni, fare riferimento a<block ref="08964a7c7e6cd9155ed7286907a68824" category="inline-link-rx"></block>.</block>
-  <block id="218024fb6e7af189844709b4e9d8c0e7" category="paragraph">Puoi registrare il provider VASA con un'istanza di vCenter Server utilizzando i tool ONTAP per VMware vSphere. La sezione Impostazioni provider VASA visualizza lo stato di registrazione provider VASA per vCenter Server selezionato. In una distribuzione multi-vCenter, assicurati di disporre di certificati CA personalizzati per ogni istanza di vCenter Server.</block>
   <block id="42c7c15e79d589d9c277ebcfaf6f5cbd" category="cell">Indirizzo IP per l'applicazione degli strumenti ONTAP. Questo è l'indirizzo IP per accedere all'interfaccia web degli strumenti ONTAP.</block>
   <block id="b88a0208d3e02d8e8542318a4bf1dae1" category="cell">Indirizzo IP virtuale degli strumenti ONTAP per le comunicazioni interne. Questo indirizzo IP viene utilizzato per le comunicazioni interne in una configurazione con più istanze degli strumenti ONTAP. Questo indirizzo IP non deve essere uguale all'indirizzo IP dell'applicazione degli strumenti ONTAP.</block>
   <block id="5813391479b0e439cbd9b28d9c14a7b2" category="cell">Indirizzo IPv4 per il primo nodo. È un indirizzo IPv4 univoco per l'interfaccia di gestione del nodo sulla rete di gestione.</block>
@@ -2282,5 +2238,43 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">I nomi host dei nodi nella configurazione HA devono essere in minuscolo.</block>
   <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">Immettere il valore della frequenza di backup compreso tra 10-60 minuti.</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">Per gli strumenti ONTAP per la distribuzione VMware vSphere HA, è necessario modificare la password utente della console di manutenzione sul primo nodo, ovvero node1.</block>
-  <block id="6ff4a9d3d74ed15774b9bf38288e7fab" category="list-text">I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xx sono visibili nei tool ONTAP per VMware vSphere 10,4 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti. Verificare che i datastore siano visibili nella pagina di panoramica degli strumenti ONTAP per la pagina dell'interfaccia utente del plugin VMware vSphere.</block>
+  <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">Le impostazioni MPIO non si applicano ai protocolli NVMe, NVMe/FC e NVMe/TCP.</block>
+  <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">Puoi registrare il provider VASA con un'istanza di vCenter Server utilizzando i tool ONTAP per VMware vSphere. La sezione Impostazioni provider VASA visualizza lo stato di registrazione provider VASA per vCenter Server selezionato. In una distribuzione multi-vCenter, assicurati di disporre di certificati CA personalizzati per ogni istanza di vCenter Server.</block>
+  <block id="6cc905f50a7d9454e2cd6814a57ffcc4" category="list-text">Scarica il <block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> file che contiene i binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere da <block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> .</block>
+  <block id="5da601563ca7e442eafa7d6f32d54969" category="paragraph">Inizialmente, gli strumenti ONTAP per VMware vSphere vengono distribuiti come configurazione non HA. Per scalare l'implementazione ha, è necessario abilitare il plug-in hot della CPU e il plug-in hot della memoria. È possibile eseguire questo passaggio come parte del processo di distribuzione o modificare le impostazioni della macchina virtuale dopo la distribuzione.</block>
+  <block id="7ee31d2f37adf0d7f90807953a704c75" category="list-text">Scarica il <block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> file che contiene i binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere da <block ref="db8756d7f65d6a8e593e69ba45adbb2e" category="inline-link-rx"></block> . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.</block>
+  <block id="42bc4627d63b98bd97ba7ee44a76918d" category="summary">Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di implementazione e alcuni requisiti di base del sistema host.</block>
+  <block id="7cbac47005f891099143c8780a7b8c4a" category="cell">7.0U3 e 8.0U3</block>
+  <block id="76f4abcdaba315d261061ef1716fec26" category="paragraph">L'opzione *Consenti importazione della configurazione vVol* viene visualizzata solo quando il servizio provider VASA è attivato. Questa opzione consente la migrazione dei dati vVol dagli strumenti ONTAP 9.xx agli strumenti ONTAP 10,4.</block>
+  <block id="5239d77bc203f1ccbb06d46c0327b099" category="summary">È possibile gestire le configurazioni di applicazione, sistema e rete utilizzando la console di manutenzione degli strumenti di ONTAP. È possibile modificare la password di amministratore e la password di manutenzione. È inoltre possibile generare pacchetti di supporto, impostare diversi livelli di log, visualizzare e gestire le configurazioni TLS e avviare la diagnostica remota.</block>
+  <block id="f4b50e8494bf3a443986218866d19dd2" category="paragraph">Dopo aver distribuito gli strumenti ONTAP per VMware vSphere, è necessario installare VMware Tools per accedere alla console di manutenzione. È consigliabile utilizzare <block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> come nome utente e password configurati durante la distribuzione per accedere alla console di manutenzione degli strumenti ONTAP. Si consiglia di utilizzare *nano* per modificare i file in manutenzione o nella console di login principale.</block>
+  <block id="da76ecb340fc565948a6b1a789558982" category="doc">Migrazione dai tool ONTAP per VMware vSphere 9.xx a 10,4</block>
+  <block id="188f30594923570222a6f1488e852e69" category="paragraph">Lo spostamento degli strumenti NetApp ONTAP per la configurazione di VMware vSphere dalla versione 9.xx alla 10.x richiede un processo di migrazione a causa degli aggiornamenti e dei miglioramenti significativi del prodotto nelle versioni.</block>
+  <block id="8b6081846f56ef049557c82e5b444e2d" category="paragraph">Se nella configurazione sono presenti datastore NFS e VMFS e nessun datastore vVols, è sufficiente disinstallare ONTAP Tools 9.xx e installare ONTAP Tools 10.x. Tuttavia, se la configurazione contiene datastore vVols, sarà necessario eseguire la migrazione del provider VASA e dell'SRA.</block>
+  <block id="30725e73463cac6869eb16851a0b7f1f" category="paragraph">La tabella seguente descrive il processo di migrazione in questi due diversi scenari.</block>
+  <block id="481ad82ca4c063eed4e75acc5640a962" category="cell">*Se la configurazione ha datastore vVols*</block>
+  <block id="a52ec04716984e73a95a673f19b4381b" category="cell">*Se la configurazione non contiene datastore vVols*</block>
+  <block id="612ae34fe355690bba22816577fb8ceb" category="inline-link-macro">Migrazione del provider VASA</block>
+  <block id="b01a9665d854fa0b6f2ee86db8e7e7e5" category="inline-link-macro">Migrazione SRA</block>
+  <block id="6e4d49fbd70ad4839257ed5ced55d275" category="inline-link">Creare policy di archiviazione VM</block>
+  <block id="a1a2f15a55d77fba2d3e9d1ffb9c2d37" category="cell">Passaggi: 1. <block ref="b948e8148e317c6b3a44b41129efa89c" category="inline-link-macro-rx"></block> 2. <block ref="fd39ed98cbc7c628cdfb8965952c02e6" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="27116dca14772e71a5f801de216fb934" category="inline-link-macro">Distribuisci e configura gli strumenti ONTAP per VMware vSphere 10.4</block>
+  <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">Come rimuovere OTV 9.xx dal tuo ambiente</block>
+  <block id="2de1e904f7a723f3fccf3b29b5d3a892" category="cell">Passaggi: 1. Rimuovere ONTAP Tools 9.xx dal proprio ambiente. Fare riferimento a <block ref="9bde8c27ff3ba526e74c5e0434eb2686" category="inline-link-rx"></block> Articolo della Knowledge Base di NetApp. 2. <block ref="b784a866e80ba41b4fb2f8e0caeb5197" category="inline-link-macro-rx"></block> 3. <block ref="2f4f76d1186f7e1931e429142840bca6" category="inline-link-rx"></block></block>
+  <block id="8fba1879056f1b6c411434b65fe61ee9" category="admonition">Dopo la migrazione da tool ONTAP per VMware vSphere 9.xx a 10,4, i datastore vVol che utilizzano il protocollo NVMe/FC non sono più operativi, perché gli strumenti ONTAP 10,4 supportano il protocollo NVMe-of solo con i datastore VMFS.</block>
+  <block id="61ace5a2518ab1c5ed7b0cdaaff98213" category="doc">Migrare il provider VASA e l'adattatore di replicazione dello storage (SRA)</block>
+  <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">Passaggi per migrare il provider VASA</block>
+  <block id="db9ce82f740ff3a9f2ad609cd7d296c9" category="list-text">Integrare localmente il backend di archiviazione dalle API del server vCenter per il plug-in degli strumenti ONTAP.</block>
+  <block id="c31397b4be5939d5bf72a8bb0faf9443" category="paragraph">Si può accedere a Swagger tramite questo URL: `https://$FQDN_IP_PORT/, per esempio:<block ref="31b962e36589b3bd2081bfb7d028723f" category="inline-link-rx"></block>.</block>
+  <block id="6e086f74a5eaa2061811529e1d6a623e" category="paragraph">arricciatura -X POST <block ref="c5820eec1fb061702ab2f34b24d1d295" category="inline-link-rx"></block> \ --header 'x-auth: &lt;token_autorizzazione&gt;' \ --header 'Tipo di contenuto: application/json' \ --data '{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "nomeutente": "xxxxx", "password": "******" }, "password_database": "******" }'</block>
+  <block id="684e740f5c7b2c5d6085a2342428c783" category="paragraph">{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "nome utente": "xxxxx", "password": "*******" } }</block>
+  <block id="fafb1a9cdf3a5eb6029da27aa9e99060" category="list-text">Aggiungere gli strumenti ONTAP per il provider di storage VMware vSphere al vCenter Server e <block ref="c283b8bc021fee7e6c856fce39783a46" category="inline-link-macro-rx"></block> con strumenti ONTAP per VMware vSphere.</block>
+  <block id="9a75388e84716581ed710b23451155ae" category="list-text">I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xxx sono visibili nei tool ONTAP per VMware vSphere 10,4 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti. Verificare che i datastore siano visibili nella pagina di panoramica degli strumenti ONTAP per la pagina dell'interfaccia utente del plugin VMware vSphere.</block>
+  <block id="219ce9585531b00b3bd54170f3775f53" category="section-title">Passaggi per migrare l'SRA</block>
+  <block id="507fcd9c144d0cee8403de3b0608fc58" category="paragraph">Nel piano di ripristino, il sito protetto si riferisce alla posizione in cui le VM sono attualmente in esecuzione, mentre il sito di ripristino è quello in cui le VM verranno ripristinate. L'interfaccia SRM visualizza lo stato del piano di ripristino con dettagli sui siti protetti e di ripristino. Nel piano di ripristino, i pulsanti CLEANUP e REPROTECT sono disabilitati, mentre i pulsanti TEST ed RUN rimangono abilitati. Ciò indica che il sito è pronto per il ripristino dei dati. Prima di migrare l'SRA, verificare che un sito sia in stato protetto e l'altro in stato di ripristino.</block>
+  <block id="d6b99aad2c3ad58ece5306ce3dbab4d3" category="cell">Evoluzione degli strumenti ONTAP 10.x verso la parità 9.xx e estensione dei limiti di high Availability, performance e scalabilità</block>
+  <block id="ea974b3b2665a0ede55feb5ef712e4dd" category="paragraph"><block ref="ea974b3b2665a0ede55feb5ef712e4dd" category="inline-link-macro-rx"></block></block>
+  <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Esegui la migrazione dei tool ONTAP per VMware vSphere dalla 9.xx alla 10,4</block>
+  <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrare agli strumenti ONTAP più recenti per VMware vSphere</block>
+  <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrare il provider VASA e SRA</block>
 </blocks>

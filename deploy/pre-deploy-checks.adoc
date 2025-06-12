@@ -2,7 +2,7 @@
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
 keywords: ONTAP tools,Storage Replication Adapter 
-summary: Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di distribuzione e alcuni requisiti di base del sistema host. 
+summary: Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di implementazione e alcuni requisiti di base del sistema host. 
 ---
 = Prima di iniziare…​
 :allow-uri-read: 
