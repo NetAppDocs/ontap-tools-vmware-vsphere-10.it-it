@@ -2236,7 +2236,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="15f0aef685a07d8a64ee213328fd4abf" category="list-text">Determinare gli strumenti ONTAP per il tipo di distribuzione VMware vSphere dalla prima VM del nodo.</block>
   <block id="82cb2fe68a0c35dd310db836d38102d0" category="list-text">Nel vCenter Server, imposta il livello di automazione del Disaster Recovery Service (DRS) su parzialmente automatizzato. Dopo aver implementato HA, ripristinalo su completamente automatizzato.</block>
   <block id="b02bbd059e55c04c7db94e76a92bd311" category="list-text">I nomi host dei nodi nella configurazione HA devono essere in minuscolo.</block>
-  <block id="a4a802cdddc104ad7f0a14d2bdc2c05e" category="list-text">Immettere il valore della frequenza di backup compreso tra 10-60 minuti.</block>
   <block id="843e69439f5c77bf5c54644b48190fc1" category="admonition">Per gli strumenti ONTAP per la distribuzione VMware vSphere HA, è necessario modificare la password utente della console di manutenzione sul primo nodo, ovvero node1.</block>
   <block id="56564ecb20e9cb45429b432b22f216f4" category="admonition">Le impostazioni MPIO non si applicano ai protocolli NVMe, NVMe/FC e NVMe/TCP.</block>
   <block id="07c9ecda15aaf26d8eef3770025ec27c" category="paragraph">Puoi registrare il provider VASA con un'istanza di vCenter Server utilizzando i tool ONTAP per VMware vSphere. La sezione Impostazioni provider VASA visualizza lo stato di registrazione provider VASA per vCenter Server selezionato. In una distribuzione multi-vCenter, assicurati di disporre di certificati CA personalizzati per ogni istanza di vCenter Server.</block>
@@ -2277,4 +2276,5 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="b9a7adbda4cb4f1f2ba292b154c6353e" category="sidebar">Esegui la migrazione dei tool ONTAP per VMware vSphere dalla 9.xx alla 10,4</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrare agli strumenti ONTAP più recenti per VMware vSphere</block>
   <block id="6cd5692bfbed66b11eefcd5a575d4cdd" category="sidebar">Migrare il provider VASA e SRA</block>
+  <block id="51aabaf24027b697520ff09c79c5f552" category="list-text">Immettere un valore per la frequenza di backup compreso tra 5 e 60 minuti.</block>
 </blocks>
