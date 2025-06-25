@@ -71,7 +71,7 @@ OVA è uno standard aperto per il packaging e la distribuzione di appliance virt
 
 === Obiettivo RPO (Recovery Point Objective)
 
-Il valore di RPO misura la frequenza di esecuzione del backup o della replica dei dati. Rappresenta il momento in cui i dati devono essere ripristinati dopo un'interruzione per poter riprendere le operazioni di business. Ad esempio, se un'organizzazione ha un RPO di 4 ore, può tollerare la perdita di dati fino a 4 ore in caso di disastro.
+L'RPO misura la frequenza con cui si esegue il backup o la replica dei dati. Specifica il momento esatto in cui è necessario ripristinare i dati dopo un'interruzione per riprendere le operazioni aziendali. Ad esempio, se un'organizzazione ha un RPO di 4 ore, può tollerare la perdita di dati fino a 4 ore in caso di disastro.
 
 
 
