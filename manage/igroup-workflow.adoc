@@ -94,7 +94,11 @@ Smontare un datastore da un host
 
 
 
-L'host1Igroup viene rimosso dalla gerarchia. Gli igroup figlio non vengono eliminati esplicitamente. L'eliminazione avviene in queste due condizioni: • Se non sono mappate LUN, il sistema ONTAP elimina l'igroup figlio. • Un processo di pulizia pianificato rimuove gli igroup figlio non associati a LUN. Questi scenari si applicano solo agli igroup gestiti dagli strumenti ONTAP, non a quelli creati dall'utente.
+L'host1Igroup viene rimosso dalla gerarchia. Gli igroup figlio non vengono eliminati esplicitamente. L'eliminazione avviene in queste due condizioni:
+
+* Se non viene mappato alcun LUN, il sistema ONTAP elimina l'igroup figlio.
+* Un processo di pulizia pianificato rimuove gli igroup figlio sospesi senza mapping LUN. Questi scenari si applicano solo agli igroup gestiti dagli strumenti ONTAP, non a quelli creati dall'utente.
+
 
 .Esempio 4:
 Elimina archivio dati

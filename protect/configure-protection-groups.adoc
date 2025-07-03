@@ -20,7 +20,7 @@ summary: È necessario creare gruppi di protezione per proteggere un gruppo di m
 È necessario associare i siti protetti e di ripristino creati utilizzando il client vSphere per consentire l'individuazione dei sistemi di storage mediante Storage Replication Adapter (SRA).
 
 
-NOTE: Storage Replication Adapter (SRA) supporta fan-out con una relazione di sincronizzazione di tipo Automated failover Duplex e async Relationship SnapMirror su gruppo di coerenza. Tuttavia, la fan-out con due SnapMirror asincroni sul gruppo di coerenza o gli SnapMirror fan-out sul volume non sono supportati.
+NOTE: Storage Replication Adapter (SRA) supporta il fan-out con una relazione di sincronizzazione di tipo Automated Failover Duplex e una relazione asincrona SnapMirror sul gruppo di coerenza. Tuttavia, la fan-out con due SnapMirror asincroni sul gruppo di coerenza o gli SnapMirror fan-out sul volume non sono supportati.
 
 .Prima di iniziare
 * È necessario che VMware Live Site Recovery sia installato sui siti protetti e di ripristino.
