@@ -26,7 +26,7 @@ Se non disponi di una libreria di contenuti, segui questi passaggi per crearne u
 
 *Creare una libreria di contenuti* in un'implementazione con un solo nodo di piccole dimensioni, non è necessario creare una libreria di contenuti.
 
-. Scarica il  `.zip` file che contiene i binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere da  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
+. Scarica il file contenente i file binari (_.ova_) e i certificati firmati per gli ONTAP tools for VMware vSphere da  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] .
 . Accedere al client vSphere
 . Selezionare il menu del client vSphere e selezionare *Libreria di contenuti*.
 . Selezionare *Crea* a destra della pagina.
