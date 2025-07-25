@@ -41,7 +41,7 @@ NOTE: Nei tool ONTAP per VMware vSphere, è consentito solo aumentare le dimensi
 ** La macchina virtuale che ospita gli strumenti ONTAP non viene implementata direttamente su un host ESXi. La VM deve essere distribuita su un cluster o su un pool di risorse.
 +
 
-NOTE: Una volta abilitata la configurazione ha, non puoi tornare a una configurazione non ha a nodo singolo.
+NOTE: Dopo aver abilitato la configurazione HA, non è possibile tornare a una configurazione a nodo singolo non HA.
 
 
 

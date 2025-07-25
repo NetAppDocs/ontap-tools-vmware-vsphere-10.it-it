@@ -62,7 +62,7 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | *Codice errore di aggiornamento* | *Flusso di lavoro* | *Risoluzione* 
 
 
-| 052 | L'ISO può essere uguale alla versione corrente o a due versioni superiori alla versione corrente. | Utilizzare una versione ISO compatibile per eseguire l'aggiornamento dalla versione corrente. 
+| 052 | L'ISO potrebbe essere uguale alla versione corrente o due release superiori rispetto alla versione corrente. | Utilizzare una versione ISO compatibile per eseguire l'aggiornamento dalla versione corrente. 
 
 
 | 068 | Il rollback dei pacchetti Debian non è riuscito | Utilizza un ripristino basato su RPO pari a zero o su snapshot e riprova l'aggiornamento. 

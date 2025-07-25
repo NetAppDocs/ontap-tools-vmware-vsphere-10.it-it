@@ -84,7 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Requisiti delle porte
 
-Nella tabella seguente sono descritte le porte di rete utilizzate da NetApp e le relative finalità. Assicurarsi che queste porte siano aperte e accessibili per facilitare il corretto funzionamento e la comunicazione all'interno del sistema. Verificare che siano state configurate le configurazioni di rete necessarie per consentire il corretto funzionamento del traffico su queste porte per i servizi associati. A seconda dei criteri di protezione in uso, potrebbe essere necessario configurare firewall o altri dispositivi di protezione per consentire questo traffico all'interno della rete.
+La tabella seguente illustra le porte di rete utilizzate da NetApp e le relative funzioni. Assicurarsi che queste porte siano aperte e accessibili per facilitare il corretto funzionamento e la comunicazione all'interno del sistema. Assicurarsi che siano presenti le configurazioni di rete necessarie per consentire il traffico su queste porte e il corretto funzionamento dei servizi associati. A seconda delle policy di sicurezza, potrebbe essere necessario configurare firewall o altri dispositivi di sicurezza per consentire questo traffico all'interno della rete.
 
 |===
 

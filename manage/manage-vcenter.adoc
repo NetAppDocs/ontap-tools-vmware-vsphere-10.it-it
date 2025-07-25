@@ -52,7 +52,7 @@ Prima di rimuoverlo, devi rimuovere tutti i backend dello storage collegati a vC
 . Selezionare le ellissi verticali sul vCenter Server che si desidera rimuovere e selezionare *Rimuovi*.
 +
 
-NOTE: Una volta rimosse le istanze di vCenter Server, queste non verranno più gestite dall'applicazione.
+NOTE: Dopo aver rimosso le istanze di vCenter Server, queste non saranno più gestite dall'applicazione.
 
 
 

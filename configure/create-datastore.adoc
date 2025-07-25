@@ -26,7 +26,7 @@ Quando lo storage viene integrato negli strumenti ONTAP e viene eseguita la scop
 A partire dai tool ONTAP per VMware vSphere 10,3, puoi creare un datastore vVol nei sistemi ASA R2 con efficienza in termini di spazio come thin.vVol. Il provider VASA crea un contenitore e gli endpoint del protocollo desiderati durante la creazione del datastore vVol. Questo contenitore non presenta volumi di supporto.
 
 .Prima di iniziare
-* Verifica che gli aggregati root non siano mappati alla SVM.
+* Assicurarsi che gli aggregati radice non siano mappati su SVM.
 * Assicurarsi che il provider VASA sia registrato con il vCenter selezionato.
 * Nel sistema storage ASA R2, la SVM deve essere mappata all'aggregato per l'utente della SVM.
 
@@ -47,7 +47,7 @@ NOTE: Il sistema ASA R2 supporta i protocolli iSCSI e FC per i vVol.
 ** È possibile selezionare il nome *Custom Initiator group* per i protocolli iSCSI e FC.
 +
 
-NOTE: In SVM di tipo sistema storage ASA R2, le unità storage (LUN/namespace) non vengono create in quanto il datastore è solo un container logico.
+NOTE: Nel sistema di archiviazione ASA r2 di tipo SVM, le unità di archiviazione (LUN/namespace) non vengono create perché l'archivio dati è solo un contenitore logico.
 
 
 
@@ -148,7 +148,7 @@ Quando si seleziona il protocollo NVMe/FC o NVMe/TCP, viene creato un nuovo sott
 .. Selezionare *aggregate* dalle opzioni a discesa.
 +
 
-NOTE: Per i sistemi di storage ASA R2, l'opzione *aggregato* non è visualizzata poiché lo storage ASA R2 è uno storage disaggregato. Quando scegli una SVM di tipo sistema storage ASA R2, la pagina degli attributi dello storage mostra le opzioni per l'abilitazione della QoS.
+NOTE: Per i sistemi di storage ASA r2, l'opzione *Aggregate* non viene visualizzata perché lo storage ASA r2 è disaggregato. Quando si sceglie un sistema di storage ASA r2 di tipo SVM, la pagina degli attributi di storage mostra le opzioni per abilitare la QoS.
 
 .. Secondo il protocollo selezionato, viene creata un'unità di storage (LUN/namespace) con una riserva di spazio di tipo thin.
 +

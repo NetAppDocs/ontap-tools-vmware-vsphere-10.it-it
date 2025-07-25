@@ -11,10 +11,10 @@ summary: 'I tool ONTAP per l"appliance VMware vSphere sono implementati come nod
 
 
 [role="lead"]
-I tool ONTAP per l'appliance VMware vSphere sono implementati come nodo singolo di piccole dimensioni con servizi core per supportare i datastore NFS e VMFS. Il processo di distribuzione degli strumenti ONTAP può richiedere fino a 45 minuti.
+Gli ONTAP tools for VMware vSphere vengono distribuiti come un singolo nodo di piccole dimensioni con servizi core per supportare datastore NFS e VMFS. Il processo di distribuzione degli strumenti ONTAP potrebbe richiedere fino a 45 minuti.
 
 .Prima di iniziare
-Una libreria di contenuti in VMware è un oggetto contenitore che memorizza modelli di VM, modelli di vApp e altri tipi di file. La distribuzione con la libreria di contenuti offre un'esperienza senza problemi poiché non dipende dalla connettività di rete.
+Una libreria di contenuti in VMware è un oggetto contenitore che archivia modelli di VM, modelli di vApp e altri tipi di file. La distribuzione con la libreria di contenuti offre un'esperienza fluida perché non dipende dalla connettività di rete.
 
 
 NOTE: È necessario archiviare la libreria di contenuti in un datastore condiviso in modo che tutti gli host all'interno di un cluster possano accedervi. Creare una libreria di contenuti per memorizzare l'OVA prima di configurare l'appliance sulla configurazione ha. Non eliminare il modello della libreria di contenuti dopo la distribuzione.

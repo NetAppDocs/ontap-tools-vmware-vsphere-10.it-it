@@ -22,7 +22,7 @@ NOTA:
 .Prima di iniziare
 Per un aggiornamento non ha, spegnere la VM degli strumenti ONTAP e, per un aggiornamento ha, spegnere il primo nodo prima di apportare le seguenti modifiche alle impostazioni della macchina virtuale (VM).
 
-Se si esegue l'aggiornamento dagli strumenti ONTAP per VMware vSphere 10,2 o 10,3, è necessario completare i seguenti passaggi prima di procedere con l'attività di aggiornamento: * Aggiungere un disco rigido aggiuntivo da 100 GB a ciascun nodo, poiché i dati del servizio vengono memorizzati localmente sulla VM. * Modificare la CPU e la memoria per la macchina virtuale spenta in base al tipo di implementazione. Abilitare l'hot plug per CPU e RAM.
+Se si esegue l'aggiornamento dagli ONTAP tools for VMware vSphere 10.2 o 10.3, è necessario completare i seguenti passaggi prima di procedere con l'attività di aggiornamento: * Aggiungere un disco rigido aggiuntivo da 100 GB a ciascun nodo, poiché i dati di servizio sono archiviati localmente sulla VM. * Modificare la CPU e la memoria per la VM spenta in base al tipo di distribuzione. Abilitare il plug-in a caldo per CPU e RAM.
 
 +
 

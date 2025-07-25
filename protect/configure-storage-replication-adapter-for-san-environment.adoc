@@ -66,6 +66,6 @@ L'adattatore viene installato su VMware Live Site Recovery e sul server SRA.
 .Fasi
 . Verificare che gli archivi dati del sito protetto contengano macchine virtuali registrate con vCenter Server.
 . Verificare che gli host ESXi nel sito protetto abbiano montato i volumi di esportazione NFS dalla macchina virtuale di storage (SVM).
-. Verificare che gli indirizzi validi, quali l'indirizzo IP, il nome host o il nome FQDN su cui sono presenti le esportazioni NFS, siano specificati nel campo *indirizzi NFS* quando si utilizza la procedura guidata di Array Manager per aggiungere array a VMware Live Site Recovery.
+. Verificare che nel campo *Indirizzi NFS* siano specificati indirizzi validi, come l'indirizzo IP o il nome di dominio completo (FQDN) su cui sono presenti le esportazioni NFS, quando si utilizza la procedura guidata di Array Manager per aggiungere array a VMware Live Site Recovery. Non utilizzare il nome host NFS nel campo *Indirizzi NFS*.
 . Utilizzare `ping` Su ciascun host ESXi nel sito di ripristino per verificare che l'host disponga di una porta VMkernel in grado di accedere agli indirizzi IP utilizzati per le esportazioni NFS dalla SVM.
 

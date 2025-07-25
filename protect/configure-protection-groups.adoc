@@ -13,6 +13,8 @@ summary: È necessario creare gruppi di protezione per proteggere un gruppo di m
 [role="lead"]
 È necessario creare gruppi di protezione per proteggere un gruppo di macchine virtuali sul sito protetto.
 
+Quando si aggiunge un nuovo datastore, è possibile includerlo nel gruppo di datastore esistente oppure aggiungere un nuovo datastore e creare un nuovo volume o gruppo di coerenza per la protezione. Dopo aver aggiunto un nuovo datastore a un gruppo di coerenza o volume protetto, aggiornare SnapMirror ed eseguire il discovery dello storage sia sul sito protetto che su quello di ripristino. È possibile eseguire il discovery manualmente o in base a una pianificazione per garantire che il nuovo datastore venga rilevato e protetto.
+
 
 
 == Associare siti protetti e di ripristino
@@ -57,15 +59,14 @@ Assicurarsi che i siti di origine e di destinazione siano configurati per:
 
 
 .Fasi
-. Accedere a vCenter Server e selezionare *Site Recovery* > *Protection Groups*.
+. Accedi a vCenter Server e seleziona *Site Recovery* > *Gruppi di protezione*.
 . Nel riquadro *gruppi di protezione*, selezionare *nuovo*.
 . Specificare un nome e una descrizione per il gruppo protezione, direzione e selezionare *Avanti*.
-. Nel campo *Type*, selezionare l'opzione *Type Field...* come gruppi di datastore (replica basata su array) per NFS e datastore VMFS.
-Il dominio degli errori non è altro che SVM con replica abilitata. Vengono visualizzate le SVM che hanno implementato solo il peering e che non hanno problemi.
+. Nel campo *Tipo*, seleziona l'opzione *Tipo...* come gruppi di datastore (replica basata su array) per datastore NFS e VMFS. Il dominio di errore è costituito esclusivamente da SVM con replica abilitata. Vengono visualizzate le SVM che hanno implementato solo il peering e non presentano problemi.
 . Nella scheda gruppi di replica, selezionare la coppia di array abilitata o i gruppi di replica che hanno configurato la macchina virtuale, quindi selezionare *Avanti*.
 +
 Tutte le macchine virtuali presenti nel gruppo di replica vengono aggiunte al gruppo di protezione.
 
-. Selezionare il piano di ripristino esistente o crearne uno nuovo selezionando *Aggiungi al nuovo piano di ripristino*.
+. È possibile selezionare il piano di ripristino esistente oppure crearne uno nuovo selezionando *Aggiungi al nuovo piano di ripristino.*
 . Nella scheda Pronto per il completamento, esaminare i dettagli del gruppo di protezione creato, quindi selezionare *fine*.
 

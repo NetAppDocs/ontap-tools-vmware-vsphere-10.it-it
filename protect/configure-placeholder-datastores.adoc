@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È necessario configurare un datastore segnaposto in modo che conservi una posizione nell"inventario vCenter nel sito di ripristino per la macchina virtuale protetta \(VM\). Non è necessario che l"archivio dati segnaposto sia grande, in quanto le macchine virtuali segnaposto sono piccole e utilizzano solo poche centinaia o meno di kilobyte.' 
+summary: 'È necessario configurare un datastore segnaposto per occupare una posizione nell"inventario vCenter nel sito di ripristino per la macchina virtuale protetta. Il datastore segnaposto non deve essere di grandi dimensioni, poiché le VM segnaposto sono piccole e utilizzano solo poche centinaia di kilobyte o meno.' 
 ---
 = Configurare gli archivi dati segnaposto
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'È necessario configurare un datastore segnaposto in modo che conservi
 
 
 [role="lead"]
-È necessario configurare un datastore segnaposto in modo che conservi un posto nell'inventario vCenter nel sito di ripristino per la macchina virtuale protetta (VM). Non è necessario che l'archivio dati segnaposto sia grande, in quanto le macchine virtuali segnaposto sono piccole e utilizzano solo poche centinaia o meno di kilobyte.
+È necessario configurare un datastore segnaposto per occupare una posizione nell'inventario vCenter nel sito di ripristino per la macchina virtuale (VM) protetta. Il datastore segnaposto non deve essere di grandi dimensioni, poiché le VM segnaposto sono piccole e utilizzano solo poche centinaia di kilobyte o meno.
 
 .Prima di iniziare
 * È necessario aver collegato i siti protetti e di ripristino.

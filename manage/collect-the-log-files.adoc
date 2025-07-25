@@ -35,8 +35,7 @@ Per generare il bundle di log utilizzando l'interfaccia utente del client vCente
 .Fasi
 . Accedere al client vSphere.
 . Dalla home page di vSphere Client, andare a *supporto* > *pacchetto di registrazione* > *genera*.
-. Fornire l'etichetta del bundle di log e generare il bundle di log.
-È possibile visualizzare l'opzione di download quando vengono generati i file. Il download potrebbe richiedere del tempo.
+. Specifica l'etichetta del bundle di log e generalo. L'opzione di download verrà visualizzata durante la generazione dei file. Il download potrebbe richiedere del tempo.
 
 
 

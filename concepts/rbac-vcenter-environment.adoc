@@ -56,4 +56,4 @@ Si tratta di un'esclusiva di Privileges personalizzata per i tool ONTAP per VMwa
 
 === Utenti e gruppi
 
-È possibile definire utenti e gruppi utilizzando Active Directory o l'istanza locale di vCenter Server. Insieme a un ruolo, è possibile creare un'autorizzazione per un oggetto nella gerarchia degli oggetti vSphere. L'autorizzazione concede l'accesso in base all'Privileges nel ruolo associato. Tenere presente che i ruoli non vengono assegnati direttamente agli utenti in isolamento. Gli utenti e i gruppi ottengono invece l'accesso a un oggetto tramite Role Privileges come parte dell'autorizzazione più grande di vCenter Server.
+È possibile definire utenti e gruppi utilizzando Active Directory o l'istanza locale di vCenter Server. In combinazione con un ruolo, è possibile creare un'autorizzazione su un oggetto nella gerarchia degli oggetti vSphere. L'autorizzazione concede l'accesso in base ai privilegi del ruolo associato. Si noti che i ruoli non vengono assegnati direttamente agli utenti in modo isolato. Invece, utenti e gruppi ottengono l'accesso a un oggetto tramite i privilegi del ruolo, come parte dell'autorizzazione più ampia di vCenter Server.

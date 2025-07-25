@@ -22,7 +22,7 @@ Dalla pagina di panoramica, è possibile eseguire l'azione *rilevamento*. L'azio
 
 NOTE: Il pulsante di azione viene attivato solo se si dispone dei privilegi necessari per eseguire l'azione di ricerca.
 
-Una volta inviata la richiesta di rilevamento, è possibile tenere traccia dell'avanzamento dell'azione nel pannello attività recenti.
+Dopo aver inviato la richiesta di individuazione, è possibile monitorare l'avanzamento dell'azione nel pannello delle attività recenti.
 
 Il cruscotto ha diverse schede che mostrano diversi elementi del sistema. La tabella seguente mostra le diverse schede e ciò che esse rappresentano.
 
@@ -35,7 +35,7 @@ Il cruscotto ha diverse schede che mostrano diversi elementi del sistema. La tab
 | Stato | La scheda Stato mostra il numero di backend di archiviazione e lo stato di integrità generale dei backend di archiviazione e del provider VASA. Lo stato dei backend di archiviazione mostra *integro* quando lo stato di tutti i backend di archiviazione è normale e mostra *non integro* se uno dei backend di archiviazione presenta un problema (stato sconosciuto/irraggiungibile/danneggiato). Selezionare la descrizione comando per aprire i dettagli di stato dei backend di archiviazione. È possibile selezionare qualsiasi backend di storage per ulteriori dettagli. Il collegamento *altri stati provider VASA* mostra lo stato corrente del provider VASA registrato in vCenter Server. 
 
 
-| Backend di archiviazione - capacità | Questa scheda mostra la capacità aggregata utilizzata e disponibile di tutti i backend storage per l'istanza di vCenter Server selezionata. Nel caso dei sistemi di storage ASA R2, i dati sulla capacità non vengono mostrati in quanto si tratta di un sistema disaggregato. 
+| Backend di archiviazione - capacità | Questa scheda mostra la capacità aggregata utilizzata e disponibile di tutti i backend di storage per l'istanza di vCenter Server selezionata. Nel caso di sistemi di storage ASA r2, i dati sulla capacità non vengono visualizzati perché si tratta di un sistema disaggregato. 
 
 
 | Macchine virtuali | Questa scheda mostra le 10 macchine virtuali principali ordinate in base alla metrica delle prestazioni. È possibile selezionare l'intestazione per ottenere le 10 macchine virtuali principali per la metrica selezionata in ordine crescente o decrescente. Le modifiche di ordinamento e filtraggio apportate alla scheda persistono fino a quando non si modifica o si cancella la cache del browser. 

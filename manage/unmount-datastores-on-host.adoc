@@ -30,7 +30,7 @@ Se l'archivio dati fa parte di un cluster host protetto, viene visualizzato un m
 
 
 
-NOTE: Se l'archivio dati protetto non è montato, l'impostazione di protezione in uscita potrebbe causare una protezione parziale. Fare riferimento a link:../manage/edit-hostcluster-protection.html["Modificare il cluster host protetto"] per abilitare la protezione completa.
+NOTE: Se il datastore protetto viene smontato, l'impostazione di protezione esistente potrebbe comportare una protezione parziale. Fare riferimento a link:../manage/edit-hostcluster-protection.html["Modificare il cluster host protetto"] per consentire una protezione completa.
 
 .Quali sono le prossime novità?
 È possibile tenere traccia dell'avanzamento nel pannello attività recenti.

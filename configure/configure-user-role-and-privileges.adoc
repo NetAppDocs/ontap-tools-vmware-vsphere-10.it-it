@@ -36,7 +36,7 @@ NOTE: È possibile creare utenti a livello di cluster o direttamente a livello d
 +
 Il campo prodotto viene compilato automaticamente.
 
-.. Seleziona le funzionalità del prodotto come VSC, provider VASA o SRA dal menu a discesa.
+.. Selezionare la funzionalità del prodotto come *VSC, VASA Provider e SRA* dal menu a discesa.
 +
 Il campo *ruolo* viene compilato automaticamente in base alla capacità del prodotto selezionata.
 
@@ -105,7 +105,7 @@ Aggiungere il percorso *REST API* e il relativo accesso dal menu a discesa.
 
 === Elenco dei privilegi minimi richiesti per gli utenti cluster con ambito globale non amministratori
 
-In questa sezione sono elencati i privilegi minimi richiesti per gli utenti cluster con ambito globale non amministratore creati senza utilizzare il file JSON degli utenti. Se un cluster viene aggiunto nell'ambito locale, si consiglia di utilizzare il file JSON per creare gli utenti, poiché gli strumenti ONTAP per VMware vSphere richiedono più dei soli privilegi di lettura per il provisioning su ONTAP.
+In questa sezione sono elencati i privilegi minimi richiesti per gli utenti di cluster con ambito globale non amministratore creati senza utilizzare il file JSON degli utenti. Se un cluster viene aggiunto in ambito locale, si consiglia di utilizzare il file JSON per creare gli utenti, poiché gli ONTAP tools for VMware vSphere richiedono privilegi di lettura superiori a quelli di semplice accesso per il provisioning su ONTAP.
 
 Utilizzo delle API:
 

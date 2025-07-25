@@ -38,10 +38,7 @@ NOTE: Durante la configurazione dell'array manager occorre utilizzare la stessa 
 
 
 
-.. Se si sta effettuando la connessione a un cluster, inserire il nome della SVM nel campo *SVM name* (Nome SVM).
-+
-È anche possibile lasciare vuoto questo campo.
-
+.. Se ci si connette a un cluster, specificare il nome SVM nel campo *Nome SVM* oppure lasciarlo vuoto per gestire tutte le SVM nel cluster.
 .. Inserire i volumi da rilevare nel campo *Volume include list* (elenco di inclusione del volume).
 +
 È possibile inserire il volume di origine nel sito protetto e il volume di destinazione replicato nel sito di ripristino.

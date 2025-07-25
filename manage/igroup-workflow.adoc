@@ -153,7 +153,7 @@ Elimina un datastore sotto un igroup padre personalizzato.
 
 * Anche se CustomIgroup1 non viene riutilizzato, non viene eliminato.
 * Se non viene mappato alcun LUN, il sistema ONTAP elimina host2Igroup.
-* host1Igroup non viene eliminato poiché è mappato a lun3 di DS3. Gli igroup personalizzati non vengono mai eliminati, indipendentemente dallo stato di riutilizzo.
+* host1Igroup non viene eliminato perché è mappato a lun3 di DS3. Gli igroup personalizzati non vengono mai eliminati, indipendentemente dallo stato di riutilizzo.
 
 
 .Esempio 7:
@@ -238,7 +238,7 @@ Quando si monta un datastore NFS su un nuovo host ESXi, gli strumenti ONTAP per 
 
 Quando si elimina o si smonta un datastore NFS da un host ESXi, gli strumenti ONTAP per VMware vSphere rimuovono l'indirizzo IP dell'host dalla policy di esportazione. Se nessun altro host utilizza quella policy di esportazione, questa verrà eliminata. Quando si elimina un datastore NFS, gli strumenti ONTAP per VMware vSphere rimuovono la policy di esportazione associata a tale datastore se non viene riutilizzata da altri datastore. Se la policy di esportazione viene riutilizzata, mantiene l'indirizzo IP dell'host e rimane invariata. Quando si eliminano i datastore, la policy di esportazione rimuove l'assegnazione dell'indirizzo IP dell'host e assegna una policy di esportazione predefinita, in modo che i sistemi ONTAP possano accedervi se necessario.
 
-L'assegnazione della policy di esportazione varia a seconda che venga riutilizzata su datastore diversi. Quando si riutilizza la policy di esportazione, è possibile aggiungerla con il nuovo indirizzo IP host. Quando si elimina o si smonta un datastore che utilizza una policy di esportazione condivisa, la policy non verrà eliminata. Rimane invariata e l'indirizzo IP host non viene rimosso, poiché è condivisa con gli altri datastore. Il riutilizzo delle policy di esportazione è sconsigliato, in quanto può causare problemi di accesso e latenza.
+L'assegnazione della policy di esportazione varia a seconda che venga riutilizzata su datastore diversi. Quando si riutilizza la policy di esportazione, è possibile aggiungerla con il nuovo indirizzo IP host. Quando si elimina o si smonta un datastore che utilizza una policy di esportazione condivisa, la policy non verrà eliminata. Rimane invariata e l'indirizzo IP host non viene rimosso, poiché è condivisa con gli altri datastore. Il riutilizzo delle policy di esportazione è sconsigliato, poiché può causare problemi di accesso e latenza.
 
 .Argomenti correlati
 https://docs.netapp.com/us-en/ontap/nfs-config/create-export-policy-task.html["Creare una policy di esportazione"]
