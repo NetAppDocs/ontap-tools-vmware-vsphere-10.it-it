@@ -44,7 +44,7 @@ NOTE: Prima di procedere con la distribuzione, impostare il DRS (Distributed Res
 Inizialmente, gli strumenti ONTAP per VMware vSphere vengono distribuiti come configurazione non HA. Per scalare l'implementazione ha, è necessario abilitare il plug-in hot della CPU e il plug-in hot della memoria. È possibile eseguire questo passaggio come parte del processo di distribuzione o modificare le impostazioni della macchina virtuale dopo la distribuzione.
 
 .Fasi
-. Scarica il  `.zip` file che contiene i binari (_.ova_) e i certificati firmati per gli strumenti ONTAP per VMware vSphere da  https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab["Sito di supporto NetApp"^] . Se l'OVA è stato importato nella libreria di contenuti, è possibile saltare questo passaggio e procedere con il passaggio successivo.
+. Scaricare il file che contiene i file binari (_.ova_) e i certificati firmati per il ONTAP tools for VMware vSphere dal. Se hai importato l'OVA nella libreria dei contenuti, puoi saltare questo passaggio e procedere con quello successivo
 . Accedere al server vSphere.
 . Passare al pool di risorse, al cluster o all'host in cui si intende distribuire l'OVA.
 +
