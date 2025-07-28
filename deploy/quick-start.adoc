@@ -94,5 +94,5 @@ Configura i tool ONTAP per VMware vSphere per gestire la protezione dei cluster 
 Pianificazione dei backup dei tool ONTAP per il setup di VMware vSphere, utilizzabili per ripristinare il setup in caso di errore.
 
 [role="quick-margin-list"]
-* link:../manage/manage/enable-backup.html["Creare una copia di backup e ripristinare la configurazione degli strumenti ONTAP"]
+* link:../manage/enable-backup.html["Creare una copia di backup e ripristinare la configurazione degli strumenti ONTAP"]
 

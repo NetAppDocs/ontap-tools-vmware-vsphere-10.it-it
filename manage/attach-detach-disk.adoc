@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html 
 sidebar: sidebar 
 keywords:  
-summary: - 
+summary: Collegare un disco dati a una macchina virtuale per espandere la capacità di archiviazione. 
 ---
 = Collegare o scollegare un disco dati da una macchina virtuale
 :allow-uri-read: 
