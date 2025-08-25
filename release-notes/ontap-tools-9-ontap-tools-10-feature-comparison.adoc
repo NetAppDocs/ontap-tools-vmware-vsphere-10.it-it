@@ -11,7 +11,10 @@ summary: Scopri i tool ONTAP per i tool VMware vSphere 9 e ONTAP per il confront
 
 
 [role="lead"]
-Scopri se la migrazione dai tool ONTAP per VMware vSphere 9 ai tool ONTAP per VMware vSphere 10,1 o versioni successive è la soluzione giusta per te. Per le informazioni più aggiornate sulla compatibilità, fare riferimento a https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
+Scopri se la migrazione dagli ONTAP tools for VMware vSphere 9 agli ONTAP tools for VMware vSphere 10.1 o versioni successive è adatta alle tue esigenze.
+
+
+NOTE: Per le informazioni più aggiornate sulla compatibilità, fare riferimento https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^] .
 
 [cols="20%,25%,25%,30%"]
 |===
@@ -21,7 +24,7 @@ Scopri se la migrazione dai tool ONTAP per VMware vSphere 9 ai tool ONTAP per VM
 | Proposta di valore chiave | Ottimizza e semplifica le operazioni quotidiane da 0 a 2 con funzionalità di sicurezza, conformità e automazione migliorate | Evoluzione degli strumenti ONTAP 10.x verso la parità 9.xx e estensione dei limiti di high Availability, performance e scalabilità | Supporto esteso per includere FC per VMFS e vVol e NVMe-of/FC, NVMe-of/TCP solo per VMFS. Facilità di utilizzo per NetApp SnapMirror, semplice configurazione dei cluster di storage vSphere metro e supporto per il ripristino di tre siti VMware Live Site 
 
 
-| Qualifica delle release di ONTAP | Da ONTAP 9.9,1 a ONTAP 9.15,1 | Da ONTAP 9.12,1 a ONTAP 9.14,1 | Da ONTAP 9.12.1 a ONTAP 9.15.1 per gli strumenti ONTAP 10,2 ONTAP 9.14.1, 9.15.1 e 9.16.0 per gli strumenti ONTAP 10,3. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 per gli strumenti ONTAP 10,4 
+| Qualifica delle release di ONTAP | ONTAP 9.9.1 a ONTAP 9.16.1 | Da ONTAP 9.12,1 a ONTAP 9.14,1 | ONTAP 9.12.1 a ONTAP 9.15.1 per gli strumenti ONTAP 10.2.  ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 per gli strumenti ONTAP 10.3.  ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 per gli strumenti ONTAP 10.4.  Per gli strumenti ONTAP 10.4 è necessario ONTAP 9.16.1P3 e versioni successive quando si utilizzano sistemi ASA r2. 
 
 
 | Supporto alla release VMware | VSphere 7.x-8.x da VMware Site Recovery Manager (SRM) 8,5 a VMware Live Site Recovery 9,0 | VSphere 7.x-8.x da VMware Site Recovery Manager (SRM) 8,7 a VMware Live Site Recovery 9,0 | VSphere 7.x-8.x da VMware Site Recovery Manager (SRM) 8,7 a VMware Live Site Recovery 9,0 

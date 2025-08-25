@@ -95,7 +95,8 @@ Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richiest
 
 | Gateway per l'indirizzo IPv6 (opzionale) |  
 |===
-Creare record DNS per tutti gli indirizzi IP indicati sopra. Prima di assegnare i nomi host, eseguire il mapping agli indirizzi IP liberi sul DNS. Tutti gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
+
+NOTE: Creare record DNS per tutti gli indirizzi IP indicati sopra. Prima di assegnare i nomi host, eseguire il mapping agli indirizzi IP liberi sul DNS. Tutti gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
 
 
 

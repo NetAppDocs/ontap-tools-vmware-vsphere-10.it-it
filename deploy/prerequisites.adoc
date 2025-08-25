@@ -53,7 +53,7 @@ NOTE: Una volta abilitato il backup, ogni cluster di tool ONTAP necessita di alt
 | Storage, host e applicazioni | Requisiti di versione 
 
 
-| ONTAP | 9.14.1, 9.15.1 e 9.16.0. FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series e ASA R2. 
+| ONTAP | 9.14.1, 9.15.1, 9.16.0, 9.16.1 e 9.16.1P3 FAS, ASA serie A, ASA serie C, AFF serie A, AFF serie C e ASA r2. 
 
 
 | Gli strumenti ONTAP supportavano gli host ESXi | da 7.0.3 in poi 
