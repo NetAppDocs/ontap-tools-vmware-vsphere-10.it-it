@@ -64,7 +64,7 @@ NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere n
 . Nel campo *Select a name and folder* (Seleziona un nome e una cartella*), immettere il nome della macchina virtuale e sceglierne la posizione.
 +
 ** Se si utilizza la versione vCenter Server 8.0.3, selezionare l'opzione *Personalizza l'hardware di questa macchina virtuale*, che attiverà un'ulteriore fase chiamata *Personalizza hardware* prima di passare alla finestra *Pronto per il completamento*.
-** Se si utilizza la versione vCenter Server 7.0.3, seguire la procedura descritta nella sezione *What's next?* al termine della distribuzione.
+** Se si utilizza la versione vCenter Server 7.0.3, seguire i passaggi nella sezione *cosa succede dopo?* alla fine della distribuzione.image:../media/select-name.png["Seleziona un nome e una cartella"]
 
 
 . Selezionare una risorsa di computer e selezionare *Avanti*. Se lo si desidera, selezionare la casella *Accendi automaticamente VM distribuita*.
@@ -72,7 +72,7 @@ NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere n
 . Leggere e accettare il contratto di licenza e selezionare *Avanti*.
 . Selezionare lo spazio di archiviazione per la configurazione e il formato del disco, quindi selezionare *Avanti*.
 . Selezionare la rete di destinazione per ciascuna rete di origine e selezionare *Avanti*.
-. Nella finestra *Personalizza modello*, compilare i campi obbligatori e selezionare *Avanti*.
+. Nella finestra *Personalizza modello*, compila i campi richiesti e seleziona *Avanti*.image:../media/customize-temp.png["Personalizza il modello"]
 +
 ** Le informazioni vengono convalidate durante l'installazione. In caso di discrepanza, viene visualizzato un messaggio di errore sulla console Web e viene richiesto di correggerla.
 ** I nomi host devono includere lettere (A-Z, a-z), cifre (0-9) e trattini (-). Per configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
@@ -84,7 +84,7 @@ NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN con
 ** IPv4 è il componente dell'indirizzo IP della configurazione del nodo, che può essere utilizzato per abilitare la shell diagnostica e l'accesso SSH sul nodo ai fini del debug e della manutenzione.
 
 
-. Quando si utilizza la versione vCenter Server 8.0.3, nella finestra *Customize hardware* (Personalizza hardware*), abilitare le opzioni *CPU hot add* e *Memory hot plug* per consentire la funzionalità ha.
+. Quando si utilizza la versione vCenter Server 8.0.3, nella finestra *Personalizza hardware*, abilitare le opzioni *Aggiunta a caldo CPU* e *Collegamento a caldo della memoria* per consentire la funzionalità HA.image:../media/customize-hw.png["Personalizza l'hardware"]
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.
