@@ -94,7 +94,7 @@ Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizza
 
 È possibile tenere traccia dell'avanzamento dell'installazione nella console Web della VM.
 
-In caso di discrepanze nel modulo OVF, viene visualizzata una finestra di dialogo che richiede l'azione correttiva. Utilizzare il pulsante Tab per spostarsi, apportare le modifiche necessarie e selezionare "OK.sono disponibili tre tentativi per risolvere eventuali problemi. Se i problemi persistono dopo tre tentativi, il processo di installazione si interrompe e si consiglia di riprovare l'installazione su una nuova macchina virtuale.
+In caso di discrepanze nel modulo OVF, una finestra di dialogo richiederà un'azione correttiva.  Utilizzare il pulsante Tab per navigare, apportare le modifiche necessarie e selezionare *OK*.  Hai tre tentativi per risolvere eventuali problemi.  Se i problemi persistono dopo tre tentativi, il processo di installazione si interromperà e si consiglia di riprovare l'installazione su una nuova macchina virtuale.
 
 .Cosa succederà?
 Se disponi di strumenti ONTAP per VMware vSphere con vCenter Server 7,0.3, segui questi passaggi dopo l'implementazione.

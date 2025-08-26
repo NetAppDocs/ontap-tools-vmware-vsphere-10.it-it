@@ -1465,7 +1465,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="fdbd4c13a762f69f21a098a7dd8e55ad" category="list-text">Selezionare *Reimposta* per implementare le modifiche.</block>
   <block id="39a4d1dfe549518e18a4188e13768079" category="list-text">Selezionare *Reimposta* per implementare le modifiche. Una volta reimpostata correttamente la password, è possibile utilizzare la nuova password per accedere.</block>
   <block id="3ac063bd7a8e9b85e1a6cc3c07a304c3" category="list-text">Selezionare la scheda *Configura* nel riquadro di destra.</block>
-  <block id="41e0fa10828ee2d85cfd4c0ff833ac64" category="inline-link">Storage vMotion</block>
   <block id="6981bfa872a319e4f266c3733ce4e5c3" category="list-text">Selezionare la scheda *Monitor* nel riquadro di destra.</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Selezionare *Avanti*.</block>
   <block id="03c100e80bdd94d3eb4d85dffe4eaecb" category="list-text">Selezionare *segnaposto datastore* &gt; *nuovo* nella scheda Gestisci per creare un nuovo archivio dati segnaposto.</block>
@@ -1707,7 +1706,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="4c91382e492707f0779f372fcc750396" category="list-text">Le informazioni vengono convalidate durante l'installazione. In caso di discrepanza, viene visualizzato un messaggio di errore sulla console Web e viene richiesto di correggerla.</block>
   <block id="2760ddae8a52ae77e6711ac97cdeff45" category="list-text">I nomi host devono includere lettere (A-Z, a-z), cifre (0-9) e trattini (-). Per configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.</block>
   <block id="a1f2c5d218a3501d9d0831dccea5dbc3" category="admonition">Pure IPv6 non è supportato. La modalità mista è supportata con VLAN contenente indirizzi IPv6 e IPv4.</block>
-  <block id="1651a6277f4f59f0128c7be036557e5d" category="paragraph">In caso di discrepanze nel modulo OVF, viene visualizzata una finestra di dialogo che richiede l'azione correttiva. Utilizzare il pulsante Tab per spostarsi, apportare le modifiche necessarie e selezionare "OK.sono disponibili tre tentativi per risolvere eventuali problemi. Se i problemi persistono dopo tre tentativi, il processo di installazione si interrompe e si consiglia di riprovare l'installazione su una nuova macchina virtuale.</block>
   <block id="fc670824c9b9087edaedbd8931be914a" category="doc">Rimuovere i volumi FlexVol</block>
   <block id="94ba231101263cc02a5bbd35865c2569" category="paragraph">Se utilizzi un cluster ONTAP dedicato per i tool ONTAP per l'implementazione di VMware, creerai molti volumi FlexVol non utilizzati. Dopo aver rimosso i tool ONTAP per VMware vSphere, occorre rimuovere i volumi FlexVol per evitare possibili impatti sulle performance.</block>
   <block id="3fcb4ec0988a47a419299691b19d04fa" category="paragraph">Se si tratta di una distribuzione iSCSI, è necessario eliminare anche gli igroup.</block>
@@ -1720,7 +1718,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="23829b8d6575f7cd3e20a5e92b475a9e" category="doc">Disinstallare gli strumenti ONTAP per VMware vSphere</block>
   <block id="82a00fc1c0ae6d437f6d942c64bee898" category="list-text">Rimuovere o spostare tutte le macchine virtuali dai tool ONTAP per datastore gestiti da VMware vSphere.</block>
   <block id="4ad237c48098cfd8973e73475bded403" category="list-text">Per rimuovere le macchine virtuali, fare riferimento alla<block ref="c16fb322315174fa2c9720c74541cf45" category="inline-link-rx"></block></block>
-  <block id="937380d419246adf3fdb369397226f82" category="list-text">Per spostarli in un datastore non gestito, fare riferimento alla sezione<block ref="5c1e2b1dd1aaa388da4191e5a966b959" category="inline-link-rx"></block></block>
   <block id="1d920979688b28c7b10ef84d14436f95" category="list-text">Se hai abilitato il provider VASA, seleziona *Impostazioni* &gt; *Impostazioni provider VASA* &gt; *Annulla registrazione* negli strumenti ONTAP per annullare la registrazione dei provider VASA da tutti i server vCenter.</block>
   <block id="cdb9fe2a322209ab095ba01e8388697d" category="list-text">Rimuovere l'adattatore SRA da VMware Live Site Recovery:</block>
   <block id="1435a5cf1efdb19e83d0f140a2ca4f4f" category="list-text">Accedere come amministratore all'interfaccia di gestione dell'appliance VMware Live Site Recovery utilizzando la porta 5480.</block>
@@ -2388,4 +2385,7 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="63629b02d982d9e4fe0f19501143ce17" category="inline-image-macro">Personalizza l'hardware</block>
   <block id="2a2d465455150512141b1402a600df32" category="list-text">Quando si utilizza la versione vCenter Server 8.0.3, nella finestra *Personalizza hardware*, abilitare le opzioni *Aggiunta a caldo CPU* e *Collegamento a caldo della memoria* per consentire la funzionalità HA.<block ref="93c02f5316fc65f2262959de5552f7c0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="936fb178b14835844700bc06aa5ab952" category="list-text">Se si utilizza Fibre Channel (FC) per la connettività di archiviazione, configurare la suddivisione in zone sugli switch FC per connettere gli host ESXi con i LIF FC dell'SVM.<block ref="56d435991bafd2bcca9f59739e2992e7" category="inline-link-rx"></block></block>
+  <block id="396603bc11e32e1c8be473d2a79f1d2a" category="paragraph">In caso di discrepanze nel modulo OVF, una finestra di dialogo richiederà un'azione correttiva.  Utilizzare il pulsante Tab per navigare, apportare le modifiche necessarie e selezionare *OK*.  Hai tre tentativi per risolvere eventuali problemi.  Se i problemi persistono dopo tre tentativi, il processo di installazione si interromperà e si consiglia di riprovare l'installazione su una nuova macchina virtuale.</block>
+  <block id="59dd8a5d1e9605907341901d2760c087" category="inline-link">Come migrare la tua macchina virtuale con Storage vMotion</block>
+  <block id="0166be8b4848389c414e9e383efe9111" category="list-text">Per spostarli in un datastore non gestito, fare riferimento a<block ref="920cfb03e9def61d5164fb56cf050dd9" category="inline-link-rx"></block></block>
 </blocks>
