@@ -42,6 +42,6 @@ Il diagramma seguente mostra la configurazione di protezione ventola in uscita: 
 
 *Fasi*
 
-. Creare un nuovo archivio dati segnaposto. Fare riferimento a. https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html["Selezionare un datastore segnaposto"]
+. Crea un nuovo datastore segnaposto. Fare riferimento https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html["Selezionare un datastore segnaposto"]
 . Aggiungere il datastore alla protezione del cluster host link:../manage/edit-hostcluster-protection.html["Modificare il cluster host protetto"]. È necessario aggiungere tipi di policy asincroni e sincroni.
 
