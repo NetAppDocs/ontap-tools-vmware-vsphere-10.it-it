@@ -17,7 +17,7 @@ Esistono diversi aspetti dei tool ONTAP per l'implementazione RBAC di VMware vSp
 
 == Panoramica del processo di configurazione
 
-I tool ONTAP per VMware vSphere 10 includono il supporto per la creazione di un utente ONTAP con un ruolo personalizzato. Le definizioni sono contenute in un file JSON che è possibile caricare nel cluster ONTAP. È possibile creare l'utente e personalizzare il ruolo in base all'ambiente e alle esigenze di protezione.
+Gli ONTAP tools for VMware vSphere includono il supporto per la creazione di un utente ONTAP con un ruolo personalizzato.  Le definizioni sono impacchettate in un file JSON che è possibile caricare nel cluster ONTAP .  Puoi creare l'utente e personalizzare il ruolo in base al tuo ambiente e alle tue esigenze di sicurezza.
 
 Le fasi principali della configurazione sono descritte in alto di seguito. Per link:../configure/configure-user-role-and-privileges.html["Configurare i ruoli e i privilegi degli utenti ONTAP"]ulteriori dettagli, fare riferimento a.
 

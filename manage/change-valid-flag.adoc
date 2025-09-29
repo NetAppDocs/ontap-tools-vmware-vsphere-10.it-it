@@ -1,0 +1,30 @@
+---
+permalink: manage/change-valid-flag.html 
+sidebar: sidebar 
+keywords:  
+summary: È possibile modificare il flag di convalida del certificato tramite la console di manutenzione. 
+---
+= Cambia il flag di convalida del certificato
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per impostazione predefinita, il flag di convalida del certificato è abilitato (impostato su true).  È possibile impostare il flag di convalida del certificato back-end di archiviazione ONTAP su false se è necessario ignorare i controlli del certificato SAN.  Questa impostazione non è applicabile ai certificati di vCenter Server.
+
+.Prima di iniziare
+È necessario disporre delle credenziali di accesso per gli utenti di manutenzione.
+
+.Fasi
+. Da vCenter Server, aprire una console agli strumenti ONTAP.
+. Accedere come utente di manutenzione.
+. Entra `1` per selezionare il menu Configurazione applicazione.
+. Entra `3` per modificare il flag di convalida del certificato.
++
+La console di manutenzione mostra lo stato del flag di convalida del certificato e richiede di modificarlo.
+
+. Inserisci 'y' per attivare/disattivare il flag oppure 'n' per annullare.
+
+
+Se si imposta nuovamente il flag di convalida del certificato su true, il sistema esegue un controllo preliminare.  Se un backend di archiviazione aggiunto utilizza un certificato senza SAN, non è possibile abilitare la convalida del certificato.  Prima di abilitare questo flag, assicurarsi che tutti i backend di archiviazione utilizzino certificati basati su SAN.  Se si imposta il flag di convalida del certificato su false, il sistema salta la convalida del certificato per tutti i backend di archiviazione aggiunti.

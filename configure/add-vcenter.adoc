@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Aggiungi le istanze di vCenter Server ai tool ONTAP per VMware vSphere per configurare, gestire e proteggere i datastore virtuali nel tuo ambiente vCenter Server. 
 ---
-= Aggiungere istanze di vCenter Server
+= Aggiungere istanze di vCenter Server agli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,14 +13,14 @@ summary: Aggiungi le istanze di vCenter Server ai tool ONTAP per VMware vSphere 
 [role="lead"]
 Aggiungi le istanze di vCenter Server ai tool ONTAP per VMware vSphere per configurare, gestire e proteggere i datastore virtuali nel tuo ambiente vCenter Server. Quando si aggiungono più istanze di vCenter Server, sono richiesti certificati CA personalizzati per la comunicazione sicura tra gli strumenti ONTAP e ciascun vCenter Server.
 
-*A proposito di questa attività*
-
-Attraverso l'integrazione con vCenter, gli strumenti ONTAP ti consentono di eseguire task di storage come provisioning, snapshot e data Protection direttamente dal client vSphere, eliminando la necessità di passare a console di gestione dello storage separate.
+.A proposito di questa attività
+Gli strumenti ONTAP si integrano con vCenter Server per eseguire attività di archiviazione come provisioning, snapshot e protezione dei dati direttamente dal client vSphere.
 
 .Fasi
-. Aprire un browser Web e accedere all'URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Apri un browser web e vai all'URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *vCenters* > *Add* per integrare le istanze di vCenter Server. Fornisci l'indirizzo IP vCenter o il nome host, il nome utente, la password e i dettagli della porta.
+. Nelle opzioni avanzate, è possibile recuperare automaticamente il certificato di vCenter Server (autorizzarlo) oppure caricarlo manualmente.
 +
 
 NOTE: Non occorre un account di amministratore per aggiungere istanze vCenter agli strumenti ONTAP. È possibile creare un ruolo personalizzato senza l'account admin con autorizzazioni limitate. Per ulteriori informazioni, fare riferimento alla link:../concepts/rbac-vcenter-use.html["USA vCenter Server RBAC con i tool ONTAP per VMware vSphere 10"] sezione.
@@ -29,7 +29,7 @@ NOTE: Non occorre un account di amministratore per aggiungere istanze vCenter ag
 
 L'aggiunta di un'istanza di vCenter Server agli strumenti ONTAP attiva automaticamente le seguenti azioni:
 
-* Il plug-in del client vCenter è registrato come plug-in remoto.
+* Gli strumenti ONTAP registrano il plug-in del client vCenter come plug-in remoto.
 * All'istanza di vCenter Server vengono applicate le Privileges personalizzate per i plug-in e le API.
 * Per gestire gli utenti vengono creati ruoli personalizzati.
 * Il plug-in viene visualizzato come collegamento nell'interfaccia utente di vSphere.

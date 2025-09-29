@@ -20,15 +20,15 @@ summary: Durante la migrazione dei dati di storage, i backend di storage vengono
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Implementazione di OVA per tool ONTAP per VMware vSphere 10,4.
-. Aggiungere l'istanza di vCenter Server che si desidera migrare agli strumenti ONTAP per VMware vSphere 10,4. Per ulteriori informazioni, fare riferimento link:../configure/add-vcenter.html["Aggiungere un'istanza di vCenter Server"] a.
+. Distribuisci OVA per gli ONTAP tools for VMware vSphere 10.5.
+. Aggiungere l'istanza di vCenter Server che si desidera migrare agli ONTAP tools for VMware vSphere 10.5. Fare riferimento a link:../configure/add-vcenter.html["Aggiungere un'istanza di vCenter Server"] per maggiori informazioni.
 . Integrare localmente il backend di archiviazione dalle API del server vCenter per il plug-in degli strumenti ONTAP.
 . Eseguire la seguente API da Swagger o in Postman per la migrazione.
 +
-arricciatura -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs``
+arricciatura -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
 
 +
-Puoi accedere a Swagger tramite questo URL:  `\https://$FQDN_IP_PORT/', for example: `\https://10.67.25.33:8443` .
+Puoi accedere a Swagger tramite questo URL: `\https://$FQDN_IP_PORT/` , Per esempio: `\https://10.67.25.33:8443/` .
 
 +
 []
@@ -78,15 +78,15 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?i
 Dopo aver completato il processo, esaminare il rapporto sulla migrazione. Questo rapporto è incluso nei dati del lavoro ed è accessibile dalla risposta del lavoro.
 
 . Aggiungere gli strumenti ONTAP per il provider di storage VMware vSphere al vCenter Server e link:../configure/registration-process.html["Registrare il provider VASA"] con strumenti ONTAP per VMware vSphere.
-. link:../manage/enable-services.html["Attiva provider VASA"] Servizio sui tool ONTAP per VMware vSphere 10,4.
+. link:../manage/enable-services.html["Attiva provider VASA"]servizio sugli ONTAP tools for VMware vSphere 10.5.
 . Stop ai tool ONTAP per il provider di storage VMware vSphere 9,10/9,11/9,12/9,13 il servizio provider VASA dalla console di manutenzione.
 +
-Non eliminare il provider VASA.
+non eliminare il fornitore VASA.
 
 +
 Dopo l'arresto del vecchio provider VASA, il vCenter Server esegue il failover sugli ONTAP tools for VMware vSphere. Tutti i datastore e le VM diventano accessibili e vengono gestiti dagli ONTAP tools for VMware vSphere.
 
-. I datastore NFS e VMFS migrati dai tool ONTAP per VMware vSphere 9.xxx sono visibili nei tool ONTAP per VMware vSphere 10,4 solo dopo l'attivazione del processo di rilevamento del datastore, che potrebbe richiedere fino a 30 minuti. Verificare che i datastore siano visibili nella pagina di panoramica degli strumenti ONTAP per la pagina dell'interfaccia utente del plugin VMware vSphere.
+. I datastore NFS e VMFS migrati dagli ONTAP tools for VMware vSphere 9.xxx sono visibili negli ONTAP tools for VMware vSphere 10.5 solo dopo l'attivazione del processo di individuazione del datastore, che potrebbe richiedere fino a 30 minuti.  Verificare che i datastore siano visibili nella pagina di panoramica degli strumenti ONTAP per la pagina dell'interfaccia utente del plug-in VMware vSphere.
 . Eseguire la migrazione delle patch utilizzando la seguente API in Swagger o in Postman:
 +
 []
@@ -132,7 +132,7 @@ Dopo aver eseguito l'API di migrazione delle patch, tutte le VM sono conformi al
 
 
 .Cosa succederà
-Dopo aver completato la migrazione e aver registrato gli strumenti ONTAP 10,4 in vCenter Server, attenersi alla seguente procedura:
+Dopo aver completato la migrazione e registrato gli strumenti ONTAP 10.5 su vCenter Server, seguire questi passaggi:
 
 * Attendere il completamento di *Discovery*; i certificati verranno aggiornati automaticamente su tutti gli host.
 * Attendere un tempo sufficiente prima di avviare le operazioni del datastore e della macchina virtuale. Il periodo di attesa richiesto varia in base al numero di host, datastore e macchine virtuali nella configurazione. La mancata attesa potrebbe causare errori operativi intermittenti.
@@ -140,7 +140,7 @@ Dopo aver completato la migrazione e aver registrato gli strumenti ONTAP 10,4 in
 
 Dopo l'aggiornamento, se lo stato di conformità della macchina virtuale è obsoleto, riapplicare il criterio di archiviazione attenendosi alla seguente procedura:
 
-. Accedere al datastore e selezionare *Riepilogo* > *Criteri archiviazione VM*.
+. Vai al datastore e seleziona *Riepilogo* > *Criteri di archiviazione VM*.
 +
 Lo stato di conformità in *conformità ai criteri di archiviazione VM* viene visualizzato come *non aggiornato*.
 
@@ -153,7 +153,7 @@ Lo stato di conformità in *conformità ai criteri di archiviazione VM* è ora v
 
 .Informazioni correlate
 * link:../concepts/rbac-learn-about.html["Scopri i tool ONTAP per VMware vSphere 10 RBAC"]
-* link:../upgrade/upgrade-ontap-tools.html["Aggiornamento dai tool ONTAP per VMware vSphere 10.x alla 10,4"]
+* link:../upgrade/upgrade-ontap-tools.html["Aggiornamento dagli ONTAP tools for VMware vSphere 10.x alla versione 10.5"]
 
 
 
@@ -161,10 +161,10 @@ Lo stato di conformità in *conformità ai criteri di archiviazione VM* è ora v
 == Passaggi per aggiornare l'adattatore di replicazione dello storage (SRA)
 
 .Prima di iniziare
-Nel piano di ripristino, il sito protetto si riferisce alla posizione in cui le VM sono attualmente in esecuzione, mentre il sito di ripristino è quello in cui le VM verranno ripristinate. L'interfaccia SRM visualizza lo stato del piano di ripristino con dettagli sui siti protetti e di ripristino. Nel piano di ripristino, i pulsanti *CleanupP* e *Reprotect* sono disabilitati, mentre i pulsanti TEST ed ESEGUI rimangono abilitati. Ciò indica che il sito è pronto per il ripristino dei dati. Prima di migrare l'SRA, verificare che un sito sia in stato protetto e l'altro in stato di ripristino.
+Nel piano di ripristino, il sito protetto si riferisce alla posizione in cui le VM sono attualmente in esecuzione, mentre il sito di ripristino è quello in cui le VM verranno ripristinate. L'interfaccia dell'appliance VMware Live Site Recovery visualizza lo stato del piano di ripristino con dettagli sui siti protetti e di ripristino.  Nel piano di ripristino, i pulsanti CLEANUP e REPROTECT sono disabilitati, mentre i pulsanti TEST ed RUN rimangono abilitati. Ciò indica che il sito è pronto per il ripristino dei dati. Prima di migrare l'SRA, verificare che un sito sia in stato protetto e l'altro in stato di ripristino.
 
 
-NOTE: Non iniziare la migrazione se il failover è stato completato ma la nuova protezione è in sospeso. Prima di procedere con la migrazione, assicurarsi che il processo di protezione sia completato. Se è in corso un failover di test, ripulire il failover di test e avviare la migrazione.
+NOTE: Non avviare la migrazione se il failover è stato completato ma la nuova protezione è in sospeso.  Assicurarsi che il processo di riprotezione sia completato prima di procedere con la migrazione.  Se è in corso un failover di prova, pulire il failover di prova e avviare la migrazione.
 
 . Per eliminare l'adattatore SRA degli strumenti ONTAP per VMware vSphere 9.xx in VMware Site Recovery, procedere come segue:
 +
@@ -177,7 +177,7 @@ NOTE: Non iniziare la migrazione se il failover è stato completato ma la nuova 
 . Eseguire queste operazioni sui siti di protezione e ripristino.
 +
 .. link:../manage/enable-services.html["Abilita i tool ONTAP per i servizi VMware vSphere"]
-.. Installare gli strumenti ONTAP per l'adattatore SRA VMware vSphere 10,4 seguendo la procedura descritta in link:../protect/configure-on-srm-appliance.html["Configurare SRA sull'appliance VMware Live Site Recovery"].
+.. Configurare gli ONTAP tools for VMware vSphere 10.5 SRA seguendo i passaggi inlink:../protect/configure-on-srm-appliance.html["Configurare SRA sull'appliance VMware Live Site Recovery"] .
 .. Nella pagina dell'interfaccia utente di VMware Live Site Recovery, eseguire le operazioni *Discover Arrays* e *Discover Devices* e verificare che i dispositivi vengano visualizzati come prima della migrazione.
 
 

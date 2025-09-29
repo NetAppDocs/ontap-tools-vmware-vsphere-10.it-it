@@ -4,20 +4,23 @@ sidebar: sidebar
 keywords:  
 summary: I backend dello storage sono sistemi utilizzati dagli host ESXi per lo storage dei dati. 
 ---
-= Aggiungere un backend di storage
+= Aggiungere backend di archiviazione agli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-L'aggiunta di un backend storage ti consente di integrare un cluster ONTAP.
+Aggiungendo backend di storage agli strumenti ONTAP , è possibile eseguire il provisioning e gestire gli archivi dati direttamente da vCenter Server.
 
-*A proposito di questa attività*
+Per aggiungere backend di archiviazione in locale, utilizzare le credenziali del cluster o SVM nell'interfaccia degli strumenti ONTAP .  Questi backend di archiviazione sono disponibili solo per il vCenter Server selezionato.  Gli strumenti ONTAP mappano le SVM sul vCenter Server per la gestione dei datastore vVols o VMFS.  Per i flussi di lavoro SRA e datastore VMFS, è possibile utilizzare le credenziali SVM senza la necessità di un cluster mappato a livello globale.
 
-In caso di configurazioni multi-tenancy in cui vCenter agisce come tenant con una SVM associata, utilizza ONTAP Tools Manager per aggiungere il cluster. Associare il backend dello storage con vCenter Server per associarlo globalmente all'istanza di vCenter Server integrata. Il tenant di vCenter deve integrare le Storage Virtual Machine (SVM) desiderate. In questo modo, un utente della SVM può eseguire il provisioning dei datastore vVol. Puoi aggiungere storage in vCenter utilizzando la SVM.
+È possibile aggiungere backend di archiviazione globali utilizzando le credenziali del cluster ONTAP in ONTAP Tools Manager.  I backend di archiviazione globali consentono ai flussi di lavoro di individuazione di identificare le risorse del cluster necessarie per la gestione vVol.  Nelle configurazioni multitenant, è possibile aggiungere un utente SVM localmente per gestire i datastore vVols .
 
-Aggiungi i backend dello storage locale con credenziali cluster o SVM utilizzando l'interfaccia utente dei tool ONTAP. Questi backend di storage sono limitati a un singolo vCenter. Quando si utilizzano le credenziali del cluster a livello locale, le SVM associate vengono associate automaticamente mappate in vCenter per gestire vVol o VMFS. Per la gestione di VMFS, incluso SRA, i tool ONTAP supportano le credenziali SVM senza richiedere un cluster globale.
+Quando si abilita il supporto MetroCluster nel sistema ONTAP , è possibile integrare sia i cluster di origine che quelli di destinazione come backend di archiviazione locali o globali.
+
+.Prima di iniziare
+Verificare che il certificato includa un campo Subject Alternative Name (SAN) valido.  I sistemi ONTAP utilizzano il campo SAN per identificare i LIF di gestione del cluster e dell'SVM.
 
 [role="tabbed-block"]
 ====
@@ -35,13 +38,23 @@ NOTE: In un setup multi-tenant, puoi aggiungere un cluster backend storage a liv
 
 NOTE: Sono supportate le interfacce LIF di gestione indirizzi IPv4 e IPv6.
 
+. Recupera automaticamente i certificati del cluster ONTAP e autorizza il certificato oppure caricalo manualmente navigando fino alla sua posizione.
++
+
+NOTE: Se necessario, è possibile disabilitare la convalida del nome alternativo del soggetto (SAN) dalla console di manutenzione. Per le istruzioni, vederelink:../manage/change-valid-flag.html["Cambia il flag di convalida del certificato"] .
+
+. Se il backend di archiviazione aggiunto fa parte di una configurazione MetroCluster , ONTAP Tools Manager mostra un messaggio pop-up per aggiungere il cluster peered.  Selezionare *Aggiungi* e fornire i dettagli per il backend di archiviazione peer MetroCluster .
++
+
+NOTE: Dopo che il sistema ONTAP ha eseguito uno switchover e uno switchback, eseguire manualmente la scoperta degli strumenti ONTAP .
+
 
 
 --
 .Utilizzo dell'interfaccia utente del client vSphere
 --
 
-NOTE: Durante la configurazione di un backend storage tramite l'interfaccia utente client vSphere, è importante notare che i datastore vVol non supportano l'aggiunta diretta di un utente SVM.
+NOTE: I datastore vVols non supportano l'aggiunta diretta di un utente SVM tramite l'interfaccia utente del client vSphere.
 
 . Accedere al client vSphere.
 . Nella pagina Collegamenti, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
@@ -49,12 +62,22 @@ NOTE: Durante la configurazione di un backend storage tramite l'interfaccia uten
 . Aggiungere il backend di archiviazione e fornire l'indirizzo IP del server, il nome utente, la password e i dettagli della porta.
 +
 
-NOTE: Per aggiungere direttamente un utente SVM, puoi aggiungere credenziali basate sul cluster e LIF di gestione indirizzi IPv4 e IPv6 o fornire credenziali basate su SVM con un LIF di gestione SVM.
+NOTE: È possibile aggiungere un backend di archiviazione utilizzando credenziali basate su cluster con LIF di gestione IPv4 o IPv6.  Per aggiungere direttamente un utente SVM, fornire credenziali basate su SVM insieme a un LIF di gestione SVM.  Se un cluster è già stato integrato, non è possibile integrare nuovamente un utente SVM da quel cluster.
+
+. Recupera automaticamente i certificati del cluster ONTAP e autorizza il certificato oppure caricalo manualmente navigando fino alla sua posizione.
+. Se il backend di archiviazione aggiunto fa parte della configurazione MetroCluster , gli strumenti ONTAP visualizzano la schermata *Aggiungi peer MetroCluster *.  Selezionare *Aggiungi peer* per aggiungere il backend di archiviazione peer.
++
+
+NOTE: Dopo che il sistema ONTAP ha eseguito uno switchover e uno switchback, eseguire manualmente la scoperta degli strumenti ONTAP .
 
 
 
 .Cosa succederà?
-L'elenco viene aggiornato ed è possibile visualizzare il backend dello storage appena aggiunto nell'elenco.
+Gli strumenti ONTAP aggiornano l'elenco per mostrare il nuovo backend di archiviazione.
 
 --
 ====
+Gli strumenti ONTAP elencano il backend di archiviazione appena aggiunto nella pagina *Backend di archiviazione*.  Se un certificato scade entro 30 giorni o meno, gli strumenti ONTAP mostrano un avviso nella colonna della data di scadenza del certificato.  Dopo la scadenza, gli strumenti ONTAP contrassegnano il backend di archiviazione come sconosciuto perché non riesce a connettersi al sistema di archiviazione.
+
+.Informazioni correlate
+https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html["Configurazione dei cluster in una configurazione MetroCluster"]

@@ -25,7 +25,7 @@ Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual 
 ** 348 GB per installazioni con thick provisioning
 
 
-* *Requisiti di dimensionamento del sistema host* la memoria consigliata in base alle dimensioni di distribuzione è illustrata nella tabella seguente. Per implementare l'high Availability (ha), occorrono dimensioni triplicate rispetto a quelle specificate nella tabella.
+* *Requisiti di dimensionamento del sistema host* La memoria consigliata per ogni dimensione di distribuzione è indicata nella tabella seguente.  Per le distribuzioni ad alta disponibilità (HA), è necessaria una dimensione dell'appliance tre volte superiore a quella indicata.
 
 
 |===
@@ -53,7 +53,7 @@ NOTE: Una volta abilitato il backup, ogni cluster di tool ONTAP necessita di alt
 | Storage, host e applicazioni | Requisiti di versione 
 
 
-| ONTAP | 9.14.1, 9.15.1, 9.16.0, 9.16.1 e 9.16.1P3 FAS, ASA serie A, ASA serie C, AFF serie A, AFF serie C e ASA r2. 
+| ONTAP | 9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1 
 
 
 | Gli strumenti ONTAP supportavano gli host ESXi | da 7.0.3 in poi 
@@ -65,7 +65,7 @@ NOTE: Una volta abilitato il backup, ogni cluster di tool ONTAP necessita di alt
 | Provider VASA | 3,0 
 
 
-| Applicazione OVA | 10,4 
+| Applicazione OVA | 10,5 
 
 
 | Host ESXi per implementare la macchina virtuale degli strumenti ONTAP | 7.0U3 e 8.0U3 
@@ -85,6 +85,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 == Requisiti delle porte
 
 La tabella seguente illustra le porte di rete utilizzate da NetApp e le relative funzioni. Assicurarsi che queste porte siano aperte e accessibili per facilitare il corretto funzionamento e la comunicazione all'interno del sistema. Assicurarsi che siano presenti le configurazioni di rete necessarie per consentire il traffico su queste porte e il corretto funzionamento dei servizi associati. A seconda delle policy di sicurezza, potrebbe essere necessario configurare firewall o altri dispositivi di sicurezza per consentire questo traffico all'interno della rete.
+
+
+NOTE: Assicurarsi che tutti i nodi degli strumenti ONTAP risiedano nella stessa subnet per mantenere una comunicazione ininterrotta tra loro.
 
 |===
 
@@ -116,16 +119,10 @@ La tabella seguente illustra le porte di rete utilizzate da NetApp e le relative
 | 2380 | TCP | Questa è la porta predefinita per la comunicazione server-server per il cluster etcd utilizzato per l'algoritmo di consenso raft su cui si basa etcd per la replica e la coerenza dei dati. 
 
 
-| 7472 | TCP/UDP | Questa è la porta di servizio delle metriche prometheus. 
-
-
-| 7946 | TCP/UDP | Questa porta viene utilizzata per il rilevamento della rete dei container del docker. 
+| 7946 | TCP/UDP | Questa porta viene utilizzata per la scoperta della rete di container di Docker. 
 
 
 | 9083 | TCP | Questa porta è una porta di servizio utilizzata internamente per il servizio del provider VASA. 
-
-
-| 1162 | UDP | Questa è la porta dei pacchetti trap SNMP. 
 
 
 | 6443 | TCP | Fonte: RKE2 nodi agenti. Destinazione: REK2 nodi server. Descrizione: API Kubernetes 
@@ -146,19 +143,7 @@ La tabella seguente illustra le porte di rete utilizzate da NetApp e le relative
 | 123 | TCP | Ntpd utilizza questa porta per eseguire la convalida del server NTP. 
 
 
-| 137-139 | TCP/UDP | Pacchetti di condivisione SMB/Windows. 
-
-
-| 6789 | TCP | Monitor Ceph (MON) 
-
-
-| 3300 | TCP | Monitor Ceph (MON) 
-
-
-| 6800-7300 | TCP | Ceph Managers, OSD e filesystem (MDS). 
-
-
-| 80 | TCP | Gateway RADOS Ceph (RGW) 
+| 3300 e 6789-7300 | TCP | Piano dati internodo 
 
 
 | 9080 | TCP | VP connessioni HTTP/HTTPS (solo da 127,0.0.0/8 per IPv4 o ::1/128 per IPv6). 
@@ -187,7 +172,7 @@ La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere
 | Alta disponibilità | Medio (M) | circa 50k mb | 128 
 
 
-| Alta disponibilità | Grande (L) | circa 100k mb | 256 [NOTA] il numero di host nella tabella mostra il numero totale di host da più vCenter. 
+| Alta disponibilità | Grande (L) | circa 100k mb | 256 [NOTA] I conteggi degli host nella tabella rappresentano il totale combinato di tutti i vCenter connessi. 
 |===
 
 

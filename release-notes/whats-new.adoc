@@ -1,31 +1,50 @@
 ---
 permalink: release-notes/whats-new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, 10.4, ONTAP tools for VMware vSphere' 
-summary: Scopri le nuove funzionalità disponibili nei tool ONTAP per VMware vSphere 10,4. 
+keywords: 'what"s new, release notes, 10.5, ONTAP tools for VMware vSphere' 
+summary: Scopri le nuove funzionalità disponibili negli ONTAP tools for VMware vSphere 10.5. 
 ---
-= Novità dei tool ONTAP per VMware vSphere 10,4
+= Novità negli ONTAP tools for VMware vSphere 10.5
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Scopri le nuove funzionalità disponibili nei tool ONTAP per VMware vSphere 10,4.
+Scopri le nuove funzionalità disponibili negli ONTAP tools for VMware vSphere 10.5.
 
-[cols="30%,70%"]
-|===
-| Aggiornare | Descrizione 
+* *Qualifica della piattaforma*
 
 
-| link:../configure/create-datastore.html["Supporto per il sistema ASA R2 con 12 nodi per cluster"] | I tool ONTAP per VMware vSphere 10,4 supportano i flussi di lavoro per i sistemi storage ASA R2 con un massimo di 12 nodi per cluster, migliorando così l'efficienza e la scalabilità della gestione dei dati. Supporta datastore vVol con protocollo iSCSI e FC e datastore VMFS con protocollo iSCSI, FC e NVMe, per opzioni di storage flessibili e migliorate. 
+Gli ONTAP tools for VMware vSphere 10.5 aggiungono il supporto per i sistemi ASA r2, garantendo la compatibilità con le configurazioni hardware e software più recenti.  Questa versione include anche l'integrazione con ONTAP 9.16.1 e 9.17.1, ampliando gli ambienti supportati.
+
+* *Qualificazioni e certificazioni VMware*
 
 
-| link:../manage/add-ntpserver.html["Miglioramenti all'interfaccia utente di ONTAP tools Manager"] | È ora possibile abilitare il server NTP per una sincronizzazione precisa dell'ora nell'ambiente e configurare le impostazioni di telemetria per monitorare e analizzare le prestazioni del sistema dall'interfaccia di gestione degli strumenti ONTAP. Queste impostazioni non sono più disponibili nella console di manutenzione. 
+Gli ONTAP tools for VMware vSphere 10.5 sono conformi agli attuali standard di certificazione di interoperabilità VMware, supportando sia l'host ESXi che vCenter Server.
+
+* * Supporto MetroCluster *
 
 
-| Funzionalità di sicurezza avanzate | Le funzioni di sicurezza offrono ora protezione e conformità migliorate agli standard del settore, fornendo un'esperienza solida e intuitiva per aiutare gli amministratori a gestire gli ambienti VMware in modo più efficiente. 
+Questa versione introduce il supporto per le configurazioni MetroCluster (MCC), migliorando le capacità di elevata disponibilità e di ripristino di emergenza.
+
+* *Gestione della sicurezza e dei certificati*
 
 
-| link:../protect/enable-storage-replication-adapter.html["Funzionalità di disaster recovery SRA avanzate"] | Gli strumenti ONTAP per VMware vSphere 10,4 ora supportano le operazioni di disaster recovery con Site Recovery Appliance (SRA) con snapshot con nome personalizzato, oltre alle copie snapshot pianificate da SnapMirror. 
-|===
+Questa versione introduce una gestione semplificata dei certificati autofirmati, migliorando sia l'esperienza utente sia l'aderenza agli standard di sicurezza.  Fornisce flussi di lavoro di convalida dei certificati migliorati per proteggere ONTAP e gli ONTAP tools for VMware vSphere .
+
+* *Miglioramenti della replicazione*
+
+
+Questa versione supporta la replica VMFS con gruppo di coerenza gerarchica, inclusi SRA e SnapMirror ActiveSync nei sistemi ASA r2.  Supporta backup RPO pari a zero per migliorare la protezione e il ripristino dei dati.
+
+* *Aggiornamento e migrazione*
+
+
+Il processo di aggiornamento e migrazione dalle versioni precedenti degli ONTAP tools for VMware vSphere agli ONTAP tools for VMware vSphere 10.5 è progettato per essere fluido ed efficiente, riducendo al minimo i tempi di inattività e garantendo una transizione fluida.
+
+
+
+== Piattaforme ONTAP supportate e versioni di vCenter Server
+
+Per i dettagli più recenti sulla compatibilità delle versioni, fare riferimento a https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Tool di matrice di interoperabilità NetApp"^] .

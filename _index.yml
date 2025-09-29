@@ -7,7 +7,7 @@ indexpage:
   - title: Inizia subito
     links:
     - title: Note di rilascio
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3343864
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876
     - title: Scopri i tool ONTAP per VMware vSphere
       url: "/concepts/ontap-tools-overview.html"
     - title: Implementa i tool ONTAP per VMware vSphere
@@ -23,8 +23,6 @@ indexpage:
       url: "/concepts/rbac-learn-about.html"
     - title: Configurare la diagnostica remota
       url: "/manage/configure-remote-diagnostic-access.html"
-    - title: Alta disponibilità per i tool ONTAP per VMware vSphere
-      url: "/concepts/high-availability.html"
     - title: Proteggi i tuoi datastore
       url: "/protect/enable-storage-replication-adapter.html"
   - title: Più risorse

@@ -23,6 +23,6 @@ Quando esegui la migrazione da un datastore NFS e VMFS a un datastore vVol, vCen
 .Fasi
 . Fare clic con il pulsante destro del mouse sulla macchina virtuale da migrare e selezionare *Migra*.
 . Selezionare *Cambia solo memoria*, quindi selezionare *Avanti*.
-. Seleziona un formato di dischi virtuali, una policy storage delle macchine virtuali e un datastore vVol corrispondente alle funzionalità del datastore che stai migrando.
+. Selezionare un formato di disco virtuale, una policy di archiviazione della VM e un datastore vVol che corrispondano alle funzionalità del datastore che si sta migrando.
 . Controllare le impostazioni e selezionare *fine*.
 

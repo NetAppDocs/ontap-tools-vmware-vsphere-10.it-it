@@ -63,6 +63,6 @@ Per ulteriori informazioni sulla modifica delle impostazioni del provider di arc
 Quando si preme un timeout, aumentare i valori di `storage.commandTimeout` e. `storage.maxConcurrentCommandCnt` ad un valore più alto.
 
 
-NOTE: L'intervallo di timeout specificato è il valore massimo. Non è necessario attendere il raggiungimento del timeout massimo. La maggior parte dei comandi termina entro l'intervallo di timeout massimo impostato.
+NOTE: L'intervallo di timeout specificato è il valore massimo.  Non è necessario attendere che venga raggiunto il timeout massimo.  La maggior parte dei comandi termina entro l'intervallo di timeout massimo impostato.
 
 Per modificare le impostazioni dei provider SAN, consultare la sezione https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Modificare le impostazioni di archiviazione"].

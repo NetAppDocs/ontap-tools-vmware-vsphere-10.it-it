@@ -14,9 +14,15 @@ summary: Quando si rimuove la protezione dei cluster di host, i datastore divent
 Quando si rimuove la protezione dei cluster di host, i datastore diventano non protetti.
 
 .Fasi
-. Per visualizzare i cluster host protetti, accedere a *NetApp ONTAP tools* > *protezione* > *Relazioni cluster host*.
+. Per visualizzare l'elenco dei cluster host protetti, andare su *Strumenti NetApp ONTAP * > *Protezione* > *Relazioni tra cluster host*.
 +
-In questa pagina, puoi monitorare i cluster host protetti insieme al relativo stato di protezione, alla relazione SnapMirror e al relativo stato SnapMirror.
+In questa pagina è possibile monitorare i cluster host protetti, lo stato di protezione, la relazione SnapMirror e lo stato.  Selezionare i gruppi di coerenza per visualizzare la capacità, gli archivi dati associati e i gruppi figlio.
 
-. Nella finestra *protezione cluster host*, selezionare il menu puntini di sospensione sul cluster, quindi selezionare *Rimuovi protezione*.
+. Nella finestra *Protezione cluster host*, selezionare il menu con i puntini di sospensione accanto al cluster e selezionare *Rimuovi protezione*.
++
+** Se si rimuove la protezione da un cluster host con solo una relazione asincrona SnapMirror , è necessario eliminare manualmente gli elementi di archiviazione.  Gli elementi di archiviazione includono gruppi di coerenza, volumi (per il sistema ONTAP ), unità di archiviazione (LUN) e snapshot.
+** Se si rimuove la protezione da un cluster host con solo una relazione di policy SnapMirror basata su duplex di failover automatizzato e un gruppo di coerenza non gerarchico, è possibile eliminare gli elementi di archiviazione associati sull'archiviazione secondaria direttamente dalla stessa schermata.
+** Se si rimuove la protezione da un cluster host con criteri SnapMirror e un gruppo di coerenza gerarchica per i backup, viene visualizzato un avviso relativo agli impatti sui backup.  Conferma per procedere.  Dopo la conferma, eliminare gli elementi di archiviazione associati nell'archiviazione secondaria.  Se non si esegue la pulizia, gli elementi di archiviazione rimangono nel sito secondario.
+
+
 

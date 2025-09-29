@@ -13,7 +13,7 @@ summary: Con questa sezione di avvio rapido puoi configurare gli ONTAP tools for
 [role="lead"]
 Con questa sezione di avvio rapido puoi configurare gli ONTAP tools for VMware vSphere .
 
-Inizialmente, implementerai tool ONTAP per VMware vSphere come configurazione di piccole dimensioni a nodo singolo che offre servizi chiave per supportare i datastore NFS e VMFS. Se devi espandere la configurazione per utilizzare i datastore vVol e l'alta disponibilità (ha), dopo aver completato questo workflow dovrai farlo. Per ulteriori informazioni, fare riferimento alla link:../deploy/ha-workflow.html["Workflow di implementazione HA"].
+Inizialmente, distribuirai gli ONTAP tools for VMware vSphere come una configurazione a nodo singolo di piccole dimensioni che fornisce servizi principali per supportare i datastore NFS e VMFS.  Per espandere la configurazione con contenitori aggiuntivi per servizio, maggiore resilienza o per utilizzare datastore vVols e alta disponibilità (HA), completare prima questo flusso di lavoro e poi procedere con i passaggi di espansione. Per ulteriori informazioni, fare riferimento al link:../deploy/ha-workflow.html["Workflow di implementazione HA"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Pianificare la distribuzione
 [role="quick-margin-para"]
@@ -91,8 +91,9 @@ Configura i tool ONTAP per VMware vSphere per gestire la protezione dei cluster 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["Nove"] Configurare backup e recovery per i tool ONTAP per l'implementazione di VMware vSphere
 [role="quick-margin-para"]
-Pianificazione dei backup dei tool ONTAP per il setup di VMware vSphere, utilizzabili per ripristinare il setup in caso di errore.
+Il backup è abilitato per impostazione predefinita negli ONTAP tools for VMware vSphere 10.5 e viene eseguito ogni 10 minuti.  Pianifica i backup degli ONTAP tools for VMware vSphere , che puoi utilizzare per ripristinare la configurazione in caso di errore.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html["Creare una copia di backup e ripristinare la configurazione degli strumenti ONTAP"]
+* link:../manage/backup-settings.html["Modifica le impostazioni di backup"]
+* link:../manage/recover-backup.html["Ripristina la configurazione degli strumenti ONTAP"]
 

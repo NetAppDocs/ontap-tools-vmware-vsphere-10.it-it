@@ -1,0 +1,23 @@
+---
+permalink: manage/backup-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Immettere i dettagli del server NTP per sincronizzare gli orologi dell"appliance ONTAP Tools.' 
+---
+= Modifica le impostazioni di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partire dagli ONTAP tools for VMware vSphere 10.5, la funzionalità di backup è abilitata per impostazione predefinita e viene creato un backup ogni 10 minuti.  È possibile disattivare il backup o modificarne la frequenza.
+
+Non disattivare il backup perché impedisce agli strumenti ONTAP di mantenere un RPO basso.  La disattivazione del backup non elimina i file di backup esistenti.  È possibile modificare la frequenza del backup impostando un valore compreso tra 10 e 60 minuti.
+
+.Fasi
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
+. Selezionare l'opzione *Impostazioni* > *Backup* > *Modifica*.
+. Nella finestra di modifica è possibile disattivare il backup o modificarne la frequenza.
+

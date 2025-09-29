@@ -11,16 +11,14 @@ summary: 'Quando si seleziona l"icona degli strumenti ONTAP per il plug-in VMwar
 
 
 [role="lead"]
-Quando si seleziona l'icona degli strumenti ONTAP per il plug-in VMware vSphere nella sezione Collegamenti del client vCenter, l'interfaccia utente passa alla pagina di panoramica. Questa pagina agisce come la dashboard che fornisce il riepilogo dei tool ONTAP per il plug-in VMware vSphere.
+Selezionando l'icona del plug-in ONTAP tools for VMware vSphere dalla sezione dei collegamenti nel client vCenter si apre la pagina di panoramica.  Questa dashboard fornisce un riepilogo degli ONTAP tools for VMware vSphere .
 
-Nel caso della configurazione della modalità di collegamento avanzata (ELM), viene visualizzato il menu a discesa vCenter Server SELECT ed è possibile selezionare un vCenter Server desiderato per visualizzare i dati pertinenti. Questo menu a discesa è disponibile per tutte le altre visualizzazioni del plugin.
-La selezione di vCenter Server effettuata in una pagina persiste nelle schede del plug-in.
-image:../media/remote-plugin-dashboard.png["Panoramica della dashboard"]
+Nel caso di configurazione Enhanced Linked Mode (ELM), viene visualizzato il menu a discesa di selezione del vCenter Server ed è possibile selezionare il vCenter Server desiderato per visualizzare i dati ad esso pertinenti.  Questo menu a discesa è disponibile per tutte le altre visualizzazioni dell'elenco del plug-in. La selezione di vCenter Server effettuata in una pagina viene mantenuta in tutte le schede del plug-in.image:../media/remote-plugin-dashboard.png["Panoramica della dashboard"]
 
 Dalla pagina di panoramica, è possibile eseguire l'azione *rilevamento*. L'azione di Discovery esegue il rilevamento a livello di vCenter per rilevare eventuali backend storage, host, datastore e stato/relazioni di protezione aggiunti o aggiornati di recente. È possibile eseguire una ricerca su richiesta delle entità senza dover attendere la ricerca pianificata.
 
 
-NOTE: Il pulsante di azione viene attivato solo se si dispone dei privilegi necessari per eseguire l'azione di ricerca.
+NOTE: Il pulsante di azione *Scoperta* è abilitato solo se si dispone dei privilegi necessari per eseguire l'azione di scoperta.
 
 Dopo aver inviato la richiesta di individuazione, è possibile monitorare l'avanzamento dell'azione nel pannello delle attività recenti.
 

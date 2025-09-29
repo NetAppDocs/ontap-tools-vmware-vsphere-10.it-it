@@ -15,21 +15,15 @@ Nella sezione seguente vengono descritti i concetti e i termini principali utili
 
 
 
-=== Sistemi ASA r2
-
-I nuovi sistemi NetApp ASA R2 forniscono una soluzione hardware e software unificata che crea un'esperienza semplificata specifica delle esigenze dei clienti SAN. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["Informazioni sui sistemi di storage ASA R2"].
-
-
-
 === Autorità di certificazione (CA)
 
 CA è un'entità attendibile che emette certificati SSL (Secure Sockets Layer).
 
 
 
-=== Gruppo di coerenza (CG)
+=== Gruppo di coerenza
 
-Un gruppo di coerenza è un insieme di volumi gestiti come singola unità. I CGS sono sincronizzati per garantire la coerenza dei dati tra unità e volumi di storage. In ONTAP, offrono una semplice gestione e una garanzia di protezione per un workload dell'applicazione su più volumi. Ulteriori informazioni su https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["gruppi di coerenza"].
+Un gruppo di coerenza è una raccolta di volumi gestiti come un'unica unità. I gruppi di coerenza vengono sincronizzati per garantire la coerenza dei dati tra unità di archiviazione e volumi. In ONTAP, forniscono una gestione semplice e una garanzia di protezione per un carico di lavoro applicativo che si estende su più volumi.  Scopri di più su https://docs.netapp.com/us-en/ontap/consistency-groups/index.html["gruppi di coerenza"] .
 
 
 
@@ -125,7 +119,7 @@ VMFS è un file system in cluster progettato per la memorizzazione dei file dell
 
 === Volumi virtuali (vVol)
 
-I vVol offrono un'astrazione a livello di volume per lo storage utilizzato da una macchina virtuale. Include diversi vantaggi e offre un'alternativa all'utilizzo di un LUN tradizionale. Di solito, un datastore vVol è associato a una singola LUN che agisce come container per i vVol.
+I vVols forniscono un'astrazione a livello di volume per l'archiviazione utilizzata da una macchina virtuale.  Offre numerosi vantaggi e rappresenta un'alternativa all'utilizzo di una LUN tradizionale.  Un datastore vVol è in genere associato a un singolo LUN che funge da contenitore per i vVols.
 
 
 

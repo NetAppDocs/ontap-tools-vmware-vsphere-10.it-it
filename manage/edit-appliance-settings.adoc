@@ -11,10 +11,7 @@ summary: 'È possibile modificare la password dell"amministratore utilizzando ON
 
 
 [role="lead"]
-Utilizzando ONTAP tools Manager, scala in verticale i tool ONTAP per la configurazione di VMware vSphere per aumentare il numero di nodi nell'implementazione o modificare la configurazione in impostazione ha (High Availability). I tool ONTAP per l'appliance VMware vSphere vengono inizialmente implementati in una configurazione non ha a nodo singolo.
-
-
-NOTE: Per migrare ad alta disponibilità quando è abilitato il backup non ha, disabilitare prima il backup e riabilitarlo dopo la migrazione.
+Utilizzare ONTAP Tools Manager per ampliare la configurazione ONTAP tools for VMware vSphere , aumentando il numero di nodi o abilitando l'alta disponibilità (HA).  Per impostazione predefinita, gli ONTAP tools for VMware vSphere vengono distribuiti come configurazione a nodo singolo, non HA.
 
 .Prima di iniziare
 * Assicurarsi che il modello OVA abbia la stessa versione OVA del nodo 1. Il nodo 1 è il nodo predefinito in cui vengono inizialmente implementati i tool ONTAP per VMware vSphere OVA.
@@ -33,7 +30,7 @@ Quando gli strumenti ONTAP sono nella configurazione ha, puoi modificare i detta
 
 +
 
-NOTE: Nei tool ONTAP per VMware vSphere, è consentito solo aumentare le dimensioni del nodo, non è possibile ridurre le dimensioni del nodo. In una configurazione non ha, è supportata solo una configurazione di dimensioni medie. In un'impostazione ha sono supportate le configurazioni di medie e grandi dimensioni.
+NOTE: Negli ONTAP tools for VMware vSphere è consentito solo aumentare le dimensioni del nodo; non è possibile ridurle.  In una configurazione non HA è supportata solo una configurazione di medie dimensioni.  In una configurazione HA sono supportate configurazioni medie e grandi.
 
 . Utilizzare il pulsante di commutazione ha per abilitare la configurazione ha. Nella pagina *ha settings*, verificare che:
 +
@@ -48,7 +45,7 @@ NOTE: Dopo aver abilitato la configurazione HA, non è possibile tornare a una c
 . Nella sezione *ha settings* della finestra *Edit Appliance Settings*, è possibile immettere i dettagli dei nodi 2 e 3. I tool ONTAP per VMware vSphere supportano tre nodi nel setup ha.
 +
 
-NOTE: La maggior parte delle opzioni di input sono precompilate con i dettagli della rete del nodo 1 per semplificare il flusso di lavoro. Tuttavia, è possibile modificare i dati di input prima di passare alla pagina finale della procedura guidata. È possibile immettere i dettagli dell'indirizzo IPv6 per gli altri due nodi solo quando l'indirizzo IPv6 è attivato sul primo nodo.
+NOTE: La maggior parte delle opzioni di input sono precompilate con i dettagli della rete Nodo 1 per semplificare il flusso di lavoro.  Tuttavia, è possibile modificare i dati di input prima di passare alla pagina finale della procedura guidata.  È possibile immettere i dettagli dell'indirizzo IPv6 per gli altri due nodi solo quando l'indirizzo IPv6 è abilitato sul nodo di gestione degli strumenti ONTAP .
 
 +
 Assicurarsi che un host ESXi contenga solo una VM di strumenti ONTAP. I dati immessi vengono convalidati ogni volta che si passa alla finestra successiva.

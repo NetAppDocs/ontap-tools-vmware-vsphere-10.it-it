@@ -4,12 +4,22 @@ title: Gestisci i tool ONTAP per VMware vSphere
 entries:
 - title: Panoramica dei tool ONTAP per la dashboard di VMware vSphere
   url: "/configure/dashboard-overview.html"
-- title: Interfaccia utente di ONTAP tools Manager
-  url: "/configure/manager-user-interface.html"
 - title: Comprendere igroup e le policy di esportazione
   url: "/manage/igroup-workflow.html"
 - title: Comprendere gli igroup gestiti dagli strumenti ONTAP
   url: "/manage/nested-igroups.html"
+- title: Interfaccia utente di ONTAP tools Manager
+  url: "/manage/manager-user-interface.html"
+- title: Gestisci le impostazioni del gestore degli strumenti ONTAP
+  entries:
+  - title: Modifica le impostazioni AutoSupport
+    url: "/manage/edit-autosupport.html"
+  - title: Aggiungere server NTP
+    url: "/manage/add-ntpserver.html"
+  - title: Reimposta le credenziali del fornitore VASA e SRA
+    url: "/manage/reset-vasa-sra-credentials.html"
+  - title: Modifica le impostazioni di backup
+    url: "/manage/backup-settings.html"
 - title: Abilita i tool ONTAP per i servizi VMware vSphere
   url: "/manage/enable-services.html"
 - title: Modifica i tool di ONTAP per la configurazione di VMware vSphere
@@ -38,7 +48,7 @@ entries:
   url: "/manage/manage-storage-threshold.html"
 - title: Gestire i back-end dello storage
   url: "/manage/storage-backend.html"
-- title: Gestire le istanze di vCenter Server
+- title: Gestire le istanze di vCenter Server negli strumenti ONTAP
   url: "/manage/manage-vcenter.html"
 - title: Gestire i certificati
   url: "/manage/certificate-manage.html"
@@ -52,10 +62,10 @@ entries:
     url: "/manage/start-the-ssh-on-other-nodes.html"
   - title: Aggiornare il server vCenter e le credenziali ONTAP
     url: "/manage/update-vcenter-credentials.html"
+  - title: Cambia il flag di convalida del certificato
+    url: "/manage/change-valid-flag.html"
 - title: Report sui tool ONTAP
   url: "/manage/reports.html"
-- title: Raccogliere i file di log
-  url: "/manage/collect-the-log-files.html"
 - title: Gestire le macchine virtuali
   entries:
   - title: Considerazioni per migrare o clonare macchine virtuali
@@ -86,14 +96,8 @@ entries:
     url: "/manage/edit-hostcluster-protection.html"
   - title: Rimozione della protezione del cluster host
     url: "/manage/delete-hostcluster-protection.html"
-- title: Disattiva AutoSupport
-  url: "/manage/disable-autosupport.html"
-- title: Aggiorna URL proxy AutoSupport
-  url: "/manage/update-proxyurl.html"
-- title: Aggiungere server NTP
-  url: "/manage/add-ntpserver.html"
-- title: Creare un backup e ripristinare la configurazione degli strumenti ONTAP
-  url: "/manage/enable-backup.html"
+- title: Ripristina la configurazione degli strumenti ONTAP
+  url: "/manage/recover-backup.html"
 - title: Disinstallare gli strumenti ONTAP per VMware vSphere
   url: "/manage/uninstall-deployment.html"
 - title: Rimuovere i volumi FlexVol

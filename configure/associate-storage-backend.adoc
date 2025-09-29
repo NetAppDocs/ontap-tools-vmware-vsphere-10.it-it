@@ -11,12 +11,12 @@ summary: 'Associare un backend dello storage con vCenter Server per creare una m
 
 
 [role="lead"]
-Associare un backend dello storage con vCenter Server per creare una mappatura tra il backend dello storage e l'istanza di vCenter Server integrata a livello globale.
+Associare un backend di archiviazione a un'istanza di vCenter Server per consentire l'accesso a tutte le istanze di vCenter Server.  Per la configurazione MetroCluster , quando si associa un cluster backend di archiviazione, assicurarsi di associare anche il suo cluster peer al vCenter Server.
 
 .Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona vCenter dalla barra laterale.
-. Seleziona i puntini di sospensione verticali rispetto all'istanza di vCenter Server da associare ai backend dello storage.
-. Seleziona il backend dello storage dal menu a discesa per associare l'istanza di vCenter Server al backend dello storage richiesto.
+. Selezionare le ellissi verticali accanto all'istanza di vCenter Server che si desidera connettere ai backend di storage.
+. Dal menu a discesa, seleziona il backend di archiviazione che desideri associare all'istanza di vCenter Server selezionata.
 

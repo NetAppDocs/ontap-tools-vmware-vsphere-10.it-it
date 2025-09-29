@@ -13,10 +13,10 @@ summary:
 [role="lead"]
 I gruppi iniziatori (igroup) sono tabelle di nomi di porte World Wide Port Name (WWPN) dell'host del protocollo FC o nomi di nodi qualificati dell'host iSCSI. È possibile definire igroups e mapparli alle LUN per controllare quali iniziatori hanno accesso alle LUN.
 
-Negli strumenti ONTAP per VMware vSphere 9.x, gli igroup venivano creati e gestiti in una struttura piatta, in cui ogni datastore in vCenter era associato a un singolo igroup. Questo modello limitava la flessibilità e il riutilizzo degli igroup su più datastore. Gli strumenti ONTAP per VMware vSphere 10.x introducono gli igroup nidificati, in cui ogni datastore in vCenter è associato a un igroup padre, mentre ogni host è collegato a un igroup figlio sotto tale igroup padre. È possibile definire igroup padre personalizzati con nomi definiti dall'utente da riutilizzare su più datastore, consentendo una gestione più flessibile e interconnessa degli igroup. Comprendere il flusso di lavoro degli igroup è essenziale per gestire efficacemente LUN e datastore negli strumenti ONTAP per VMware vSphere. Flussi di lavoro diversi generano configurazioni di igroup diverse, come mostrato nei seguenti esempi:
+Negli ONTAP tools for VMware vSphere 9.x, gli igroup venivano creati e gestiti in una struttura piatta, in cui ogni datastore in vCenter era associato a un singolo igroup.  Questo modello limitava la flessibilità e il riutilizzo degli igroup su più datastore.  Gli ONTAP tools for VMware vSphere introducono igroup annidati, in cui ogni datastore in vCenter è associato a un igroup padre, mentre ogni host è collegato a un igroup figlio sotto tale padre.  È possibile definire igroup padre personalizzati con nomi definiti dall'utente per riutilizzarli in più datastore, consentendo una gestione più flessibile e interconnessa degli igroup.  La comprensione del flusso di lavoro igroup è essenziale per gestire efficacemente LUN e datastore negli ONTAP tools for VMware vSphere.  Flussi di lavoro diversi generano configurazioni igroup diverse, come mostrato negli esempi seguenti:
 
 
-NOTE: I nomi menzionati sono solo a scopo illustrativo e non si riferiscono ai nomi reali degli igroup. Gli igroup gestiti dagli strumenti ONTAP utilizzano il prefisso "otv_". Agli igroup personalizzati è possibile assegnare qualsiasi nome.
+NOTE: I nomi menzionati sono solo a scopo illustrativo e non si riferiscono ai nomi reali dei gruppi igroup.  Gli igroup gestiti dagli strumenti ONTAP utilizzano il prefisso “otv_”.  È possibile assegnare qualsiasi nome agli igroup personalizzati.
 
 |===
 
@@ -94,7 +94,7 @@ Smontare un datastore da un host
 
 
 
-L'host1Igroup viene rimosso dalla gerarchia. Gli igroup figlio non vengono eliminati esplicitamente. L'eliminazione avviene in queste due condizioni:
+L'host1Igroup viene rimosso dalla gerarchia.  Gli igroup figlio non vengono eliminati esplicitamente.  L'eliminazione avviene in queste due condizioni:
 
 * Se non viene mappato alcun LUN, il sistema ONTAP elimina l'igroup figlio.
 * Un processo di pulizia pianificato rimuove gli igroup figlio sospesi senza mapping LUN. Questi scenari si applicano solo agli igroup gestiti dagli strumenti ONTAP, non a quelli creati dall'utente.
@@ -114,7 +114,7 @@ Elimina archivio dati
 
 
 
-Gli igroup padre e figlio vengono rimossi se un altro datastore non riutilizza l'igroup padre. Gli igroup figlio non vengono mai eliminati esplicitamente.
+Gli igroup padre e figlio vengono rimossi se un altro datastore non riutilizza l'igroup padre.  Gli igroup figlio non vengono mai eliminati esplicitamente
 
 .Esempio 5:
 Crea più datastore sotto un igroup padre personalizzato
@@ -203,7 +203,7 @@ Migrazione dagli strumenti ONTAP 9 a 10 (normalizzazione igroup)
 
 *Flusso di lavoro*
 
-Gli strumenti ONTAP per VMware vSPhere 9.x non supportano gli igroup gerarchici. Durante la migrazione alla versione 10.3 o successive, gli igroup devono essere normalizzati nella struttura gerarchica.
+Gli strumenti ONTAP per le versioni VMware vSPhere 9.x non supportano gli igroup gerarchici.  Durante la migrazione alla versione 10.3 o successive, gli igroup devono essere normalizzati nella struttura gerarchica.
 
 Prima della migrazione:
 

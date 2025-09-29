@@ -27,8 +27,8 @@ La configurazione di SRA sull'appliance VMware Live Site Recovery salva le crede
 . Caricare il file _.tar.gz_ su VMware Live Site Recovery.
 . Accedere al dispositivo VMware Live Site Recovery utilizzando un account amministratore tramite un client SSH come PuTTY.
 . Passare all'utente root utilizzando il comando: `su root`
-. Eseguire il comando `cd /var/log/vmware/srm` per accedere alla directory del registro.
-. Nella posizione del registro, immettere il comando per ottenere l'ID docker utilizzato da SRA: `docker ps -l`
+. Esegui il comando `cd /var/log/vmware/srm` per andare alla directory del registro.
+. Nella posizione del registro, immettere il comando per ottenere l'ID Docker utilizzato da SRA: `docker ps -l`
 . Per accedere all'ID contenitore, immettere il comando: `docker exec -it -u srm <container id> sh`
 . Configurare VMware Live Site Recovery con gli ONTAP tools for VMware vSphere utilizzando il comando:  `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 +
@@ -40,5 +40,4 @@ La configurazione di SRA sull'appliance VMware Live Site Recovery salva le crede
 . Eseguire nuovamente la scansione degli adattatori per confermare che i dettagli aggiornati siano visualizzati nella pagina Adattatori VMware Live Site Recovery Storage Replication.
 
 
-.Risultati
-Viene visualizzato un messaggio di conferma che indica che le credenziali di archiviazione sono state salvate. SRA può ora comunicare con il server SRA utilizzando l'indirizzo IP, la porta e le credenziali specificati.
+*Risultati* Viene visualizzato un messaggio di conferma che indica che le credenziali di archiviazione sono state salvate.  Ora puoi utilizzare SRA per comunicare con il server SRA utilizzando l'indirizzo IP, la porta e le credenziali specificati.

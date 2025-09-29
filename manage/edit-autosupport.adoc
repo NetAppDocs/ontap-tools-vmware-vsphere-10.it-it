@@ -1,0 +1,47 @@
+---
+permalink: manage/edit-autosupport.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Quando si configurano gli ONTAP tools for VMware vSphere per la prima volta, AutoSupport è abilitato per impostazione predefinita.  Invia messaggi al supporto tecnico 24 ore dopo l"attivazione.' 
+---
+= Modifica le impostazioni AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si configurano gli ONTAP tools for VMware vSphere per la prima volta, AutoSupport è abilitato per impostazione predefinita.  Invia messaggi al supporto tecnico 24 ore dopo l'attivazione.
+
+
+
+== Disattiva AutoSupport
+
+Disattivando AutoSupport, non riceverai più supporto e monitoraggio proattivi.
+
+
+NOTE: Si consiglia di mantenere abilitato AutoSupport , poiché aiuta ad accelerare il rilevamento e la risoluzione dei problemi.  Anche quando AutoSupport è disattivato, il sistema continua a raccogliere e memorizzare informazioni localmente, ma non invia report tramite la rete.
+
+.Fasi
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
+. Selezionare l'opzione *Impostazioni* > *Telemetria* > *Modifica*.
+. Deselezionare l'opzione *AutoSupport* e salvare le modifiche.
+
+
+
+
+== Aggiorna URL proxy AutoSupport
+
+Aggiornare l'URL del proxy AutoSupport in modo che la funzionalità AutoSupport instradi i dati attraverso il server proxy per una trasmissione sicura.
+
+.Fasi
+. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
+. Seleziona *Impostazioni* dalla barra laterale.
+. Selezionare l'opzione *Impostazioni* > *Telemetria* > *Modifica*.
+. Immettere un *URL proxy* valido e salvare le modifiche.
++
+Se si disattiva AutoSupport, anche l'URL proxy viene disattivato.
+
+

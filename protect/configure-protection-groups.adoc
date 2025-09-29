@@ -30,7 +30,7 @@ NOTE: Storage Replication Adapter (SRA) supporta il fan-out con una relazione di
 
 
 .Fasi
-. Fare doppio clic su *Site Recovery* nella home page di vSphere Client e selezionare *Sites*.
+. Nella home page di vSphere Client, fare doppio clic sull'icona *Site Recovery* e quindi selezionare *Siti*.
 . Selezionare *oggetti* > *azioni* > *abbina siti*.
 . Nella finestra di dialogo *Associa server di Site Recovery Manager*, immettere l'indirizzo del Platform Services Controller del sito protetto, quindi selezionare *Avanti*.
 . Nella sezione Select vCenter Server (Seleziona server vCenter), procedere come segue:
@@ -43,7 +43,7 @@ NOTE: Storage Replication Adapter (SRA) supporta il fan-out con una relazione di
 
 
 .Risultato
-I siti protetti e di ripristino vengono visualizzati nella finestra di dialogo oggetti.
+Nella finestra di dialogo *Oggetti* vengono visualizzati sia i siti protetti che quelli di ripristino.
 
 
 

@@ -134,9 +134,6 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 099 | Impossibile convalidare la nuova aggiunta di HDD | Aggiungi il nuovo HDD a tutti i nodi in caso di ha e a un nodo in caso di implementazione non ha. 
 
 
-| 108 | Seeding script non riuscito | - 
-
-
 | 109 | il backup dei dati del volume persistente non è riuscito | Controllare i registri di aggiornamento e riprovare l'aggiornamento. 
 
 
@@ -162,6 +159,9 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 
 
 | 056 | eliminazione del backup di migrazione non riuscita | NA 
+
+
+| 090 | convalida del certificato per i backend di archiviazione e vCenter non riuscita | Controllare i registri di aggiornamento e il file di registro in /var/log/cert_validation_error.log e riprovare l'aggiornamento. 
 |===
 
 NOTE: A partire dai tool ONTAP per VMware vSphere 10,3 zero RPO non è supportato.

@@ -30,7 +30,8 @@ Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degl
 Configurazione dell'applicazione
  a| 
 . Visualizza il riepilogo dello stato del server
-. Modificare il livello di REGISTRAZIONE per servizi provider VASA e servizi SRA
+. Modifica il livello LOG per i servizi degli strumenti ONTAP
+. Cambia il flag di convalida del certificato
 
 
 

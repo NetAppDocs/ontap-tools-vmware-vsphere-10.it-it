@@ -11,12 +11,32 @@ summary: 'ONTAP tools per VMware vSphere è una raccolta di strumenti per la ges
 
 
 [role="lead"]
-I tool ONTAP per VMware vSphere sono un set di strumenti per la gestione del ciclo di vita delle macchine virtuali. Si integra con l'ecosistema VMware per consentire il provisioning dei datastore e fornire una protezione di base per le macchine virtuali. I tool ONTAP per VMware vSphere sono una raccolta di microservizi basati sugli eventi e scalabili orizzontalmente implementati come Open Virtual Appliance (OVA). Questa versione integra l'API REST con ONTAP.
+ONTAP tools for VMware vSphere è un set di strumenti per la gestione del ciclo di vita delle macchine virtuali.  Si integra con l'ecosistema VMware per semplificare il provisioning del datastore e fornire una protezione di base per le macchine virtuali.  Si tratta di una raccolta di microservizi scalabili orizzontalmente e basati su eventi, distribuiti come Open Virtual Appliance (OVA).
 
-I tool ONTAP per VMware vSphere sono composti dai seguenti elementi:
+Gli ONTAP tools for VMware vSphere supportano:
 
-* Funzionalità della macchina virtuale come protezione di base e disaster recovery
-* Provider VASA per gestione granulare delle macchine virtuali
+* Funzionalità principali della macchina virtuale (VM) come protezione e ripristino di emergenza
+* Fornitore VASA per la gestione basata su policy di archiviazione
 * Gestione basata su criteri dello storage
 * Storage Replication Adapter (SRA)
 
+
+.Alta disponibilità per gli strumenti ONTAP per VMware
+Gli ONTAP tools for VMware vSphere offrono supporto ad alta disponibilità (HA) per contribuire a mantenere un funzionamento ininterrotto in caso di guasti.
+
+La soluzione HA ti aiuta a ripristinare rapidamente i seguenti tipi di interruzioni:
+
+* Errore host: è supportato solo l'errore di un singolo nodo.
+* Errore di rete
+* Errore della macchina virtuale (sistema operativo guest)
+* Errore dell'applicazione (strumenti ONTAP )
+
+
+Non è necessario eseguire alcuna configurazione aggiuntiva per abilitare HA per gli ONTAP tools for VMware vSphere.
+
+[NOTE]
+====
+Gli ONTAP tools for VMware vSphere non supportano vCenter HA.
+
+====
+Per utilizzare la funzionalità HA, assicurarsi che l'aggiunta a caldo della CPU e il collegamento a caldo della memoria siano abilitati durante la distribuzione o in un secondo momento nelle impostazioni della VM.

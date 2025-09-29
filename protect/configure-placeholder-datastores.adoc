@@ -2,7 +2,7 @@
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: 'È necessario configurare un datastore segnaposto per occupare una posizione nell"inventario vCenter nel sito di ripristino per la macchina virtuale protetta. Il datastore segnaposto non deve essere di grandi dimensioni, poiché le VM segnaposto sono piccole e utilizzano solo poche centinaia di kilobyte o meno.' 
+summary: 'Configurare un datastore segnaposto per riservare spazio nell"inventario vCenter nel sito di ripristino per le macchine virtuali (VM) protette.  Gli archivi dati segnaposto richiedono una capacità minima, perché le VM segnaposto sono piccole e in genere utilizzano solo poche centinaia di kilobyte.' 
 ---
 = Configurare gli archivi dati segnaposto
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'È necessario configurare un datastore segnaposto per occupare una pos
 
 
 [role="lead"]
-È necessario configurare un datastore segnaposto per occupare una posizione nell'inventario vCenter nel sito di ripristino per la macchina virtuale (VM) protetta. Il datastore segnaposto non deve essere di grandi dimensioni, poiché le VM segnaposto sono piccole e utilizzano solo poche centinaia di kilobyte o meno.
+Configurare un datastore segnaposto per riservare spazio nell'inventario vCenter nel sito di ripristino per le macchine virtuali (VM) protette.  Gli archivi dati segnaposto richiedono una capacità minima, perché le VM segnaposto sono piccole e in genere utilizzano solo poche centinaia di kilobyte.
 
 .Prima di iniziare
-* È necessario aver collegato i siti protetti e di ripristino.
-* È necessario configurare le mappature delle risorse.
+* Assicurarsi che i siti protetti e di ripristino siano connessi.
+* Verificare che le mappature delle risorse siano state configurate.
 
 
 .Fasi
@@ -25,7 +25,7 @@ summary: 'È necessario configurare un datastore segnaposto per occupare una pos
 . Selezionare l'archivio dati appropriato e selezionare *OK*.
 +
 
-NOTE: Gli archivi dati segnaposto possono essere locali o remoti e non devono essere replicati.
+NOTE: Gli archivi dati segnaposto possono risiedere su storage locali o remoti, ma non richiedono replica.
 
 . Ripetere i passaggi da 3 a 5 per configurare un archivio dati segnaposto per il sito di ripristino.
 

@@ -22,7 +22,7 @@ summary: 'È necessario verificare che il sito protetto e il sito di ripristino 
 
 .Fasi
 . Accedere al server vCenter.
-. Accedere a *Site Recovery* > *Array Based Replication*.
+. Vai a *Site Recovery* > *Array Based Replication*.
 . Selezionare la coppia di array richiesta e verificare i dettagli corrispondenti.
 +
 I sistemi di archiviazione devono essere rilevati nel sito protetto e nel sito di ripristino con lo stato "`abilitato'".
