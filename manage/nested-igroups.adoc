@@ -11,9 +11,9 @@ summary:
 
 
 [role="lead"]
-Quando si gestiscono sia le VM degli strumenti ONTAP sia i sistemi di archiviazione ONTAP , è essenziale comprendere il comportamento di igroup, soprattutto quando si migrano gli archivi dati da ambienti di gestione di strumenti non ONTAP alla gestione di strumenti ONTAP .  Questa sezione descrive come gli igroup vengono aggiornati durante questa transizione.
+Se si gestiscono sia le VM degli strumenti ONTAP sia i sistemi di archiviazione ONTAP , è importante comprendere il comportamento degli igroup, in particolare quando si spostano gli archivi dati da ambienti non gestiti dagli strumenti ONTAP a quelli che lo sono.  Questa sezione spiega come vengono aggiornati gli igroup durante questo processo.
 
-A partire dagli ONTAP tools for VMware vSphere 10.4, la gestione del datastore è semplificata grazie alla creazione e alla gestione automatica di oggetti ONTAP e vCenter negli ambienti data center VMware.
+Gli ONTAP tools for VMware vSphere 10.4 e versioni successive creano e gestiscono automaticamente oggetti ONTAP e vCenter per semplificare la gestione dei datastore negli ambienti data center VMware.
 
 Gli ONTAP tools for VMware vSphere interpretano gli igroup in due contesti diversi:
 
@@ -41,7 +41,7 @@ Con l'approccio igroup annidato, le LUN vengono mappate solo agli igroup figlio.
 
 *Quando si crea un datastore con un nome igroup personalizzato*
 
-Durante la creazione del datastore negli strumenti ONTAP , è possibile immettere un nome igroup personalizzato anziché selezionarlo dal menu a discesa.  Gli strumenti ONTAP creano quindi un igroup padre a livello di datastore utilizzando il nome specificato.  Se lo stesso host viene utilizzato per più datastore, viene riutilizzato l'igroup (figlio) a livello di host esistente.  Di conseguenza, il LUN per il nuovo datastore viene mappato su questo igroup figlio esistente, che ora potrebbe essere associato a più igroup padre (uno per ciascun datastore).  L'elenco dei datastore dell'interfaccia utente di vCenter Server conferma la creazione corretta del nuovo datastore con il nome igroup personalizzato.
+Durante la creazione del datastore negli strumenti ONTAP , è possibile immettere un nome igroup personalizzato anziché selezionarlo dal menu a discesa. Gli strumenti ONTAP creano quindi un igroup padre a livello di datastore utilizzando il nome specificato. Se lo stesso host viene utilizzato per più datastore, viene riutilizzato l'igroup (figlio) a livello di host esistente. Di conseguenza, il LUN per il nuovo datastore viene mappato su questo igroup figlio esistente, che ora potrebbe essere associato a più igroup padre (uno per ciascun datastore). È possibile visualizzare il nuovo datastore con il nome igroup personalizzato nell'interfaccia di vCenter Server.
 
 *Quando si riutilizza il nome igroup durante la creazione del datastore*
 
@@ -59,10 +59,10 @@ Per gestire un datastore e un igroup esistenti con gli strumenti ONTAP , è nece
 
 image:../media/otv-ds.png["Datastore e igroup gestiti dagli strumenti ONTAP"]
 
-È possibile creare un datastore direttamente in vCenter Server e successivamente inserirlo nella gestione degli strumenti ONTAP .  Per prima cosa, creare un igroup piatto nei sistemi ONTAP e mapparvi una LUN.  Dopo aver eseguito la scoperta del datastore negli strumenti ONTAP , l'igroup piatto viene convertito in una struttura annidata.  Gli strumenti ONTAP gestiscono quindi l'igroup, rinominandolo con il prefisso 'otv_'.  Durante tutto il processo, la LUN rimane mappata sullo stesso igroup.
+Dopo aver eseguito la scoperta del datastore negli strumenti ONTAP , gli strumenti ONTAP convertono l'igroup piatto in una struttura annidata. Gli strumenti ONTAP gestiscono quindi l'igroup, rinominandolo con il prefisso 'otv_'. Durante tutto il processo, la LUN rimane mappata sullo stesso igroup.
 
 *Come gli strumenti ONTAP riutilizzano gli igroup creati in modo nativo*
 
-È possibile predisporre un datastore negli strumenti ONTAP utilizzando un igroup creato originariamente nei sistemi ONTAP , dopo averlo gestito tramite gli strumenti ONTAP .  Questi igroup vengono visualizzati nell'elenco a discesa del nome del gruppo di iniziatori personalizzato.  Il nuovo LUN per il datastore viene quindi mappato al corrispondente igroup figlio normalizzato, ad esempio "otv_NativeIgroup1".
+È possibile creare un datastore negli strumenti ONTAP utilizzando un igroup creato inizialmente nei sistemi ONTAP , dopo che gli strumenti ONTAP lo hanno gestito. Questi igroup vengono visualizzati nell'elenco a discesa del nome del gruppo di iniziatori personalizzato. Il nuovo LUN per il datastore viene quindi mappato al corrispondente igroup figlio normalizzato, ad esempio "otv_NativeIgroup1".
 
 Gli ONTAP tools for VMware vSphere non rilevano né utilizzano gli igroup creati nel sistema ONTAP che non sono gestiti dagli strumenti ONTAP o collegati a un datastore.

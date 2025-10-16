@@ -44,3 +44,5 @@ NOTE: Non è possibile eliminare un datastore utilizzato dalle macchine virtuali
 NOTE: Per i datastore VMFS su storage ONTAP unificato che fanno parte di un cluster host protetto, non è possibile eliminare il volume dal cluster ONTAP .
 
 
+
+Quando si elimina un datastore NFS, VMFS o vVols , gli igroup padre rimangono sul sistema ONTAP .  Gli igroup figlio che non sono mappati ad alcun LUN vengono eliminati automaticamente.  Gli strumenti ONTAP eseguono una pulizia giornaliera per rimuovere gli igroup padre predefiniti non mappati.  Gli igroup padre personalizzati devono essere eliminati manualmente in ONTAP.  Tutti gli igroup padre rimanenti diventano obsoleti e non possono essere riutilizzati dagli strumenti ONTAP .

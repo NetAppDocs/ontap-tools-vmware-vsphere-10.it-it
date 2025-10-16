@@ -13,9 +13,9 @@ summary: 'Quando si seleziona l"icona degli strumenti ONTAP per il plug-in VMwar
 [role="lead"]
 Selezionando l'icona del plug-in ONTAP tools for VMware vSphere dalla sezione dei collegamenti nel client vCenter si apre la pagina di panoramica.  Questa dashboard fornisce un riepilogo degli ONTAP tools for VMware vSphere .
 
-Nel caso di configurazione Enhanced Linked Mode (ELM), viene visualizzato il menu a discesa di selezione del vCenter Server ed è possibile selezionare il vCenter Server desiderato per visualizzare i dati ad esso pertinenti.  Questo menu a discesa è disponibile per tutte le altre visualizzazioni dell'elenco del plug-in. La selezione di vCenter Server effettuata in una pagina viene mantenuta in tutte le schede del plug-in.image:../media/remote-plugin-dashboard.png["Panoramica della dashboard"]
+In Enhanced Linked Mode (ELM), viene visualizzato il menu a discesa vCenter Server.  Selezionare un vCenter Server per visualizzarne i dati.  Il menu a discesa è disponibile in tutte le viste di elenco del plug-in. Quando si seleziona un vCenter Server in una pagina, questo rimane invariato cambiando scheda nel plug-in.image:../media/remote-plugin-dashboard.png["Panoramica della dashboard"]
 
-Dalla pagina di panoramica, è possibile eseguire l'azione *rilevamento*. L'azione di Discovery esegue il rilevamento a livello di vCenter per rilevare eventuali backend storage, host, datastore e stato/relazioni di protezione aggiunti o aggiornati di recente. È possibile eseguire una ricerca su richiesta delle entità senza dover attendere la ricerca pianificata.
+Dalla pagina di panoramica è possibile eseguire l'azione *Discovery*. L'azione di individuazione rileva i backend di storage, gli host, i datastore e lo stato o le relazioni di protezione aggiunti o aggiornati a livello di vCenter.  Esegui la scoperta su richiesta senza attendere la scoperta pianificata.
 
 
 NOTE: Il pulsante di azione *Scoperta* è abilitato solo se si dispone dei privilegi necessari per eseguire l'azione di scoperta.
@@ -42,5 +42,5 @@ Il cruscotto ha diverse schede che mostrano diversi elementi del sistema. La tab
 | Datastore | Questa scheda mostra i 10 principali datastore ordinati in base a una metrica di prestazioni. È possibile selezionare l'intestazione per ottenere i primi 10 datastore per la metrica selezionata ordinati in ordine crescente o decrescente. Le modifiche di ordinamento e filtraggio apportate alla scheda persistono fino a quando non si modifica o si cancella la cache del browser. È disponibile un menu a discesa tipo datastore per selezionare il tipo di datastore: NFS, VMFS o vVol. 
 
 
-| Scheda di conformità host ESXi | Questa scheda mostra lo stato di conformità generale di tutti gli host ESXi (per il vCenter selezionato) rispetto alle impostazioni dell'host NetApp consigliate per gruppo/categoria di impostazioni. È possibile selezionare il collegamento *Applica impostazioni consigliate* per applicare le impostazioni consigliate. È possibile selezionare lo stato di conformità degli host per visualizzare l'elenco degli host. 
+| Scheda di conformità host ESXi | Questa scheda mostra se tutti gli host ESXi (per il vCenter selezionato) seguono le impostazioni host NetApp consigliate per gruppo o categoria. È possibile selezionare il collegamento *Applica impostazioni consigliate* per applicare le impostazioni consigliate. È possibile selezionare lo stato di conformità degli host per visualizzarne l'elenco. 
 |===

@@ -25,8 +25,10 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . Integrare localmente il backend di archiviazione dalle API del server vCenter per il plug-in degli strumenti ONTAP.
 . Eseguire la seguente API da Swagger o in Postman per la migrazione.
 +
-arricciatura -X POST  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
-
+[listing]
+----
+curl -X POST `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
+----
 +
 Puoi accedere a Swagger tramite questo URL: `\https://$FQDN_IP_PORT/` , Per esempio: `\https://10.67.25.33:8443/` .
 
@@ -51,22 +53,44 @@ Asincrono
 
 *Esempio Curl*
 
-arricciatura -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs'[] \ --header 'x-auth: <token_autorizzazione>' \ --header 'Tipo di contenuto: application/json' \ --data '{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "nomeutente": "xxxxx", "password": "******" }, "password_database": "******" }'
-
+[listing]
+----
+curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
+--header 'x-auth: <auth_token>' \
+--header 'Content-Type: application/json' \
+--data '{
+  "otv_ip": "xx.xx.xx.xx",
+  "vasa_provider_credentials": {
+    "username": "xxxxx",
+    "password": "******"
+  },
+  "database_password": "******"
+}'
+----
 Corpo della richiesta per un'altra migrazione delle release:
 
-{ "otv_ip": "xx.xx.xx.xx", "vasa_provider_credentials": { "nome utente": "xxxxx", "password": "*******" } }
-
+[listing]
+----
+{
+  "otv_ip": "xx.xx.xx.xx",
+  "vasa_provider_credentials": {
+    "username": "xxxxx",
+    "password": "*******"
+  }
+}
+----
 *Esempio di output JSON*
 
-Viene restituito un oggetto lavoro. È necessario salvare l'identificatore del lavoro per utilizzarlo nel passo successivo.
+Il sistema restituisce un oggetto lavoro.  Salvare l'identificativo del lavoro per utilizzarlo nel passaggio successivo.
 
+[listing]
+----
 {
   "id": 123,
   "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
-  "stato": "in esecuzione"
+  "status": "running"
 }
-
+----
 ====
 . Utilizzare il seguente URI in Swagger per controllare lo stato:
 +
@@ -75,7 +99,7 @@ Viene restituito un oggetto lavoro. È necessario salvare l'identificatore del l
 curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 +
-Dopo aver completato il processo, esaminare il rapporto sulla migrazione. Questo rapporto è incluso nei dati del lavoro ed è accessibile dalla risposta del lavoro.
+Una volta completato il processo, rivedere il report di migrazione nella risposta al processo.
 
 . Aggiungere gli strumenti ONTAP per il provider di storage VMware vSphere al vCenter Server e link:../configure/registration-process.html["Registrare il provider VASA"] con strumenti ONTAP per VMware vSphere.
 . link:../manage/enable-services.html["Attiva provider VASA"]servizio sugli ONTAP tools for VMware vSphere 10.5.
@@ -86,7 +110,7 @@ non eliminare il fornitore VASA.
 +
 Dopo l'arresto del vecchio provider VASA, il vCenter Server esegue il failover sugli ONTAP tools for VMware vSphere. Tutti i datastore e le VM diventano accessibili e vengono gestiti dagli ONTAP tools for VMware vSphere.
 
-. I datastore NFS e VMFS migrati dagli ONTAP tools for VMware vSphere 9.xxx sono visibili negli ONTAP tools for VMware vSphere 10.5 solo dopo l'attivazione del processo di individuazione del datastore, che potrebbe richiedere fino a 30 minuti.  Verificare che i datastore siano visibili nella pagina di panoramica degli strumenti ONTAP per la pagina dell'interfaccia utente del plug-in VMware vSphere.
+. I datastore NFS e VMFS migrati vengono visualizzati negli ONTAP tools for VMware vSphere 10.5 dopo il processo di individuazione del datastore, che può richiedere fino a 30 minuti.  Controlla la loro visibilità nella pagina di panoramica.
 . Eseguire la migrazione delle patch utilizzando la seguente API in Swagger o in Postman:
 +
 []
@@ -109,18 +133,22 @@ Asincrono
 
 *Esempio Curl*
 
-arricciatura -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
-
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
+----
 *Esempio di output JSON*
 
 Viene restituito un oggetto lavoro. È necessario salvare l'identificatore del lavoro per utilizzarlo nel passo successivo.
 
+[listing]
+----
 {
   "id": 123,
   "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
-  "stato": "in esecuzione"
+  "status": "running"
 }
-
+----
 Il corpo della richiesta è vuoto per l'operazione patch.
 
 
@@ -134,20 +162,20 @@ Dopo aver eseguito l'API di migrazione delle patch, tutte le VM sono conformi al
 .Cosa succederà
 Dopo aver completato la migrazione e registrato gli strumenti ONTAP 10.5 su vCenter Server, seguire questi passaggi:
 
-* Attendere il completamento di *Discovery*; i certificati verranno aggiornati automaticamente su tutti gli host.
-* Attendere un tempo sufficiente prima di avviare le operazioni del datastore e della macchina virtuale. Il periodo di attesa richiesto varia in base al numero di host, datastore e macchine virtuali nella configurazione. La mancata attesa potrebbe causare errori operativi intermittenti.
+* Attendi il completamento di *Discovery* e il sistema aggiornerà automaticamente i certificati su tutti gli host.
+* Attendere prima di avviare le operazioni del datastore e della macchina virtuale.  Il tempo di attesa dipende dal numero di host, datastore e macchine virtuali.  Se non aspetti, potresti riscontrare occasionali guasti.
 
 
 Dopo l'aggiornamento, se lo stato di conformità della macchina virtuale è obsoleto, riapplicare il criterio di archiviazione attenendosi alla seguente procedura:
 
 . Vai al datastore e seleziona *Riepilogo* > *Criteri di archiviazione VM*.
 +
-Lo stato di conformità in *conformità ai criteri di archiviazione VM* viene visualizzato come *non aggiornato*.
+Il sistema mostra lo stato di conformità in *Conformità ai criteri di archiviazione delle VM* come *Obsoleto*.
 
-. Selezionare il criterio Storage VM e la VM corrispondente
-. Selezionare *Applica*
+. Selezionare il criterio VM di archiviazione e la VM corrispondente.
+. Selezionare *Applica*.
 +
-Lo stato di conformità in *conformità ai criteri di archiviazione VM* è ora visualizzato come conforme.
+Lo stato di conformità in *Conformità ai criteri di archiviazione delle VM* risulta conforme.
 
 
 
@@ -178,7 +206,7 @@ NOTE: Non avviare la migrazione se il failover è stato completato ma la nuova p
 +
 .. link:../manage/enable-services.html["Abilita i tool ONTAP per i servizi VMware vSphere"]
 .. Configurare gli ONTAP tools for VMware vSphere 10.5 SRA seguendo i passaggi inlink:../protect/configure-on-srm-appliance.html["Configurare SRA sull'appliance VMware Live Site Recovery"] .
-.. Nella pagina dell'interfaccia utente di VMware Live Site Recovery, eseguire le operazioni *Discover Arrays* e *Discover Devices* e verificare che i dispositivi vengano visualizzati come prima della migrazione.
+.. Nell'interfaccia VMware Live Site Recovery, eseguire *Discover Arrays* e *Discover Devices*.  Verificare che i dispositivi vengano visualizzati come prima della migrazione.
 
 
 
