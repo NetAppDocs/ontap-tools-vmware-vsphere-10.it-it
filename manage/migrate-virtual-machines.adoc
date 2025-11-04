@@ -24,7 +24,7 @@ summary: Dovresti essere consapevole di alcune considerazioni durante la migrazi
 * Datastore vVol compatibile diverso in un host ESXi diverso
 
 
-Se la macchina virtuale viene migrata su un volume FlexVol diverso, anche il rispettivo file di metadati viene aggiornato con le informazioni della macchina virtuale. Se una macchina virtuale viene migrata su un host ESXi diverso ma sullo stesso storage, il file di metadati del volume FlexVol sottostante non verrà modificato.
+Se si migra la macchina virtuale su un FlexVol volume diverso, il sistema aggiorna il file di metadati per quel volume con le informazioni sulla macchina virtuale. Se una macchina virtuale viene migrata su un host ESXi diverso ma con lo stesso storage, il file di metadati FlexVol volume sottostante non verrà modificato.
 
 
 
@@ -60,4 +60,4 @@ Attualmente sono supportate solo le istantanee delle macchine virtuali senza mem
 
 Non è inoltre possibile proteggere macchine virtuali non protette dotate di snapshot di memoria.  Per questa versione, è previsto che tu elimini lo snapshot della memoria prima di abilitare la protezione per la macchina virtuale.
 
-Per Windows VM con tipo di storage ASA R2, quando si crea una snapshot della macchina virtuale, si tratta di uno snapshot di sola lettura. In caso di chiamata all'accensione per la VM, il provider VASA crea una LUN utilizzando lo snapshot di sola lettura, quindi la abilita per gli IOPS. Durante la richiesta di spegnimento, il provider VASA elimina il LUN creato, quindi disattiva gli IOPS.
+Per una VM Windows con tipo di archiviazione ASA r2, uno snapshot della macchina virtuale è di sola lettura.  Quando si accende la VM, VASA Provider crea una LUN dallo snapshot di sola lettura e abilita gli IOPS.  Quando si spegne la VM, VASA Provider elimina la LUN e disabilita gli IOPS.

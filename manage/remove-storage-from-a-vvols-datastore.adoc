@@ -11,9 +11,9 @@ summary: 'L"azione Elimina archivio dati elimina il datastore quando non sono pr
 
 
 [role="lead"]
-Questa sezione spiega come rimuovere volumi da un datastore vVols .
+Questa pagina spiega come rimuovere volumi da un datastore vVols .
 
-È possibile utilizzare l'azione di rimozione dello storage dal datastore su qualsiasi datastore vVols rilevato o gestito dagli ONTAP tools for VMware vSphere in vCenter Server.
+Utilizzare l'azione di rimozione dello storage dal datastore su qualsiasi datastore vVols gestito dagli strumenti ONTAP in vCenter Server.
 
 Non è possibile rimuovere l'archiviazione da un volume se contiene vVols; l'opzione di rimozione sarà disabilitata per tali volumi.  Quando si rimuovono volumi dal datastore, è anche possibile eliminare i volumi selezionati dall'archiviazione ONTAP .
 

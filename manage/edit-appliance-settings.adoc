@@ -24,9 +24,9 @@ Utilizzare ONTAP Tools Manager per ampliare la configurazione ONTAP tools for VM
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Selezionare *Modifica impostazioni appliance* nella sezione Panoramica.
-. Nella sezione *Configurazione*, è possibile scalare in verticale per aumentare le dimensioni del nodo e abilitare la configurazione ha in base alle proprie esigenze. Sono necessarie le credenziali vCenter Server per apportare eventuali modifiche.
+. Nella sezione *Configurazione*, aumenta le dimensioni del nodo e abilita la configurazione HA.  Utilizzare le credenziali di vCenter Server per apportare modifiche.
 +
-Quando gli strumenti ONTAP sono nella configurazione ha, puoi modificare i dettagli della libreria di contenuti. È necessario fornire nuovamente la password per la nuova modifica.
+Nella configurazione HA è possibile modificare i dettagli della libreria dei contenuti.  Fornire la password per ogni modifica.
 
 +
 
@@ -45,7 +45,7 @@ NOTE: Dopo aver abilitato la configurazione HA, non è possibile tornare a una c
 . Nella sezione *ha settings* della finestra *Edit Appliance Settings*, è possibile immettere i dettagli dei nodi 2 e 3. I tool ONTAP per VMware vSphere supportano tre nodi nel setup ha.
 +
 
-NOTE: La maggior parte delle opzioni di input sono precompilate con i dettagli della rete Nodo 1 per semplificare il flusso di lavoro.  Tuttavia, è possibile modificare i dati di input prima di passare alla pagina finale della procedura guidata.  È possibile immettere i dettagli dell'indirizzo IPv6 per gli altri due nodi solo quando l'indirizzo IPv6 è abilitato sul nodo di gestione degli strumenti ONTAP .
+NOTE: Gli strumenti ONTAP precompilano la maggior parte delle opzioni di input con i dettagli della rete Node 1 per semplificare il flusso di lavoro.  È possibile modificare i dati di input prima di passare all'ultima pagina della procedura guidata. È possibile immettere i dettagli dell'indirizzo IPv6 per gli altri due nodi solo quando l'indirizzo IPv6 è abilitato sul nodo di gestione degli strumenti ONTAP .
 
 +
 Assicurarsi che un host ESXi contenga solo una VM di strumenti ONTAP. I dati immessi vengono convalidati ogni volta che si passa alla finestra successiva.
@@ -54,8 +54,8 @@ Assicurarsi che un host ESXi contenga solo una VM di strumenti ONTAP. I dati imm
 
 
 .Quali sono le prossime novità?
-La pagina *Panoramica* mostra lo stato della distribuzione. Utilizzando l'ID lavoro, è anche possibile tenere traccia dello stato del lavoro di modifica delle impostazioni del dispositivo dalla vista processi.
+La pagina *Panoramica* mostra lo stato della distribuzione. È anche possibile monitorare lo stato del processo di modifica delle impostazioni dell'appliance dalla vista processi utilizzando l'ID processo.
 
-In caso di errore dell'implementazione ha e lo stato del nuovo nodo diventa "nuovo", elimina la nuova VM in vCenter prima di riprovare l'operazione di abilitazione ha.
+Se la distribuzione HA non riesce e lo stato del nuovo nodo è "Nuovo", eliminare la nuova VM in vCenter prima di provare ad abilitare nuovamente HA.
 
 La scheda *Avvisi* sul pannello di sinistra elenca gli avvisi per gli strumenti ONTAP per VMware vSphere.

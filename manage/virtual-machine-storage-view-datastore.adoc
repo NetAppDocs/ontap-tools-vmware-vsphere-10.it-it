@@ -11,10 +11,10 @@ summary: 'La vista storage mostra l"elenco dei vVol creati dalla macchina virtua
 
 
 [role="lead"]
-La vista storage mostra l'elenco dei vVol creati dalla macchina virtuale.
+La vista di archiviazione mostra l'elenco dei vVols creati dalla macchina virtuale.
 
 
-NOTE: Questa vista è applicabile alla macchina virtuale su cui è montato almeno un disco correlato al datastore vVol gestiti da ONTAP per VMware vSphere.
+NOTE: Questa visualizzazione si applica alle VM con almeno un disco da un datastore vVols gestito da ONTAP tools for VMware vSphere .
 
 .Fasi
 . Da vSphere Client vai alla macchina virtuale.

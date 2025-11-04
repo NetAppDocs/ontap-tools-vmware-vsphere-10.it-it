@@ -16,8 +16,7 @@ summary: 'È possibile eseguire la migrazione di macchine virtuali da datastore 
 .Prima di iniziare
 Assicurarsi che il provider VASA non sia in esecuzione su nessuna delle macchine virtuali che si intende migrare. Se si esegue la migrazione di una macchina virtuale che esegue VASA Provider in un datastore vVols, non è possibile eseguire alcuna operazione di gestione, inclusa l'accensione delle macchine virtuali presenti negli archivi dati vVols.
 
-*A proposito di questa attività*
-
+.A proposito di questa attività
 Quando esegui la migrazione da un datastore NFS e VMFS a un datastore vVol, vCenter Server utilizza le API vStorage per l'integrazione degli array (VAAI) per eseguire l'offload del carico durante lo spostamento dei dati dai datastore VMFS, ma non da un file NFS VMDK. Gli offload VAAI riducono normalmente il carico sull'host.
 
 .Fasi

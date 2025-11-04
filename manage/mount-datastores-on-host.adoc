@@ -13,6 +13,9 @@ summary: 'Il montaggio di un datastore fornisce l"accesso allo storage a host ag
 [role="lead"]
 Il montaggio di un datastore fornisce l'accesso allo storage a host aggiuntivi. È possibile montare il datastore sugli host aggiuntivi dopo aver aggiunto gli host all'ambiente VMware.
 
+
+NOTE: Quando si aggiunge un nuovo host ESXi utilizzando https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Aggiungi un host ESX al flusso di lavoro del cluster vSphere"] , attendere il completamento della rilevazione host pianificata prima che venga visualizzata negli strumenti ONTAP . In alternativa, è possibile eseguire manualmente l'individuazione dalla schermata di panoramica degli strumenti NetApp ONTAP .
+
 .A proposito di questa attività
 * Alcune azioni del pulsante destro del mouse sono disattivate o non disponibili a seconda della versione del client vSphere e del tipo di datastore selezionato.
 +
@@ -20,15 +23,18 @@ Il montaggio di un datastore fornisce l'accesso allo storage a host aggiuntivi. 
 ** Dalle versioni di vSphere 7.0U3 a vSphere 8,0, anche se vengono visualizzate le opzioni, l'azione verrà disattivata.
 
 
-* L'opzione mount datastore è disabilitata quando il cluster di host è protetto con configurazioni uniformi.
+* vSphere disabilita l'opzione di montaggio del datastore quando il cluster host è protetto con configurazioni uniformi.
 
 
 .Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
 . Nel riquadro di spostamento di sinistra, selezionare i data center contenenti gli host.
-. Per montare i datastore NFS/VMFS su host o cluster host, fare clic con il pulsante destro del mouse e selezionare *NetApp ONTAP tools* > *Mount Datastores*.
+. Per montare datastore NFS/VMFS su un host o un cluster di host, fare clic con il pulsante destro del mouse e selezionare *Strumenti NetApp ONTAP * > *Monta datastore*.
 . Selezionare gli archivi dati che si desidera montare e selezionare *Mount*.
 
 
 .Quali sono le prossime novità?
 È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.
+
+.Argomento correlato
+link:../manage/add-vsphere-host.html["Aggiungi nuovi host VMware vSphere"]

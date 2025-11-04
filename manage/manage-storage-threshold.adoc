@@ -17,5 +17,5 @@ Puoi impostare la soglia per ricevere notifiche in vCenter Server quando il volu
 . Accedere al client vSphere.
 . Nella pagina Collegamenti, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
 . Nel riquadro sinistro degli strumenti ONTAP , vai su *Impostazioni* > *Impostazioni soglia* > *Modifica*.
-. Nella finestra *Modifica soglia*, immettere i valori desiderati nei campi *quasi pieno* e *pieno* e selezionare *Salva*. È possibile ripristinare i valori consigliati, ovvero 80 per quasi pieno e 90 per completo.
+. Nella finestra *Modifica soglia*, immettere i valori desiderati nei campi *Quasi pieno* e *Pieno* e selezionare *Salva*. È possibile ripristinare i valori di soglia ai valori predefiniti consigliati: 80 per Quasi pieno e 90 per Pieno.
 

@@ -11,12 +11,14 @@ summary: 'Una singola istanza dei tool ONTAP per VMware vSphere può gestire pi�
 
 
 [role="lead"]
-Per impostazione predefinita, durante la distribuzione viene generato un certificato autofirmato per gli strumenti ONTAP e per il provider VASA. Utilizzando l'interfaccia di gestione degli strumenti di ONTAP, è possibile rinnovare il certificato o aggiornarlo a una CA personalizzata. I certificati CA personalizzati sono obbligatori in una distribuzione multi-vCenter.
+Per impostazione predefinita, durante la distribuzione viene generato un certificato autofirmato per gli strumenti ONTAP e VASA Provider. Utilizzando l'interfaccia di ONTAP Tools Manager, è possibile rinnovare il certificato o aggiornarlo a una CA personalizzata. In una distribuzione multi-vCenter è necessario utilizzare certificati CA personalizzati.
 
 .Prima di iniziare
-* Il nome di dominio su cui viene rilasciato il certificato deve essere mappato all'indirizzo IP virtuale.
-* Eseguire il controllo nslookup sul nome di dominio per verificare se il dominio viene risolto all'indirizzo IP desiderato.
-* I certificati devono essere creati con il nome di dominio e l'indirizzo IP degli strumenti ONTAP.
+Prima di iniziare, dovresti avere a disposizione quanto segue:
+
+* Il nome di dominio mappato all'indirizzo IP virtuale.
+* nslookup riuscito del nome di dominio, a conferma che la risoluzione avviene nell'indirizzo IP corretto.
+* Certificati creati con il nome di dominio e l'indirizzo IP degli strumenti ONTAP .
 
 
 

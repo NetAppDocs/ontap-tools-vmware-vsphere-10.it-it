@@ -11,7 +11,7 @@ summary: 'L"azione Elimina archivio dati elimina il datastore. Nel caso del data
 
 
 [role="lead"]
-Questa sezione descrive come eliminare i datastore NFS, VMFS o vVols utilizzando gli strumenti ONTAP in vCenter Server.
+Questa pagina descrive come eliminare i datastore NFS, VMFS o vVols utilizzando gli strumenti ONTAP in vCenter Server.
 
 Quando si elimina un datastore, vengono eseguite le seguenti azioni a seconda del tipo di datastore:
 
@@ -33,7 +33,7 @@ NOTE: Non è possibile eliminare un datastore utilizzato dalle macchine virtuali
 +
 .. Nel caso di un datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l'elenco delle VM che utilizzano il datastore.
 .. Se nessuna macchina virtuale è associata a un datastore VMFS, verrà visualizzata una finestra di dialogo di conferma.  Se la protezione del cluster host è abilitata ed esiste una relazione AFD, è possibile pulire gli elementi di archiviazione secondaria.
-.. Per i datastore VMFS protetti sui sistemi ASA r2, assicurarsi che la protezione sia stata rimossa prima dell'eliminazione.  A partire da ONTAP 9.17.1 e ONTAP tools for VMware vSphere 10.5, è possibile eliminare un datastore protetto.  Se è l'unico datastore nel gruppo di protezione, la protezione del cluster host viene rimossa automaticamente.
+.. Per i datastore VMFS protetti sui sistemi ASA r2, rimuovere la protezione prima di eliminare. A partire da ONTAP 9.17.1 e ONTAP tools for VMware vSphere 10.5, è possibile eliminare un datastore protetto.  Se è l'unico datastore nel gruppo di protezione, la protezione del cluster host viene rimossa automaticamente.
 .. Per i datastore vVols , è possibile eliminare il datastore solo se non sono presenti vVols .  La finestra di dialogo *Elimina datastore* include un'opzione per rimuovere volumi dal cluster ONTAP .
 .. Per i datastore vVols sui sistemi ASA r2, non è possibile eliminare i volumi di supporto da ONTAP utilizzando l'opzione *Elimina datastore*.
 
@@ -45,4 +45,4 @@ NOTE: Per i datastore VMFS su storage ONTAP unificato che fanno parte di un clus
 
 
 
-Quando si elimina un datastore NFS, VMFS o vVols , gli igroup padre rimangono sul sistema ONTAP .  Gli igroup figlio che non sono mappati ad alcun LUN vengono eliminati automaticamente.  Gli strumenti ONTAP eseguono una pulizia giornaliera per rimuovere gli igroup padre predefiniti non mappati.  Gli igroup padre personalizzati devono essere eliminati manualmente in ONTAP.  Tutti gli igroup padre rimanenti diventano obsoleti e non possono essere riutilizzati dagli strumenti ONTAP .
+Quando si elimina un datastore NFS, VMFS o vVols , gli igroup padre rimangono sul sistema ONTAP . Gli igroup figlio che non sono mappati ad alcun LUN vengono eliminati automaticamente. Gli strumenti ONTAP eseguono una pulizia giornaliera per rimuovere gli igroup padre predefiniti non mappati. Eliminare manualmente gli igroup padre personalizzati in ONTAP.  Gli strumenti ONTAP non possono riutilizzare igroup padre obsoleti.

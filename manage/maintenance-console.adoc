@@ -11,9 +11,9 @@ summary: È possibile gestire le configurazioni di applicazione, sistema e rete 
 
 
 [role="lead"]
-È possibile gestire le configurazioni di applicazione, sistema e rete utilizzando la console di manutenzione degli strumenti di ONTAP. È possibile modificare la password di amministratore e la password di manutenzione. È inoltre possibile generare pacchetti di supporto, impostare diversi livelli di log, visualizzare e gestire le configurazioni TLS e avviare la diagnostica remota.
+La console di manutenzione per gli ONTAP tools for VMware vSphere consente di gestire le impostazioni di applicazioni, sistema e rete.  È possibile aggiornare le password di amministratore e manutenzione, generare bundle di supporto, configurare i livelli di registro, gestire le impostazioni TLS e abilitare la diagnostica remota.
 
-Dopo aver distribuito gli strumenti ONTAP per VMware vSphere, è necessario installare VMware Tools per accedere alla console di manutenzione. È consigliabile utilizzare  `maint` come nome utente e password configurati durante la distribuzione per accedere alla console di manutenzione degli strumenti ONTAP. Si consiglia di utilizzare *nano* per modificare i file in manutenzione o nella console di login principale.
+Dopo aver distribuito gli ONTAP tools for VMware vSphere, se la console di manutenzione non è accessibile, installare gli strumenti VMware da vCenter Server.  Accedi utilizzando il `maint` nome utente e password impostati durante la distribuzione.  Utilizzare *nano* per modificare i file nella console di manutenzione o di accesso root.
 
 
 NOTE: Impostare una password per `diag` utente durante l'attivazione della diagnostica remota.

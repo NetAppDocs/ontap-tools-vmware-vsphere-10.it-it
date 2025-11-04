@@ -57,7 +57,7 @@ summary: 'L"aggiornamento è supportato per le implementazioni ha e non ha.'
 . Selezionare il file ISO, selezionare la casella *Connesso* per il campo *Unità CD/DVD* e fare clic su *OK*.
 . Da vCenter Server, aprire una console agli strumenti ONTAP.
 . Accedere come utente di manutenzione.
-. Immettere *3* per selezionare il menu *Configurazione di sistema*.
+. Immettere *2* per selezionare il menu *Configurazione di sistema*.
 . Immettere *7* per selezionare l'opzione *Aggiorna*.
 +
 Durante l'aggiornamento, se in uno qualsiasi dei certificati back-end di archiviazione integrati mancano le voci Subject Alternative Name (SAN), verrà visualizzato un messaggio che indica il SAN mancante.  Se si sceglie di procedere senza convalidare il SAN, l'aggiornamento continuerà, ma questa opzione non è consigliata a causa dei potenziali rischi per la sicurezza.

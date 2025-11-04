@@ -14,11 +14,10 @@ summary: 'Prima di eseguire l"aggiornamento, è necessario avviare SSH su altri 
 Prima di eseguire l'aggiornamento, è necessario avviare SSH su altri nodi.
 
 .Prima di iniziare
-L'estensione del provider VASA deve essere abilitata per l'istanza di vCenter Server.
+Abilita l'estensione VASA Provider per la tua istanza di vCenter Server.
 
-*A proposito di questa attività*
-
-Eseguire questa procedura su ciascun nodo prima di eseguire l'aggiornamento.
+.A proposito di questa attività
+Ripetere questa procedura su ciascun nodo prima di effettuare l'aggiornamento.
 
 .Fasi
 . Dal server vCenter, aprire una console per il provider VASA.
