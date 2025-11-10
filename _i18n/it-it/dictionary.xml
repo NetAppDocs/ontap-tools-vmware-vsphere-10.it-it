@@ -204,9 +204,6 @@
   <block id="ad9681c4b067c102640e512ffe944ae5" category="paragraph">Assicurarsi che il provider VASA non sia in esecuzione su nessuna delle macchine virtuali che si intende migrare. Se si esegue la migrazione di una macchina virtuale che esegue VASA Provider in un datastore vVols, non è possibile eseguire alcuna operazione di gestione, inclusa l'accensione delle macchine virtuali presenti negli archivi dati vVols.</block>
   <block id="87dd176d02dc14ceef36faeb3b3e32ae" category="paragraph">Quando esegui la migrazione da un datastore NFS e VMFS a un datastore vVol, vCenter Server utilizza le API vStorage per l'integrazione degli array (VAAI) per eseguire l'offload del carico durante lo spostamento dei dati dai datastore VMFS, ma non da un file NFS VMDK. Gli offload VAAI riducono normalmente il carico sull'host.</block>
   <block id="951d3fc54a28f9f46798897467d96a5b" category="doc">Gestire i certificati</block>
-  <block id="a6f65a806180d1ff3c8d5e553e634e9d" category="summary">È possibile aggiornare le credenziali vCenter Server e ONTAP utilizzando la console di manutenzione.</block>
-  <block id="f72e000ebb4c7bedf651a46e595f1371" category="doc">Aggiornare le credenziali vCenter Server e ONTAP</block>
-  <block id="7ac19aa441feceb73519a5108d4cc366" category="paragraph">È possibile aggiornare l'istanza di vCenter Server e le credenziali ONTAP utilizzando la console di manutenzione.</block>
   <block id="21a56b485fb6cd9f7c9cc8f514440950" category="paragraph">È necessario disporre delle credenziali di accesso per gli utenti di manutenzione.</block>
   <block id="2e7ce9d8495225c584175fd7caa148ce" category="summary">I tool ONTAP per il plug-in VMware vSphere forniscono report su macchine virtuali e datastore.</block>
   <block id="bd294460cf119253eaf3ca5c5ff6bb68" category="summary">Durante l'operazione Riavvia il sistema operativo guest, il menu GRUB visualizza un'opzione per ripristinare la password utente della console di manutenzione. </block>
@@ -475,7 +472,6 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="ec874bf582309d24e5c0f1f38429fb73" category="inline-link-macro">Registrare il provider VASA su vCenter Server</block>
   <block id="63bc9a3997d66d835d9f3ec29451407d" category="cell">PATCH</block>
   <block id="b06f0e274f6c746f0d30521b5c7f392e" category="list-text">Carica gli strumenti ONTAP per l'aggiornamento ISO di VMware vSphere nella libreria di contenuti.</block>
-  <block id="dd5382558ec4a47dfbc203fb25698772" category="list-text">Nella pagina principale della macchina virtuale, selezionare *azioni* &gt; *Modifica impostazioni*</block>
   <block id="6aa61138e01e77bb590500715db216a4" category="list-text">Quando si esegue l'aggiornamento, le seguenti azioni vengono eseguite automaticamente:</block>
   <block id="ea228e7ce90fb22b7336716e47dc7d35" category="summary">In questa pagina vengono descritti i codici di errore per l'operazione di aggiornamento degli strumenti ONTAP per il sistema VMware vSphere.</block>
   <block id="f804f395829e966ca161a8be7756fec4" category="doc">Aggiornare i codici di errore</block>
@@ -576,8 +572,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="71a16bd19bda0e91c90a56e37682dc0d" category="list-text">Eseguire il comando Perl per configurare SRA con le nuove credenziali:</block>
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Selezionare la coppia di array richiesta e verificare i dettagli corrispondenti.</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Inserire<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> per selezionare il menu Configurazione di sistema.</block>
-  <block id="86ce6e9c3af571980099ca308cd245e3" category="list-text">Immettere<block ref="45c48cce2e2d7fbdea1afc51c7c6ad26" prefix=" " category="inline-code"></block> per modificare le credenziali ONTAP.</block>
-  <block id="207c00a73dde0270cc0fbc7ce9c5f2fd" category="list-text">Immettere<block ref="d3d9446802a44259755d38e6d163e820" prefix=" " category="inline-code"></block> per modificare le credenziali vCenter.</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">Stack doppio</block>
   <block id="5541521d8d465590f0919510f29154b2" category="summary">Limiti di configurazione per l'implementazione dei tool ONTAP per VMware vSphere</block>
   <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere.</block>
@@ -677,7 +671,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="174e0bb9fd863076b8b78d2ca9e0dd08" category="sidebar">Montare il datastore NFS e VMFS</block>
   <block id="41d4fa725cfb558559b7183adeea1e30" category="sidebar">Smontare il datastore NFS e VMFS</block>
   <block id="e6e4c7644f1b4ac0c9a1fa2e3a633259" category="sidebar">Espandere il datastore vVol</block>
-  <block id="0b05bd7cf8d32e0eca345c170c1c2bdd" category="sidebar">Aggiornare il server vCenter e le credenziali ONTAP</block>
   <block id="b380edc36b1ed383fd72d0b93d5857c5" category="sidebar">Gestire la protezione dei cluster di host</block>
   <block id="430cbe0d7261af556b6d05cea5b38e0e" category="sidebar">Modifica della protezione dei cluster di host</block>
   <block id="4fb2d974d1e232174a0545c1d40f5345" category="section-title">Ripristino sito live di VMware</block>
@@ -2440,8 +2433,18 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="0e527af09bb57a137d15be7b82466174" category="cell">Elenca tutti i volumi. È possibile espandere o rimuovere lo spazio di archiviazione dal riquadro di archiviazione ONTAP . Gli strumenti ONTAP non supportano questa visualizzazione per i datastore vVols basati sul sistema ASA r2.</block>
   <block id="c39c392ff0013e0b93fcc63dc310cc30" category="paragraph">L'azione Smonta datastore rimuove un datastore NFS o VMFS dagli host ESXi.  È disponibile per i datastore rilevati o gestiti dagli ONTAP tools for VMware vSphere.</block>
   <block id="0901929c9c2cc418f53328e6412b7d46" category="paragraph">Il client vSphere apre una finestra di dialogo ed elenca gli host ESXi che montano il datastore. Quando l'operazione viene eseguita su un datastore protetto, sullo schermo viene visualizzato un messaggio di avviso.</block>
-  <block id="e65e1eb2c16cb3c35af4e401b566b7c4" category="paragraph">Se hai modificato le credenziali di vCenter Server, ONTAP o Data LIF dopo la distribuzione, aggiornale utilizzando questa procedura.</block>
   <block id="69e03ac4326032eeb38fb3fcf35c7ff6" category="paragraph">La vista di archiviazione mostra l'elenco dei vVols creati dalla macchina virtuale.</block>
   <block id="6dc534da8e148f3344a75f75993a7078" category="admonition">Questa visualizzazione si applica alle VM con almeno un disco da un datastore vVols gestito da ONTAP tools for VMware vSphere .</block>
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">Immettere *2* per selezionare il menu *Configurazione di sistema*.</block>
+  <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">Fare clic per espandere o comprimere la tabella dei requisiti delle porte.</block>
+  <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">È possibile aggiornare le credenziali di vCenter Server tramite la console di manutenzione.</block>
+  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">Aggiorna le credenziali di vCenter Server</block>
+  <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">È possibile aggiornare le credenziali dell'istanza di vCenter Server tramite la console di manutenzione.</block>
+  <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">Se hai modificato le credenziali di vCenter Server dopo la distribuzione, aggiornale utilizzando questa procedura.</block>
+  <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">Entra<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> per modificare le credenziali di vCenter.</block>
+  <block id="b09a768d508454c0e540ea7b37cb5509" category="paragraph">Fare riferimento a <block ref="afe6cee65a7db7868c8d2eef90c140e6" category="inline-link-macro-rx"></block> E <block ref="da3a0196b755588b543a28093241fcfa" category="inline-link-macro-rx"></block> per maggiori informazioni su backup e ripristino.</block>
+  <block id="a928a1b805644ea87a643f7f8d60a477" category="list-text">Nella pagina della VM primaria, seleziona *Azioni* &gt; *Modifica impostazioni*. Per identificare il nome della VM primaria:</block>
+  <block id="75a86edd37c9b2122be450b28fa09149" category="list-text">Abilita la shell diag su qualsiasi nodo</block>
+  <block id="e016d50ae26af4214e6a864c1c2c8db5" category="list-text">Eseguire il seguente comando:<block ref="1ebe86b64a17c55ae52f4488cffae75f" prefix=" " category="inline-code"></block></block>
+  <block id="e40ec845cea3d17ed090f7fc08824c3f" category="sidebar">Aggiorna le credenziali del server vCenter</block>
 </blocks>

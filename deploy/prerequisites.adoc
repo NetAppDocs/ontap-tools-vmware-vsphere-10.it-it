@@ -94,7 +94,10 @@ La tabella seguente illustra le porte di rete utilizzate da NetApp e le relative
 
 NOTE: Assicurarsi che tutti i nodi degli strumenti ONTAP risiedano nella stessa subnet per mantenere una comunicazione ininterrotta tra loro.
 
+Fare clic per espandere o comprimere la tabella dei requisiti delle porte.
 
+[%collapsible]
+====
 |===
 | *Nome del servizio/componente* | *Porta* | *Protocollo* | *Tipo di porta* | *Descrizione* 
 
@@ -152,6 +155,7 @@ NOTE: Assicurarsi che tutti i nodi degli strumenti ONTAP risiedano nella stessa 
 
 NOTE: Per le distribuzioni HA, assicurarsi che la porta UDP 8472 sia aperta tra tutti i nodi. Questa porta consente la comunicazione pod-to-pod tra i nodi; bloccandola si interromperà la rete tra nodi.
 
+====
 
 
 == Limiti di configurazione per l'implementazione dei tool ONTAP per VMware vSphere

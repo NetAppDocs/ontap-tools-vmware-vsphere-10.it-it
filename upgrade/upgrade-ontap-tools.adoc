@@ -48,11 +48,20 @@ summary: 'L"aggiornamento è supportato per le implementazioni ha e non ha.'
 * Assicurarsi che il plug-in a caldo per CPU e RAM sia abilitato.
 * Per gli ONTAP tools for VMware vSphere 10.3 o 10.4, eseguire uno snapshot inattivo sulla macchina virtuale degli strumenti ONTAP prima dell'aggiornamento.
 * Abilita il backup con RPO basso e assicurati che un backup sia visibile nell'interfaccia di vCenter Client.
++
+Fare riferimento a link:../manage/backup-settings.html["Modifica le impostazioni di backup"] E link:../manage/recover-backup.html["Ripristina la configurazione degli strumenti ONTAP"] per maggiori informazioni su backup e ripristino.
+
 
 
 .Fasi
 . Carica gli strumenti ONTAP per l'aggiornamento ISO di VMware vSphere nella libreria di contenuti.
-. Nella pagina principale della macchina virtuale, selezionare *azioni* > *Modifica impostazioni*
+. Nella pagina della VM primaria, seleziona *Azioni* > *Modifica impostazioni*. Per identificare il nome della VM primaria:
++
+.. Abilita la shell diag su qualsiasi nodo
+.. Eseguire il seguente comando:
+`grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
+
+
 . Selezionare il *file ISO della libreria di contenuti* nella finestra di modifica delle impostazioni sotto il campo *Unità CD/DVD*.
 . Selezionare il file ISO, selezionare la casella *Connesso* per il campo *Unità CD/DVD* e fare clic su *OK*.
 . Da vCenter Server, aprire una console agli strumenti ONTAP.
