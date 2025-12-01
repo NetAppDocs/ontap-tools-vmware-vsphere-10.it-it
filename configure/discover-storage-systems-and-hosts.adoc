@@ -11,16 +11,15 @@ summary: Quando si eseguono per la prima volta i tool ONTAP per VMware vSphere i
 
 
 [role="lead"]
-Quando si eseguono per la prima volta i tool ONTAP per VMware vSphere in un client vSphere, i tool ONTAP rilevano gli host ESXi, le loro LUN e le esportazioni NFS e i sistemi storage NetApp che gestiscono tali LUN ed esportazioni.
+Quando gli ONTAP tools for VMware vSphere vengono avviati per la prima volta in vSphere Client, rilevano automaticamente gli host ESXi, i LUN associati e le esportazioni NFS, nonché i sistemi di storage NetApp che possiedono tali risorse.
 
 .Prima di iniziare
-* Tutti gli host ESXi devono essere accesi e connessi.
-* Tutte le Storage Virtual Machine (SVM) da rilevare devono essere in esecuzione e ogni nodo del cluster deve avere almeno una LIF dati configurata per il protocollo storage in uso (NFS o iSCSI).
+* Assicurarsi che tutti gli host ESXi siano accesi e connessi.
+* Assicurarsi che tutte le macchine virtuali di archiviazione (SVM) da rilevare siano in esecuzione e che ogni nodo del cluster disponga di almeno un LIF dati configurato per il protocollo di archiviazione in uso (NFS o iSCSI).
 
 
-*A proposito di questa attività*
-
-È possibile scoprire nuovi sistemi storage o aggiornare le informazioni sui sistemi storage esistenti per ottenere le informazioni più aggiornate sulla capacità e sulla configurazione in qualsiasi momento. Puoi anche modificare le credenziali utilizzate dai tool di ONTAP per VMware vSphere per accedere ai sistemi storage.
+.A proposito di questa attività
+È possibile scoprire nuovi sistemi di archiviazione o aggiornare quelli esistenti per ottenere i dettagli più recenti su capacità e configurazione.  È anche possibile modificare gli ONTAP tools for VMware vSphere per l'accesso al sistema di storage.
 
 Durante il rilevamento dei sistemi storage, i tool di ONTAP per VMware vSphere raccolgono informazioni dagli host ESXi gestiti dall'istanza di vCenter Server.
 

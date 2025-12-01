@@ -11,7 +11,7 @@ summary: 'Se l"accesso alla rete non è stato configurato, tutti gli indirizzi I
 
 
 [role="lead"]
-A meno che non sia stato configurato l'accesso alla rete, tutti gli indirizzi IP rilevati dall'host ESXi vengono automaticamente inclusi nella policy di esportazione.  È possibile configurare il criterio in modo da consentire solo determinati indirizzi IP ed escluderne altri; tuttavia, se si tenta di effettuare il montaggio da un host ESXi escluso, l'operazione non riuscirà.
+Per impostazione predefinita, tutti gli indirizzi IP rilevati dall'host ESXi vengono aggiunti automaticamente al criterio di esportazione, a meno che non si configuri l'accesso alla rete.  È possibile modificare i criteri di esportazione per consentire l'accesso solo da indirizzi IP specifici.  Se un host ESXi escluso tenta un'operazione di montaggio, l'operazione fallisce.
 
 .Fasi
 . Accedere al client vSphere.

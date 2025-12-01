@@ -10,18 +10,21 @@ summary: Collegare un disco dati a una macchina virtuale per espandere la capaci
 :imagesdir: ../media/
 
 
+[role="lead"]
+Seguire questi passaggi per collegare o scollegare i dischi dati dalle macchine virtuali in vSphere e gestirne le risorse di archiviazione.
+
 
 
 == Collegare un disco dati a una macchina virtuale
 
-Collegare un disco dati a una macchina virtuale per espandere la capacità di archiviazione.
+Collega un disco dati a una macchina virtuale per aggiungere ulteriore spazio di archiviazione.
 
 .Fasi
 . Accedere al client vSphere.
 . Fare clic con il pulsante destro del mouse su una macchina virtuale nell'inventario e selezionare *Modifica impostazioni*.
 . Nella scheda *hardware virtuale*, selezionare *disco rigido esistente*.
 . Selezionare la macchina virtuale in cui si trova il disco.
-. Selezionare il disco che si desidera collegare e selezionare *OK*
+. Selezionare il disco che si desidera collegare e fare clic sul pulsante *OK*.
 
 
 .Risultato
@@ -31,7 +34,7 @@ Il disco rigido viene visualizzato nell'elenco Virtual hardware Devices (perifer
 
 == Scollegare un disco dati dalla macchina virtuale
 
-È possibile scollegare un disco dati collegato a una macchina virtuale quando non è più necessario. Quando si scollega il disco dalla macchina virtuale, questo non viene eliminato automaticamente, ma rimane nel sistema di storage ONTAP.
+Scollega un disco dati da una macchina virtuale quando non ti serve più.  Il disco non viene eliminato, ma rimane nel sistema di archiviazione ONTAP .
 
 .Fasi
 . Accedere al client vSphere.

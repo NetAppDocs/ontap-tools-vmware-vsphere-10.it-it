@@ -23,7 +23,7 @@ Prima di creare una libreria di contenuti, tieni presente quanto segue:
 * Assicurarsi che la libreria dei contenuti sia stata creata prima di configurare l'appliance per HA.
 +
 
-NOTE: non eliminare il modello OVA nella libreria dei contenuti dopo la distribuzione.
+NOTE: Non eliminare il modello OVA nella libreria dei contenuti dopo la distribuzione.
 
 
 
@@ -78,8 +78,24 @@ NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere n
 . Leggere e accettare il contratto di licenza e selezionare *Avanti*.
 . Selezionare lo spazio di archiviazione per la configurazione e il formato del disco, quindi selezionare *Avanti*.
 . Selezionare la rete di destinazione per ciascuna rete di origine e selezionare *Avanti*.
-. Nella finestra *Personalizza modello*, compila i campi richiesti e seleziona *Avanti*.image:../media/sys-conf.png["Personalizza il modello"]
+. Nella finestra *Personalizza modello*, compila i campi richiesti.image:../media/custom-temp.png["Personalizza il modello"]
 +
+
+NOTE: Il nome host vCenter è il nome dell'istanza di vCenter Server in cui è distribuito l'appliance degli strumenti ONTAP .
+
++
+Se si distribuiscono strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza di vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza di vCenter che ospita gli strumenti ONTAP .  È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni del datastore elencate di seguito, necessarie per la distribuzione del modello OVF:
+
++
+** Assegnare spazio
+** Esplora il datastore
+** Operazioni sui file di basso livello
+** Rimuovi file
+** Aggiorna i file della macchina virtuale
+** Aggiorna i metadati della macchina virtuale
++
+Per l'istanza vCenter che verrà gestita dagli strumenti ONTAP , assicurarsi che l'account utente vCenter disponga dei privilegi di amministratore.
+
 ** Le informazioni vengono convalidate durante l'installazione.  In caso di discrepanza, sulla console Web viene visualizzato un messaggio di errore e viene richiesto di correggerlo.
 ** I nomi host devono includere lettere (A-Z, a-z), cifre (0-9) e trattini (-). Per configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
 +
@@ -90,7 +106,7 @@ NOTE: Pure IPv6 non è supportato. La modalità mista è supportata con VLAN con
 ** IPv4 è il componente dell'indirizzo IP della configurazione del nodo, che può essere utilizzato per abilitare la shell diagnostica e l'accesso SSH sul nodo ai fini del debug e della manutenzione.
 
 
-. Quando si utilizza la versione vCenter Server 8.0.3, nella finestra *Personalizza hardware*, abilitare le opzioni *Aggiunta a caldo CPU* e *Collegamento a caldo della memoria* per consentire la funzionalità HA.image:../media/customize-hw105.png["Personalizza l'hardware"] image:../media/customize-hw.png["Personalizza l'hardware"]
+. Quando si utilizza la versione vCenter Server 8.0.3, nella finestra *Personalizza hardware*, abilitare le opzioni *Aggiunta a caldo CPU* e *Collegamento a caldo della memoria* per consentire la funzionalità HA.image:../media/customize-hw105.png["Personalizza l'hardware"]
 . Rivedere i dettagli nella finestra *Pronto per il completamento*, selezionare *fine*.
 +
 Quando viene creata l'attività di distribuzione, l'avanzamento viene visualizzato nella barra delle applicazioni di vSphere.

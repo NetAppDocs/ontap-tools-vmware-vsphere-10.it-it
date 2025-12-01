@@ -19,7 +19,7 @@ Per impostazione predefinita, il flag di convalida del certificato è abilitato 
 .Fasi
 . Da vCenter Server, aprire una console agli strumenti ONTAP.
 . Accedere come utente di manutenzione.
-. Entra `1` per selezionare il menu Configurazione applicazione.
+. Entra `1` per selezionare il menu *Configurazione applicazione*.
 . Entra `3` per modificare il flag di convalida del certificato.
 +
 La console di manutenzione mostra lo stato del flag di convalida del certificato e richiede di modificarlo.

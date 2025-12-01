@@ -11,7 +11,7 @@ summary: Configurare i ruoli utente e i privilegi per i backend di archiviazione
 
 
 [role="lead"]
-Configurare i ruoli utente e i privilegi per i backend di archiviazione con il file JSON degli ONTAP tools for VMware vSphere e ONTAP System Manager.
+Utilizzare questa sezione per configurare i ruoli utente e i privilegi ONTAP per i backend di archiviazione con gli ONTAP tools for VMware vSphere e ONTAP System Manager.  È possibile assegnare ruoli utilizzando i file JSON forniti, creare manualmente utenti e ruoli e applicare i privilegi minimi richiesti per gli account non amministratori.
 
 .Prima di iniziare
 * Scaricare il file ONTAP Privileges dagli ONTAP tools for VMware vSphere utilizzando _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.  Dopo aver scaricato il file zip, troverai due file JSON.  Utilizzare il file JSON specifico di ASA r2 durante la configurazione di un sistema ASA r2.
