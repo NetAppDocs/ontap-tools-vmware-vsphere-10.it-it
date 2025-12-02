@@ -96,7 +96,6 @@ Se si distribuiscono strumenti ONTAP in una topologia a due vCenter Server, in c
 +
 Per l'istanza vCenter che verrà gestita dagli strumenti ONTAP , assicurarsi che l'account utente vCenter disponga dei privilegi di amministratore.
 
-** Le informazioni vengono convalidate durante l'installazione.  In caso di discrepanza, sulla console Web viene visualizzato un messaggio di errore e viene richiesto di correggerlo.
 ** I nomi host devono includere lettere (A-Z, a-z), cifre (0-9) e trattini (-). Per configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
 +
 
