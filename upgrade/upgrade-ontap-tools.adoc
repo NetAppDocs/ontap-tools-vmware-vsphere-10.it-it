@@ -68,8 +68,9 @@ Fare riferimento a link:../manage/backup-settings.html["Modifica le impostazioni
 . Accedere come utente di manutenzione.
 . Immettere *2* per selezionare il menu *Configurazione di sistema*.
 . Immettere *7* per selezionare l'opzione *Aggiorna*.
+. Quando richiesto, fornire le credenziali vCenter.  Questa è l'istanza vCenter in cui sono ospitati gli strumenti ONTAP .
 +
-Se si distribuiscono strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza di vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza di vCenter che ospita gli strumenti ONTAP .  È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni del datastore elencate di seguito, necessarie per la distribuzione del modello OVF:
+Se si utilizzano gli strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza di vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza di vCenter che ospita gli strumenti ONTAP .  È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni del datastore elencate di seguito:
 
 +
 ** Assegnare spazio

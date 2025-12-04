@@ -21,13 +21,13 @@ NOTE: Per le informazioni più aggiornate sulla compatibilità, fare riferimento
 | Caratteristica | Strumenti ONTAP 9.13 | Strumenti ONTAP 10.2 e successivi 
 
 
-| Proposta di valore chiave | Semplifica e ottimizza le operazioni dal giorno 0 al giorno 2 con funzionalità avanzate di sicurezza, conformità e automazione | Supporto esteso per includere FC per VMFS e NVMe-oF/FC, NVMe-oF/TCP solo per VMFS. Facilità d'uso per NetApp SnapMirror, configurazione semplice per cluster di storage metro vSphere e supporto VMware Live Site Recovery a tre siti 
+| Proposta di valore chiave | Semplifica e ottimizza le operazioni dal giorno 0 al giorno 2 con funzionalità avanzate di sicurezza, conformità e automazione | Supporto esteso per includere FC per VMFS e NVMe-oF solo per VMFS. Facilità d'uso per NetApp SnapMirror, configurazione semplice per cluster di storage metro vSphere e supporto VMware Live Site Recovery a tre siti 
 
 
 | Qualifica di rilascio ONTAP | ONTAP 9.9.1 a ONTAP 9.16.1 | ONTAP 9.12.1 a 9.15.1 per strumenti ONTAP 10.2. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 per gli strumenti ONTAP 10.3. ONTAP 9.14.1, 9.15.1, 9.16.0 e 9.16.1 per gli strumenti ONTAP 10.4. Per gli strumenti ONTAP 10.4 è necessario ONTAP 9.16.1P3 e versioni successive quando si utilizzano sistemi ASA r2.  ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1 per gli strumenti ONTAP 10.5 
 
 
-| Supporto per le versioni VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 a VMware Live Site Recovery 9.0 | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.7 a VMware Live Site Recovery 9.0 *NOTA:* negli strumenti ONTAP 10.x, SRM supporta siti condivisi, consentendo una scalabilità migliorata e prestazioni migliorate. 
+| Supporto per le versioni VMware | vSphere 7.x-8.x VMware Site Recovery Manager (SRM) 8.5 a VMware Live Site Recovery 9.0 | vSphere 7.x-8.x vSphere 9.0 da ONTAP Tools 10.5 in poi VMware Site Recovery Manager (SRM) 8.7 a VMware Live Site Recovery 9.0 *NOTA:* in ONTAP Tools 10.x, SRM supporta siti condivisi, consentendo una scalabilità migliorata e prestazioni migliorate. 
 
 
 | Supporto del protocollo | Datastore NFS e VMFS: NFS (v3 e v4.1), VMFS (iSCSI e FCP) | Datastore NFS e VMFS: NFS (v3 e v4.1), VMFS (iSCSI/FCP/NVMe-oF) 
@@ -39,7 +39,7 @@ NOTE: Per le informazioni più aggiornate sulla compatibilità, fare riferimento
 | Osservabilità | Dashboard di prestazioni, capacità e conformità dell'host Report dinamici su VM e datastore | Dashboard aggiornate su prestazioni, capacità e conformità degli host. Report dinamici su VM e datastore. 
 
 
-| Protezione dei dati | Replica SRA per integrazione SCV VMFS e NFS e interoperabilità per il backup | Replica SRA per datastore iSCSI VMFS e NFS v3, protezione a tre siti che combina SMAS e VMware Live Site Recovery. 
+| Protezione dei dati | Replica SRA per VMFS e NFS.  Integrazione SCV e interoperabilità per il backup. | Replica SRA per datastore iSCSI VMFS e NFS v3, protezione a tre siti che combina SMAS e VMware Live Site Recovery. Supporto SRA per FCP con VMFS. 
 
 
 | Supporto del fornitore VASA | VASA 4.0 | VASA 3.0 
