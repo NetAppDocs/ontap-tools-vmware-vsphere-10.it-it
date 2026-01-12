@@ -11,7 +11,7 @@ summary: 'Una singola istanza dei tool ONTAP per VMware vSphere può gestire pi�
 
 
 [role="lead"]
-Per impostazione predefinita, durante la distribuzione viene generato un certificato autofirmato per gli strumenti ONTAP e VASA Provider. Utilizzando l'interfaccia di ONTAP Tools Manager, è possibile rinnovare il certificato o aggiornarlo a una CA personalizzata. In una distribuzione multi-vCenter è necessario utilizzare certificati CA personalizzati.
+Per impostazione predefinita, durante la distribuzione viene generato un certificato autofirmato per gli strumenti ONTAP e VASA Provider. È possibile utilizzare l'interfaccia di ONTAP Tools Manager per rinnovare questo certificato o sostituirlo con un certificato CA personalizzato. Nelle distribuzioni multi-vCenter è obbligatorio utilizzare certificati CA personalizzati.
 
 .Prima di iniziare
 Prima di iniziare, dovresti avere a disposizione quanto segue:
@@ -47,7 +47,7 @@ NOTE: Il sistema non sarà in linea fino a quando il certificato non verrà rinn
 . Per aggiornare il certificato autofirmato al certificato CA personalizzato, selezionare l'opzione *certificati* > *Strumenti ONTAP* > *Aggiorna a CA*.
 +
 .. Nella finestra a comparsa, caricare il certificato del server, la chiave privata del certificato del server, il certificato della CA principale e i file di certificato intermedi.
-.. Immettere il nome di dominio per il quale è stato generato il certificato e aggiornare il certificato.
+.. Inserisci il nome di dominio completo (FQDN) dell'IP del Load Balancer per il quale hai generato questo certificato e aggiorna il certificato.
 +
 
 NOTE: Il sistema non sarà in linea fino al completamento dell'aggiornamento e l'utente verrà disconnesso dall'interfaccia di gestione degli strumenti ONTAP.
@@ -68,7 +68,7 @@ I tool ONTAP per VMware vSphere vengono implementati con un certificato autofirm
 . Selezionare *certificati* > *Provider VASA* o *Strumenti ONTAP* > *Aggiorna a CA* per aggiornare il certificato autofirmato al certificato CA personalizzato.
 +
 .. Nella finestra a comparsa, caricare il certificato del server, la chiave privata del certificato del server, il certificato della CA principale e i file di certificato intermedi.
-.. Immettere il nome di dominio per il quale è stato generato il certificato e aggiornare il certificato.
+.. Inserisci il nome di dominio completo (FQDN) dell'IP del Load Balancer per il quale hai generato questo certificato e aggiorna il certificato.
 +
 
 NOTE: Il sistema non sarà in linea fino al completamento dell'aggiornamento e l'utente verrà disconnesso dall'interfaccia di gestione degli strumenti ONTAP.
