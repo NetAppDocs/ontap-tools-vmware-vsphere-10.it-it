@@ -84,18 +84,12 @@ NOTE: Non memorizzare mai i tool ONTAP per la macchina virtuale VMware vSphere n
 NOTE: Il nome host vCenter è il nome dell'istanza di vCenter Server in cui è distribuito l'appliance degli strumenti ONTAP .
 
 +
-Se si distribuiscono strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza di vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza di vCenter che ospita gli strumenti ONTAP .  È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni del datastore elencate di seguito, necessarie per la distribuzione del modello OVF:
+Se si distribuiscono strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza di vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza di vCenter che ospita gli strumenti ONTAP . È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni richieste per la distribuzione del modello OVF. Per i dettagli, vedere i ruoli elencati in https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Ruoli inclusi nei tool ONTAP per VMware vSphere 10"].
 
-+
-** Assegnare spazio
-** Esplora il datastore
-** Operazioni sui file di basso livello
-** Rimuovi file
-** Aggiorna i file della macchina virtuale
-** Aggiorna i metadati della macchina virtuale
 +
 Per l'istanza vCenter che verrà gestita dagli strumenti ONTAP , assicurarsi che l'account utente vCenter disponga dei privilegi di amministratore.
 
++
 ** I nomi host devono includere lettere (A-Z, a-z), cifre (0-9) e trattini (-). Per configurare lo stack doppio, specificare il nome host mappato all'indirizzo IPv6.
 +
 

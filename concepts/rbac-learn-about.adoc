@@ -43,7 +43,7 @@ Un _permesso_ è una definizione che associa un utente o un gruppo insieme a un 
 
 == Due ambienti RBAC
 
-Esistono due distinti ambienti RBAC da prendere in considerazione quando si utilizzano i tool ONTAP per VMware vSphere 10.
+Quando si lavora con gli ONTAP tools for VMware vSphere 10, è necessario prendere in considerazione due distinti ambienti RBAC. Per eseguire le operazioni, gli ONTAP tools for VMware vSphere 10 richiedono privilegi specifici sia in vCenter che in ONTAP . Sebbene gli strumenti ONTAP automatizzino le attività di gestione dello storage, non creano account utente né in vCenter né in ONTAP. Gli account di servizio devono essere creati da un amministratore vSphere in base alle necessità. Questa documentazione fornisce agli amministratori una guida per assegnare i ruoli e le autorizzazioni necessari per una gestione efficace degli strumenti ONTAP .
 
 .VMware vCenter Server
 L'implementazione RBAC in VMware vCenter Server viene utilizzata per limitare l'accesso agli oggetti esposti tramite l'interfaccia utente del client vSphere. Come parte dell'installazione dei tool ONTAP per VMware vSphere 10, l'ambiente RBAC viene esteso per includere oggetti aggiuntivi che rappresentano le funzionalità dei tool ONTAP. L'accesso a questi oggetti viene fornito tramite il plug-in remoto. Per ulteriori informazioni, vedere .link:../concepts/rbac-vcenter-environment.html["Ambiente RBAC vCenter Server"]
