@@ -158,9 +158,9 @@ NOTE: Per le distribuzioni HA, assicurarsi che la porta UDP 8472 sia aperta tra 
 ====
 
 
-== Limiti di configurazione per l'implementazione dei tool ONTAP per VMware vSphere
+== Limiti di configurazione per distribuire ONTAP tools for VMware vSphere per vVols datastores
 
-La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere.
+È possibile utilizzare la seguente tabella come guida per la configurazione di ONTAP tools for VMware vSphere.
 
 |===
 
@@ -168,19 +168,53 @@ La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere
 | *Implementazione* | *Tipo* | *Numero di vVol* | *Numero di host* 
 
 
-| Non ha | Piccolo (S) | CIRCA 12K MB | 32 
+| Non ha | Piccolo (S) | fino a 12K | 32 
 
 
-| Non ha | Medio (M) | CIRCA 24K MB | 64 
+| Non ha | Medio (M) | fino a 24K | 64 
 
 
-| Alta disponibilità | Piccolo (S) | CIRCA 24K MB | 64 
+| Alta disponibilità | Piccolo (S) | fino a 24K | 64 
 
 
-| Alta disponibilità | Medio (M) | circa 50k mb | 128 
+| Alta disponibilità | Medio (M) | fino a 50k | 128 
 
 
-| Alta disponibilità | Grande (L) | circa 100k mb | 256 [NOTA] I conteggi degli host nella tabella rappresentano il totale combinato di tutti i vCenter connessi. 
+| Alta disponibilità | Grande (L) | fino a 100k | 256 
+|===
+
+NOTE: I conteggi degli host nella tabella rappresentano il totale combinato tra tutti i vCenters connessi.
+
+
+
+== Limiti di configurazione per distribuire ONTAP tools for VMware vSphere per datastore VMFS e NFS
+
+I limiti di configurazione elencati in questa sezione sono convalidati e supportati da NetApp. I limiti effettivi possono variare a seconda dell'ambiente e del carico di lavoro. Il superamento di questi limiti può influire sulle prestazioni o sul supporto e non è consigliato. Considerare quanto segue quando si esamina la tabella:
+
+* Il Disaster Recovery (DR) delle macchine virtuali è configurato utilizzando criteri sincroni, asincroni o di sincronizzazione rigorosa. Il DR non è supportato per il protocollo NVMe.
+* La protezione del cluster host ESXi utilizza SnapMirror Active Sync, che non supporta distribuzioni multi-vCenter.
+* ONTAP tools limita solo il numero di host ESXi e datastore in base alle dimensioni dell'implementazione. Non ci sono restrizioni sul numero di vCenter Server che possono essere connessi a ONTAP tools.
+* ONTAP tools esegue il discovery parallelo di tutti gli oggetti di storage. I limiti di configurazione per gli oggetti di storage ONTAP si applicano indipendentemente dal numero di oggetti attivamente in uso.
+* ONTAP tools non impone un limite al numero di vCenter Servers che possono essere integrati. I limiti di configurazione sono determinati dal numero di host e datastore supportati, come dettagliato nella tabella seguente.
+
+
+|===
+| Distribuzione | Numero di datastore VMFS e NFS | Numero di datastore VMFS con DR abilitato | Numero di host 
+
+
+| Non ha Small | 200 | 80 | 32 
+
+
+| Terreno non ha | 250 | 100 | 32 
+
+
+| HA piccolo | 350 | 200 | 64 
+
+
+| HA Media | 600 | 200 | 128 
+
+
+| HA grande | 1024 | 250 | 256 
 |===
 
 

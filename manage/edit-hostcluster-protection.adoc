@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: È possibile modificare le relazioni SnapMirror del cluster host protetto. È possibile aggiungere, modificare ed eliminare le relazioni. Tuttavia, non è possibile modificare il nome del gruppo di coerenza. 
 ---
-= Modificare il cluster host protetto
+= Modificare un cluster host protetto in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

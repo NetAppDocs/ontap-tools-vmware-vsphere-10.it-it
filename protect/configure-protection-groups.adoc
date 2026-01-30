@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È necessario creare gruppi di protezione per proteggere un gruppo di macchine virtuali sul sito protetto. 
 ---
-= Configurare siti protetti e di ripristino
+= Configura i siti protetti e di ripristino negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

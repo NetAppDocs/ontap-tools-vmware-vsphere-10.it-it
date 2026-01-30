@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Puoi impostare la soglia per ricevere notifiche in vCenter Server quando il volume e la capacità aggregata raggiungono determinati livelli.  
 ---
-= Gestire le soglie di storage
+= Gestire le soglie di archiviazione negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

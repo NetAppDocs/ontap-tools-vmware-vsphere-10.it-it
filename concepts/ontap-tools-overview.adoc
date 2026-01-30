@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'ONTAP tools per VMware vSphere è una raccolta di strumenti per la gestione del ciclo di vita delle macchine virtuali. Si integra con l"ecosistema VMware e consente il provisioning, la protezione di base e il disaster recovery delle macchine virtuali.' 
 ---
-= Panoramica sui tool ONTAP per VMware vSphere
+= Scopri gli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

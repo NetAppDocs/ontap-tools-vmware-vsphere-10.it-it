@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: In uno scenario di protezione fan-out, il gruppo di coerenza è doppiamente protetto con relazione sincrona sul primo cluster ONTAP di destinazione e con relazione asincrona sul secondo cluster ONTAP di destinazione. 
 ---
-= Protezione fan-out
+= Protezione fan-out negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

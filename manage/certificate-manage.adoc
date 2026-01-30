@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Una singola istanza dei tool ONTAP per VMware vSphere può gestire più istanze di vCenter Server. I tool ONTAP per VMware vSphere vengono implementati con un certificato autofirmato per il provider VASA. Con questo, è possibile gestire solo un"istanza di vCenter Server per i datastore vVol.' 
 ---
-= Gestire i certificati
+= Gestisci i certificati degli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

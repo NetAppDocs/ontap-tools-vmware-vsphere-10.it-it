@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: La guida introduttiva ai tool ONTAP per VMware vSphere include alcuni passaggi. 
 ---
-= Workflow di implementazione ha (High Availability, alta disponibilità)
+= Flusso di lavoro di distribuzione ad alta disponibilità per ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

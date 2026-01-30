@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Configurare un datastore segnaposto per riservare spazio nell"inventario vCenter nel sito di ripristino per le macchine virtuali (VM) protette.  Gli archivi dati segnaposto richiedono una capacità minima, perché le VM segnaposto sono piccole e in genere utilizzano solo poche centinaia di kilobyte.' 
 ---
-= Configurare gli archivi dati segnaposto
+= Configurare i datastore segnaposto negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: I backend dello storage sono sistemi utilizzati dagli host ESXi per lo storage dei dati. 
 ---
-= Gestire i back-end dello storage
+= Gestire i backend di storage in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Migrate NFS and VMFS virtual machines 
 summary: 'È possibile eseguire la migrazione di macchine virtuali da datastore NFS e VMFS a datastore \(vVol\) di volumi virtuali per sfruttare la gestione di macchine virtuali basata su policy e altre funzionalità vVol. I datastore di vVol consentono di soddisfare i requisiti di carico di lavoro più elevati.' 
 ---
-= Migrazione di macchine virtuali con datastore NFS e VMFS in datastore vVol
+= Migrare le macchine virtuali negli archivi dati vVols in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

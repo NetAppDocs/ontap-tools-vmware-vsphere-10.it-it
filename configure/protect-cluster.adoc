@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: I tool ONTAP per VMware vSphere gestiscono la protezione dei cluster di host. 
 ---
-= Proteggere utilizzando la protezione del cluster host
+= Proteggere un cluster host negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Collegare un disco dati a una macchina virtuale per espandere la capacità di archiviazione. 
 ---
-= Collegare o scollegare un disco dati da una macchina virtuale
+= Collegare o scollegare un disco dati da una VM in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

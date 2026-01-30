@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'È possibile modificare la password dell"amministratore utilizzando Gestione strumenti ONTAP per abilitare servizi come provider VASA, importazione della configurazione vVol e disaster recovery (SRA) utilizzando Gestione strumenti ONTAP.' 
 ---
-= Abilita i tool ONTAP per i servizi VMware vSphere
+= Abilita i servizi di ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

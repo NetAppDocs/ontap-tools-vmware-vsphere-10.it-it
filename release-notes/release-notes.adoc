@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: release notes, ontap tools for VMware vSphere 
 summary: Fornisce importanti informazioni su questa release di strumenti ONTAP per VMware vSphere, tra cui nuove funzionalità e miglioramenti, problemi risolti, problemi noti, precauzioni e limitazioni. 
 ---
-= Note di rilascio
+= Note di rilascio per ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

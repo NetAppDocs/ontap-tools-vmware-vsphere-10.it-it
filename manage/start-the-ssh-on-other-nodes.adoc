@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Prima di eseguire l"aggiornamento, è necessario avviare SSH su altri nodi.' 
 ---
-= Avviare SSH su altri nodi
+= Avvia SSH sugli altri nodi di ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

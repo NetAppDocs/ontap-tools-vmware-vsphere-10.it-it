@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È necessario mappare le cartelle sul sito protetto e sul sito di ripristino per consentire la comunicazione tra di esse. 
 ---
-= Configurare le mappature delle cartelle
+= Configurare i mapping delle cartelle negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

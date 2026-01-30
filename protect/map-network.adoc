@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È necessario mappare le reti nel sito protetto e nel sito di ripristino per consentire la comunicazione tra di esse. 
 ---
-= Configurare le mappature di rete
+= Configurare le mappature di rete negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

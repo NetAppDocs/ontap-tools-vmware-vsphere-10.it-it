@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'È possibile configurare i tool ONTAP per VMware vSphere per abilitare l"accesso SSH per l"utente diag.' 
 ---
-= Configurare l'accesso remoto alla diagnostica
+= Configurare l'accesso diagnostico remoto per ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

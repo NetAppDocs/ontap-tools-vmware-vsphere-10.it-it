@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade 
 summary: In questa pagina vengono descritti i codici di errore per le operazioni di distribuzione, riavvio e ripristino degli strumenti ONTAP per il sistema VMware vSphere. 
 ---
-= Risolvere gli errori di distribuzione
+= Risolvi gli errori di distribuzione degli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

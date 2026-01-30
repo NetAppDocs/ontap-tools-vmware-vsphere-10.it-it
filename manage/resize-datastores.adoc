@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Il ridimensionamento di un datastore consente di aumentare lo storage dei file delle macchine virtuali. È possibile modificare le dimensioni di un datastore in base al cambiamento dei requisiti dell"infrastruttura.' 
 ---
-= Ridimensionare il datastore NFS e VMFS
+= Ridimensiona i datastore NFS e VMFS negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

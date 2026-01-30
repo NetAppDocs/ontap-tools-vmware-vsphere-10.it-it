@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter 
 summary: 'Se utilizzi un cluster ONTAP dedicato per i tool ONTAP per l"implementazione di VMware, creerai molti volumi FlexVol non utilizzati. Dopo aver rimosso i tool ONTAP per VMware vSphere, occorre rimuovere i volumi FlexVol per evitare possibili impatti sulle performance.' 
 ---
-= Rimuovere i volumi FlexVol
+= Rimuovere i volumi FlexVol dopo aver disinstallato ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

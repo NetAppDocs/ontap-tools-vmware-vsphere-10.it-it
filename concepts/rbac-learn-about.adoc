@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role based access control, rbac, rbac components, learn about rbac 
 summary: 'RBAC (role-based access control) è un framework di sicurezza per controllare l"accesso alle risorse all"interno di un"organizzazione. RBAC semplifica l"amministrazione definendo ruoli con specifici livelli di autorizzazione per eseguire azioni, invece di assegnare autorizzazioni a singoli utenti. I ruoli definiti vengono assegnati agli utenti, riducendo così il rischio di errori e semplificando la gestione del controllo degli accessi all"interno dell"organizzazione.' 
 ---
-= Scopri i tool ONTAP per VMware vSphere 10 RBAC
+= Scopri RBAC degli strumenti ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

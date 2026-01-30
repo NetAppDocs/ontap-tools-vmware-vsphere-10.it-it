@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Comprendere igroup e le policy di esportazione negli strumenti ONTAP per VMware vSphere
+= Come ONTAP tools gestisce gli igroup e le policy di esportazione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

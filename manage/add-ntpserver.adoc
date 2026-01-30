@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Immettere i dettagli del server NTP per sincronizzare gli orologi dell"appliance ONTAP Tools.' 
 ---
-= Aggiungere server NTP
+= Aggiungi server NTP agli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

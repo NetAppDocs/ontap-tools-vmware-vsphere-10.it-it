@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Dopo aver distribuito l"appliance VMware Live Site Recovery, configurare Storage Replication Adapter (SRA) per abilitare la gestione del disaster recovery.' 
 ---
-= Configurare SRA sull'appliance VMware Live Site Recovery
+= Configurare SRA sull'appliance VMware Live Site Recovery utilizzando ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

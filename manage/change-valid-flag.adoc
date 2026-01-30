@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: È possibile modificare il flag di convalida del certificato tramite la console di manutenzione. 
 ---
-= Cambia il flag di convalida del certificato
+= Modificare il flag di convalida del certificato negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

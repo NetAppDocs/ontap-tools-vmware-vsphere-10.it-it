@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: Nella sezione seguente vengono descritti i concetti e i termini principali utilizzati nel documento. 
 ---
-= Concetti e termini chiave
+= Concetti e termini chiave negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

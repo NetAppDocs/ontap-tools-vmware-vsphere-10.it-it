@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'È possibile registrare il provider VASA con un"istanza di vCenter Server utilizzando gli ONTAP tools for VMware vSphere .' 
 ---
-= Registrare il provider VASA con un'istanza di vCenter Server utilizzando gli strumenti ONTAP
+= Registrare il provider VASA con un'istanza del server vCenter negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

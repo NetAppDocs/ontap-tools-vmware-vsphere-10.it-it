@@ -251,7 +251,6 @@ Durante il riavvio del sistema, viene visualizzata la seguente schermata:
   <block id="3cd4a1ddd805e8692af529725906108e" category="doc">Elimina datastore</block>
   <block id="a8211be0a6fb73b95cdffd1ac6d2b9d5" category="list-text">Per eliminare i volumi di backup sull'archiviazione ONTAP, selezionare *Elimina volumi sul cluster ONTAP*.</block>
   <block id="c00d479945ae0ac31dc91b4e3dd1e862" category="summary">Il montaggio di un datastore fornisce l'accesso allo storage a host aggiuntivi. È possibile montare il datastore sugli host aggiuntivi dopo aver aggiunto gli host all'ambiente VMware.</block>
-  <block id="36a4b56b73b4162884e7f45d9d8a7152" category="doc">Montare datastore NFS e VMFS</block>
   <block id="803cd3ad44ce6241271ae7cf5198e3d0" category="summary">Puoi impostare la soglia per ricevere notifiche in vCenter Server quando il volume e la capacità aggregata raggiungono determinati livelli. </block>
   <block id="6758b1c73221d6658afeee2ccd4a3e13" category="paragraph">Puoi impostare la soglia per ricevere notifiche in vCenter Server quando il volume e la capacità aggregata raggiungono determinati livelli.</block>
   <block id="0ca6560aa88bd22fa1b3bb69d8594555" category="list-title">Fasi:</block>
@@ -389,7 +388,6 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
   <block id="2c1418946774ea2b6a511fb53b6e6726" category="list-text">Verificare che gli host ESXi nel sito protetto abbiano montato i volumi di esportazione NFS dalla macchina virtuale di storage (SVM).</block>
   <block id="c15f6cdb57f72faef1aa17926a9bf11b" category="list-text">Utilizzare<block ref="df911f0151f9ef021d410b4be5060972" prefix=" " category="inline-code"></block> Su ciascun host ESXi nel sito di ripristino per verificare che l'host disponga di una porta VMkernel in grado di accedere agli indirizzi IP utilizzati per le esportazioni NFS dalla SVM.</block>
   <block id="9f3b4e502e54057e8ea3bc344de9cf8f" category="summary">È necessario verificare che il sito protetto e il sito di ripristino siano associati correttamente dopo aver configurato l'adattatore di replica archivio \(SRA\). Il sistema storage replicato deve essere raggiungibile sia dal sito protetto che dal sito di recovery.</block>
-  <block id="79d8a92408e3c5cb0a892432af2c8045" category="doc">Verificare i sistemi storage replicati</block>
   <block id="9e6567846f3b6c9a8e1d38a420da704c" category="paragraph">È necessario verificare che il sito protetto e il sito di ripristino siano associati correttamente dopo la configurazione dell'adattatore di replica dello storage (SRA). Il sistema storage replicato deve essere raggiungibile sia dal sito protetto che dal sito di recovery.</block>
   <block id="8beb897fce777c3277508139c7915a20" category="list-text">È necessario aver configurato il sistema di archiviazione.</block>
   <block id="7ceb2eab648208033ac8e2800ced40ef" category="list-text">Prima di eseguire l'operazione di test failover e di failover per SRA, è necessario aver attivato la licenza FlexClone e la licenza SnapMirror.</block>
@@ -559,19 +557,13 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="a40a3427484ba9037317f84856abff69" category="list-text">Selezionare la coppia di array richiesta e verificare i dettagli corrispondenti.</block>
   <block id="cea5a13834803a12adaeb249165351df" category="list-text">Inserire<block ref="c81e728d9d4c2f636f067f89cc14862c" prefix=" " category="inline-code"></block> per selezionare il menu Configurazione di sistema.</block>
   <block id="ab475951501b4995dc2913e61372d546" category="section-title">Stack doppio</block>
-  <block id="5541521d8d465590f0919510f29154b2" category="summary">Limiti di configurazione per l'implementazione dei tool ONTAP per VMware vSphere</block>
-  <block id="96c7de8d06430bb8621d9ca29f8bf76b" category="paragraph">La seguente tabella illustra la configurazione dei tool ONTAP per VMware vSphere.</block>
   <block id="4043f29990bf7ab4f6f8e863d6aaacfa" category="cell">*Implementazione*</block>
   <block id="7464a7978b1ad9e7f36e5f0181e97eb5" category="cell">*Tipo*</block>
   <block id="5162809ac332f21bfb27ba3b5e6afb04" category="cell">*Numero di vVol*</block>
   <block id="53fa84754bf02000ddafdbb2cd7a2311" category="cell">*Numero di host*</block>
-  <block id="44b88df569624fea08b72a4f32d29c00" category="cell">CIRCA 12K MB</block>
-  <block id="9fb2b888687c528698d5ec3b1fcac6d9" category="cell">CIRCA 24K MB</block>
   <block id="ea5d2f1c4608232e07d3aa3d998e5135" category="cell">64</block>
   <block id="9505247cbbe2382d170a963c34412544" category="cell">Alta disponibilità</block>
-  <block id="72fa3a55085ed575e69d7aaa8847dce6" category="cell">circa 50k mb</block>
   <block id="76dc611d6ebaafc66cc0879c71b5db5c" category="cell">128</block>
-  <block id="a767227b9eba64196b4788edef7ac1b7" category="cell">circa 100k mb</block>
   <block id="38c5b65e97cdb4c6de7600ae7479af40" category="section-title">Tool ONTAP per VMware vSphere - Storage Replication Adapter (SRA)</block>
   <block id="bff4a5ed353e2265f8bc7ee336bcb8a8" category="cell">*Dimensione della distribuzione vCenter*</block>
   <block id="e8ae9f0392263b55e4580177a75c948e" category="cell">*Piccolo*</block>
@@ -647,7 +639,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="cfe2ade5e927260481a4080015905722" category="paragraph">Hai 5 secondi per scegliere la tua opzione. Premere un tasto qualsiasi per interrompere l'avanzamento e bloccare il menu di GRUB.</block>
   <block id="9704bbe9f3dcdd6bcaf267fe293ed88b" category="doc">Ridimensionare il datastore NFS e VMFS</block>
   <block id="be9a71458974fa7a07e70416397a3e07" category="summary">L'azione del datastore smonta un datastore NFS o VMFS dagli host ESXi. L'azione di disinstallazione del datastore è abilitata per i datastore NFS e VMFS, rilevati o gestiti dai tool ONTAP per VMware vSphere.</block>
-  <block id="27150de0fe201042be99ab9cc1628e7f" category="doc">Smontare i datastore NFS e VMFS</block>
   <block id="145030897b3622bf5373be4a74e8ad80" category="list-text">Selezionare uno o più host ESXi per smontare il datastore.</block>
   <block id="b58a084a2e5b8ee16e91cff21aeacb3b" category="list-text">Selezionare il pulsante *Smonta*.</block>
   <block id="58ee9210196e8f4558d87b26bba5bc19" category="paragraph">Se l'archivio dati fa parte di un cluster host protetto, viene visualizzato un messaggio di avviso.</block>
@@ -853,13 +844,11 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">Configurare siti protetti e di ripristino</block>
   <block id="01e681f5a8de12d6be77dfc0e567c731" category="summary">Il riferimento all'API REST dei tool ONTAP per VMware vSphere 10 contiene dettagli su tutte le chiamate API. Questo riferimento è utile quando si sviluppano applicazioni di automazione.</block>
-  <block id="d2f73ce531661447cb475cb1f2d2e3bf" category="doc">Riferimento API per i tool ONTAP per l'API REST di VMware vSphere 10</block>
   <block id="08abdf16d81e0cbba6b259bea49cdf99" category="list-text">Digitare il seguente URL nel browser sostituendo la combinazione di indirizzo IP e porta appropriata per la variabile e premere *Invio*.</block>
   <block id="6ff8508bd0ad0da36fc04c76066c464c" category="paragraph"><block ref="4c9882763c7aaf0e39789953130b5809" prefix="" category="inline-code"></block></block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">*Esempio*</block>
   <block id="95d36d22664f8854f7a69597b5d159e9" category="paragraph"><block ref="bcaca837447d687465d80574c1488516" prefix="" category="inline-code"></block></block>
   <block id="9e2559913ee384f282b7c8922d9c892e" category="summary">Puoi effettuare una chiamata API utilizzando curl per iniziare con i tool ONTAP per l'API REST di VMware vSphere 10.</block>
-  <block id="25aa7ee97346651715a55a99bba91d34" category="doc">I tuoi primi tool ONTAP per la chiamata alle API REST di VMware vSphere 10</block>
   <block id="190ffd22724cdd7dfb04a0d2211e12bd" category="paragraph">È necessario rivedere le informazioni e i parametri richiesti negli esempi di arricciatura.</block>
   <block id="f8ad24507fa09d903436c3525e8e9d3f" category="paragraph-title">Informazioni richieste</block>
   <block id="4c6a9048ac276eb9391ebe2abd8e0c0d" category="paragraph">Sono necessari i seguenti elementi:</block>
@@ -885,7 +874,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="e0da47631d6f2648f3a36bde7e269c3b" category="listing-title">Esempio di arricciamento</block>
   <block id="e77c6880701fcbe894a878111bcb9ca8" category="paragraph">La risposta JSON include un elenco delle istanze di VMware vCenter configurate in ONTAP Tools Manager.</block>
   <block id="bf93d289f74793d6a72e909b5fc9cca0" category="summary">Tool ONTAP per VMware vSphere 10: Set di strumenti per la gestione del ciclo di vita delle macchine virtuali. Include una solida API REST che puoi utilizzare come parte dei processi di automazione.</block>
-  <block id="10a7a63d5f7f3ff2c6438bb0f95d5494" category="doc">Scopri i tool ONTAP per l'API REST VMware vSphere 10</block>
   <block id="8ed6428212b41847f33c5db651c2aa70" category="section-title">Base REST per i web Services</block>
   <block id="9e1fbdb44af04bcec2aeaa02a0374832" category="paragraph">Representational state Transfer (REST) è uno stile per la creazione di applicazioni Web distribuite, inclusa la progettazione di API di servizi Web. Stabilisce una serie di tecnologie per esporre le risorse basate su server e gestire i loro stati.</block>
   <block id="b0fcdfb2c58efafaace08609d3e95f6d" category="paragraph-title">Risorse e rappresentazione dello stato</block>
@@ -909,7 +897,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="be1cd531936ba46a2647fa7dd8d85828" category="paragraph-title">Due API REST</block>
   <block id="3a77755c4eaf7897cda1f7db8e722428" category="inline-link">Automazione ONTAP</block>
   <block id="20516199cb9481d285d518fc11cdca0a" category="summary">Mentre REST stabilisce un insieme comune di tecnologie e Best practice, l'implementazione esatta di ogni API può variare in base alle scelte di progettazione. Prima di utilizzare l'API REST di VMware vSphere 10, è necessario conoscere il modo in cui sono stati progettati i tool ONTAP.</block>
-  <block id="73e04cfa7b08e07a2220873d48382c98" category="doc">Dettagli di implementazione per i tool ONTAP per le API REST di VMware vSphere 10</block>
   <block id="19ec08da81a826d919d64ab860845c04" category="inline-link-macro">Riferimento API</block>
   <block id="3a7801515e8905c5c1b58caba299deae" category="paragraph">Le API REST comprendono diverse categorie di risorse come vCenter e aggregati. Per ulteriori informazioni, consultare la <block ref="f993b2671c2a028bb49c8687852396a0" category="inline-link-macro-rx"></block>sezione.</block>
   <block id="45cd4354f07a1ab359a1cc263ed79868" category="section-title">Come accedere all'API REST</block>
@@ -1206,7 +1193,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="95efa80bc6e01f977e0f0ccd4a71490a" category="inline-link-macro">Ambiente RBAC ONTAP</block>
   <block id="d5afa90f21ed3ed6f44619bc06967ae9" category="paragraph">I tool ONTAP per VMware vSphere 10 si collegano a un cluster ONTAP attraverso l'API REST ONTAP per eseguire operazioni relative allo storage. L'accesso alle risorse di storage viene controllato tramite un ruolo ONTAP associato all'utente ONTAP fornito durante l'autenticazione. Per ulteriori informazioni, vedere <block ref="e4be7d0a80a9c4d84c7c1c04c147ff8e" category="inline-link-macro-rx"></block> .</block>
   <block id="8b25344f06ee105a716a7392efac0b3f" category="summary">ONTAP fornisce un ambiente RBAC solido ed estensibile. Puoi utilizzare la funzionalità RBAC per controllare l'accesso alle operazioni di storage e sistema così come esposte attraverso l'API REST e la CLI. È utile acquisire familiarità con l'ambiente prima di utilizzarlo con gli strumenti ONTAP per la distribuzione di VMware vSphere 10.</block>
-  <block id="ffb63b72d307f89b9034ca9eb9c65046" category="doc">Ambiente RBAC ONTAP con tool ONTAP per VMware vSphere 10</block>
   <block id="4c095493a08eb39706180a8f9166adc3" category="section-title">Panoramica delle opzioni amministrative</block>
   <block id="d4f827c0c7c9fb2e15e437f882df68ca" category="inline-link">Automazione ONTAP: Panoramica della sicurezza RBAC</block>
   <block id="54d793c5631c270bc5de979749809fd2" category="paragraph">Ci sono diverse opzioni disponibili quando si utilizza RBAC ONTAP in base al tuo ambiente e agli obiettivi. Di seguito viene presentata una panoramica delle principali decisioni amministrative. Per ulteriori informazioni, vedere anche<block ref="120c2c6e56fa9c261aa8c0c07fc333dd" category="inline-link-rx"></block>.</block>
@@ -1265,7 +1251,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="4628ce4ed29ed74d4945136c742ba3a6" category="paragraph"><block ref="7c14b8ae567d452539a915b9285021b8" prefix="" category="inline-code"></block></block>
   <block id="d3b71e8bd1ba110ebe240ca63dae1329" category="paragraph">Il nuovo utente verrà aggiunto all'elenco nella pagina "utenti e ruoli". Si noti che sono supportati entrambi i metodi di accesso utente HTTP e ONTAPI.</block>
   <block id="cf7e7d1fa6689d4e0e92d999c6237fb5" category="summary">VMware vCenter Server offre una funzionalità RBAC che consente di controllare l'accesso agli oggetti vSphere. Si tratta di una parte importante dei servizi di sicurezza per l'autenticazione e l'autorizzazione centralizzati di vCenter.</block>
-  <block id="dc7c1083aa09af7f48c3dfcd88881a53" category="doc">Ambiente vCenter Server RBAC con tool ONTAP per VMware vSphere 10</block>
   <block id="c919d083ca35909ad6ec0213308214ee" category="section-title">Immagine di un'autorizzazione vCenter Server</block>
   <block id="f5936d22e8b5eb5001bc642d6372a3ce" category="paragraph">Un'autorizzazione è la base per applicare il controllo degli accessi nell'ambiente vCenter Server. Viene applicato a un oggetto vSphere con un utente o un gruppo incluso nella definizione dell'autorizzazione. Un'illustrazione di alto livello di un'autorizzazione vCenter è riportata nella figura seguente.</block>
   <block id="65b1fd655adb8df9bc252ecbc423fd17" category="inline-image-macro">Autorizzazione vCenter</block>
@@ -1365,7 +1350,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="02793e3182fbe0f0f175da7ab3e93d73" category="list-text">Se si utilizza la versione vCenter Server 8.0.3, selezionare l'opzione *Personalizza l'hardware di questa macchina virtuale*, che attiverà un'ulteriore fase chiamata *Personalizza hardware* prima di passare alla finestra *Pronto per il completamento*.</block>
   <block id="97b6810eb76df77c1b712c70d530f60a" category="paragraph">Se disponi di strumenti ONTAP per VMware vSphere con vCenter Server 7,0.3, segui questi passaggi dopo l'implementazione.</block>
   <block id="d2a87194163daac768f661ff8d1d3300" category="list-text">Accedere al client vCenter</block>
-  <block id="9569971b9e4c597112b89f4886d293d8" category="doc">Prima di iniziare…​</block>
   <block id="92f29cff34d92bf4fc543c08273931a8" category="paragraph">Prima di procedere con la distribuzione, assicurarsi che siano soddisfatti i seguenti requisiti:</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">Requisiti</block>
   <block id="160341e19f4199f98bae44696b547c48" category="cell">Il tuo stato</block>
@@ -1587,7 +1571,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="3e771c8c630b8cfd1ddd0dfc7e8e7c85" category="list-text"><block ref="3e771c8c630b8cfd1ddd0dfc7e8e7c85" category="inline-link-macro-rx"></block></block>
   <block id="cbc2b2dc8b4ce185c5ef0381522a3cfc" category="admonition">Non occorre un account di amministratore per aggiungere istanze vCenter agli strumenti ONTAP. È possibile creare un ruolo personalizzato senza l'account admin con autorizzazioni limitate. Per ulteriori informazioni, fare riferimento alla <block ref="31ec071db09c0fa81e221bfe3044a965" category="inline-link-macro-rx"></block> sezione.</block>
   <block id="0d8dd733c5e5b6b5d173af6dbb7e3dff" category="list-text">L'indirizzo IP degli strumenti ONTAP è l'interfaccia principale per la comunicazione con gli strumenti ONTAP.</block>
-  <block id="6a9f1ff4ac0e0c970407817908ab7071" category="doc">Espandere i datastore vVol</block>
   <block id="c61ac620cee1003679fdaa462dbeaede" category="admonition">Il funzionamento del datastore Expand vVol non è applicabile ai datastore vVol basati sul sistema ASA R2.</block>
   <block id="b5bf1eb9fc501e53457cde004db09086" category="list-text">Eseguire la seguente API da Swagger o in Postman per la migrazione.</block>
   <block id="91377d2edc3d930017c1b8c4679bdb89" category="list-text">Utilizzare il seguente URI in Swagger per controllare lo stato:</block>
@@ -1627,7 +1610,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="ae2e6f54444edfbcea323e8f64be5184" category="inline-link">Come rimuovere OTV 9.xx dal tuo ambiente</block>
   <block id="74a0fcc4fbe41d518dabd4de3a069584" category="section-title">Passaggi per migrare il provider VASA</block>
   <block id="d619f73b597358ef5140938f37254d97" category="sidebar">Migrare agli strumenti ONTAP più recenti per VMware vSphere</block>
-  <block id="d12f6b7d9e336bb21523e27a7954a424" category="doc">Comprendere igroup e le policy di esportazione negli strumenti ONTAP per VMware vSphere</block>
   <block id="27fa3073e12d15edf2d9cd750cf92bd4" category="paragraph">I gruppi iniziatori (igroup) sono tabelle di nomi di porte World Wide Port Name (WWPN) dell'host del protocollo FC o nomi di nodi qualificati dell'host iSCSI. È possibile definire igroups e mapparli alle LUN per controllare quali iniziatori hanno accesso alle LUN.</block>
   <block id="cf5f3091e30dee6597885d8c0e0c357f" category="cell">Termine</block>
   <block id="1b63a2eb7e8a70cf1b8b669bc150e401" category="cell">DS&lt;numero&gt;</block>
@@ -1832,7 +1814,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="4bfcd12d64315d1d58961f3b806ac6dc" category="paragraph">Per utilizzare la funzionalità HA, assicurarsi che l'aggiunta a caldo della CPU e il collegamento a caldo della memoria siano abilitati durante la distribuzione o in un secondo momento nelle impostazioni della VM.</block>
   <block id="cb5aaa4b432bfb00da738902f4a63d98" category="admonition">ONTAP RBAC è progettato su misura per un ambiente di archiviazione ed è più semplice dell'implementazione RBAC fornita con vCenter Server.  Con ONTAP, assegni un ruolo direttamente all'utente.  Con ONTAP RBAC non è necessario configurare autorizzazioni esplicite, come quelle utilizzate con vCenter Server.</block>
   <block id="f4a146c168aaa994f4132a4e560fa781" category="paragraph">Gli ONTAP tools for VMware vSphere includono il supporto per la creazione di un utente ONTAP con un ruolo personalizzato.  Le definizioni sono impacchettate in un file JSON che è possibile caricare nel cluster ONTAP .  Puoi creare l'utente e personalizzare il ruolo in base al tuo ambiente e alle tue esigenze di sicurezza.</block>
-  <block id="64dafa34294b521d37203ba6f7cc7a03" category="doc">Aggiungere backend di archiviazione agli strumenti ONTAP</block>
   <block id="b225fa16c9a3f1bf85713a4461d5c022" category="paragraph">Verificare che il certificato includa un campo Subject Alternative Name (SAN) valido.  I sistemi ONTAP utilizzano il campo SAN per identificare i LIF di gestione del cluster e dell'SVM.</block>
   <block id="1f3277e5ebdf2eea2a6f3fe3418039c2" category="list-text">Recupera automaticamente i certificati del cluster ONTAP e autorizza il certificato oppure caricalo manualmente navigando fino alla sua posizione.</block>
   <block id="62ecb543fe99e1bcfa6dd3667847b997" category="inline-link-macro">Cambia il flag di convalida del certificato</block>
@@ -1959,7 +1940,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="58486898b4fe52f80d7a134d74186a4c" category="inline-link">Cluster di archiviazione metro VMware vSphere (vMSC)</block>
   <block id="d893208da3b256389f79a2544f37cde3" category="paragraph"><block ref="d893208da3b256389f79a2544f37cde3" category="inline-link-rx"></block></block>
   <block id="bccc52c3ce290f0ef76fc543c6489593" category="summary">È possibile registrare il provider VASA con un'istanza di vCenter Server utilizzando gli ONTAP tools for VMware vSphere .</block>
-  <block id="b1e7de1ec678ef38ba3bd9fd05186a1b" category="doc">Registrare il provider VASA con un'istanza di vCenter Server utilizzando gli strumenti ONTAP</block>
   <block id="8285dadb400bd469655e1f4a980f5aed" category="paragraph">Utilizzare gli ONTAP tools for VMware vSphere per registrare il provider VASA con un'istanza di vCenter Server.  Ciò consente la gestione basata su policy di storage, il supporto vVols e l'integrazione con appliance VMware Live Site Recovery su sistemi ONTAP .</block>
   <block id="0724f00270dfd4a9bc460bc3c5647c9c" category="paragraph">Le impostazioni del provider VASA mostrano lo stato di registrazione per il vCenter Server selezionato.</block>
   <block id="5815ee263a5614d985fe8e0705e24f9c" category="list-text">Selezionare *Impostazioni* &gt; *Impostazioni provider VASA*.  Gli strumenti ONTAP visualizzano lo stato di registrazione del fornitore VASA come non registrato.</block>
@@ -1994,7 +1974,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="3238b34a31c90c89668904ec5be46d4c" category="cell">9.15.1, 9.16.0, 9.16.1, 9.17.0 e 9.17.1</block>
   <block id="10b3adf4529649ecb009c579e7713c8e" category="cell">10,5</block>
   <block id="40be5cc49cd5c75f73a6fb947ad09668" category="admonition">Assicurarsi che tutti i nodi degli strumenti ONTAP risiedano nella stessa subnet per mantenere una comunicazione ininterrotta tra loro.</block>
-  <block id="9393e3694e4434a89be7c86ca4b21dd7" category="cell">256 [NOTA] I conteggi degli host nella tabella rappresentano il totale combinato di tutti i vCenter connessi.</block>
   <block id="43735eab3ba96d50a6b739b518e1e76c" category="paragraph">Inizialmente, distribuirai gli ONTAP tools for VMware vSphere come una configurazione a nodo singolo di piccole dimensioni che fornisce servizi principali per supportare i datastore NFS e VMFS.  Per espandere la configurazione con contenitori aggiuntivi per servizio, maggiore resilienza o per utilizzare datastore vVols e alta disponibilità (HA), completare prima questo flusso di lavoro e poi procedere con i passaggi di espansione. Per ulteriori informazioni, fare riferimento al <block ref="9ef467ebb813ac9bfc1579e0ba7d9e65" category="inline-link-macro-rx"></block> .</block>
   <block id="c0b3d5bbb8cb9fd1d0c709c33cc29dab" category="paragraph">Il backup è abilitato per impostazione predefinita negli ONTAP tools for VMware vSphere 10.5 e viene eseguito ogni 10 minuti.  Pianifica i backup degli ONTAP tools for VMware vSphere , che puoi utilizzare per ripristinare la configurazione in caso di errore.</block>
   <block id="4dc39be59049dfa4d7525fd1d0f85d5a" category="inline-link-macro">Modifica le impostazioni di backup</block>
@@ -2381,7 +2360,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="c94984b666995a59419ca0857f214e23" category="list-text">Immettere *2* per selezionare il menu *Configurazione di sistema*.</block>
   <block id="bac860f1d4bb4c20d8de991eeeedd998" category="paragraph">Fare clic per espandere o comprimere la tabella dei requisiti delle porte.</block>
   <block id="f59d6f6c2fbe5659bab55bb335b17871" category="summary">È possibile aggiornare le credenziali di vCenter Server tramite la console di manutenzione.</block>
-  <block id="d546c3915b2e0bc231d2bd0456f2d736" category="doc">Aggiorna le credenziali di vCenter Server</block>
   <block id="6e73e8087488ddc10c72aeec0f27cc93" category="paragraph">È possibile aggiornare le credenziali dell'istanza di vCenter Server tramite la console di manutenzione.</block>
   <block id="f13c11fc9998fa4e2d133fe7f943fb4f" category="paragraph">Se hai modificato le credenziali di vCenter Server dopo la distribuzione, aggiornale utilizzando questa procedura.</block>
   <block id="a38dbe6982c223d82e53b7d0feab69ce" category="list-text">Entra<block ref="c9f0f895fb98ab9159f51fd0297e236d" prefix=" " category="inline-code"></block> per modificare le credenziali di vCenter.</block>
@@ -2608,4 +2586,105 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="15a0f68745546e63813c4df1c8d72ba3" category="paragraph">Quando si lavora con gli ONTAP tools for VMware vSphere 10, è necessario prendere in considerazione due distinti ambienti RBAC. Per eseguire le operazioni, gli ONTAP tools for VMware vSphere 10 richiedono privilegi specifici sia in vCenter che in ONTAP . Sebbene gli strumenti ONTAP automatizzino le attività di gestione dello storage, non creano account utente né in vCenter né in ONTAP. Gli account di servizio devono essere creati da un amministratore vSphere in base alle necessità. Questa documentazione fornisce agli amministratori una guida per assegnare i ruoli e le autorizzazioni necessari per una gestione efficace degli strumenti ONTAP .</block>
   <block id="4ae8aea132dd80b8c5923dad28c5b661" category="paragraph">Se si distribuiscono strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza di vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza di vCenter che ospita gli strumenti ONTAP . È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni richieste per la distribuzione del modello OVF. Per i dettagli, vedere i ruoli elencati in<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>.</block>
   <block id="281aaa5cbe3748f40438f77dcaf6f2ab" category="paragraph">Se si utilizzano gli strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza vCenter che ospita gli strumenti ONTAP . È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni richieste per la distribuzione del modello OVF. Per i dettagli, vedere i ruoli elencati in<block ref="4be7808a32deee04c9288e5441868f02" category="inline-link-rx"></block>.</block>
+  <block id="85f52c3a4cf68ed98d733bd16d720806" category="doc">Riferimento API REST di ONTAP tools</block>
+  <block id="3e6657795439746877b7825a3d38e9ee" category="doc">Effettua la tua prima chiamata API REST degli ONTAP tools</block>
+  <block id="d3aa1a65fd672d6117cbd17f19ef3713" category="doc">Scopri di più sull'API REST di ONTAP tools</block>
+  <block id="5a605ad8e95d1a9f3283371391a80135" category="doc">Dettagli di implementazione delle API REST di ONTAP tools</block>
+  <block id="370f5531bbc04005016cdf030a95744b" category="doc">Concetti e termini chiave negli ONTAP tools</block>
+  <block id="246130515f3fc0998a670e11495c67e3" category="doc">Scopri gli strumenti ONTAP</block>
+  <block id="419fc0e7d78d105ba99e3cf9a68c7a3d" category="doc">Scopri RBAC degli strumenti ONTAP</block>
+  <block id="ddd57c30734d8295ba001e0cbe968ee2" category="doc">Come funziona ONTAP RBAC con ONTAP tools</block>
+  <block id="877a4ebbff9bae8a31da8960d39d2ba1" category="doc">Considerazioni RBAC di ONTAP per ONTAP tools</block>
+  <block id="587025fcd9783b8dad6642bf4ea9050a" category="doc">Come funziona RBAC di vCenter Server con ONTAP tools</block>
+  <block id="b690b3fbfbdc8910bd0b4b68feb15af2" category="doc">vCenter Server: considerazioni RBAC per ONTAP tools</block>
+  <block id="eaeddcc9311544bd9a0756a835a12cea" category="doc">Aggiungi un backend di storage a ONTAP tools</block>
+  <block id="ff0b8d98acac2c2dec8cc8937cbbe057" category="paragraph">Quando si registra un'istanza del server vCenter con ONTAP tools Manager, assicurarsi che il certificato del server vCenter includa un'estensione Subject Alternative Name (SAN) valida. L'estensione SAN deve contenere sia voci DNS che indirizzi IP. Ad esempio:</block>
+  <block id="b6a9b93d1e2b7bdb6d36311aa19ed1cf" category="paragraph">Se il certificato del server vCenter non include un'estensione SAN, o se l'estensione SAN non contiene i valori DNS o di indirizzo IP corretti, le operazioni degli ONTAP tools potrebbero non riuscire a causa di errori di convalida del certificato.</block>
+  <block id="152eb457072cc3f0d1daeb3318bbc7f4" category="doc">Associare un backend di storage a un'istanza del vCenter Server negli ONTAP tools</block>
+  <block id="eb92fe0cb6bfddb65b18107ce1bfc6df" category="doc">Configurare le impostazioni dell'host ESXi negli ONTAP tools</block>
+  <block id="362f310edd36afeeeec5d3c7f14cefac" category="doc">Configurare l'accesso alla rete negli ONTAP tools</block>
+  <block id="cc6c6e3a3df4247ceb9143bcc1cad2a3" category="doc">Configurare i ruoli e i privilegi utente ONTAP per ONTAP tools</block>
+  <block id="95d5cac81150e067965210d361bbfb2f" category="doc">Creare un datastore in ONTAP tools</block>
+  <block id="0f07a4cc58f2fa6e808983ce5b68f72c" category="doc">Scopri la dashboard degli strumenti ONTAP</block>
+  <block id="287275745bfa919e80da387835621319" category="doc">Scopri i sistemi di archiviazione e gli host negli ONTAP tools</block>
+  <block id="b9e18a688c755278546a8e3f0acfe914" category="doc">Proteggere un cluster host negli ONTAP tools</block>
+  <block id="e697d4e8f25b738f21f477e610eec27a" category="doc">Registrare il provider VASA con un'istanza del server vCenter negli ONTAP tools</block>
+  <block id="7f3151e275294a9f61ed00de889273e2" category="doc">Risolvi gli errori di distribuzione degli ONTAP tools</block>
+  <block id="294a9fea24dd193e76e09982dc7598f8" category="doc">Flusso di lavoro di distribuzione ad alta disponibilità per ONTAP tools</block>
+  <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="doc">Distribuisci ONTAP tools</block>
+  <block id="a852f7bb9ca4b2463cb324f20a03a33f" category="doc">Requisiti di pre-distribuzione per ONTAP tools</block>
+  <block id="e70f3006eed52a96f2df3ae804ab6573" category="section-title">Limiti di configurazione per distribuire ONTAP tools for VMware vSphere per vVols datastores</block>
+  <block id="3ac31248a6b88ed4a2b8c69b8f0ac221" category="paragraph">È possibile utilizzare la seguente tabella come guida per la configurazione di ONTAP tools for VMware vSphere.</block>
+  <block id="b5d2d3a15a4fc37813f0e8d92c8df16d" category="cell">fino a 12K</block>
+  <block id="1075c55fd78c4ee15842761b6be2c749" category="cell">fino a 24K</block>
+  <block id="d8a99c6c5a3832aa61c9b24f96a4a1db" category="cell">fino a 50k</block>
+  <block id="352ffc19ab850054d4370014a8e028e8" category="cell">fino a 100k</block>
+  <block id="5f0a53efa3576ba8ca3ec9ccb42a0c17" category="admonition">I conteggi degli host nella tabella rappresentano il totale combinato tra tutti i vCenters connessi.</block>
+  <block id="e161ff0b2c86366ccb59e368d824620e" category="section-title">Limiti di configurazione per distribuire ONTAP tools for VMware vSphere per datastore VMFS e NFS</block>
+  <block id="14335a788853d478663430b45ca5cb99" category="paragraph">I limiti di configurazione elencati in questa sezione sono convalidati e supportati da NetApp. I limiti effettivi possono variare a seconda dell'ambiente e del carico di lavoro. Il superamento di questi limiti può influire sulle prestazioni o sul supporto e non è consigliato. Considerare quanto segue quando si esamina la tabella:</block>
+  <block id="2e4dc31fa3677f351342c321c0684e5c" category="list-text">Il Disaster Recovery (DR) delle macchine virtuali è configurato utilizzando criteri sincroni, asincroni o di sincronizzazione rigorosa. Il DR non è supportato per il protocollo NVMe.</block>
+  <block id="b76f2bc848545421ec0541710e6c0b58" category="list-text">La protezione del cluster host ESXi utilizza SnapMirror Active Sync, che non supporta distribuzioni multi-vCenter.</block>
+  <block id="893d7887a07883add3fee02fa39145da" category="list-text">ONTAP tools limita solo il numero di host ESXi e datastore in base alle dimensioni dell'implementazione. Non ci sono restrizioni sul numero di vCenter Server che possono essere connessi a ONTAP tools.</block>
+  <block id="95b17b8baad662b033bf13ad4e928c00" category="list-text">ONTAP tools esegue il discovery parallelo di tutti gli oggetti di storage. I limiti di configurazione per gli oggetti di storage ONTAP si applicano indipendentemente dal numero di oggetti attivamente in uso.</block>
+  <block id="308ccbb2489ce742060158df091556e2" category="list-text">ONTAP tools non impone un limite al numero di vCenter Servers che possono essere integrati. I limiti di configurazione sono determinati dal numero di host e datastore supportati, come dettagliato nella tabella seguente.</block>
+  <block id="ea355214fd4bc7c57f471bd92918879b" category="cell">Distribuzione</block>
+  <block id="32e7e654b8235751e43024542ecc56f1" category="cell">Numero di datastore VMFS e NFS</block>
+  <block id="eb3597ecc0bf33d66cb85b6e4ffc7438" category="cell">Numero di datastore VMFS con DR abilitato</block>
+  <block id="608cc72987f96ec84e0e053dd6e260be" category="cell">Numero di host</block>
+  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
+  <block id="d490d7b4576290fa60eb31b5fc917ad1" category="cell">600</block>
+  <block id="021bbc7ee20b71134d53e20206bd6feb" category="cell">1024</block>
+  <block id="e4bbb08537d026a89479407260df4908" category="doc">Aggiungi server NTP agli strumenti ONTAP</block>
+  <block id="0ac728ad45cd796f59a906aace6dbc78" category="doc">Aggiungere host VMware vSphere a ONTAP tools</block>
+  <block id="cceb1f153b38cdfd0fcb9f514f9e0035" category="doc">Collegare o scollegare un disco dati da una VM in ONTAP tools</block>
+  <block id="b4d8b21164f94a52b7edb04dccc897c8" category="doc">Modifica le impostazioni di backup di ONTAP tools</block>
+  <block id="9657a26943e4bb75464a22c5fc6e2897" category="doc">Gestisci i certificati degli strumenti ONTAP</block>
+  <block id="a6b9b400341663baa1cb7b297f934a4a" category="doc">Modificare il flag di convalida del certificato negli ONTAP tools</block>
+  <block id="7ac68c0b7f3c33c6b4b9f27d7b49cb9f" category="doc">Configurare l'accesso diagnostico remoto per ONTAP tools</block>
+  <block id="1589e9d2499152aebd2686af58c48225" category="doc">Rimuovere i volumi FlexVol dopo aver disinstallato ONTAP tools</block>
+  <block id="6f7dc13841ea634676d1d97304967165" category="doc">Elimina i datastore in ONTAP tools</block>
+  <block id="9ba9e9b0b9819443a599e708f6f104f7" category="doc">Rimuovere la protezione del cluster host negli ONTAP tools</block>
+  <block id="c7c34156637f366a4b6270d9665a4a43" category="doc">Pulisci le configurazioni VASA negli ONTAP tools</block>
+  <block id="3bf9a1ad5c3f0dd03258c078ec2a044d" category="doc">Modificare le impostazioni dell'appliance ONTAP tools</block>
+  <block id="d94928c8d7edc0cc5329f075038f858e" category="doc">Modifica le impostazioni di AutoSupport degli strumenti ONTAP</block>
+  <block id="1c4184652a215f26ec7af7980f78dfc8" category="doc">Modificare un cluster host protetto in ONTAP tools</block>
+  <block id="a577d99657c9fdd489157fc4da64f039" category="doc">Abilita i servizi di ONTAP tools</block>
+  <block id="5cf2e1e1021032385e9ce1eb992ca98c" category="doc">Espandi gli datastore vVols negli ONTAP tools</block>
+  <block id="6d538e124b476aff2397c149a69e279b" category="doc">Come ONTAP tools gestisce gli igroup e le policy di esportazione</block>
+  <block id="e82f2f0b7ea01abfe28d8ac5c7381182" category="doc">Scopri la console di manutenzione di ONTAP tools</block>
+  <block id="3080b4ebae2964eb31e9323c6c33266f" category="doc">Gestire le soglie di archiviazione negli ONTAP tools</block>
+  <block id="d02d02ee7e7b615b7792e1ad3ff171d0" category="doc">Scopri l'interfaccia utente di ONTAP tools Manager</block>
+  <block id="524fd1aef9cb6cfddcfe07ccaac75346" category="doc">Migrare le macchine virtuali negli archivi dati vVols in ONTAP tools</block>
+  <block id="fddcf8c5cf9cd2661235ccaf551a46aa" category="doc">Considerazioni sulla migrazione e la clonazione di macchine virtuali per ONTAP tools</block>
+  <block id="3299a7d360dc51186b4ee8c200627b3f" category="doc">Montare un datastore vVols negli ONTAP tools</block>
+  <block id="ff5498cd43203d12b2c313c8ee80aae3" category="doc">Montare i datastore NFS e VMFS negli ONTAP tools</block>
+  <block id="b904c32a2b89b03a0e1c9c4d83092c36" category="doc">Come ONTAP tools gestisce gli igroup</block>
+  <block id="1903b50225d131872d94f2db5cae32a8" category="doc">Ridurre un datastore vVols negli ONTAP tools</block>
+  <block id="9747809758e91bee4d80a51090576022" category="doc">Reimposta la password utente dell'applicazione in ONTAP tools</block>
+  <block id="4c72dc45491e6570220fabb95346714f" category="doc">Reimposta la password della console di manutenzione di ONTAP tools</block>
+  <block id="ee038b0c8874f7294126a114f3283407" category="doc">Reimposta le credenziali del provider VASA e SRA negli strumenti ONTAP</block>
+  <block id="260d5e5c41e1f42cffa1266dea680301" category="doc">Ridimensiona i datastore NFS e VMFS negli ONTAP tools</block>
+  <block id="6754215273b95339627d7015960cdb7c" category="doc">Avvia SSH sugli altri nodi di ONTAP tools</block>
+  <block id="68ee39c4a4735429d7e0880a75745822" category="doc">Gestire i backend di storage in ONTAP tools</block>
+  <block id="06ab550759dfdf932c2570432dd605c1" category="doc">Visualizzazioni dello storage ONTAP per i datastore negli ONTAP tools</block>
+  <block id="4cd988c417a0bf223f5eebfa9518f8ad" category="doc">Disinstallare ONTAP tools</block>
+  <block id="c57bb73289d8b0da9f85c1e90fa314ac" category="doc">Smonta i datastore NFS e VMFS negli ONTAP tools</block>
+  <block id="b65968a36172676af9d0e3db25da07d5" category="doc">Aggiorna le credenziali del server vCenter negli ONTAP tools</block>
+  <block id="f5e105fa1cc9d2e0af5a5f00dbbca6ac" category="doc">Visualizzazione dell'archiviazione della macchina virtuale in ONTAP tools</block>
+  <block id="fa9bbfc3405efa7c49b8552fea6339c6" category="doc">Migrare il VASA Provider e aggiornare l'SRA negli ONTAP tools</block>
+  <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">Configurare SRA utilizzando il gestore array in ONTAP tools</block>
+  <block id="f825d08cca5235c68d18f5f167189a42" category="doc">Configurare SRA sull'appliance VMware Live Site Recovery utilizzando ONTAP tools</block>
+  <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">Configurare i datastore segnaposto negli ONTAP tools</block>
+  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">Configura i siti protetti e di ripristino negli ONTAP tools</block>
+  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">Configurare SRA in ONTAP tools per ambienti altamente scalabili</block>
+  <block id="366099eedc535323fc065faade609247" category="doc">Configurare SRA in ONTAP tools for VMware vSphere per ambienti SAN e NAS</block>
+  <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">Configurare SRA negli ONTAP tools per proteggere i datastore</block>
+  <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">Protezione fan-out negli ONTAP tools</block>
+  <block id="c8033e108981b3a18e6208265edbd9fe" category="doc">Configurare i mapping delle cartelle negli ONTAP tools</block>
+  <block id="79d350c1ea3bbf8258ce02f746a2c7c5" category="doc">Configurare le mappature di rete negli ONTAP tools</block>
+  <block id="e3db15ab559253e4c3a624a499dd361c" category="doc">Configurare le mappature delle risorse negli ONTAP tools</block>
+  <block id="c861b78182bc6ca9256699a43afa2c05" category="doc">Aggiorna le credenziali SRA negli strumenti ONTAP</block>
+  <block id="c928bb04121a183be07f4eafbb06b783" category="doc">Verificare i sistemi di archiviazione replicati negli ONTAP tools</block>
+  <block id="9d2c893e6932222a6e9063b1f628bae1" category="doc">Note di rilascio per ONTAP tools</block>
+  <block id="c219ac41703e11b6d5430626757ee4d1" category="doc">Codici di errore di aggiornamento di ONTAP tools</block>
 </blocks>

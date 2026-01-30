@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'I tool ONTAP per VMware vSphere controllano e impostano le impostazioni di multipathing dell"host ESXi e le impostazioni di timeout degli HBA più adatte ai sistemi storage NetApp.' 
 ---
-= Configurare le impostazioni dell'host ESXi
+= Configurare le impostazioni dell'host ESXi negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'È necessario mappare le risorse sul sito protetto e sul sito di ripristino in modo che le macchine virtuali siano configurate per eseguire il failover in un gruppo di host o nell"altro.' 
 ---
-= Configurare le mappature delle risorse
+= Configurare le mappature delle risorse negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

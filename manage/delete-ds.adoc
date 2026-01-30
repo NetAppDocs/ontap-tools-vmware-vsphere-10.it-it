@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol 
 summary: 'L"azione Elimina archivio dati elimina il datastore. Nel caso del datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l"elenco delle macchine virtuali che utilizzano il datastore.' 
 ---
-= Elimina datastore
+= Elimina i datastore in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

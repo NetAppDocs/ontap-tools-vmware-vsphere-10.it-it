@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'È possibile modificare la password dell"amministratore utilizzando ONTAP Tools Manager.' 
 ---
-= Modifica i tool di ONTAP per la configurazione di VMware vSphere
+= Modificare le impostazioni dell'appliance ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
