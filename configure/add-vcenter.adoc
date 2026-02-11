@@ -13,19 +13,37 @@ summary: Aggiungi le istanze di vCenter Server ai tool ONTAP per VMware vSphere 
 [role="lead"]
 Aggiungi le istanze di vCenter Server ai tool ONTAP per VMware vSphere per configurare, gestire e proteggere i datastore virtuali nel tuo ambiente vCenter Server. Quando si aggiungono più istanze di vCenter Server, sono richiesti certificati CA personalizzati per la comunicazione sicura tra gli strumenti ONTAP e ciascun vCenter Server.
 
-Quando si registra un'istanza del server vCenter con ONTAP tools Manager, assicurarsi che il certificato del server vCenter includa un'estensione Subject Alternative Name (SAN) valida. L'estensione SAN deve contenere sia voci DNS che indirizzi IP. Ad esempio:
+.A proposito di questa attività
+Gli strumenti ONTAP si integrano con vCenter Server per eseguire attività di archiviazione come provisioning, snapshot e protezione dei dati direttamente dal client vSphere.
 
+.Prima di iniziare
+* Assicurarsi che il certificato del server vCenter includa un'estensione SAN (Subject Alternative Name) valida con voci sia DNS che indirizzo IP. Ad esempio:
++
 [listing]
 ----
 X509v3 extensions:
     X509v3 Subject Alternative Name:
         DNS: vcenter.example.com, DNS: vcenter, IP Address: 192.168.0.50
 ----
-Se il certificato del server vCenter non include un'estensione SAN, o se l'estensione SAN non contiene i valori DNS o di indirizzo IP corretti, le operazioni degli ONTAP tools potrebbero non riuscire a causa di errori di convalida del certificato.
++
+Se il certificato non include un'estensione SAN, o se l'estensione SAN non contiene i valori DNS o di indirizzo IP corretti, le operazioni di ONTAP tools potrebbero non riuscire a causa di errori di convalida del certificato.
 
-.A proposito di questa attività
-Gli strumenti ONTAP si integrano con vCenter Server per eseguire attività di archiviazione come provisioning, snapshot e protezione dei dati direttamente dal client vSphere.
+* L'identificatore di rete primario (PNID) del vCenter Server deve essere incluso nei dettagli SAN. Il PNID e il nome DNS devono essere identici e risolvibili nel DNS.
+* Si consiglia di distribuire vCenter Server utilizzando il suo fully qualified domain name (FQDN) e di assicurarsi che il SAN nel certificato includa DNS Name=machine_FQDN per una compatibilità e un supporto ottimali.
+* Per ulteriori informazioni, fare riferimento alla documentazione VMware:
++
+** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["vSphere Certificate Requirements per diversi percorsi di soluzione"]
+** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html["Sostituisci il certificato SSL della macchina vCenter con un certificato firmato da un'autorità di certificazione personalizzata"]
+** https://knowledge.broadcom.com/external/article/406282/error-subject-alternate-name-san-field-d.html["Errore: il campo Subject Alternate Name (SAN) non contiene il PNID. Fornire un certificato valido"]
 
+
+
+
+[NOTE]
+====
+Se l'FQDN non è disponibile, puoi impostare il PNID sull'indirizzo IP e includere l'indirizzo IP nella SAN. Tuttavia, questo non è raccomandato da VMware.
+
+====
 .Fasi
 . Apri un browser web e vai all'URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
