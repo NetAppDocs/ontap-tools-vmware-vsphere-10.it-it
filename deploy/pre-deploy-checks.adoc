@@ -60,7 +60,7 @@ Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richiest
 | Requisito | Il tuo valore 
 
 
-| Indirizzo IP per l'applicazione degli strumenti ONTAP .  Questo è l'indirizzo IP per accedere all'interfaccia web degli strumenti ONTAP (bilanciatore del carico) |  
+| Indirizzo IP per l'applicazione ONTAP tools. Questo è l'indirizzo IP per accedere all'interfaccia web del gestore ONTAP tools (load balancer) a `\https://<ip>:8443/virtualization/ui/` |  
 
 
 | Gli strumenti ONTAP forniscono un indirizzo IP virtuale per la comunicazione interna.  Questo indirizzo IP viene utilizzato per la comunicazione interna in una configurazione con più istanze di strumenti ONTAP .  Questo indirizzo IP non deve essere uguale all'indirizzo IP dell'applicazione degli strumenti ONTAP (piano di controllo Kubernetes). |  
@@ -78,7 +78,7 @@ Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richiest
 | Dominio di ricerca DNS |  
 
 
-| Indirizzo IPv4 per il nodo di gestione degli strumenti ONTAP .  Si tratta di un indirizzo IPv4 univoco per l'interfaccia di gestione del nodo sulla rete di gestione. |  
+| Indirizzo IPv4 per il nodo di gestione degli strumenti ONTAP. Si tratta di un indirizzo IPv4 univoco per l'interfaccia di gestione del nodo sulla rete di gestione. Questo viene utilizzato per connettersi all'appliance degli strumenti ONTAP per l'accesso diagnostico remoto tramite SSH. |  
 
 
 | Subnet mask dell'indirizzo IPv4 |  

@@ -25,16 +25,17 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . Distribuisci OVA per gli ONTAP tools for VMware vSphere 10.5.
 . Aggiungere l'istanza di vCenter Server che si desidera migrare agli ONTAP tools for VMware vSphere 10.5. Fare riferimento a link:../configure/add-vcenter.html["Aggiungere un'istanza di vCenter Server"] per maggiori informazioni.
+. link:../manage/enable-services.html["Attiva provider VASA"]servizio sugli ONTAP tools for VMware vSphere 10.5.
 . Integrare il backend di storage localmente dalle API del server vCenter per il plug-in degli strumenti ONTAP . Fare riferimento alink:../configure/add-storage-backend.html["Aggiungere un backend di archiviazione utilizzando l'interfaccia client vSphere"] per maggiori informazioni.
 . Ottieni un token di accesso per autenticare le richieste API REST.  Utilizzare l'esempio seguente, sostituendo le variabili con valori specifici per il proprio ambiente.
 +
 [source, curl]
 ----
 curl --request POST \
---location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/login” \
---header "Content-Type: application/json" \
---header "Accept: */*" \
--d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
+  --location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/vcenter-login" \
+  --header "Content-Type: application/json" \
+  --header "Accept: */*" \
+  -d '{"username": "$MYUSER", "password": "$MYPASSWORD"}'
 ----
 +
 Copia e salva il token di accesso restituito nella risposta.
@@ -72,16 +73,16 @@ Asincrono
 [listing]
 ----
 curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
---header 'x-auth: <auth_token>' \
---header 'Content-Type: application/json' \
---data '{
-  "otv_ip": "xx.xx.xx.xx",
-  "vasa_provider_credentials": {
-    "username": "xxxxx",
-    "password": "******"
-  },
-  "database_password": "******"
-}'
+  --header 'x-auth: <auth_token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "otv_ip": "xx.xx.xx.xx",
+    "vasa_provider_credentials": {
+      "username": "xxxxx",
+      "password": "******"
+    },
+    "database_password": "******"
+  }'
 ----
 Corpo della richiesta per un'altra migrazione delle release:
 
@@ -112,23 +113,28 @@ Il sistema restituisce un oggetto lavoro.  Salvare l'identificativo del lavoro p
 +
 [listing]
 ----
-curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migration_id>?includeSubJobsAndTasks=true`
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?includeSubJobsAndTasks=true`
 ----
 +
-Una volta completato il processo, rivedere il report di migrazione nella risposta al processo.
+Utilizzare il valore 'id' restituito dal job di migrazione nel passaggio precedente. Al termine del job, rivedere il report di migrazione nella risposta al job.
 
 . Aggiungere gli ONTAP tools for VMware vSphere al vCenter Server.
 . Registrare il provider VASA con gli ONTAP tools for VMware vSphere. Per le istruzioni, vederelink:../configure/registration-process.html["Registrare il provider VASA"] .
-. Dopo la registrazione, verificare il nome del provider VASA e il suo stato in vSphere Client in *Storage Providers*.  Il fornitore VASA dovrebbe apparire online, confermando l'avvenuta registrazione.
-. link:../manage/enable-services.html["Attiva provider VASA"]servizio sugli ONTAP tools for VMware vSphere 10.5.
+. Verificare la registrazione del VASA Provider:
++
+.. Nel vSphere Client, vai al vCenter Server.
+.. Seleziona *Configura* > *Storage Providers*.
+.. Confermare che il VASA Provider registrato nel passaggio precedente risulti online.
+
+
 . Arrestare gli ONTAP tools for VMware vSphere Storage Provider 9.10/9.11/9.12/9.13 VASA Provider seguendo questi passaggi:
 +
 .. Negli strumenti ONTAP 9.x, aprire la console Web.
 .. Accedere alla console di manutenzione.
 .. Entra `1` per selezionare il menu *Configurazione applicazione*.
 .. Entra `5` per interrompere i servizi VASA Provider e SRA.
-.. Nel vSphere Client, vai a *Inventario* > *Provider di storage*.
-.. Selezionare il provider VASA degli strumenti ONTAP 9.x dal backend di archiviazione e fare clic su *Rimuovi*.
+.. Nel vSphere Client, vai al vCenter Server e seleziona *Configura* > *Provider di archiviazione*.
+.. Selezionare il VASA Provider offline per ONTAP tools 9.x e selezionare *Rimuovi*.
 +
 Dopo l'arresto del vecchio provider VASA, il vCenter Server esegue il failover sugli ONTAP tools for VMware vSphere. Tutti i datastore e le VM diventano accessibili e vengono gestiti dagli ONTAP tools for VMware vSphere.
 
@@ -161,6 +167,28 @@ Utilizzare il seguente URI in Swagger:
 ----
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
 ----
+*Metodo HTTP ed endpoint*
+
+Questa chiamata API REST utilizza il metodo e l'endpoint seguenti.
+
+|===
+
+
+| *Metodo HTTP* | *Percorso* 
+
+
+| PATCH | /api/v1 
+|===
+*Tipo di lavorazione*
+
+Asincrono
+
+Utilizzare il seguente URI in Swagger:
+
+[listing]
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
+----
 *Esempio Curl*
 
 [listing]
@@ -168,8 +196,6 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcent
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/d50073ce-35b4-4c51-9d2e-4ce66f802c35`
 ----
 *Esempio di output JSON*
-
-Viene restituito un oggetto lavoro. È necessario salvare l'identificatore del lavoro per utilizzarlo nel passo successivo.
 
 [listing]
 ----
@@ -181,12 +207,14 @@ Viene restituito un oggetto lavoro. È necessario salvare l'identificatore del l
 ----
 ====
 +
-Il corpo della richiesta è vuoto per l'operazione patch.
 
+NOTE: Utilizzare il valore 'migration_id' restituito nel passaggio 7 come <migration_id> nella chiamata API PATCH. Il corpo della richiesta è vuoto per l'operazione di patch.
 
-
++
 
 NOTE: UUID è l'UUID di migrazione restituito in risposta all'API post-migrazione.
+
+
 
 Dopo aver eseguito l'API di migrazione delle patch, tutte le VM sono conformi al criterio di storage.
 
@@ -200,14 +228,10 @@ Dopo aver completato la migrazione e registrato gli strumenti ONTAP 10.5 su vCen
 Dopo l'aggiornamento, se lo stato di conformità della macchina virtuale è obsoleto, riapplicare il criterio di archiviazione attenendosi alla seguente procedura:
 
 . Vai al datastore e seleziona *Riepilogo* > *Criteri di archiviazione VM*.
-+
-Il sistema mostra lo stato di conformità in *Conformità ai criteri di archiviazione delle VM* come *Obsoleto*.
-
+. Il sistema mostra lo stato di conformità in *Conformità ai criteri di archiviazione delle VM* come *Obsoleto*.
 . Selezionare il criterio VM di archiviazione e la VM corrispondente.
 . Selezionare *Applica*.
-+
-Lo stato di conformità in *Conformità ai criteri di archiviazione delle VM* risulta conforme.
-
+. Lo stato di conformità in *Conformità ai criteri di archiviazione delle VM* risulta conforme.
 
 
 .Informazioni correlate
