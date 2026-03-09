@@ -28,3 +28,16 @@ La console di manutenzione mostra lo stato del flag di convalida del certificato
 
 
 Quando si abilita il flag di convalida del certificato (impostato su true), gli strumenti ONTAP verificano che tutti i backend di archiviazione utilizzino certificati con un nome alternativo del soggetto (SAN).  Se un backend utilizza un certificato senza SAN, non è possibile abilitare la convalida del certificato.  Prima di abilitare questo flag, verificare che tutti i backend di archiviazione utilizzino certificati basati su SAN.  Se si disabilita il flag di convalida del certificato (impostato su false), gli strumenti ONTAP ignorano la convalida del certificato per tutti i backend di archiviazione configurati.
+
+
+
+== Verificare i certificati basati su SAN per i backend di storage
+
+Per garantire una comunicazione sicura e una convalida adeguata, verificare che tutti i backend di archiviazione utilizzino certificati basati su SAN:
+
+. Verificare che il certificato di gestione ONTAP includa una voce Subject Alternative Name (SAN).
+. Confermare che le voci SAN corrispondano all'indirizzo IP di gestione ONTAP o al nome DNS, o a entrambi.
+. Assicurarsi che i dettagli utilizzati per integrare ONTAP corrispondano all'indirizzo IP o al nome DNS nella voce SAN del certificato.
+
+
+Seguendo questi passaggi si evitano problemi di convalida dei certificati e si garantisce che il sistema ONTAP sia integrato in modo sicuro.
