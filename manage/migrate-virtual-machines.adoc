@@ -56,8 +56,8 @@ Per ulteriori dettagli, fare riferimento https://techdocs.broadcom.com/us/en/vmw
 
 == Snapshot delle macchine virtuali
 
-Attualmente sono supportate solo le istantanee delle macchine virtuali senza memoria. Se la macchina virtuale dispone di Snapshot con memoria, la macchina virtuale non viene presa in considerazione per la protezione.
+Sono supportati gli snapshot di macchine virtuali senza memoria. Se una macchina virtuale ha uno snapshot con memoria, la macchina virtuale non può essere protetta.
 
-Non è inoltre possibile proteggere macchine virtuali non protette dotate di snapshot di memoria.  Per questa versione, è previsto che tu elimini lo snapshot della memoria prima di abilitare la protezione per la macchina virtuale.
+Non è possibile proteggere le macchine virtuali non protette che contengono snapshot di memoria. Elimina gli snapshot di memoria prima di abilitare la protezione per la macchina virtuale.
 
-Per una VM Windows con tipo di archiviazione ASA r2, uno snapshot della macchina virtuale è di sola lettura.  Quando si accende la VM, VASA Provider crea una LUN dallo snapshot di sola lettura e abilita gli IOPS.  Quando si spegne la VM, VASA Provider elimina la LUN e disabilita gli IOPS.
+Per una VM Windows con tipo di storage ASA r2, gli snapshot della macchina virtuale sono di sola lettura. Quando si accende la VM, VASA Provider crea una LUN dallo snapshot di sola lettura e abilita le IOPS. Quando si spegne la VM, VASA Provider elimina la LUN e disabilita le IOPS.
