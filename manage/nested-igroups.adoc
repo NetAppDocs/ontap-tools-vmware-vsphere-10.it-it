@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 Se si gestiscono sia le VM degli strumenti ONTAP sia i sistemi di archiviazione ONTAP , è importante comprendere il comportamento degli igroup, in particolare quando si spostano gli archivi dati da ambienti non gestiti dagli strumenti ONTAP a quelli che lo sono. Questa pagina spiega come vengono aggiornati gli igroup durante questo processo.
 
-Gli ONTAP tools for VMware vSphere 10.4 e versioni successive creano e gestiscono automaticamente oggetti ONTAP e vCenter per semplificare la gestione dei datastore negli ambienti data center VMware.
+A partire da ONTAP tools for VMware vSphere 10.4, ONTAP tools crea e gestisce automaticamente oggetti ONTAP e vCenter, semplificando la gestione dei datastore negli ambienti datacenter VMware.
 
 Gli ONTAP tools for VMware vSphere interpretano gli igroup in due contesti diversi:
 

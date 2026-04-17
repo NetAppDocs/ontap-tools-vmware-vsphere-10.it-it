@@ -163,7 +163,7 @@ Se la distribuzione non riesce con il codice di errore 114, completare i seguent
 
 * Abilita la shell diagnostica.
 * Eseguire il seguente comando: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Consulta i registri su  `/var/log/otvng/post-deploy-upgrade.log`.
+* Esamina i registri a `/var/log/otvng/post-deploy-upgrade.log`
 
 
 |===
