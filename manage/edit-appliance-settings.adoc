@@ -48,7 +48,7 @@ NOTE: Dopo aver abilitato la configurazione HA, non è possibile tornare a una c
 NOTE: Gli strumenti ONTAP precompilano la maggior parte delle opzioni di input con i dettagli della rete Node 1 per semplificare il flusso di lavoro.  È possibile modificare i dati di input prima di passare all'ultima pagina della procedura guidata. È possibile immettere i dettagli dell'indirizzo IPv6 per gli altri due nodi solo quando l'indirizzo IPv6 è abilitato sul nodo di gestione degli strumenti ONTAP .
 
 +
-Assicurarsi che un host ESXi contenga solo una VM di strumenti ONTAP. I dati immessi vengono convalidati ogni volta che si passa alla finestra successiva.
+Assicurati che ogni host ESXi contenga solo una macchina virtuale ONTAP tools. Gli input vengono convalidati ogni volta che passi alla finestra successiva.
 
 . Rivedere i dettagli nella sezione *Riepilogo* e *Salva* le modifiche.
 

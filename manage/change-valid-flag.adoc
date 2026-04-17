@@ -41,3 +41,7 @@ Per garantire una comunicazione sicura e una convalida adeguata, verificare che 
 
 
 Seguendo questi passaggi si evitano problemi di convalida dei certificati e si garantisce che il sistema ONTAP sia integrato in modo sicuro.
+
+Il seguente certificato di esempio mostra le informazioni decodificate:
+
+image:../media/sample-cert.png["Esempio di certificato"]

@@ -72,9 +72,6 @@ NOTE: Dopo che il sistema ONTAP ha eseguito uno switchover e uno switchback, ese
 
 
 
-.Cosa succederà?
-Gli strumenti ONTAP aggiornano l'elenco per mostrare il nuovo backend di archiviazione.
-
 --
 ====
 Gli strumenti ONTAP elencano il backend di archiviazione appena aggiunto nella pagina *Backend di archiviazione*.  Se un certificato scade entro 30 giorni o meno, gli strumenti ONTAP mostrano un avviso nella colonna della data di scadenza del certificato.  Dopo la scadenza, gli strumenti ONTAP contrassegnano il backend di archiviazione come sconosciuto perché non riesce a connettersi al sistema di archiviazione.

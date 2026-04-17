@@ -25,7 +25,7 @@ Durante il rilevamento dei sistemi storage, i tool di ONTAP per VMware vSphere r
 
 .Fasi
 . Dalla home page di vSphere Client, selezionare *host e cluster*.
-. Fare clic con il pulsante destro del mouse sul data center desiderato e selezionare *Strumenti NetApp ONTAP * > *Aggiorna dati host*.
+. Fare clic con il pulsante destro del mouse sul data center desiderato e selezionare *NetApp ONTAP tools* > *Aggiorna dati host*.
 +
 Nella finestra di dialogo *Conferma*, confermare la scelta.
 

@@ -17,6 +17,9 @@ summary: 'È necessario configurare i sistemi di archiviazione prima di eseguire
 
 == Configurare SRA per gli ambienti SAN
 
+
+NOTE: I gruppi di coerenza nei flussi di lavoro SRA sono supportati solo con protocolli SAN (iSCSI e Fibre Channel) sia sui sistemi di storage Unified che ASA r2.
+
 .Prima di iniziare
 Nel sito protetto e nel sito di ripristino devono essere installati i seguenti programmi:
 
@@ -27,9 +30,15 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 * SRA: installare l'adattatore su VMware Live Site Recovery.
 
 
+Per le configurazioni del protocollo iSCSI, prima di eseguire i flussi di lavoro SRA, tenere presente quanto segue:
+
+* *Sito protetto*: gli adattatori di storage iSCSI e i dettagli LIF dei dati vengono configurati automaticamente durante il provisioning dei datastore. Non è richiesta alcuna configurazione manuale.
+* *Sito di ripristino*: gli adattatori di storage iSCSI devono essere configurati manualmente su ciascun host ESXi incluso nella mappatura delle risorse per il ripristino di emergenza. Per evitare di configurare gli adattatori singolarmente su ciascun host, crea un datastore segnaposto di tipo iSCSI sul sito di ripristino utilizzando la SVM su cui sono configurati i workflow SRA. Questo aggiunge automaticamente l'adattatore iSCSI e gli indirizzi IP LIF dei dati necessari a tutti gli host ESXi mappati. Consultare link:../protect/configure-placeholder-datastores.html["Configurare i datastore segnaposto negli ONTAP tools"] per ulteriori dettagli.
+
+
 .Fasi
 . Verificare che gli host ESXi primari siano connessi alle LUN nel sistema di storage primario sul sito protetto.
-. Verificare che i LUN si trovino in igroups che dispongono di `ostype` Opzione impostata su _VMware_ sul sistema di storage primario.
+. Verificare che le LUN siano presenti in igroups che hanno l' `ostype`opzione impostata su _VMware_ sul sistema di storage primario.
 . Verificare che gli host ESXi nel sito di ripristino dispongano di una connettività iSCSI e Fibre Channel appropriata alla macchina virtuale di archiviazione (SVM).  Gli host ESXi del sito secondario devono avere accesso allo storage del sito secondario, mentre gli host ESXi del sito primario devono avere accesso allo storage del sito primario.
 +
 Per farlo, verificare che gli host ESXi abbiano LUN locali connessi alla SVM o al `iscsi show initiators` Sulle SVM.
@@ -41,6 +50,9 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
 
 == Configurare SRA per gli ambienti NAS
 
+
+NOTE: I gruppi di coerenza non sono supportati per NFS nei flussi di lavoro SRA. Se i volumi di datastore NFS vengono inseriti in un gruppo di coerenza e protetti, l'operazione Discover Devices non andrà a buon fine. Non utilizzare i gruppi di coerenza quando si proteggono i datastore NFS con SRA.
+
 .Prima di iniziare
 Nel sito protetto e nel sito di ripristino devono essere installati i seguenti programmi:
 
@@ -50,7 +62,7 @@ Nel sito protetto e nel sito di ripristino devono essere installati i seguenti p
 
 .Fasi
 . Verificare che gli archivi dati del sito protetto contengano macchine virtuali registrate con vCenter Server.
-. Verificare che gli host ESXi nel sito protetto abbiano montato i volumi di esportazione NFS dalla macchina virtuale di storage (SVM).
-. Verificare che nel campo *Indirizzi NFS* siano specificati indirizzi validi, come l'indirizzo IP o il nome di dominio completo (FQDN) su cui sono presenti le esportazioni NFS, quando si utilizza la procedura guidata di Array Manager per aggiungere array a VMware Live Site Recovery. Non utilizzare il nome host NFS nel campo *Indirizzi NFS*.
+. Verificare che gli host ESXi nel sito protetto abbiano montato i volumi di esportazione NFS dalla storage virtual machine (SVM).
+. Verificare che nel campo *NFS Addresses* siano specificati indirizzi IP validi su cui sono presenti le esportazioni NFS quando si utilizza la procedura guidata di Array Manager per aggiungere array a VMware Live Site Recovery. Non utilizzare il nome host NFS o il FQDN nel campo *NFS Addresses*.
 . Utilizzare `ping` Su ciascun host ESXi nel sito di ripristino per verificare che l'host disponga di una porta VMkernel in grado di accedere agli indirizzi IP utilizzati per le esportazioni NFS dalla SVM.
 

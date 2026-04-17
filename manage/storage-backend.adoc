@@ -68,7 +68,7 @@ Prima di rimuovere il backend di archiviazione, è necessario rimuovere tutti gl
 . Selezionare il menu delle ellissi verticali e selezionare *Rimuovi*.  Assicurarsi che il backend di archiviazione non contenga alcun archivio dati.  È possibile monitorare i progressi nel pannello delle attività recenti.
 
 
-Puoi eseguire l'operazione di rimozione per i cluster ONTAP globali usando ONTAP tools Manager.
+È possibile rimuovere i cluster ONTAP globali utilizzando ONTAP tools Manager.
 
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
@@ -92,7 +92,7 @@ La pagina di riepilogo fornisce i seguenti dettagli:
 * Informazioni di base sulla macchina virtuale
 * Dettagli del certificato, come lo stato del certificato e la data di scadenza.
 * Informazioni di rete come l'indirizzo IP e la porta della rete.  Per l'SVM figlio, le informazioni sono le stesse del backend di archiviazione padre.
-* Privileges consentiti e limitati per il backend di archiviazione.  Per l'SVM figlio, le informazioni sono le stesse del backend di archiviazione padre.  Gli strumenti ONTAP mostrano i privilegi solo sui backend di archiviazione basati su cluster.  Se si aggiunge SVM come backend di archiviazione, le informazioni sui privilegi non vengono visualizzate.
+* Privileges consentiti e limitati per il backend di storage. Per la SVM figlia, le informazioni sono le stesse del backend di storage padre. ONTAP tools visualizza i privilegi solo sui backend di storage basati su cluster. Se si aggiunge SVM come backend di storage, le informazioni sui privilegi non vengono visualizzate.
 * La visualizzazione dettagliata del cluster di sistema ASA r2 non include la scheda dei livelli locali quando la proprietà disaggregata è impostata su "true" per l'SVM o il cluster.
 * Per i sistemi SVM ASA R2, il portlet della capacità non è mostrato. Il portale della capacità è richiesto solo quando la proprietà disaggregata è impostata su "true" per la SVM o il cluster.
 * Per i sistemi ASA R2 SVM, la sezione delle informazioni di base mostra il tipo di piattaforma.

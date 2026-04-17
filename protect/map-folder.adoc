@@ -31,4 +31,4 @@ summary: È necessario mappare le cartelle sul sito protetto e sul sito di ripri
 
 
 .Risultato
-La pagina Folder Mappings (Mapping cartelle) visualizza le risorse del sito protetto e le risorse del sito di ripristino. È possibile seguire la stessa procedura per le altre reti del proprio ambiente.
+La pagina Mappature cartelle visualizza le risorse del sito protetto e le risorse del sito di ripristino. È possibile seguire gli stessi passaggi per le altre cartelle presenti nell'ambiente.

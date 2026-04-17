@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: 'Quando si seleziona l"icona degli strumenti ONTAP per il plug-in VMware vSphere nella sezione Collegamenti del client vCenter, l"interfaccia utente passa alla pagina di panoramica. Questa pagina agisce come la dashboard che fornisce il riepilogo dei tool ONTAP per il plug-in VMware vSphere.' 
+summary: 'Quando si seleziona l"icona del plug-in ONTAP tools for VMware vSphere nella sezione dei collegamenti rapidi sul client vCenter, l"interfaccia utente viene indirizzata alla pagina di panoramica. Questa pagina funge da dashboard, fornendo un riepilogo del plug-in ONTAP tools for VMware vSphere.' 
 ---
 = Scopri la dashboard degli strumenti ONTAP
 :allow-uri-read: 
@@ -18,7 +18,7 @@ In Enhanced Linked Mode (ELM), viene visualizzato il menu a discesa vCenter Serv
 Dalla pagina di panoramica è possibile eseguire l'azione *Discovery*. L'azione di individuazione rileva i backend di storage, gli host, i datastore e lo stato o le relazioni di protezione aggiunti o aggiornati a livello di vCenter.  Esegui la scoperta su richiesta senza attendere la scoperta pianificata.
 
 
-NOTE: Il pulsante di azione *Scoperta* è abilitato solo se si dispone dei privilegi necessari per eseguire l'azione di scoperta.
+NOTE: Il pulsante *Rilevamento* è abilitato solo se si dispone del privilegio necessario per eseguire il rilevamento.
 
 Dopo aver inviato la richiesta di individuazione, è possibile monitorare l'avanzamento dell'azione nel pannello delle attività recenti.
 
@@ -30,10 +30,10 @@ Il cruscotto ha diverse schede che mostrano diversi elementi del sistema. La tab
 | *Carta* | *Descrizione* 
 
 
-| Stato | La scheda Stato mostra il numero di backend di archiviazione e lo stato di integrità generale dei backend di archiviazione e del provider VASA. Lo stato dei backend di archiviazione mostra *integro* quando lo stato di tutti i backend di archiviazione è normale e mostra *non integro* se uno dei backend di archiviazione presenta un problema (stato sconosciuto/irraggiungibile/danneggiato). Selezionare la descrizione comando per aprire i dettagli di stato dei backend di archiviazione. È possibile selezionare qualsiasi backend di storage per ulteriori dettagli. Il collegamento *altri stati provider VASA* mostra lo stato corrente del provider VASA registrato in vCenter Server. 
+| Stato | La scheda Stato mostra il numero di backend di archiviazione e lo stato di salute generale dei backend di archiviazione e del VASA Provider. Lo stato dei backend di archiviazione viene visualizzato come *Integro* quando tutti gli stati dei backend di archiviazione sono normali e come *Non integro* se uno qualsiasi dei backend di archiviazione presenta un problema (stato Sconosciuto/Irraggiungibile/Degradato). Seleziona il tool tip per aprire i dettagli sullo stato dei backend di archiviazione. Puoi selezionare qualsiasi backend di archiviazione per maggiori dettagli. Il collegamento *Altri stati del VASA Provider* mostra lo stato corrente del VASA Provider registrato nel vCenter Server. 
 
 
-| Backend di archiviazione - capacità | Questa scheda mostra la capacità aggregata utilizzata e disponibile di tutti i backend di storage per l'istanza di vCenter Server selezionata. Nel caso di sistemi di storage ASA r2, i dati sulla capacità non vengono visualizzati perché si tratta di un sistema disaggregato. 
+| Backend di archiviazione - capacità | Questa scheda mostra la capacità aggregata utilizzata e disponibile di tutti i backend di storage per l'istanza del server vCenter selezionata. Per i sistemi di storage ASA r2, i dati relativi alla capacità non vengono visualizzati perché lo storage è disaggregato. 
 
 
 | Macchine virtuali | Questa scheda mostra le 10 macchine virtuali principali ordinate in base alla metrica delle prestazioni. È possibile selezionare l'intestazione per ottenere le 10 macchine virtuali principali per la metrica selezionata in ordine crescente o decrescente. Le modifiche di ordinamento e filtraggio apportate alla scheda persistono fino a quando non si modifica o si cancella la cache del browser. 
@@ -42,5 +42,5 @@ Il cruscotto ha diverse schede che mostrano diversi elementi del sistema. La tab
 | Datastore | Questa scheda mostra i 10 principali datastore ordinati in base a una metrica di prestazioni. È possibile selezionare l'intestazione per ottenere i primi 10 datastore per la metrica selezionata ordinati in ordine crescente o decrescente. Le modifiche di ordinamento e filtraggio apportate alla scheda persistono fino a quando non si modifica o si cancella la cache del browser. È disponibile un menu a discesa tipo datastore per selezionare il tipo di datastore: NFS, VMFS o vVol. 
 
 
-| Scheda di conformità host ESXi | Questa scheda mostra se tutti gli host ESXi (per il vCenter selezionato) seguono le impostazioni host NetApp consigliate per gruppo o categoria. È possibile selezionare il collegamento *Applica impostazioni consigliate* per applicare le impostazioni consigliate. È possibile selezionare lo stato di conformità degli host per visualizzarne l'elenco. 
+| Scheda di conformità host ESXi | Questa scheda mostra se tutti gli host ESXi (per il vCenter selezionato) seguono le impostazioni host consigliate NetApp per gruppo o categoria. È possibile selezionare il collegamento *Applica impostazioni consigliate* per applicare le impostazioni consigliate. È possibile selezionare lo stato di conformità degli host per visualizzare l'elenco degli host. 
 |===

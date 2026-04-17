@@ -55,7 +55,7 @@ Le definizioni dei RBAC sono composte da diverse funzionalità dei prodotti, tra
 
 === Privilegi
 
-Le Privileges del ruolo sono organizzate in quattro serie in base al livello di accesso necessario allo storage ONTAP. Le Privileges su cui si basano i ruoli includono:
+I privilegi di ruolo sono organizzati in quattro gruppi in base al livello di accesso necessario per lo storage ONTAP. I privilegi su cui si basano i ruoli includono:
 
 * Discovery (rilevamento)
 +
@@ -89,4 +89,4 @@ Dopo aver selezionato le opzioni di configurazione per il proprio ambiente, fare
 .Esempio
 `OTV_10_VSC_Discovery_Create`
 
-Il nuovo utente verrà aggiunto all'elenco nella pagina "utenti e ruoli". Si noti che sono supportati entrambi i metodi di accesso utente HTTP e ONTAPI.
+Il nuovo utente verrà aggiunto all'elenco nella pagina 'Utenti e ruoli'. Si noti che sono supportati entrambi i metodi di accesso utente, HTTP e ONTAPI.

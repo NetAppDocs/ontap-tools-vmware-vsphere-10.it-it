@@ -17,7 +17,7 @@ Prima di procedere con la distribuzione, assicurarsi che siano soddisfatti i seg
 | Requisiti | Il tuo stato 
 
 
-| La versione vSphere, la versione ONTAP e la versione host ESXi sono compatibili con la versione dei tool ONTP. | ❏ Sì ❏ No 
+| vSphere versione, versione di ONTAP e versione dell'host ESXi sono compatibili con la versione degli strumenti ONTAP. | ❏ Sì ❏ No 
 
 
 | L'ambiente vCenter Server è configurato e configurato | ❏ Sì ❏ No 
@@ -63,7 +63,7 @@ Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richiest
 | Indirizzo IP per l'applicazione ONTAP tools. Questo è l'indirizzo IP per accedere all'interfaccia web del gestore ONTAP tools (load balancer) a `\https://<ip>:8443/virtualization/ui/` |  
 
 
-| Gli strumenti ONTAP forniscono un indirizzo IP virtuale per la comunicazione interna.  Questo indirizzo IP viene utilizzato per la comunicazione interna in una configurazione con più istanze di strumenti ONTAP .  Questo indirizzo IP non deve essere uguale all'indirizzo IP dell'applicazione degli strumenti ONTAP (piano di controllo Kubernetes). |  
+| Indirizzo IP virtuale di ONTAP tools per la comunicazione interna. Questo indirizzo IP viene utilizzato per la comunicazione interna in una configurazione con più istanze di ONTAP tools. Questo indirizzo IP non deve essere uguale all'indirizzo IP per l'applicazione ONTAP tools. (Il Kubernetes Control Plane) |  
 
 
 | Nome host DNS per il nodo di gestione degli strumenti ONTAP |  
@@ -96,7 +96,7 @@ Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richiest
 | Gateway per l'indirizzo IPv6 (opzionale) |  
 |===
 
-NOTE: Creare record DNS per tutti gli indirizzi IP indicati sopra. Prima di assegnare i nomi host, eseguire il mapping agli indirizzi IP liberi sul DNS. Tutti gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
+NOTE: Crea record DNS per tutti gli indirizzi IP sopra indicati. Prima di assegnare i nomi host, mappali agli indirizzi IP liberi nel DNS. Tutti gli indirizzi IP devono trovarsi sulla stessa VLAN selezionata per la distribuzione.
 
 
 

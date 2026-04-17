@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html 
 sidebar: sidebar 
 keywords: vVols datastore,delete vVol 
-summary: 'L"azione Elimina archivio dati elimina il datastore. Nel caso del datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l"elenco delle macchine virtuali che utilizzano il datastore.' 
+summary: 'L"azione "Elimina datastore" elimina il datastore. Nel caso di un datastore NFS o VMFS, viene visualizzata una finestra di dialogo con l"elenco delle macchine virtuali che utilizzano il datastore.' 
 ---
 = Elimina i datastore in ONTAP tools
 :allow-uri-read: 
@@ -16,7 +16,7 @@ Questa pagina descrive come eliminare i datastore NFS, VMFS o vVols utilizzando 
 Quando si elimina un datastore, vengono eseguite le seguenti azioni a seconda del tipo di datastore:
 
 * Il contenitore vVol è smontato.
-* Se l'igroup non è in uso, iqn viene rimosso dall'igroup.
+* Se l'igroup non è in uso, i suoi initiator vengono rimossi dall'igroup.
 * Il contenitore vVol è stato eliminato.
 * I volumi flessibili vengono lasciati nell'array di archiviazione.
 

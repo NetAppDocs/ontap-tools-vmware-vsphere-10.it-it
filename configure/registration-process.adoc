@@ -20,7 +20,7 @@ Le impostazioni del provider VASA mostrano lo stato di registrazione per il vCen
 . Selezionare *tasti di scelta rapida* > *NetApp ONTAP tools* nella sezione dei plug-in.
 . Selezionare *Impostazioni* > *Impostazioni provider VASA*.  Gli strumenti ONTAP visualizzano lo stato di registrazione del fornitore VASA come non registrato.
 . Selezionare il pulsante *Registra* per registrare il provider VASA.
-. Inserisci un nome e le credenziali per il fornitore VASA.  Il nome utente può contenere solo lettere, numeri e caratteri di sottolineatura.  Impostare la lunghezza della password tra 8 e 256 caratteri.
+. Inserisci un nome e le credenziali per il VASA Provider. Il nome utente può contenere solo lettere, numeri e trattini bassi. La password deve essere compresa tra 8 e 256 caratteri.
 . Selezionare *Registra*.
 . Dopo una registrazione riuscita e l'aggiornamento della pagina, gli strumenti ONTAP visualizzano lo stato, il nome e la versione del provider VASA registrato.
 

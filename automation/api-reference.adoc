@@ -19,7 +19,7 @@ Il riferimento all'API REST dei tool ONTAP per VMware vSphere 10 contiene dettag
 È possibile accedere online ai tool ONTAP per la documentazione dell'API REST di VMware vSphere 10 tramite l'interfaccia utente Swagger. È necessario l'indirizzo IP o FQDN degli strumenti ONTAP per il servizio gateway VMware vSphere 10 e la porta.
 
 .Fasi
-. Digitare il seguente URL nel browser sostituendo la combinazione di indirizzo IP e porta appropriata per la variabile e premere *Invio*.
+. Digita il seguente URL nel tuo browser, sostituendo l'indirizzo IP e la porta appropriati con la variabile, e premi *Enter*.
 +
 `\https://$FQDN_IP_PORT/`
 

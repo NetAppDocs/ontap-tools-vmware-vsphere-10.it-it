@@ -223,6 +223,12 @@ Durante la migrazione:
 
 Ciò garantisce il rispetto del modello gerarchico.
 
+A partire da ONTAP tools 10.5P2, gli igroup migrati vengono eliminati quando non sono più in uso. Nelle versioni precedenti, gli igroup migrati non venivano mai rimossi. Nota quanto segue:
+
+* Gli igroup migrati non possono essere riutilizzati tra datastore diversi.
+* Gli igroup personalizzati (definiti dall'utente) non vengono mai eliminati e possono essere riutilizzati.
+
+
 .Argomenti correlati
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["A proposito di igroups"]
 

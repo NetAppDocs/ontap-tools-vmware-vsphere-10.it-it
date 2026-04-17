@@ -19,6 +19,6 @@ Immettere i dettagli del server NTP per sincronizzare gli orologi dell'appliance
 . Selezionare l'opzione *Impostazioni* > *Server NTP* > *Modifica*.
 . Immettere gli indirizzi FQDN (Fully Qualified Domain Name), IPv4 o IPv6 separati da virgola.
 +
-Aggiornare alla schermata per visualizzare i valori aggiornati.
+Aggiorna la schermata per visualizzare i valori aggiornati.
 
 

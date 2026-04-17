@@ -13,7 +13,7 @@ summary: Prima di implementare gli strumenti ONTAP per VMware vSphere, è necess
 [role="lead"]
 Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di implementazione e alcuni requisiti di base del sistema host.
 
-Puoi utilizzare tool ONTAP per VMware vSphere con VMware vCenter Server Virtual Appliance (vCSA). È necessario implementare i tool ONTAP per VMware vSphere su un client vSphere supportato che include il sistema ESXi.
+È possibile utilizzare ONTAP tools for VMware vSphere con VMware vCenter Server Virtual Appliance (vCSA). È necessario distribuire ONTAP tools for VMware vSphere in un ambiente vSphere supportato che includa host ESXi.
 
 
 
@@ -240,7 +240,7 @@ La tabella seguente mostra i numeri supportati per istanza di VMware Live Site R
 
 | Numero di macchine virtuali | 4000 | 7000 
 |===
-La tabella seguente mostra il numero di VMware Live Site Recovery e i corrispondenti strumenti ONTAP per le dimensioni della distribuzione di VMware vSphere.
+La tabella seguente mostra il numero di istanze di VMware Live Site Recovery e la corrispondente dimensione di implementazione di ONTAP tools for VMware vSphere.
 
 |===
 

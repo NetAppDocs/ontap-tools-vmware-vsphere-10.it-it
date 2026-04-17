@@ -22,7 +22,7 @@ Quando si aggiunge un nuovo datastore, è possibile includerlo nel gruppo di dat
 È necessario associare i siti protetti e di ripristino creati utilizzando il client vSphere per consentire l'individuazione dei sistemi di storage mediante Storage Replication Adapter (SRA).
 
 
-NOTE: Storage Replication Adapter (SRA) supporta il fan-out con una relazione di sincronizzazione di tipo Automated Failover Duplex e una relazione asincrona SnapMirror sul gruppo di coerenza. Tuttavia, il fan-out con due SnapMirror asincroni su un gruppo di coerenza o con due SnapMirror fan-out su un volume non è supportato. Le relazioni SnapMirror di tipo Vault non sono considerate in queste restrizioni di fan-out.
+NOTE: Storage Replication Adapter (SRA) supporta il fan-out con una relazione sincrona di tipo Automated Failover Duplex e una relazione asincrona SnapMirror sul gruppo di coerenza. Tuttavia, il fan-out con due relazioni asincrone SnapMirror sui gruppi di coerenza o relazioni di fan-out SnapMirror sui volumi non è supportato. Le relazioni di tipo vault SnapMirror non sono considerate all'interno di queste restrizioni di fan-out. Il supporto dei gruppi di coerenza in SRA è limitato ai protocolli SAN (iSCSI e Fibre Channel) sui sistemi di storage Unified e ASA r2. I gruppi di coerenza non sono supportati per NFS; se i volumi datastore NFS vengono inseriti in un gruppo di coerenza, l'operazione Discover Devices non andrà a buon fine.
 
 .Prima di iniziare
 * È necessario che VMware Live Site Recovery sia installato sui siti protetti e di ripristino.
@@ -62,7 +62,7 @@ Assicurarsi che i siti di origine e di destinazione siano configurati per:
 . Accedi a vCenter Server e seleziona *Site Recovery* > *Gruppi di protezione*.
 . Nel riquadro *gruppi di protezione*, selezionare *nuovo*.
 . Specificare un nome e una descrizione per il gruppo protezione, direzione e selezionare *Avanti*.
-. Nel campo *Tipo*, seleziona l'opzione *Tipo...* come gruppi di datastore (replica basata su array) per datastore NFS e VMFS. Il dominio di errore è costituito esclusivamente da SVM con replica abilitata. Vengono visualizzate le SVM che hanno implementato solo il peering e non presentano problemi.
+. Nel campo *Tipo*, selezionare l'opzione *Tipo campo...* come gruppi di datastore (replica basata su array) per i datastore NFS e VMFS. Il dominio di errore è costituito da SVM con replica abilitata. Vengono visualizzati gli SVM che hanno implementato solo il peering e non presentano problemi.
 . Nella scheda gruppi di replica, selezionare la coppia di array abilitata o i gruppi di replica che hanno configurato la macchina virtuale, quindi selezionare *Avanti*.
 +
 Tutte le macchine virtuali presenti nel gruppo di replica vengono aggiunte al gruppo di protezione.

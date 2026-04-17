@@ -26,7 +26,7 @@ Dopo aver integrato l'archiviazione ed eseguito la scoperta del datastore, gli s
 A partire dagli ONTAP tools for VMware vSphere 10.3, è possibile creare un datastore vVols su sistemi ASA r2 con efficienza di spazio come thin.vVol.  Il provider VASA crea un contenitore e gli endpoint del protocollo desiderati durante la creazione del datastore vVol.  Il provider VASA non assegna alcun volume di supporto a questo contenitore.
 
 .Prima di iniziare
-* Assicurarsi che gli aggregati radice non siano mappati su SVM.
+* Assicurarsi che gli aggregati radice non siano mappati sull'SVM.
 * Assicurarsi che il provider VASA sia registrato con il vCenter selezionato.
 * Nel sistema di archiviazione ASA r2, l'SVM deve essere mappato sull'aggregato per l'utente SVM.
 
@@ -34,7 +34,7 @@ A partire dagli ONTAP tools for VMware vSphere 10.3, è possibile creare un data
 .Fasi
 . Accedere al client vSphere.
 . Fare clic con il pulsante destro del mouse su un sistema host, un cluster host o un data center e selezionare *Strumenti NetApp ONTAP * > *Crea datastore*.
-. Selezionare vVol *tipo di datastore*.
+. Selezionare vVols come *Tipo di archivio dati*.
 . Immettere le informazioni *Nome datastore* e *protocollo*.
 +
 
@@ -44,7 +44,7 @@ NOTE: Il sistema ASA R2 supporta i protocolli iSCSI e FC per i vVol.
 . In Opzioni avanzate:
 +
 ** Se selezioni *Criterio di esportazione personalizzato*, assicurati di eseguire l'individuazione in vCenter per tutti gli oggetti.  Si consiglia di non utilizzare questa opzione.
-** È possibile selezionare il nome *Custom Initiator group* per i protocolli iSCSI e FC.
+** È possibile selezionare un nome *Custom initiator group* per i protocolli iSCSI e FC.
 +
 
 NOTE: Nel sistema di archiviazione ASA r2 di tipo SVM, le unità di archiviazione (LUN/namespace) non vengono create perché l'archivio dati è solo un contenitore logico.
@@ -53,7 +53,7 @@ NOTE: Nel sistema di archiviazione ASA r2 di tipo SVM, le unità di archiviazion
 
 . Nel riquadro *attributi archiviazione* è possibile creare nuovi volumi o utilizzare i volumi esistenti. Tuttavia, non è possibile combinare questi due tipi di volumi per creare un datastore vVol.
 +
-Quando si crea un nuovo volume, è possibile abilitare QoS sul datastore.  Per impostazione predefinita, viene creato un volume per ogni richiesta di creazione LUN.  Saltare questo passaggio per i datastore vVols sui sistemi di archiviazione ASA r2.
+Quando si crea un nuovo volume, è possibile abilitare il QoS sul datastore. Per impostazione predefinita, viene creato un volume per ogni richiesta di creazione di LUN. Saltare questo passaggio per i datastore vVols sui sistemi di storage ASA r2.
 
 . Controllare la selezione nel riquadro *Riepilogo* e selezionare *fine*.
 
@@ -139,7 +139,7 @@ Per ulteriori informazioni sull'utilizzo di NVMe/FC con VMware vSphere 7,0, cons
 . Fare clic con il pulsante destro del mouse su un sistema host, un cluster host o un data center e selezionare *Strumenti NetApp ONTAP * > *Crea datastore*.
 . Selezionare il tipo di datastore VMFS.
 . Immettere il nome del datastore, le dimensioni e le informazioni sul protocollo nel riquadro *Nome e protocollo*.  Per aggiungere il nuovo datastore a un cluster VMFS esistente, selezionare il cluster del datastore in Opzioni avanzate.
-. Selezionare Storage VM nel riquadro *Storage*. Specificare il *nome gruppo iniziatore personalizzato* nella sezione *Opzioni avanzate* secondo necessità. È possibile scegliere un igroup esistente per il datastore o creare un nuovo igroup con un nome personalizzato.
+. Seleziona una VM di archiviazione nel riquadro *Archiviazione*. Fornisci il *Nome del gruppo iniziatore personalizzato* nella sezione *Opzioni avanzate* come richiesto. Puoi scegliere un igroup esistente per il datastore oppure crearne uno nuovo con un nome personalizzato.
 +
 Quando si seleziona il protocollo NVMe/FC o NVMe/TCP, viene creato un nuovo sottosistema di namespace che viene utilizzato per la mappatura degli spazi dei nomi.  Gli strumenti ONTAP creano il sottosistema dello spazio dei nomi utilizzando il nome generato automaticamente che include il nome del datastore.  È possibile rinominare il sottosistema dello spazio dei nomi nel campo *nome del sottosistema dello spazio dei nomi personalizzato* nelle opzioni avanzate del riquadro *Archiviazione*.
 
@@ -162,7 +162,7 @@ NOTE: A partire da ONTAP 9.16.1, i sistemi storage ASA R2 supportano fino a 12 n
 .. Selezionare *Usa volume esistente*, *attiva QoS* come richiesto e fornire i dettagli.
 +
 
-NOTE: Nel tipo di archiviazione ASA r2, la creazione o la selezione del volume non si applica alla creazione dell'unità di archiviazione (LUN/Namespace).  Pertanto, queste opzioni non vengono mostrate.
+NOTE: Nel tipo di storage ASA r2, la creazione o la selezione del volume non si applica alla creazione dell'unità di storage (LUN/Namespace). Pertanto, queste opzioni non vengono visualizzate.
 
 +
 

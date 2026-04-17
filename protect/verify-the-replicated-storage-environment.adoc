@@ -1,7 +1,7 @@
 ---
 permalink: protect/verify-the-replicated-storage-environment.html 
 sidebar: sidebar 
-keywords:  
+keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery 
 summary: 'È necessario verificare che il sito protetto e il sito di ripristino siano associati correttamente dopo aver configurato l"adattatore di replica archivio \(SRA\). Il sistema storage replicato deve essere raggiungibile sia dal sito protetto che dal sito di recovery.' 
 ---
 = Verificare i sistemi di archiviazione replicati negli ONTAP tools
@@ -18,6 +18,13 @@ summary: 'È necessario verificare che il sito protetto e il sito di ripristino 
 * È necessario abbinare il sito protetto e il sito di ripristino utilizzando il gestore dell'array VMware Live Site Recovery.
 * Prima di eseguire l'operazione di test failover e di failover per SRA, è necessario aver attivato la licenza FlexClone e la licenza SnapMirror.
 * È necessario disporre degli stessi criteri e pianificazioni SnapMirror sui siti di origine e destinazione.
+* Se si utilizzano criteri SnapMirror personalizzati con una pianificazione personalizzata, è necessario configurare la stessa pianificazione e gli stessi criteri sia sul sito protetto che su quello di ripristino.
+* Se si utilizzano criteri SnapMirror personalizzati (con pianificazione predefinita o personalizzata), è necessario eseguire il rilevamento dello storage dagli strumenti ONTAP affinché il nuovo criterio venga riconosciuto. In caso contrario, i flussi di lavoro SRA, inclusi il failover di test e il failover effettivo, non andranno a buon fine. Eseguire il rilevamento dello storage nei seguenti punti:
++
+** Dopo aver creato i criteri personalizzati sul sito di ripristino.
+** Dopo un'operazione di riprotezione, che ricrea i criteri sul sito protetto.
+
+
 
 
 .Fasi

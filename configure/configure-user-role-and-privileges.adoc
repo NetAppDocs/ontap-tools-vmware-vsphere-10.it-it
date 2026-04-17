@@ -90,11 +90,11 @@ Aggiungere il *Percorso API REST* e scegliere l'accesso dall'elenco a discesa.
 
 . Crea utenti:
 +
-.. Selezionare *Aggiungi* nella tabella *utenti*.
+.. Seleziona *Aggiungi* nella tabella *Users*.
 .. Nella finestra di dialogo *Aggiungi utente*, selezionare *System Manager*.
 .. Immettere il *Nome utente*.
 .. Selezionare *ruolo* dalle opzioni create nel passaggio *Crea ruoli* riportato sopra.
-.. Immettere le applicazioni a cui assegnare l'accesso e il metodo di autenticazione. ONTAPI e HTTP sono le applicazioni richieste e il tipo di autenticazione è *Password*.
+.. Inserisci le applicazioni a cui desideri concedere l'accesso e il metodo di autenticazione. ONTAPI e HTTP sono le applicazioni richieste e il tipo di autenticazione è *Password*.
 .. Impostare *Password per l'utente* e *Salva* l'utente.
 
 
@@ -259,13 +259,13 @@ security login rest-role create -role <role-name> -api /api/svm/svms -access rea
 security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
 
 ----
-Inoltre, per ONTAP versione 9.16.0 e successive, eseguire il seguente comando:
+Inoltre, per le versioni di ONTAP 9.16.0 e successive, eseguire il seguente comando:
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
-Per i sistemi ASA R2 su ONTAP versione 9.16.1 e successive, eseguire il seguente comando:
+Per i sistemi ASA r2 con versioni di ONTAP 9.16.1 e successive, eseguire il seguente comando:
 
 [listing]
 ----
@@ -355,13 +355,13 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
-Inoltre, per ONTAP versione 9.16.0 e successive, eseguire il seguente comando:
+Inoltre, per le versioni di ONTAP 9.16.0 e successive, eseguire il seguente comando:
 
 [listing]
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
-Per creare un nuovo utente basato su API utilizzando i ruoli basati su API creati in precedenza, eseguire il comando seguente:
+Per creare un nuovo utente basato su API utilizzando i ruoli basati su API creati in precedenza, eseguire il seguente comando:
 
 [listing]
 ----

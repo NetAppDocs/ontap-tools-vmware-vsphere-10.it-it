@@ -25,7 +25,7 @@ NOTE: In VMware Live Site Recovery, le risorse possono essere pool di risorse, h
 . Selezionare *mappature risorse* > *nuovo* nella scheda Gestisci per creare una nuova mappatura delle risorse.
 . Nella procedura guidata Create Resource Mapping (Crea mappatura risorse), eseguire le seguenti operazioni:
 +
-.. Selezionare *prepara automaticamente mappature per risorsa con nomi corrispondenti* e selezionare *Avanti*.
+.. Seleziona *Prepara automaticamente le mappature per le risorse con nomi corrispondenti* e seleziona *Avanti*.
 .. Selezionare gli oggetti del data center richiesti per i siti protetti e di ripristino e selezionare *Aggiungi mappature*.
 .. Selezionare *Avanti* dopo aver creato correttamente le mappature.
 .. Selezionare l'oggetto utilizzato in precedenza per creare la mappatura inversa, quindi selezionare *fine*.
@@ -34,4 +34,4 @@ NOTE: In VMware Live Site Recovery, le risorse possono essere pool di risorse, h
 
 
 .Risultato
-La pagina Resource Mappings (Mapping delle risorse) visualizza le risorse protette del sito e le risorse del sito di ripristino. È possibile seguire la stessa procedura per le altre reti del proprio ambiente.
+La pagina Mappatura risorse visualizza le risorse del sito protetto e le risorse del sito di ripristino. È possibile seguire gli stessi passaggi per le altre risorse presenti nell'ambiente.

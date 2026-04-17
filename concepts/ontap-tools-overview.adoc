@@ -39,4 +39,4 @@ Non è necessario eseguire alcuna configurazione aggiuntiva per abilitare HA per
 Gli ONTAP tools for VMware vSphere non supportano vCenter HA.
 
 ====
-Per utilizzare la funzionalità HA, assicurarsi che l'aggiunta a caldo della CPU e il collegamento a caldo della memoria siano abilitati durante la distribuzione o in un secondo momento nelle impostazioni della VM.
+Per utilizzare la funzionalità HA, assicurarsi che l'hot-add della CPU e l'hot-plug della memoria siano abilitati durante la distribuzione o nelle impostazioni della macchina virtuale.

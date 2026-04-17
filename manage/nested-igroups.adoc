@@ -49,6 +49,9 @@ Quando si crea un datastore utilizzando l'interfaccia utente degli strumenti ONT
 
 Questa operazione può essere eseguita anche tramite API.  Per riutilizzare un igroup esistente durante la creazione del datastore, specificare l'UUID dell'igroup nel payload della richiesta API.
 
+
+NOTE: È possibile riutilizzare solo gli igroup personalizzati. Gli igroup creati durante la migrazione da ONTAP tools 9.x (igroup migrati) non possono essere riutilizzati e, a partire da ONTAP tools 10.5P2, vengono eliminati automaticamente quando non sono più in uso.
+
 *Quando si crea un datastore e un igroup in modo nativo da ONTAP e vCenter*
 
 Se si creano igroup e datastore direttamente nei sistemi ONTAP e negli ambienti VMware, gli strumenti ONTAP non gestiscono inizialmente questi oggetti.  Ciò crea una struttura igroup piatta.

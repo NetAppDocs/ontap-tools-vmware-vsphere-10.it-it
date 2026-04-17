@@ -36,12 +36,12 @@ Tutte le autorizzazioni vengono convalidate nella gerarchia di oggetti vSphere a
 
 == Ruoli inclusi nei tool ONTAP per VMware vSphere 10
 
-Per semplificare le operazioni con vCenter Server RBAC, gli strumenti ONTAP per VMware vSphere offrono ruoli predefiniti personalizzati in base a diverse attività amministrative.
+Per semplificare il lavoro con il controllo degli accessi basato sui ruoli (RBAC) del server vCenter, ONTAP tools for VMware vSphere fornisce ruoli predefiniti adattati a varie attività amministrative.
 
 
-NOTE: Se necessario, è possibile creare nuovi ruoli personalizzati. In questo caso, è necessario clonare uno dei ruoli degli strumenti ONTAP esistenti e modificarlo secondo necessità. Dopo aver apportato le modifiche alla configurazione, gli utenti del client vSphere interessato devono disconnettersi e riconnettersi per attivare le modifiche.
+NOTE: Se necessario, è possibile creare nuovi ruoli personalizzati. Per farlo, clonare uno dei ruoli esistenti di ONTAP tools e modificarlo secondo le proprie esigenze. Dopo aver apportato le modifiche alla configurazione, gli utenti client vSphere interessati dovranno disconnettersi e accedere nuovamente per attivare le modifiche.
 
-Per visualizzare gli ONTAP tools for VMware vSphere , selezionare *Menu* nella parte superiore di vSphere Client e fare clic su *Amministrazione* e quindi su *Ruoli* a sinistra. I seguenti privilegi devono essere inclusi nel ruolo assegnato all'utente vCenter responsabile della distribuzione o dell'onboarding di vCenter. Assicurarsi che questi privilegi siano configurati come prerequisito per il processo di distribuzione o onboarding.
+Per visualizzare i ruoli di ONTAP tools for VMware vSphere, selezionare *Menu* nella parte superiore del vSphere Client e fare clic su *Amministrazione* e poi su *Ruoli* a sinistra. I seguenti privilegi devono essere inclusi nel ruolo assegnato all'utente vCenter responsabile della distribuzione o dell'onboarding del vCenter Server. Assicurarsi che questi privilegi siano configurati come prerequisito per il processo di distribuzione o onboarding.
 
 * Allarmi
 +

@@ -11,7 +11,7 @@ summary: I tool ONTAP per VMware vSphere gestiscono la protezione dei cluster di
 
 
 [role="lead"]
-I tool ONTAP per VMware vSphere gestiscono la protezione dei cluster di host. Tutti i datastore appartenenti alla SVM selezionata e montati su uno o più host del cluster sono protetti in un cluster di host.
+ONTAP tools for VMware vSphere gestisce la protezione dei cluster host. Tutti i datastore appartenenti alla SVM selezionata e montati su uno o più host del cluster sono protetti nell'ambito di un cluster host.
 
 .Prima di iniziare
 Prima di proteggere un cluster host, assicurati di soddisfare questi requisiti:
@@ -34,10 +34,10 @@ Prima di proteggere un cluster host, assicurati di soddisfare questi requisiti:
 Il tipo di criterio può essere asincrono o AutomatedFailOverDuplex.
 
 +
-Quando Aggiungi la relazione SnapMirror come policy di tipo AutomatedFailOverDuplex, devi aggiungere la VM storage di destinazione come backend dello storage al medesimo vCenter in cui vengono implementati i tool ONTAP per VMware vSphere.
+Quando si aggiunge la relazione SnapMirror come policy di tipo AutomatedFailOverDuplex, è necessario aggiungere la VM di storage di destinazione come backend di storage allo stesso vCenter in cui ONTAP tools for VMware vSphere è distribuito.
 
 +
-Nel tipo di policy AutomatedFailOverDuplex sono presenti configurazioni host uniformi e non uniformi.  Quando si seleziona il pulsante di attivazione/disattivazione *configurazione host uniforme*, la configurazione del gruppo di iniziatori host viene replicata implicitamente sul sito di destinazione. Per ulteriori informazioni, fare riferimento a link:../concepts/ontap-tools-concepts-terms.html["Concetti e termini chiave"] .
+Nel tipo di policy AutomatedFailOverDuplex, sono presenti configurazioni host uniformi e non uniformi. Quando si seleziona il pulsante di attivazione *Configurazione host uniforme*, la configurazione del gruppo initiator host viene replicata implicitamente sul sito di destinazione. Per ulteriori informazioni, fare riferimento a link:../concepts/ontap-tools-concepts-terms.html["Concetti e termini chiave"].
 
 . Se si sceglie di avere una configurazione host non uniforme, selezionare l'accesso host (origine/destinazione) per ogni host all'interno di quel cluster.
 . Selezionare *Aggiungi*.
