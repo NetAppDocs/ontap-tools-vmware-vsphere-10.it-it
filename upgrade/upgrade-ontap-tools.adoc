@@ -70,7 +70,7 @@ Fare riferimento a link:../manage/backup-settings.html["Modifica le impostazioni
 . Immettere *7* per selezionare l'opzione *Aggiorna*.
 . Fornisci le credenziali vCenter quando richiesto. Questa è l'istanza vCenter in cui è ospitato ONTAP tools.
 +
-Se si utilizzano gli strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza vCenter e ne gestisce un'altra, è possibile assegnare un ruolo limitato all'istanza vCenter che ospita gli strumenti ONTAP . È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni richieste per la distribuzione del modello OVF. Per i dettagli, vedere i ruoli elencati in https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Ruoli inclusi nei tool ONTAP per VMware vSphere 10"].
+Se si utilizzano gli strumenti ONTAP in una topologia a due vCenter Server, in cui l'appliance è ospitata in un'istanza vCenter e ne gestisce un'altra, è possibile assegnare un ruolo con restrizioni per l'istanza vCenter che ospita gli strumenti ONTAP. È possibile creare un utente e un ruolo vCenter dedicati con solo le autorizzazioni necessarie per la distribuzione del modello OVF. Per dettagli, consultare i ruoli elencati in link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy["Ruoli inclusi nei tool ONTAP per VMware vSphere 10"].
 
 +
 Per l'istanza vCenter che verrà gestita dagli strumenti ONTAP , assicurarsi che l'account utente vCenter disponga dei privilegi di amministratore.
