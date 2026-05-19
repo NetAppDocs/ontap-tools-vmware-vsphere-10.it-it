@@ -2791,4 +2791,8 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="45f0d050845f640650733b37410eca9f" category="paragraph">Dopo che ONTAP tools gestisce un igroup nativo rilevato, tale igroup è disponibile nell'elenco a discesa del nome del gruppo initiator personalizzato per la creazione del datastore.</block>
   <block id="8d90581e01616bc6e833be117c8bf966" category="paragraph">Il nuovo LUN del datastore viene mappato all'igroup figlio normalizzato, ad esempio,<block ref="e2e2c5bf7535645ea2278f194b28ad1e" prefix=" " category="inline-code"></block>.</block>
   <block id="270b8c3a2baff1c0296c4a92204b5a54" category="paragraph">ONTAP tools for VMware vSphere non rileva né utilizza gli igroups creati nei sistemi ONTAP che non sono gestiti da ONTAP tools o non sono collegati a un datastore.</block>
+  <block id="3830b8eac1743f2f8fe4765b99fa2547" category="summary">Aggiungi e gestisci i backend di storage localmente per un'istanza vCenter o globalmente per la rilevazione a livello di cluster negli strumenti ONTAP.</block>
+  <block id="986013590d14c5a1a3fba70da34aec61" category="inline-link">OTV 10: Cos'è l'ambito globale e locale del backend di archiviazione</block>
+  <block id="7a2217d00eec7417d83566729e06f7aa" category="paragraph">Consultare l'articolo della Knowledge Base:<block ref="8136f7308c7184af5e69534cb5835c82" category="inline-link-rx"></block> per ulteriori informazioni sui backend di archiviazione globali e locali.</block>
+  <block id="0c1cd48173490f27f69352986a77e96e" category="paragraph"><block ref="0c1cd48173490f27f69352986a77e96e" category="inline-link-rx"></block></block>
 </blocks>
