@@ -15,6 +15,7 @@ summary: 'È necessario configurare i sistemi di archiviazione prima di eseguire
 
 
 
+[[configure-sra-for-san-environments]]
 == Configurare SRA per gli ambienti SAN
 
 
@@ -48,6 +49,7 @@ Controllare l'accesso LUN per i LUN mappati nell'host ESXi per verificare la con
 
 
 
+[[configure-sra-for-nas-environments]]
 == Configurare SRA per gli ambienti NAS
 
 

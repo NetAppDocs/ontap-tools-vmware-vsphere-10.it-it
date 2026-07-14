@@ -15,6 +15,7 @@ Seguire questi passaggi per collegare o scollegare i dischi dati dalle macchine 
 
 
 
+[[attach-a-data-disk-to-a-virtual-machine]]
 == Collegare un disco dati a una macchina virtuale
 
 Collega un disco dati a una macchina virtuale per aggiungere ulteriore spazio di archiviazione.
@@ -32,6 +33,7 @@ Il disco rigido viene visualizzato nell'elenco Virtual hardware Devices (perifer
 
 
 
+[[detach-a-data-disk-from-the-virtual-machine]]
 == Scollegare un disco dati dalla macchina virtuale
 
 Scollega un disco dati da una macchina virtuale quando non ti serve più.  Il disco non viene eliminato, ma rimane nel sistema di archiviazione ONTAP .

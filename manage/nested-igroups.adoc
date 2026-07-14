@@ -17,6 +17,7 @@ A partire da ONTAP tools for VMware vSphere 10.4, ONTAP tools for VMware crea e 
 
 
 
+[[quick-behavior-summary]]
 == Riepilogo rapido del comportamento
 
 * I datastore VMFS gestiti dagli strumenti ONTAP utilizzano igroup nidificati: un igroup padre per ogni contesto di datastore e igroup figli per ogni host.
@@ -27,6 +28,7 @@ A partire da ONTAP tools for VMware vSphere 10.4, ONTAP tools for VMware crea e 
 
 
 
+[[igroup-contexts]]
 == Contesti di gruppo
 
 ONTAP tools for VMware vSphere gestisce gli igroup in due contesti.
@@ -47,6 +49,7 @@ image:../media/otv-managed2.png["Strumenti ONTAP gestiti igroup con igroup figli
 
 
 
+[[naming-behavior]]
 == Comportamento di denominazione
 
 Quando si crea un datastore e si lascia vuoto il campo igroup, ONTAP tools crea una struttura igroup nidificata predefinita.
@@ -59,6 +62,7 @@ L'interfaccia di sistema ONTAP mostra la relazione tra igroup padre e figlio nel
 
 
 
+[[behavior-by-scenario]]
 == Comportamento in base allo scenario
 
 [cols="25,25,25,25"]
@@ -79,6 +83,7 @@ L'interfaccia di sistema ONTAP mostra la relazione tra igroup padre e figlio nel
 |===
 
 
+[[custom-igroup-reuse-and-api-behavior]]
 == Riutilizzo personalizzato degli igroup e comportamento delle API
 
 Nell'interfaccia utente degli strumenti ONTAP, è possibile riutilizzare un igroup padre personalizzato esistente dall'elenco a discesa durante la creazione di un datastore.
@@ -90,6 +95,7 @@ NOTE: È possibile riutilizzare solo gli igroup personalizzati. Gli igroup migra
 
 
 
+[[native-to-managed-conversion-view]]
 == Vista di conversione da nativo a gestito
 
 Se si creano igroup e datastore direttamente nei sistemi ONTAP e negli ambienti VMware, ONTAP tools inizialmente non gestisce questi oggetti. Ciò si traduce in una struttura igroup piatta.
@@ -104,6 +110,7 @@ ONTAP tools for VMware vSphere non rileva né gestisce gli igroup creati nei sis
 
 
 
+[[reuse-of-discovered-native-igroups]]
 == Riutilizzo degli igroup nativi scoperti
 
 Dopo che ONTAP tools gestisce un igroup nativo rilevato, tale igroup è disponibile nell'elenco a discesa del nome del gruppo initiator personalizzato per la creazione del datastore.

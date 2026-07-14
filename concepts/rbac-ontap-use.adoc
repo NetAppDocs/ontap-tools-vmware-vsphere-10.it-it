@@ -15,6 +15,7 @@ Esistono diversi aspetti dei tool ONTAP per l'implementazione RBAC di VMware vSp
 
 
 
+[[overview-of-the-configuration-process]]
 == Panoramica del processo di configurazione
 
 Gli ONTAP tools for VMware vSphere includono il supporto per la creazione di un utente ONTAP con un ruolo personalizzato.  Le definizioni sono impacchettate in un file JSON che è possibile caricare nel cluster ONTAP .  Puoi creare l'utente e personalizzare il ruolo in base al tuo ambiente e alle tue esigenze di sicurezza.
@@ -41,18 +42,21 @@ Come parte della definizione del ruolo, è necessario prendere diverse decisioni
 
 
 
+[[configure-the-role-using-system-manager]]
 == Configurare il ruolo utilizzando System Manager
 
 Dopo aver iniziato a creare un nuovo utente e ruolo con System Manager e aver caricato il file JSON, è possibile personalizzare il ruolo in base all'ambiente e alle esigenze.
 
 
 
+[[core-user-and-role-configuration]]
 === Configurazione principale di utenti e ruoli
 
 Le definizioni dei RBAC sono composte da diverse funzionalità dei prodotti, tra cui combinazioni di VSC, VASA Provider e SRA. Devi selezionare l'ambiente o gli ambienti in cui hai bisogno di supporto RBAC. Ad esempio, se si desidera che i ruoli supportino la funzionalità plug-in remoto, selezionare VSC. È inoltre necessario scegliere il nome utente e la password associata.
 
 
 
+[[privileges]]
 === Privilegi
 
 I privilegi di ruolo sono organizzati in quattro gruppi in base al livello di accesso necessario per lo storage ONTAP. I privilegi su cui si basano i ruoli includono:
@@ -77,6 +81,7 @@ Questo ruolo consente di distruggere lo storage. Include inoltre tutta la Privil
 
 
 
+[[generate-the-user-with-a-role]]
 === Generare l'utente con un ruolo
 
 Dopo aver selezionato le opzioni di configurazione per il proprio ambiente, fare clic su *Aggiungi* e ONTAP crea l'utente e il ruolo. Il nome del ruolo generato è una concatenazione dei seguenti valori:

@@ -20,6 +20,7 @@ Le API REST comprendono diverse categorie di risorse come vCenter e aggregati. P
 
 
 
+[[how-to-access-the-rest-api]]
 == Come accedere all'API REST
 
 Puoi accedere ai tool ONTAP per l'API REST di VMware vSphere 10 tramite l'indirizzo IP del tool ONTAP insieme alla porta. L'URL completo contiene diverse parti, tra cui:
@@ -47,12 +48,14 @@ Questo URL può essere utilizzato per richiedere un elenco delle istanze del ser
 
 
 
+[[http-details]]
 == Dettagli HTTP
 
 I tool ONTAP per l'API REST di VMware vSphere 10 utilizzano HTTP e i parametri correlati per agire sulle raccolte e sulle istanze delle risorse. Di seguito sono presentati i dettagli dell'implementazione HTTP.
 
 
 
+[[http-methods]]
 === Metodi HTTP
 
 I metodi HTTP o i verbi supportati dall'API REST sono presentati nella tabella seguente.
@@ -78,6 +81,7 @@ I metodi HTTP o i verbi supportati dall'API REST sono presentati nella tabella s
 |===
 
 
+[[request-and-response-headers]]
 === Intestazioni di richiesta e risposta
 
 La tabella seguente riassume le intestazioni HTTP più importanti utilizzate con l'API REST.
@@ -97,6 +101,7 @@ La tabella seguente riassume le intestazioni HTTP più importanti utilizzate con
 |===
 
 
+[[http-status-codes]]
 === Codici di stato HTTP
 
 I codici di stato HTTP utilizzati dall'API REST sono descritti di seguito.
@@ -137,6 +142,7 @@ I codici di stato HTTP utilizzati dall'API REST sono descritti di seguito.
 |===
 
 
+[[authentication]]
 == Autenticazione
 
 L'autenticazione di un client all'API REST viene eseguita utilizzando un token di accesso. Le caratteristiche rilevanti del token e del processo di autenticazione includono:
@@ -151,6 +157,7 @@ Fare riferimento alla link:../automation/first-call.html["La prima chiamata API 
 
 
 
+[[synchronous-and-asynchronous-requests]]
 == Richieste sincrone e asincrone
 
 La maggior parte delle chiamate API REST vengono completate rapidamente e quindi eseguite in modo sincrono. In altre parole, restituiscono un codice di stato (ad esempio 200) dopo il completamento di una richiesta. Le richieste che richiedono più tempo per essere completate vengono eseguite in modo asincrono utilizzando un processo in background.

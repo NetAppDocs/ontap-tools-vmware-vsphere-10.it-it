@@ -234,6 +234,7 @@ https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html["A proposito 
 
 
 
+[[export-policies]]
 == Policy di esportazione
 
 I criteri di esportazione controllano l'accesso al datastore NFS e le autorizzazioni client negli ONTAP tools for VMware vSphere.  Le policy di esportazione vengono create e gestite nei sistemi ONTAP e possono essere utilizzate con gli archivi dati NFS per applicare il controllo degli accessi. Ogni policy di esportazione è composta da regole che specificano i client (indirizzi IP o subnet) a cui è consentito l'accesso e le autorizzazioni concesse (sola lettura o lettura-scrittura).

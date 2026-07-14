@@ -48,10 +48,12 @@ Prima di procedere con la distribuzione, assicurarsi che siano soddisfatti i seg
 |===
 
 
+[[deployment-worksheet]]
 == Foglio di lavoro distribuzione
 
 
 
+[[for-single-node-deployment]]
 === Per implementazione a nodo singolo
 
 Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richieste per gli strumenti ONTAP per la distribuzione iniziale di VMware vSphere:
@@ -100,6 +102,7 @@ NOTE: Crea record DNS per tutti gli indirizzi IP sopra indicati. Prima di assegn
 
 
 
+[[for-high-availability-ha-deployment]]
 === Per l'implementazione ha (High Availability, alta disponibilità)
 
 Oltre ai requisiti di implementazione a nodo singolo, per l'implementazione ha sono necessarie le seguenti informazioni:
@@ -132,12 +135,14 @@ Oltre ai requisiti di implementazione a nodo singolo, per l'implementazione ha s
 |===
 
 
+[[network-firewall-configuration]]
 == Configurazione del firewall di rete
 
 Assicurarsi che le porte firewall necessarie siano aperte per tutti gli indirizzi IP rilevanti.  Gli strumenti ONTAP richiedono l'accesso al LIF tramite la porta 443.  Per un elenco completo delle porte richieste, vedere la sezione requisiti delle porte all'indirizzolink:../deploy/prerequisites.html["Strumenti ONTAP per requisiti e limiti di configurazione VMware vSphere"] .
 
 
 
+[[ontap-storage-settings]]
 == Impostazioni di archiviazione di ONTAP
 
 Per garantire un'integrazione perfetta dello storage ONTAP con i tool ONTAP per VMware vSphere, prendi in considerazione le seguenti impostazioni:

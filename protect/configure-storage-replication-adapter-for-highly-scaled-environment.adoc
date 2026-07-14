@@ -15,6 +15,7 @@ summary: 'È necessario configurare gli intervalli di timeout della memoria in b
 
 
 
+[[storage-provider-settings]]
 == Impostazioni del provider di storage
 
 È necessario impostare i seguenti valori di timeout su VMware Live Site Recovery per l'ambiente scalato:
@@ -58,6 +59,7 @@ Per ulteriori informazioni sulla modifica delle impostazioni del provider di arc
 
 
 
+[[storage-settings]]
 == Impostazioni di storage
 
 Quando si preme un timeout, aumentare i valori di `storage.commandTimeout` e. `storage.maxConcurrentCommandCnt` ad un valore più alto.

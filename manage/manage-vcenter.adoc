@@ -15,6 +15,7 @@ Le istanze di vCenter Server sono piattaforme di gestione centrali che consenton
 
 
 
+[[dissociate-storage-backends-with-the-vcenter-server-instance]]
 == Dissociare i backend di storage con l'istanza di vCenter Server
 
 La pagina dell'elenco di vCenter Server mostra il numero associato di backend storage. Ogni istanza di vCenter Server può essere associata o dissociata da un backend dello storage.
@@ -29,6 +30,7 @@ La pagina dell'elenco di vCenter Server mostra il numero associato di backend st
 
 
 
+[[modify-a-vcenter-server-instance]]
 == Modificare un'istanza di vCenter Server
 
 Per modificare le istanze di vCenter Server, procedere come segue.
@@ -43,6 +45,7 @@ Per modificare le istanze di vCenter Server, procedere come segue.
 
 
 
+[[remove-a-vcenter-server-instance]]
 == Rimuovere un'istanza di vCenter Server
 
 Rimuovere tutti i backend di archiviazione dal vCenter Server prima di rimuoverlo.
@@ -65,6 +68,7 @@ Quando si rimuovono le istanze di vCenter Server negli strumenti ONTAP, vengono 
 
 
 
+[[renew-vcenter-server-certificate]]
 == Rinnova il certificato di vCenter Server
 
 Gli strumenti ONTAP ti avvisano quando il certificato vCenter sta per scadere o è scaduto. Dopo aver rinnovato il certificato vCenter, caricare il nuovo certificato negli strumenti ONTAP seguendo i passaggi seguenti:

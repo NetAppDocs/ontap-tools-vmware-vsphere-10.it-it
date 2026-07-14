@@ -18,6 +18,7 @@ VMware vCenter Server offre una funzionalità RBAC che consente di controllare l
 
 
 
+[[illustration-of-a-vcenter-server-permission]]
 == Immagine di un'autorizzazione vCenter Server
 
 Un'autorizzazione è la base per applicare il controllo degli accessi nell'ambiente vCenter Server. Viene applicato a un oggetto vSphere con un utente o un gruppo incluso nella definizione dell'autorizzazione. Un'illustrazione di alto livello di un'autorizzazione vCenter è riportata nella figura seguente.
@@ -26,18 +27,21 @@ image:vc-permission.png["Autorizzazione vCenter"]
 
 
 
+[[components-of-a-vcenter-server-permission]]
 == Componenti di un'autorizzazione vCenter Server
 
 Un'autorizzazione vCenter Server è un pacchetto di diversi componenti che sono associati insieme quando viene creata l'autorizzazione.
 
 
 
+[[vsphere-objects]]
 === Oggetti vSphere
 
 Le autorizzazioni sono associate agli oggetti vSphere, come vCenter Server, host ESXi, macchine virtuali, datastore, data center e cartelle. In base alle autorizzazioni assegnate all'oggetto, vCenter Server determina quali azioni o attività possono essere eseguite sull'oggetto da ciascun utente o gruppo. Per le attività specifiche degli strumenti ONTAP per VMware vSphere, tutte le autorizzazioni vengono assegnate e convalidate a livello di cartella principale o principale di vCenter Server. Per ulteriori informazioni, vedere link:../concepts/rbac-vcenter-use.html["USA RBAC con server vCenter"] .
 
 
 
+[[privileges-and-roles]]
 === Privileges e ruoli
 
 Esistono due tipi di vSphere Privileges utilizzati con i tool ONTAP per VMware vSphere 10. Per semplificare le operazioni con RBAC in questo ambiente, gli strumenti ONTAP forniscono ruoli che contengono la Privileges nativa e personalizzata richiesta. Il Privileges include:
@@ -54,6 +58,7 @@ Si tratta di un'esclusiva di Privileges personalizzata per i tool ONTAP per VMwa
 
 
 
+[[users-and-groups]]
 === Utenti e gruppi
 
 È possibile definire utenti e gruppi utilizzando Active Directory o l'istanza locale di vCenter Server. In combinazione con un ruolo, è possibile creare un'autorizzazione su un oggetto nella gerarchia degli oggetti vSphere. L'autorizzazione concede l'accesso in base ai privilegi del ruolo associato. Si noti che i ruoli non vengono assegnati direttamente agli utenti in modo isolato. Invece, utenti e gruppi ottengono l'accesso a un oggetto tramite i privilegi del ruolo, come parte dell'autorizzazione più ampia di vCenter Server.

@@ -17,6 +17,7 @@ Quando si aggiunge un nuovo datastore, è possibile includerlo nel gruppo di dat
 
 
 
+[[pair-protected-and-recovery-sites]]
 == Associare siti protetti e di ripristino
 
 È necessario associare i siti protetti e di ripristino creati utilizzando il client vSphere per consentire l'individuazione dei sistemi di storage mediante Storage Replication Adapter (SRA).
@@ -47,6 +48,7 @@ Nella finestra di dialogo *Oggetti* vengono visualizzati sia i siti protetti che
 
 
 
+[[configure-protection-groups]]
 == Configurare i gruppi di protezione
 
 .Prima di iniziare

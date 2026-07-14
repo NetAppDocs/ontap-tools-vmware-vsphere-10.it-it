@@ -15,6 +15,7 @@ Seguire i passaggi descritti in questa sezione per migrare VASA Provider dagli O
 
 
 
+[[steps-to-migrate-the-vasa-provider]]
 == Passaggi per migrare il provider VASA
 
 . Per abilitare la PORTA Derby 1527 sugli strumenti ONTAP esistenti per VMware vSphere, abilitare l'utente root e accedere alla CLI tramite SSH. Quindi, eseguire il seguente comando:
@@ -240,6 +241,7 @@ Dopo l'aggiornamento, se lo stato di conformità della macchina virtuale è obso
 
 
 
+[[steps-to-update-the-storage-replication-adapter-sra]]
 == Procedura per aggiornare l'adattatore di replica dello storage (SRA)
 
 .Prima di iniziare

@@ -15,6 +15,7 @@ Se riscontri problemi durante la distribuzione, esamina i registri e i codici di
 
 
 
+[[collect-the-log-files]]
 == Raccogliere i file di log
 
 È possibile raccogliere i file di registro per ONTAP tools for VMware vSphere dalle opzioni disponibili nell'interfaccia utente di ONTAP tools Manager. Il supporto tecnico potrebbe chiedere di raccogliere i file di registro per aiutare a risolvere un problema.
@@ -49,6 +50,7 @@ NOTE: Il bundle di log generato sostituisce il bundle di log generato negli ulti
 
 
 
+[[deployment-error-codes]]
 == Codici di errore di distribuzione
 
 Potrebbero verificarsi codici di errore durante gli strumenti ONTAP per le operazioni di distribuzione, riavvio e ripristino di VMware vSphere.

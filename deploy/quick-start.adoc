@@ -13,11 +13,13 @@ summary: Con questa sezione di avvio rapido puoi configurare gli ONTAP tools for
 [role="lead"]
 Con questa sezione di avvio rapido puoi configurare gli ONTAP tools for VMware vSphere .
 
+Completa innanzitutto queste attività principali per rendere operativi gli ONTAP tools per la gestione e il provisioning fin dal giorno 0. Poi completa le attività facoltative in base al tuo ambiente e ai requisiti di protezione.
+
 Inizialmente, distribuirai gli ONTAP tools for VMware vSphere come una configurazione a nodo singolo di piccole dimensioni che fornisce servizi principali per supportare i datastore NFS e VMFS.  Per espandere la configurazione con contenitori aggiuntivi per servizio, maggiore resilienza o per utilizzare datastore vVols e alta disponibilità (HA), completare prima questo flusso di lavoro e poi procedere con i passaggi di espansione. Per ulteriori informazioni, fare riferimento al link:../deploy/ha-workflow.html["Workflow di implementazione HA"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"] Pianificare la distribuzione
 [role="quick-margin-para"]
-Verifica che le versioni degli host vSphere, ONTAP ed ESXi siano compatibili con la versione degli strumenti ONTAP . Alloca CPU, memoria e spazio su disco sufficienti. In base alle tue regole di sicurezza, potrebbe essere necessario configurare firewall o altri strumenti di sicurezza per consentire il traffico di rete.
+Conferma che il tuo ambiente sia pronto per una distribuzione supportata. Verifica che le versioni di vSphere, ONTAP e dell'host ESXi siano compatibili con la versione degli ONTAP tools. Alloca CPU, memoria e spazio su disco sufficienti. In base alle tue regole di sicurezza, potresti dover configurare firewall o altri strumenti di sicurezza per consentire il traffico di rete.
 
 [role="quick-margin-para"]
 Assicurarsi che vCenter Server sia installato e accessibile.
@@ -30,31 +32,29 @@ Assicurarsi che vCenter Server sia installato e accessibile.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"] Implementa i tool ONTAP per VMware vSphere
 [role="quick-margin-para"]
-Inizialmente, implementerai gli ONTAP tools for VMware vSphere come una configurazione a singolo nodo di piccole dimensioni che fornisce servizi core per supportare datastore NFS e VMFS. Se prevedi di espandere la configurazione per utilizzare datastore vVols e alta disponibilità (HA), lo farai al termine di questo flusso di lavoro. Per espandere la configurazione ad alta disponibilità (HA), assicurati che le opzioni CPU hot-add e memory hot-plug siano abilitate.
+Distribuisci l'appliance ONTAP tools per stabilire i servizi di base per i datastore NFS e VMFS.
+
+[role="quick-margin-para"]
+Inizialmente, implementerai ONTAP tools for VMware vSphere come configurazione a nodo singolo di piccole dimensioni. Se prevedi di espandere la configurazione per utilizzare datastore vVols e l’alta disponibilità (HA), lo farai dopo aver completato questo workflow. Per espandere a una configurazione HA, assicurati che CPU hot-add e memory hot-plug siano abilitati.
+
+[role="quick-margin-para"]
+Durante la distribuzione, esamina attentamente i campi di *Customize template*, in particolare host name, utilizzo dell'indirizzo IP di ONTAP tools e requisiti DNS.
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html["Implementa i tool ONTAP per VMware vSphere"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"] Aggiungere istanze di vCenter Server
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]Registrati e installa il plug-in client vCenter
 [role="quick-margin-para"]
-Aggiungere istanze di vCenter Server agli ONTAP tools for VMware vSphere per configurare, gestire e proteggere i datastore virtuali nell'ambiente vCenter Server.
+Aggiungi un'istanza del server vCenter per registrare il plug-in client vCenter e applicare i privilegi e i ruoli necessari. Quando aggiungi un'istanza del server vCenter, ONTAP tools registra il plug-in remoto, applica privilegi personalizzati per il plug-in e le API, crea ruoli personalizzati e aggiunge un collegamento al plug-in nell'interfaccia utente vSphere.
 
 [role="quick-margin-list"]
-* link:../configure/add-vcenter.html["Aggiungere istanze di vCenter Server"]
+* link:../configure/add-vcenter.html["Aggiungere istanze di vCenter Server agli strumenti ONTAP"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Configurare i ruoli utente ONTAP e Privileges
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"]Configura i backend di storage
 [role="quick-margin-para"]
-Configurare nuovi ruoli utente e Privileges per la gestione dei backend di storage utilizzando il file JSON fornito con gli strumenti ONTAP per VMware vSphere.
-
-[role="quick-margin-list"]
-* link:../configure/configure-user-role-and-privileges.html["Configurare i ruoli e i privilegi degli utenti ONTAP"]
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"] Configurare i backend di archiviazione
-[role="quick-margin-para"]
-Aggiunta di un backend dello storage a un cluster ONTAP. Per le configurazioni multi-tenancy in cui vCenter agisce come tenant con una SVM associata, utilizza ONTAP Tools Manager per aggiungere il cluster. Associare il backend dello storage con vCenter Server per associarlo globalmente all'istanza di vCenter Server integrata.
+Connetti le risorse di storage ONTAP per consentire agli strumenti ONTAP di eseguire il provisioning e la gestione dei datastore. Aggiungi un backend di storage a un cluster ONTAP. Negli ambienti multitenant in cui un vCenter Server è associato a un tenant SVM, usa ONTAP tools Manager per aggiungere il cluster. Poi associa il backend di storage al vCenter Server per creare una mappatura globale per quella istanza di vCenter.
 
 [role="quick-margin-para"]
 Aggiungi i backend dello storage locale con credenziali cluster o SVM utilizzando l'interfaccia utente dei tool ONTAP. Questi backend di storage sono limitati a un singolo vCenter. Quando si utilizzano le credenziali del cluster a livello locale, le SVM associate vengono associate automaticamente mappate in vCenter per gestire vVol o VMFS. Per la gestione di VMFS, incluso SRA, i tool ONTAP supportano le credenziali SVM senza richiedere un cluster globale.
@@ -64,32 +64,46 @@ Aggiungi i backend dello storage locale con credenziali cluster o SVM utilizzand
 * link:../configure/associate-storage-backend.html["Associare il backend dello storage a un'istanza di vCenter Server"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sei"] Aggiorna i certificati se stai lavorando con più istanze di vCenter Server
+[discrete]
+== Attività successive facoltative
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]Configura i ruoli e i privilegi utente ONTAP
 [role="quick-margin-para"]
-Quando si lavora con più istanze di vCenter Server, aggiornare il certificato autofirmato a un certificato firmato da un'autorità di certificazione (CA).
+Configura ruoli ONTAP personalizzati per l'accesso con privilegi minimi invece dell'account admin predefinito.
+
+[role="quick-margin-list"]
+* link:../configure/configure-user-role-and-privileges.html["Configurare i ruoli e i privilegi degli utenti ONTAP"]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Due"]Aggiorna i certificati per più istanze di vCenter Server
+[role="quick-margin-para"]
+Aggiorna i certificati per utilizzare una comunicazione affidabile basata su certificati tra più istanze di vCenter Server.
 
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html["Gestire i certificati"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["Sette"] (Facoltativo) Configurare la protezione SRA
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tre"]Configura la protezione SRA
 [role="quick-margin-para"]
-Abilitare la funzionalità SRA per configurare il disaster recovery e proteggere datastore NFS o VMFS.
+Abilita la funzionalità SRA per configurare la protezione di disaster recovery per i datastore NFS e VMFS.
 
 [role="quick-margin-list"]
 * link:../manage/enable-services.html["Abilita i tool ONTAP per i servizi VMware vSphere"]
 * link:../protect/configure-on-srm-appliance.html["Configurare SRA sull'appliance VMware Live Site Recovery"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["otto"] (Opzionale) attivare la protezione di sincronizzazione attiva SnapMirror
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quattro"] Abilita la protezione di sincronizzazione attiva SnapMirror
 [role="quick-margin-para"]
-Configura i tool ONTAP per VMware vSphere per gestire la protezione dei cluster host per la sincronizzazione attiva di SnapMirror. Eseguire il cluster ONTAP e il peering SVM nei sistemi ONTAP per utilizzare SnapMirror ActiveSync. Questo vale solo per gli archivi dati VMFS.
+Configura la protezione del cluster host con SnapMirror active sync per proteggere i datastore VMFS. Nei sistemi ONTAP, esegui il peering del cluster e dell'SVM necessari, quindi configura la protezione del cluster host negli ONTAP tools for VMware vSphere. Questa opzione si applica solo ai datastore VMFS.
 
 [role="quick-margin-list"]
 * link:../configure/protect-cluster.html["Proteggere utilizzando la protezione del cluster host"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png["Nove"] Configurare backup e recovery per i tool ONTAP per l'implementazione di VMware vSphere
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinque"]Configura il backup e il ripristino per la tua distribuzione di ONTAP tools
+[role="quick-margin-para"]
+Configura backup e ripristino per proteggere la configurazione di ONTAP tools e recuperare rapidamente dai guasti.
+
 [role="quick-margin-para"]
 Il backup è abilitato per impostazione predefinita negli ONTAP tools for VMware vSphere 10.5 e viene eseguito ogni 10 minuti.  Pianifica i backup degli ONTAP tools for VMware vSphere , che puoi utilizzare per ripristinare la configurazione in caso di errore.
 

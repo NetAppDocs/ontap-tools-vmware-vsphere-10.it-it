@@ -31,6 +31,7 @@ Quando si abilita il flag di convalida del certificato (impostato su true), gli 
 
 
 
+[[verify-san-based-certificates-for-storage-backends]]
 == Verificare i certificati basati su SAN per i backend di storage
 
 Per garantire una comunicazione sicura e una convalida adeguata, verificare che tutti i backend di archiviazione utilizzino certificati basati su SAN:

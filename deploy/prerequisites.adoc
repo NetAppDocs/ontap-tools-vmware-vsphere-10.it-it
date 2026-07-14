@@ -17,6 +17,7 @@ Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario cono
 
 
 
+[[system-requirements]]
 == Requisiti di sistema
 
 * *Requisiti di spazio per il pacchetto di installazione per nodo*
@@ -47,6 +48,7 @@ NOTE: Una volta abilitato il backup, ogni cluster di tool ONTAP necessita di alt
 
 
 
+[[minimum-storage-and-application-requirements]]
 == Requisiti minimi di archiviazione e applicazione
 
 |===
@@ -82,6 +84,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 
 
+[[port-requirements]]
 == Requisiti delle porte
 
 La tabella seguente illustra le porte di rete utilizzate da NetApp e le relative funzioni. Esistono tre diversi tipi di porte:
@@ -158,6 +161,7 @@ NOTE: Per le distribuzioni HA, assicurarsi che la porta UDP 8472 sia aperta tra 
 ====
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vvols-datastores]]
 == Limiti di configurazione per distribuire ONTAP tools for VMware vSphere per vVols datastores
 
 È possibile utilizzare la seguente tabella come guida per la configurazione di ONTAP tools for VMware vSphere.
@@ -187,6 +191,7 @@ NOTE: I conteggi degli host nella tabella rappresentano il totale combinato tra 
 
 
 
+[[configuration-limits-to-deploy-ontap-tools-for-vmware-vsphere-for-vmfs-and-nfs-datastores]]
 == Limiti di configurazione per distribuire ONTAP tools for VMware vSphere per datastore VMFS e NFS
 
 I limiti di configurazione elencati in questa sezione sono convalidati e supportati da NetApp. I limiti effettivi possono variare a seconda dell'ambiente e del carico di lavoro. Il superamento di questi limiti può influire sulle prestazioni o sul supporto e non è consigliato. Considerare quanto segue quando si esamina la tabella:
@@ -218,6 +223,7 @@ I limiti di configurazione elencati in questa sezione sono convalidati e support
 |===
 
 
+[[ontap-tools-for-vmware-vsphere-storage-replication-adapter-sra]]
 == Tool ONTAP per VMware vSphere - Storage Replication Adapter (SRA)
 
 La tabella seguente mostra i numeri supportati per istanza di VMware Live Site Recovery utilizzando gli strumenti ONTAP per VMware vSphere.

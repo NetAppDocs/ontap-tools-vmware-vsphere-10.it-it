@@ -15,6 +15,7 @@ I backend dello storage sono sistemi utilizzati dagli host ESXi per lo storage d
 
 
 
+[[discover-storage]]
 == Rileva lo storage
 
 È possibile eseguire l'individuazione di un backend di archiviazione su richiesta senza attendere un'individuazione pianificata per aggiornare immediatamente i dettagli di archiviazione.  Per le configurazioni MetroCluster , eseguire manualmente la scoperta degli strumenti ONTAP dopo un passaggio.
@@ -32,6 +33,7 @@ Segui i passaggi riportati di seguito per scoprire i backend dello storage.
 
 
 
+[[modify-storage-backends]]
 == Modificare i backend di archiviazione
 
 È possibile modificare le credenziali del backend di archiviazione o il nome della porta.  È anche possibile modificare il backend di archiviazione per i cluster ONTAP globali utilizzando ONTAP Tools Manager.  Se il certificato scade entro 30 giorni o meno, gli strumenti ONTAP mostrano un avviso.  Modificare il backend di archiviazione e caricare il nuovo certificato dall'amministratore ONTAP .
@@ -58,6 +60,7 @@ Modificare i cluster ONTAP globali con ONTAP Tools Manager come segue.
 
 
 
+[[remove-storage-backends]]
 == Rimuovere i backend di stoccaggio
 
 Prima di rimuovere il backend di archiviazione, è necessario rimuovere tutti gli archivi dati collegati.  Per rimuovere un backend di archiviazione, seguire i passaggi indicati di seguito.
@@ -79,6 +82,7 @@ Prima di rimuovere il backend di archiviazione, è necessario rimuovere tutti gl
 
 
 
+[[drill-down-view-of-storage-backend]]
 == Drill-down del backend dello storage
 
 Nella pagina del backend di archiviazione sono elencati tutti i backend di archiviazione.  È possibile eseguire operazioni di individuazione, modifica e rimozione dell'archiviazione sui backend di archiviazione aggiunti, ma non sulla singola SVM figlio nel cluster.
