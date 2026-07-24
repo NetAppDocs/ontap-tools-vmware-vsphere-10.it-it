@@ -1,8 +1,8 @@
 ---
 permalink: manage/edit-esxi-host-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: 'È possibile utilizzare la dashboard dei tool ONTAP per VMware vSphere per modificare le impostazioni dell"host ESXi.' 
+keywords: modify ESXi host settings, ONTAP tools host configuration, VMware host tuning, ESXi settings dashboard 
+summary: 'Modifica le impostazioni dell"host ESXi dalla dashboard degli strumenti ONTAP.' 
 ---
 = Modificare le impostazioni degli host ESXi utilizzando gli strumenti ONTAP
 :allow-uri-read: 

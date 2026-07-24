@@ -1,8 +1,8 @@
 ---
 permalink: protect/enable-storage-replication-adapter.html 
 sidebar: sidebar 
-keywords:  
-summary: I tool ONTAP per VMware vSphere offrono la possibilità di abilitare la funzionalità SRA per la configurazione del disaster recovery. 
+keywords: enable SRA, VMware Live Site Recovery, disaster recovery, SnapMirror schedules, ONTAP tools 
+summary: Abilita SRA negli ONTAP tools per supportare i flussi di lavoro di disaster recovery di VMware Live Site Recovery. 
 ---
 = Configurare SRA negli ONTAP tools per proteggere i datastore
 :allow-uri-read: 

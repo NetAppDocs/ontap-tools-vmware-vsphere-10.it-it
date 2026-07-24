@@ -1,8 +1,8 @@
 ---
 permalink: configure/associate-storage-backend.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Associare un backend dello storage con vCenter Server per creare una mappatura tra il backend dello storage e l"istanza di vCenter Server integrata a livello globale.' 
+keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
+summary: 'Associa un backend di storage globale a un"istanza del server vCenter negli ONTAP tools.' 
 ---
 = Associare un backend di storage a un'istanza del vCenter Server negli ONTAP tools
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: 'Associare un backend dello storage con vCenter Server per creare una m
 
 
 [role="lead"]
-Associare un backend di archiviazione a un'istanza di vCenter Server per consentire l'accesso a tutte le istanze di vCenter Server.  Per la configurazione MetroCluster , quando si associa un cluster backend di archiviazione, assicurarsi di associare anche il suo cluster peer al vCenter Server.
+Usa questa attività per associare un backend di storage globale a un'istanza del server vCenter. Un backend di storage globale è un backend aggiunto in ONTAP tools Manager che non è ancora associato a specifiche istanze del server vCenter. Per le configurazioni NetApp MetroCluster, quando associ un cluster di backend di storage, associa anche il suo cluster peer al server vCenter.
 
 .Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona vCenter dalla barra laterale.
-. Selezionare le ellissi verticali accanto all'istanza di vCenter Server che si desidera connettere ai backend di storage.
+. Seleziona i tre puntini verticali accanto all'istanza del server vCenter che vuoi connettere ai backend di storage.
 . Dal menu a discesa, seleziona il backend di archiviazione che desideri associare all'istanza di vCenter Server selezionata.
 

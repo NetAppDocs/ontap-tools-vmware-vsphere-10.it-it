@@ -1,8 +1,8 @@
 ---
 permalink: manage/change-valid-flag.html 
 sidebar: sidebar 
-keywords:  
-summary: È possibile modificare il flag di convalida del certificato tramite la console di manutenzione. 
+keywords: certificate validation flag, ONTAP tools certificate check, maintenance console certificate settings, TLS validation toggle 
+summary: Modifica il flag di convalida del certificato usando la console di manutenzione. 
 ---
 = Modificare il flag di convalida del certificato negli ONTAP tools
 :allow-uri-read: 
@@ -17,8 +17,9 @@ Per impostazione predefinita, il flag di convalida del certificato è abilitato 
 È necessario disporre delle credenziali di accesso per gli utenti di manutenzione.
 
 .Fasi
-. Da vCenter Server, aprire una console agli strumenti ONTAP.
-. Accedere come utente di manutenzione.
+. Accedi al vCenter Server.
+. Individua la macchina virtuale ONTAP tools e avvia la console web.
+. Accedi utilizzando le `maint` credenziali.
 . Entra `1` per selezionare il menu *Configurazione applicazione*.
 . Entra `3` per modificare il flag di convalida del certificato.
 +

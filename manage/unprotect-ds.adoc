@@ -1,0 +1,57 @@
+---
+permalink: manage/unprotect-ds.html 
+sidebar: sidebar 
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
+summary: Sblocca un datastore VMFS e, facoltativamente, rimuovi gli elementi di storage lato destinazione associati. 
+---
+= Sblocca un datastore VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa questa attività per rimuovere la protezione da un datastore VMFS e, facoltativamente, eliminare gli elementi di storage lato destinazione associati sul sito secondario.
+
+.A proposito di questa attività
+Quando rimuovi la protezione da un datastore VMFS, considera il seguente comportamento:
+
+* La rimozione della protezione dall'ultimo datastore in un gruppo di protezione elimina il gruppo di protezione e il nome delle impostazioni di protezione.
+* Per l'ultimo datastore, ONTAP tools mostra il nome delle impostazioni di protezione.
+
+
+.Prima di iniziare
+* Assicurati di avere i privilegi amministrativi in vSphere.
+* Assicurati che il tuo account utente ONTAP tools disponga delle autorizzazioni per gestire le impostazioni di protezione.
+* Esamina l'impatto della rimozione della protezione dall'ultimo datastore in un gruppo di protezione.
+* Sui cluster ONTAP 9, la rimozione della protezione dal datastore non ultimo è supportata solo per le relazioni AutomatedFailOverDuplex.
+
+
+.Fasi
+. Accedi al vSphere Client.
+. Seleziona il cluster e poi seleziona *Archivi dati*.
+. Fai clic con il pulsante destro del mouse sul datastore VMFS idoneo che vuoi rimuovere dalla protezione e seleziona *NetApp ONTAP tools* > *Unprotect datastore*.
++
+
+NOTE: Puoi rimuovere la protezione da un solo datastore alla volta. La rimozione della protezione multipla non è supportata.
+
+. Nella finestra di dialogo di conferma, esamina il messaggio *Questa azione rimuove la protezione del datastore. Vuoi continuare?*.
+. Facoltativo: seleziona *Elimina gli elementi di storage associati (LUN) e gli igroup dallo storage secondario* per rimuovere i LUN replicati e i gruppi di coerenza nel sito di destinazione.
+. Seleziona *Rimuovi protezione datastore*.
++
+
+NOTE: Per i datastore non "last", il comportamento varia in base al tipo di storage:
+
++
+** Per ASA r2, la rimozione della protezione da un datastore non ultimo mostra lo stesso messaggio di conferma e ti permette di eliminare le risorse del sito secondario dalla finestra di dialogo.
+** Per lo storage ONTAP con una relazione SnapMirror asincrona, la rimozione della protezione da un datastore non ultimo non è supportata.
+** Per lo storage ONTAP con una relazione AutomatedFailOverDuplex (AFD), la rimozione della protezione da un datastore non ultimo elimina la relazione AFD e la ricrea, perché la riduzione del gruppo di coerenza non è supportata.
++
+L'operazione di rimozione della protezione avvia un job che puoi monitorare in ONTAP tools Manager.
+
+
+
+
+
+.Risultato
+Il datastore viene rimosso dalla protezione. Se era l'ultimo datastore nel gruppo di protezione, ONTAP tools elimina il gruppo di protezione e le impostazioni di protezione. Se hai selezionato l'opzione di eliminazione, anche i LUN replicati sul lato di destinazione e i gruppi di coerenza vengono rimossi. Per i datastore idonei non ultimi su ONTAP storage (AutomatedFailOverDuplex solo), ONTAP tools rimuove e ricrea la relazione AFD come parte dell'operazione.

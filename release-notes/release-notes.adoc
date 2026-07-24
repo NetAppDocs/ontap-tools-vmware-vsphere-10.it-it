@@ -1,22 +1,22 @@
 ---
 permalink: release-notes/release-notes.html 
 sidebar: sidebar 
-keywords: release notes, ontap tools for VMware vSphere 
-summary: Fornisce importanti informazioni su questa release di strumenti ONTAP per VMware vSphere, tra cui nuove funzionalità e miglioramenti, problemi risolti, problemi noti, precauzioni e limitazioni. 
+keywords: release notes, ONTAP tools for VMware vSphere, 10.6 
+summary: Consulta le note di rilascio di ONTAP tools for VMware vSphere 10.6 per informazioni su funzionalità, compatibilità e percorsi di migrazione supportati. 
 ---
-= Note di rilascio per ONTAP tools
+= Note di rilascio per ONTAP tools for VMware vSphere 10.6
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Scopri le nuove e migliorate funzionalità disponibili negli ONTAP tools for VMware vSphere 10.5.
+Consulta questa pagina per informazioni chiave su ONTAP tools for VMware vSphere 10.6, poi segui gli argomenti collegati per dettagli sulle funzionalità, la compatibilità e le informazioni sulla migrazione.
 
-Per un elenco completo delle nuove funzionalità e dei miglioramenti, consultare xref:whats-new.adoc[Novità negli ONTAP tools for VMware vSphere 10.5].
+Per un elenco completo delle nuove funzionalità e dei miglioramenti, consulta xref:whats-new.adoc[Novità degli ONTAP tools per VMware vSphere 10.6].
 
 Per le informazioni più aggiornate sulla compatibilità, fare riferimento a https://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^].
 
-È supportata la migrazione dagli ONTAP tools for VMware vSphere 9.12D1, 9.13D2 e 9.13P2 agli ONTAP tools for VMware vSphere 10.5.
+La migrazione è supportata da ONTAP tools for VMware vSphere versioni 9.12D1, 9.13D2 e 9.13P2 a ONTAP tools for VMware vSphere 10.6.
 
-Per ulteriori informazioni, consultare la  https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876["Note sulla versione ONTAP tools for VMware vSphere 10.5"^]. È necessario accedere con il proprio NetApp account o crearne uno per accedere alle Note di rilascio.
+Per ulteriori informazioni, consulta il https://library.netapp.com/ecm/ecm_download_file/ECMLP3383264["Note di rilascio di ONTAP tools for VMware vSphere 10.6"^]. Devi accedere con il tuo account NetApp o crearne uno per accedere a questo documento.

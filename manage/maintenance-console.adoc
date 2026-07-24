@@ -1,8 +1,8 @@
 ---
 permalink: manage/maintenance-console.html 
 sidebar: sidebar 
-keywords:  
-summary: È possibile gestire le configurazioni di applicazione, sistema e rete utilizzando la console di manutenzione degli strumenti di ONTAP. È possibile modificare la password di amministratore e la password di manutenzione. È inoltre possibile generare pacchetti di supporto, impostare diversi livelli di log, visualizzare e gestire le configurazioni TLS e avviare la diagnostica remota. 
+keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
+summary: Gestisci le configurazioni degli strumenti ONTAP, reimposta le password, genera i pacchetti di supporto e configura le impostazioni TLS. 
 ---
 = Scopri la console di manutenzione di ONTAP tools
 :allow-uri-read: 
@@ -40,12 +40,14 @@ Configurazione dell'applicazione
 Configurazione del sistema
  a| 
 . Riavviare la macchina virtuale
-. Arrestare la macchina virtuale
-. Modificare la password utente "maint"
+. Spegni la macchina virtuale
+. Genera un token per reimpostare la password dell'interfaccia utente del manager
 . Modificare il fuso orario
 . Aumentare la dimensione del disco jail (/jail)
 . Eseguire l'upgrade
 . Installare VMware Tools
+. Aggiorna le credenziali di vCenter
+. Aggiorna i certificati dei servizi ONTAP tools
 
 
 

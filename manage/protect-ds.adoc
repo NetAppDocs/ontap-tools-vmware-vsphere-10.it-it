@@ -1,0 +1,55 @@
+---
+permalink: manage/protect-ds.html 
+sidebar: sidebar 
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery 
+summary: Proteggi un datastore VMFS idoneo aggiungendolo a un gruppo di protezione con la replica SnapMirror. 
+---
+= Proteggi un datastore VMFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa questa attività per proteggere un datastore VMFS idoneo aggiungendolo a un gruppo di protezione.
+
+.Prima di iniziare
+* Assicurati che il datastore utilizzi il protocollo iSCSI o FC.
+* Conferma di avere i privilegi di amministratore in vSphere.
+* Verifica che l'archivio dati non faccia già parte di un gruppo di protezione.
+
+
+.Fasi
+. Accedi al vSphere Client.
+. Seleziona un cluster e seleziona *Archivi dati*.
+. Fai clic con il pulsante destro del mouse sul datastore VMFS idoneo che vuoi proteggere e seleziona *NetApp ONTAP tools* > *Proteggi*.
++
+Il sistema verifica l'idoneità del datastore alla protezione. Se il datastore è idoneo, il flusso di lavoro di protezione prosegue. Se il datastore non è idoneo, viene visualizzato un messaggio con le relative motivazioni e non puoi procedere.
+
+. Scegli se aggiungere il datastore a un gruppo di protezione esistente o crearne uno nuovo.
++
+.. Per utilizzare un gruppo di protezione esistente, seleziona il gruppo di protezione e continua.
+.. Per creare un nuovo gruppo di protezione:
++
+... Fornisci un nome per il gruppo di protezione.
+... Selezionare *Aggiungi relazione*.
+... Nella finestra *Aggiungi relazione SnapMirror*, selezionare la VM di archiviazione di destinazione* e il tipo *criterio*.
++
+Il tipo di policy può essere *asincrono* o *AutomatedFailOverDuplex*.
+
++
+Se selezioni *AutomatedFailOverDuplex*, aggiungi la VM di storage di destinazione come backend di storage allo stesso vCenter Server dove sono distribuiti gli ONTAP tools for VMware vSphere.
+
++
+Per *AutomatedFailOverDuplex*, scegli una configurazione host uniforme o non uniforme. Quando selezioni l'opzione *configurazione host uniforme*, la configurazione del gruppo initiator host viene replicata implicitamente sul sito di destinazione. Per ulteriori informazioni, consulta link:../concepts/ontap-tools-concepts-terms.html["Concetti e termini chiave"].
+
+... Se selezioni una configurazione host non uniforme, seleziona l'accesso host (origine/destinazione) per ogni host nel cluster.
+
+
+
+
+. Seleziona *OK* per avviare il flusso di lavoro di protezione.
+
+
+.Risultato
+Il datastore viene visualizzato nel gruppo di protezione selezionato. Puoi visualizzare e gestire lo stato di protezione dal plug-in ONTAP tools.

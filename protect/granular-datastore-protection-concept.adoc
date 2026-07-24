@@ -1,0 +1,83 @@
+---
+permalink: protect/granular-datastore-protection-concept.html 
+sidebar: sidebar 
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
+summary: Comprendi la protezione granulare dei datastore e i criteri di idoneità dei datastore prima di proteggerli in un cluster host. 
+---
+= Criteri di idoneità per la protezione granulare dei datastore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa la protezione granulare dei datastore per proteggere i datastore VMFS selezionati in un cluster host invece di proteggere l'intero cluster.
+
+La protezione granulare del datastore è disponibile con ONTAP tools for VMware vSphere 10.6 e versioni successive. Questa funzionalità offre la pianificazione della protezione a livello di datastore invece che la selezione a livello di cluster.
+
+Questa funzione ti consente di:
+
+* Proteggi solo i datastore selezionati in un cluster host.
+* Raggruppa i datastore selezionati in gruppi di protezione.
+* Applica le relazioni e le policy di SnapMirror a livello di protection group.
+* Usa approcci di protezione diversi per gruppi di datastore diversi all'interno dello stesso cluster.
+
+
+Questa funzionalità supporta solo i datastore VMFS che utilizzano i protocolli iSCSI o FC.
+
+Puoi utilizzare i seguenti tipi di criteri per i datastore idonei:
+
+* *AutomatedFailOverDuplex (AFD)*
++
+** *Configurazione host uniforme*: Gli host di entrambi i siti possono accedere ai datastore protetti.
+** *Configurazione host non uniforme*: l'accesso agli host è limitato agli host specifici del sito.
+
+
+* *Asincrono*: Il sito di destinazione mantiene una copia asincrona per il recovery.
+
+
+La protezione fan-out può combinare l'AFD tra i siti primari e la replica asincrona verso un terzo sito.
+
+
+
+[[eligibility-evaluation]]
+== Valutazione dell'idoneità
+
+L'ammissibilità viene valutata in due fasi: inserimento in elenco e selezione.
+
+I datastore vengono inclusi nell'elenco per la protezione granulare dei datastore solo se soddisfano tutti i seguenti criteri:
+
+* Il tipo di datastore è VMFS.
+* Il protocollo è iSCSI o FC.
+* Il datastore viene montato solo sugli host nel cluster host selezionato.
+* Gli strumenti ONTAP possono valutare il datastore ai fini della protezione quando il datastore si trova nel cluster host selezionato in vCenter Server.
+
+
+Dopo essere stato inserito nell'elenco, un datastore può essere selezionato per la protezione solo se vengono soddisfatti tutti i seguenti requisiti:
+
+* Il datastore non è già protetto.
+* Il datastore rimane montato solo all'interno del cluster host selezionato.
+* Le SVM di origine e di destinazione sono in peering e integrate negli ONTAP tools.
+* La versione di ONTAP è la 9.15.1 o successiva.
+* Sono supportate solo combinazioni di nodi cluster di origine e destinazione 2x2 e 4x4.
+* MetroCluster configurazioni non sono idonee.
+* Il FlexVol volume o LUN che supporta il datastore non fa parte di un gruppo di coerenza esistente.
+* Il volume FlexVol o LUN che supporta il datastore non fa parte di una relazione di SnapMirror esistente.
+
+
+Considera i seguenti limiti operativi e comportamenti:
+
+* Configura la prossimità del cluster prima di configurare la protezione del datastore.
+* Un singolo cluster host può utilizzare una configurazione AFD uniforme o non uniforme, ma non entrambe.
+* Lo spostamento dei datastore tra gruppi di protezione non è supportato. Rimuovi la protezione e poi proteggili di nuovo nel gruppo di destinazione.
+* La protezione cross-SVM nello stesso cluster host, con una sorgente e più destinazioni diverse, non è supportata.
+* Le policy asincrone personalizzate non sono supportate. Usa la policy asincrona predefinita di ONTAP.
+* Nelle configurazioni terziarie o solo asincrone, la pulizia delle relazioni asincrone è manuale.
+* Attiva il failover da ONTAP System Manager. Configura ONTAP Mediator al di fuori degli strumenti ONTAP.
+
+
+Quando esegui l'aggiornamento da ONTAP tools 10.5, le configurazioni di protezione del cluster host esistenti vengono migrate al formato di protezione granulare del datastore. Dopo l'aggiornamento, verifica i gruppi di protezione e l'appartenenza al datastore.
+
+.Informazioni correlate
+* link:../protect/protect-multiple-ds.html["Proteggi i datastore in un cluster con ONTAP tools"]
+

@@ -2,8 +2,12 @@
 section: protect
 title: Protezione di datastore e macchine virtuali
 entries:
-- title: Proteggere utilizzando la protezione del cluster host
-  url: "/configure/protect-cluster.html"
+- title: Concetti e requisiti di idoneità per la protezione granulare dei datastore
+  url: "/protect/granular-datastore-protection-concept.html"
+- title: Configura il cluster per la protezione del datastore
+  url: "/protect/config-proximity.html"
+- title: Proteggi i datastore in un cluster
+  url: "/protect/protect-multiple-ds.html"
 - title: Proteggere utilizzando la protezione SRA
   entries:
   - title: Configurare SRA per proteggere gli archivi dati

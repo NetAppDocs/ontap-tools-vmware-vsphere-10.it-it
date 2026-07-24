@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: automation/api-reference.html 
-keywords: ontap tools for vmware vsphere rest api reference, api reference 
+keywords: REST API reference, Swagger UI, API endpoints, authentication 
 summary: 'Il riferimento all"API REST dei tool ONTAP per VMware vSphere 10 contiene dettagli su tutte le chiamate API. Questo riferimento è utile quando si sviluppano applicazioni di automazione.' 
 ---
 = Riferimento API REST di ONTAP tools

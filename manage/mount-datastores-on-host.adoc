@@ -1,8 +1,8 @@
 ---
 permalink: manage/mount-datastores-on-host.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Il montaggio di un datastore fornisce l"accesso allo storage a host aggiuntivi. È possibile montare il datastore sugli host aggiuntivi dopo aver aggiunto gli host all"ambiente VMware.' 
+keywords: mount NFS VMFS datastore, datastore host access, ONTAP tools datastore mounting, add datastore to ESXi host 
+summary: 'Monta i datastore sugli host aggiuntivi dopo aver aggiunto gli host all"ambiente VMware.' 
 ---
 = Montare i datastore NFS e VMFS negli ONTAP tools
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: 'Il montaggio di un datastore fornisce l"accesso allo storage a host ag
 Il montaggio di un datastore fornisce l'accesso allo storage a host aggiuntivi. È possibile montare il datastore sugli host aggiuntivi dopo aver aggiunto gli host all'ambiente VMware.
 
 
-NOTE: Quando si aggiunge un nuovo host ESXi utilizzando https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html["Aggiungi un host ESX al flusso di lavoro del cluster vSphere"] , attendere il completamento della rilevazione host pianificata prima che venga visualizzata negli strumenti ONTAP . In alternativa, è possibile eseguire manualmente l'individuazione dalla schermata di panoramica degli strumenti NetApp ONTAP .
+NOTE: Dopo aver aggiunto l'host, aspetta che il rilevamento pianificato dell'host sia completato prima che venga visualizzato in ONTAP tools. In alternativa, puoi avviare manualmente il rilevamento dalla schermata panoramica di NetApp ONTAP tools. Per informazioni su come aggiungere un host ESXi al tuo cluster vSphere, consulta  https://techdocs.broadcom.com/["Documentazione Tecnica Broadcom"].
 
 .A proposito di questa attività
 * Alcune azioni del pulsante destro del mouse sono disattivate o non disponibili a seconda della versione del client vSphere e del tipo di datastore selezionato.
@@ -24,6 +24,7 @@ NOTE: Quando si aggiunge un nuovo host ESXi utilizzando https://techdocs.broadco
 
 
 * vSphere disabilita l'opzione di montaggio del datastore quando il cluster host è protetto con configurazioni uniformi.
+* Quando un datastore con nconnect viene montato su un nuovo host, ONTAP tools applica il valore nconnect del datastore se questo supera l'impostazione dell'host.
 
 
 .Fasi

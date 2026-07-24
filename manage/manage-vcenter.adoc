@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-vcenter.html 
 sidebar: sidebar 
-keywords:  
-summary: I vCenter sono piattaforme di gestione centrali che consentono di controllare host, macchine virtuali e backend di storage. 
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management 
+summary: Gestisci le istanze di vCenter negli ONTAP tools per controllare host, macchine virtuali e backend di storage. 
 ---
 = Gestire le istanze di vCenter Server negli strumenti ONTAP
 :allow-uri-read: 
@@ -15,16 +15,16 @@ Le istanze di vCenter Server sono piattaforme di gestione centrali che consenton
 
 
 
-[[dissociate-storage-backends-with-the-vcenter-server-instance]]
-== Dissociare i backend di storage con l'istanza di vCenter Server
+[[dissociate-storage-backends-from-a-vcenter-server-instance]]
+== Dissocia i backend di storage da un'istanza del server vCenter
 
 La pagina dell'elenco di vCenter Server mostra il numero associato di backend storage. Ogni istanza di vCenter Server può essere associata o dissociata da un backend dello storage.
 
 .Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
-. Seleziona l'istanza vCenter Server richiesta dalla barra laterale.
-. Seleziona i puntini di sospensione verticali su vCenter Server che desideri associare o dissociare dai backend di storage.
+. Seleziona *vCenters* dalla barra laterale.
+. Seleziona i tre puntini verticali per il vCenter Server che vuoi associare o dissociare ai backend di storage.
 . Selezionare *dissociare il backend di archiviazione*.
 
 
@@ -33,12 +33,10 @@ La pagina dell'elenco di vCenter Server mostra il numero associato di backend st
 [[modify-a-vcenter-server-instance]]
 == Modificare un'istanza di vCenter Server
 
-Per modificare le istanze di vCenter Server, procedere come segue.
-
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
-. Seleziona l'istanza vCenter Server applicabile dalla barra laterale
-. Selezionare le ellissi verticali a fronte di vCenter Server che si desidera modificare e selezionare *Modifica*.
+. Seleziona *vCenters* dalla barra laterale.
+. Seleziona i tre puntini verticali per il vCenter Server che vuoi modificare e seleziona *Modifica*.
 . Nella finestra *Modifica vCenter*, immettere il nome utente, la password e i dettagli della porta.
 . Carica il certificato e seleziona *Modifica*.
 
@@ -48,22 +46,61 @@ Per modificare le istanze di vCenter Server, procedere come segue.
 [[remove-a-vcenter-server-instance]]
 == Rimuovere un'istanza di vCenter Server
 
-Rimuovere tutti i backend di archiviazione dal vCenter Server prima di rimuoverlo.
+Puoi rimuovere un'istanza del server vCenter anche quando i datastore e i backend di storage sono ancora associati. La finestra di dialogo *Remove vCenter* ti guida nelle azioni necessarie in base allo stato attuale del server vCenter.
 
+
+NOTE: L'eliminazione forzata rimuove solo i metadati degli strumenti ONTAP. Non rimuove gli oggetti di storage ONTAP (volumi o LUN), i datastore vSphere o le macchine virtuali.
+
+.Prima di iniziare
+L'eliminazione forzata è bloccata se il vCenter Server ha datastore vVols o datastore protetti. Prima di procedere:
+
+* Rimuovi o migra tutti gli archivi dati vVols.
+* Rimuovi la protezione da tutti i datastore protetti.
+* Assicurati che non siano in esecuzione processi di rilevamento. L'operazione di eliminazione forzata non verrà eseguita se sono in corso processi di rilevamento.
+
+
+
+NOTE: I backend di storage globali condivisi con altre istanze del server vCenter vengono mantenuti. Viene rimossa solo l'associazione con il server vCenter eliminato.
+
+.Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
-. Seleziona le istanze vCenter Server applicabili dalla barra laterale
-. Selezionare le ellissi verticali del vCenter Server che si desidera rimuovere e selezionare *Rimuovi*.
+. Seleziona *vCenters* dalla barra laterale.
+. Seleziona i tre puntini verticali per il vCenter Server richiesto e seleziona *Rimuovi*.
+. Nella finestra di dialogo *Rimuovi vCenter*, controlla lo stato del server vCenter ed esegui le azioni necessarie.
 +
+Il comportamento della finestra di dialogo dipende dallo stato del vCenter Server:
 
-NOTE: Dopo aver rimosso le istanze di vCenter Server, queste non saranno più gestite dall'applicazione.
++
+[cols="2,2,3"]
+|===
+| Condizione | Comportamento della finestra di dialogo | Azione richiesta 
 
 
+| Nessun vVols o archivi dati protetti, ma i backend di storage sono associati | La finestra di dialogo visualizza il numero di storage backend e datastore associati. | Seleziona *Rimuovi tutti gli artefatti di storage da questo vCenter Server* e *Capisco che i datastore associati non saranno più gestiti da ONTAP tools*. 
 
-Quando si rimuovono le istanze di vCenter Server negli strumenti ONTAP, vengono eseguite automaticamente le seguenti azioni:
+
+| Nessun vVols datastore, datastore protetto o backend di storage | La finestra di dialogo conferma la rimozione. | Non è richiesta alcuna azione aggiuntiva. 
+|===
+. Seleziona *Eliminazione forzata*.
+. Conferma l'azione.
+
+
+.Risultato
+Gli strumenti ONTAP eseguono automaticamente le seguenti azioni:
 
 * Plug-in non registrato.
 * I privilegi dei plug-in e i ruoli dei plug-in vengono rimossi.
+
+
+L'istanza del server vCenter non è più gestita da ONTAP tools.
+
+Se il vCenter Server non è raggiungibile durante la cancellazione:
+
+* ONTAP tools rimuove il record del server vCenter.
+* La deregistrazione del plugin non avviene.
+* Viene visualizzato un avviso.
+* Devi annullare manualmente la registrazione del plugin da VMware vCenter Server.
 
 
 
@@ -120,7 +157,7 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona l'istanza vCenter Server applicabile dalla barra laterale
-. Selezionare le ellissi verticali a fronte di vCenter Server che si desidera modificare e selezionare *Modifica*.
+. Seleziona i tre puntini verticali per il vCenter Server che vuoi modificare e seleziona *Modifica*.
 . Nella finestra *Modifica vCenter*, immettere il nome utente, la password e i dettagli della porta.
 . Carica il certificato e seleziona *Modifica*.
 

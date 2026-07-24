@@ -1,0 +1,158 @@
+---
+permalink: manage/audit-logs.html 
+sidebar: sidebar 
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention 
+summary: Scopri come ONTAP tools acquisisce, conserva e monitora i log di controllo per la sicurezza e la conformità. 
+---
+= Gestisci i log di audit per ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usa questa attività per gestire il comportamento della registrazione degli audit e la risposta operativa in ONTAP tools for VMware vSphere. I log di audit forniscono una traccia degli eventi che mostra chi ha eseguito un'azione, quale azione è stata eseguita, quando si è verificata, l'origine della richiesta e se ha avuto successo o meno.
+
+.Prima di iniziare
+* Assicurati di avere accesso come amministratore a ONTAP tools Manager.
+* Assicurati di avere accesso alla console di manutenzione se intendi modificare le impostazioni di conservazione locali.
+* Esamina i requisiti di sicurezza e conformità della tua organizzazione per la conservazione, l'inoltro e la risposta agli incidenti.
+
+
+.A proposito di questa attività
+ONTAP tools acquisisce eventi di audit completi per la visibilità operativa e di conformità.
+
+La copertura dell'audit comprende:
+
+* Operazioni utente e API, come creazione/eliminazione di datastore, onboarding di vCenter e azioni di backend di storage
+* Chiamate di servizio interne, incluse le interazioni del servizio VASA Provider
+* Lavori, inclusi discovery, protezione e operazioni aggregate
+* Attività della console di manutenzione
+
+
+Le voci di audit possono includere:
+
+* Nome utente, se disponibile
+* Operazione eseguita
+* Timestamp
+* Origine della richiesta (UI, API o interservizio)
+* Dettagli della richiesta e della risposta con stato
+
+
+Gli archivi di audit vengono generati giornalmente e sono disponibili nel pacchetto di supporto generato in ONTAP tools Manager. Gli archivi relativi a un determinato giorno sono disponibili il giorno successivo.
+
+La registrazione degli eventi di controllo presenta i seguenti limiti operativi:
+
+* La disattivazione della registrazione degli audit non è supportata.
+* La dimensione del file di log degli audit non è configurabile dall'utente.
+
+
+La gestione dei dati sensibili è integrata:
+
+* I dati sensibili, come password, token e materiale delle chiavi private, vengono oscurati.
+* Le richieste e le risposte di grandi dimensioni potrebbero essere troncate.
+
+
+.Fasi
+. Genera un pacchetto di supporto da ONTAP tools Manager:
++
+.. Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. Accedi con le credenziali di amministratore di ONTAP tools for VMware vSphere.
+.. Selezionare *Log Bundle* dalla barra laterale.
+.. Seleziona *Genera*.
+.. Inserisci un'etichetta per il pacchetto di log e seleziona *Genera*.
++
+I registri di controllo sono disponibili negli archivi giornalieri nella directory di controllo all'interno del pacchetto di supporto scaricato.
+
+
+
+. Opzionale: Configura la conservazione locale dalla console di manutenzione:
++
+.. Accedi al vCenter Server.
+.. Individua la macchina virtuale ONTAP tools e avvia la console web.
+.. Accedi utilizzando le `maint` credenziali.
+.. Premi Invio  `1` per selezionare *Configurazione applicazione*.
+.. Premi  `4` per selezionare *Modifica conservazione del registro di controllo*.
+.. Inserisci il valore di conservazione in giorni e conferma la modifica.
++
+Il periodo di conservazione predefinito è 30 giorni e l'intervallo supportato va da 1 a 180 giorni.
+
++
+
+WARNING: La modifica del periodo di conservazione dei log di controllo riavvia i servizi ed è un'operazione dirompente.
+
+
+
+. Monitora lo stato di integrità del log di audit in ONTAP tools Manager:
++
+.. Nella dashboard di ONTAP tools Manager, controlla la scheda *Avvisi* per gli avvisi attivi.
+.. Seleziona l'hyperlink del conteggio degli avvisi oppure apri *Gestisci avvisi* per visualizzare i dettagli e lo stato degli avvisi.
++
+ONTAP tools verifica l'integrità degli archivi dei log di controllo ogni 3 minuti. ONTAP tools mantiene un registro degli archivi previsti. Se un archivio risulta mancante o alterato, ONTAP tools genera un avviso in ONTAP tools Manager.
+
+
+
+. Opzionale: Cambia l'intervallo di verifica dell'integrità dell'audit dalla console di manutenzione:
++
+.. Accedi al vCenter Server.
+.. Individua la macchina virtuale ONTAP tools e avvia la console web.
+.. Accedi utilizzando le `maint` credenziali.
+.. Premi Invio `4` per selezionare *Supporto e diagnostica*.
+.. Premi Invio  `2` per selezionare *Abilita accesso diag*.
+.. Accedi come utente  `diag`.
+.. Esegui il seguente comando per modificare l'intervallo in secondi:
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
+
++
+L'intervallo minimo supportato è di 60 secondi.
+
++
+
+WARNING: La modifica dell'intervallo di verifica dell'integrità dell'audit riavvia i servizi ed è un'operazione dirompente.
+
+
+
+. Opzionale: inoltra i log di controllo a una destinazione syslog esterna. Usa l'inoltro syslog quando hai bisogno di monitoraggio centralizzato, conservazione a lungo termine o correlazione con Security Information and Event Management (SIEM). Segui gli standard della tua organizzazione per TLS, certificati, porte e conservazione.
+. Se si verifica un avviso di integrità, esegui le azioni di risposta all'incidente.
++
+.. Raccogli al più presto un pacchetto di supporto.
+.. Conserva i pacchetti e gli archivi esportati secondo la procedura di risposta agli incidenti della tua organizzazione.
+.. Esamina i dettagli dell'avviso in ONTAP tools Manager e contatta NetApp Support se necessario.
+
+
+
+
+
+
+[[example-audit-record]]
+== Esempio di registro di controllo
+
+I registri di audit includono una serie coerente di campi a supporto della tracciabilità. I campi tipici includono:
+
+* Timestamp (UTC)
+* Nome utente (identità utente autenticata)
+* Operazione (metodo HTTP e URI della richiesta)
+* Origine della richiesta (UI, API o interservizio)
+* Stato (successo o fallimento e codice di stato)
+* Agente utente (identità del client, se disponibile)
+* Identificatore della richiesta, se disponibile (ad esempio, correlation ID)
+* Identificativo del job, se disponibile (per flussi di lavoro asincroni)
+* Tenant o identificativo vCenter, se disponibile
+
+
+L'esempio seguente mostra il tipo di informazioni acquisite. L'insieme esatto dei campi può variare a seconda del flusso di lavoro.
+
+[source, json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

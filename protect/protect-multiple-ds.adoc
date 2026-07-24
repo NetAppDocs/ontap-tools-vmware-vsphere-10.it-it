@@ -1,0 +1,62 @@
+---
+permalink: protect/protect-multiple-ds.html 
+sidebar: sidebar 
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration 
+summary: Proteggi più datastore VMFS in un cluster host raggruppando i datastore in gruppi di protezione e applicando criteri SnapMirror. 
+---
+= Proteggi i datastore in un cluster con ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizza la protezione granulare dei datastore quando un cluster host include datastore provenienti da più storage virtual machine (SVM) e devi proteggere datastore selezionati con criteri diversi.
+
+.Prima di iniziare
+Assicurati di soddisfare questi requisiti prima di proteggere i datastore in un cluster host:
+
+* I datastore sono datastore VMFS che utilizzano i protocolli iSCSI o FC.
+* I datastore vengono rilevati e sono disponibili in ONTAP tools.
+* Le macchine virtuali di archiviazione di origine e di destinazione sono configurate per le relazioni di SnapMirror.
+
+
+.Fasi
+. Accedi al vSphere Client.
+. Fai clic con il pulsante destro del mouse su un host o un cluster e seleziona *NetApp ONTAP tools* > *Protect datastores*.
+. Seleziona la *VM di archiviazione* nel cluster.
++
+Vengono visualizzati i datastore della SVM selezionata.
+
+. Il campo *Tipo di datastore* è precompilato con VMFS come unico tipo di datastore supportato per la protezione ed è disabilitato.
+. Dall'elenco che viene visualizzato in base ai criteri di idoneità, seleziona i datastore che vuoi proteggere e fai clic su *Avanti*.
+. Nella finestra *Impostazioni di protezione*, scegli se proteggere i datastore selezionati in un gruppo di protezione esistente o in un nuovo gruppo di protezione.
+. Se selezioni *Crea nuovo*, assegna un nome al gruppo di protezione e seleziona *Aggiungi relazione*.
+. Nella finestra *Aggiungi relazione SnapMirror*, selezionare la VM di archiviazione di destinazione* e il tipo *criterio*.
++
+Il tipo di policy può essere asincrono o AutomatedFailOverDuplex. AutomatedFailOverDuplex è supportato solo per i datastore configurati su ONTAP 9.15.1 con protocolli iSCSI o FC e montati sul cluster host.
+
++
+Se aggiungi la relazione di SnapMirror come AutomatedFailOverDuplex, aggiungi lo storage di destinazione come backend di storage allo stesso vCenter Server dove ONTAP tools for VMware vSphere è distribuito.
+
++
+Nel tipo di policy AutomatedFailOverDuplex, ci sono configurazioni di cluster uniformi e non uniformi. Per la configurazione di cluster uniforme, la configurazione del gruppo initiator dell'host viene replicata sul sito di destinazione. Per ulteriori informazioni, consulta link:../concepts/ontap-tools-concepts-terms.html["Concetti e termini chiave"].
+
+. Per una configurazione di cluster non uniforme, seleziona l'accesso host (origine o destinazione) per ogni host nel cluster. ONTAP tools crea le corrispondenti configurazioni dei gruppi di initiator host sullo storage di destinazione per fornire l'accesso host agli oggetti di storage di destinazione.
+. Selezionare *Salva*.
+. Rivedi la configurazione nella finestra *Riepilogo* e seleziona *Proteggi*.
+. Per visualizzare i dettagli di tutti i gruppi di protezione disponibili, vai su *NetApp ONTAP tools* > *Protection* > *Protection groups*.
+
+
+.Risultato
+Viene creato un nuovo gruppo di protezione con i datastore selezionati e la relazione di SnapMirror viene aggiunta a tale gruppo di protezione. Il sistema crea un'attività di vCenter con i dettagli dell'ID del lavoro e ne mostra l'avanzamento nel pannello delle attività recenti. Questa è un'attività asincrona; l'interfaccia utente mostra solo lo stato di invio della richiesta e non attende il completamento dell'attività.
+
+[NOTE]
+====
+Per i cluster di storage ONTAP (ONTAP 9), la rimozione della protezione da un datastore non ultimo non è supportata se il gruppo di protezione ha una relazione asincrona.
+
+====
+.Informazioni correlate
+* link:../manage/protect-ds.html["Proteggi un datastore VMFS"]
+* link:../manage/unprotect-ds.html["Sblocca un datastore VMFS"]
+

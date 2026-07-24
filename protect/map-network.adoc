@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-network.html 
 sidebar: sidebar 
-keywords:  
-summary: È necessario mappare le reti nel sito protetto e nel sito di ripristino per consentire la comunicazione tra di esse. 
+keywords: network mappings, protected and recovery sites, VMware Live Site Recovery, resource mappings, ONTAP tools 
+summary: Mappa le reti tra i siti protetti e di ripristino per allineare la connettività delle VM durante il failover di VMware Live Site Recovery. 
 ---
 = Configurare le mappature di rete negli ONTAP tools
 :allow-uri-read: 

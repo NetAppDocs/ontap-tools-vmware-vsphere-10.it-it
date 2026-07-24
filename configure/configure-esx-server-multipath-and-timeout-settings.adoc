@@ -1,8 +1,8 @@
 ---
 permalink: configure/configure-esx-server-multipath-and-timeout-settings.html 
 sidebar: sidebar 
-keywords:  
-summary: 'I tool ONTAP per VMware vSphere controllano e impostano le impostazioni di multipathing dell"host ESXi e le impostazioni di timeout degli HBA più adatte ai sistemi storage NetApp.' 
+keywords: ESXi multipath settings, HBA timeout settings, ONTAP tools host settings, NetApp storage failover 
+summary: 'Configura le impostazioni di multipathing dell"host ESXi e di timeout dell"HBA per prestazioni ottimali dello storage NetApp.' 
 ---
 = Configurare le impostazioni dell'host ESXi negli ONTAP tools
 :allow-uri-read: 

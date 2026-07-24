@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-resource.html 
 sidebar: sidebar 
-keywords:  
-summary: 'È necessario mappare le risorse sul sito protetto e sul sito di ripristino in modo che le macchine virtuali siano configurate per eseguire il failover in un gruppo di host o nell"altro.' 
+keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools 
+summary: Mappa pool di risorse, host o cluster tra siti protetti e di ripristino per posizionare correttamente le macchine virtuali durante il failover. 
 ---
 = Configurare le mappature delle risorse negli ONTAP tools
 :allow-uri-read: 

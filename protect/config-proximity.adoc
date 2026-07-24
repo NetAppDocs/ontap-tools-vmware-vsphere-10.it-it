@@ -1,0 +1,59 @@
+---
+permalink: protect/config-proximity.html 
+sidebar: sidebar 
+keywords: cluster configuration, datastore protection, SVM pairing, VMware vSphere, failover management 
+summary: Configura le impostazioni di prossimità del cluster host per definire i siti di origine e di destinazione, assegnare gli host e associare gli SVM per la protezione del datastore. 
+---
+= Configura il cluster per la protezione del datastore con ONTAP tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizza ONTAP tools for VMware vSphere per configurare le impostazioni della configurazione del cluster (prossimità host-storage), consentendo una protezione efficiente del datastore e una gestione semplificata del failover per il tuo ambiente virtualizzato.
+
+.Prima di iniziare
+* Verifica di avere i privilegi di amministratore in vSphere.
+* Le impostazioni di configurazione del cluster sono applicabili sia alle configurazioni uniformi che a quelle non uniformi, mentre le impostazioni di accesso sono applicabili solo al tipo di relazione AFD.
+
+
+.Fasi
+. Nel client vSphere, fai clic con il pulsante destro del mouse sul cluster host e seleziona *Configura protezione cluster*.
++
+
+NOTE: Se il cluster dispone già di una configurazione di cluster, questa opzione ti permette di modificare la configurazione esistente.
+
+. Nella finestra *Tipo di configurazione*:
++
+.. Seleziona *Uniform* per consentire agli host in entrambi i domini di errore di accedere alle risorse di storage in entrambi i siti. Un dominio di errore è un gruppo di componenti hardware e infrastrutturali. Assegna ciascun host a un dominio di errore per entrambi i siti.
+.. Seleziona *Non uniforme* per limitare gli host di ciascun sito ad accedere allo storage solo nel rispettivo sito. Assegna gli host ai domini di errore di conseguenza.
+.. Inserisci i nomi dei domini di errore. I nomi predefiniti sono "Site A" e "Site B". Puoi modificare questi valori. I nomi dei siti corrispondono ai domini di errore di origine e di destinazione. L'interfaccia utente convalida i dati inseriti mentre digiti e mostra messaggi per i caratteri non supportati o per i valori che superano il limite di caratteri.
++
+
+NOTE: Il tipo di configurazione non può essere modificato dopo che è stato impostato. Per cambiare il tipo di configurazione, elimina la configurazione del cluster e creane una nuova con le impostazioni desiderate.
+
+
+
+. Selezionare *Avanti*.
+. Nella finestra *Host*, assegna ciascun host al dominio di errore di origine o al dominio di errore di destinazione. Tutti gli host devono essere assegnati e un host non può appartenere a entrambi i siti. I nomi dei siti visualizzati nella procedura guidata sono i nomi dei domini di errore di origine e di destinazione. Il pulsante *Avanti* si attiva dopo che tutti gli host sono stati assegnati.
+. Selezionare *Avanti*.
+. Nella pagina *Peer SVM di storage*, assegna ogni SVM al sito appropriato. Puoi assegnare più peer SVM, ma almeno uno deve essere assegnato a ciascun sito. Quando assegni un SVM a un sito, il suo peer SVM viene automaticamente assegnato al sito opposto.
+. Selezionare *Avanti*.
+. Esamina la pagina *Riepilogo*. Conferma le impostazioni di configurazione del cluster per i rispettivi domini di errore.
+. Seleziona *Crea* per applicare la configurazione.
+. Per visualizzare o modificare una configurazione di protezione del cluster esistente:
++
+.. Vai alla vista del plug-in ONTAP tools.
+.. Vai su *Protezione* > *Configurazione protezione cluster*.
+.. Seleziona il cluster per visualizzarne la configurazione corrente.
+.. Fai clic sui tre puntini verticali e seleziona *Modifica* per modificare la configurazione. La procedura guidata visualizza le impostazioni correnti per la modifica.
++
+image:../media/edit-protection.png["Modifica la configurazione della protezione del cluster"]
+
+
+
+
+
+.Risultato
+La configurazione viene applicata e puoi visualizzarla o modificarla nel plugin ONTAP tools.

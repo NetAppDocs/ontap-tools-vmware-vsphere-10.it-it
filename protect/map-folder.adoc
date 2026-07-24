@@ -1,8 +1,8 @@
 ---
 permalink: protect/map-folder.html 
 sidebar: sidebar 
-keywords:  
-summary: È necessario mappare le cartelle sul sito protetto e sul sito di ripristino per consentire la comunicazione tra di esse. 
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools 
+summary: Mappa le cartelle tra i siti protetti e quelli di ripristino per preparare i workflow di failover di VMware Live Site Recovery. 
 ---
 = Configurare i mapping delle cartelle negli ONTAP tools
 :allow-uri-read: 

@@ -1,8 +1,8 @@
 ---
 permalink: upgrade/upgrade-error-codes.html 
 sidebar: sidebar 
-keywords: upgrade 
-summary: 'In questa pagina vengono descritti i codici di errore per l"operazione di aggiornamento degli strumenti ONTAP per il sistema VMware vSphere.' 
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs 
+summary: Utilizza i codici di errore di aggiornamento di ONTAP tools per identificare i flussi di lavoro non riusciti e risolvere i problemi di aggiornamento in VMware vSphere. 
 ---
 = Codici di errore di aggiornamento di ONTAP tools
 :allow-uri-read: 
@@ -65,7 +65,7 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 052 | L'ISO potrebbe essere uguale alla versione corrente o due release superiori rispetto alla versione corrente. | Utilizzare una versione ISO compatibile per eseguire l'aggiornamento dalla versione corrente. 
 
 
-| 068 | Il rollback dei pacchetti Debian non è riuscito | Utilizza un ripristino basato su RPO pari a zero o su snapshot e riprova l'aggiornamento. 
+| 068 | Il ripristino dei pacchetti del sistema operativo Debian non è riuscito | Utilizza un ripristino basato su RPO pari a zero o su snapshot e riprova l'aggiornamento. 
 
 
 | 069 | Ripristino dei file non riuscito | Utilizza un ripristino basato su RPO pari a zero o su snapshot e riprova l'aggiornamento. 
@@ -77,7 +77,7 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 071 | Il cluster Kubernetes non era integro | - 
 
 
-| 074 | Montaggio ISO non riuscito | Controllare /var/log/upgrade-run.log e riprovare l'aggiornamento. 
+| 074 | Montaggio ISO non riuscito | Controlla il file /var/log/otvng/upgrade-run.log e riprova l'upgrade. 
 
 
 | 075 | I controlli preliminari dell'aggiornamento non sono riusciti | Riprovare a eseguire l'aggiornamento. 
@@ -107,10 +107,10 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 083 | Eliminazione backup non riuscita | Utilizza un ripristino basato su RPO pari a zero o su snapshot e riprova l'aggiornamento. 
 
 
-| 084 | La modifica di JobManager in produzione non è riuscita | Eseguire i seguenti passaggi per ripristinare/completare l'aggiornamento. 1. Abilitare la Shell diagnostica 2. Eseguire il comando: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Controllare i log in /var/log/post-deploy-upgrade.log 
+| 084 | La modifica di JobManager in produzione non è riuscita | Esegui i seguenti passaggi per ripristinare/completare l'aggiornamento. 1. Abilita la Diagnostic Shell 2. Esegui il comando: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Controlla i log in /var/log/otvng/post-deploy-upgrade.log 
 
 
-| 087 | Procedura di post-aggiornamento non riuscita. | Per ripristinare/completare l'aggiornamento, procedere come segue. 1. Attivare la shell diagnostica 2. Eseguire _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ comando 3. Controllare i log in /var/log/post-deploy-upgrade.log 
+| 087 | Procedura di post-aggiornamento non riuscita. | Esegui i seguenti passaggi per ripristinare/completare l'aggiornamento. 1. Abilita la Diagnostic Shell 2. Esegui il comando _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ 3. Controlla i log in /var/log/otvng/post-deploy-upgrade.log 
 
 
 | 088 | La configurazione della rotazione del registro per il giornale non è riuscita | Verifica che le impostazioni di rete della macchina virtuale siano compatibili con l'host su cui è ospitata. Puoi provare a migrare la macchina virtuale su un altro host e riavviarla. 
@@ -128,10 +128,13 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 097 | La disinstallazione dei servizi per l'aggiornamento non è riuscita | Utilizzare un RPO pari a zero o un ripristino basato su snapshot e riprovare l'aggiornamento. 
 
 
-| 098 | la copia del segreto dockercred dal sistema ntv allo spazio dei nomi del provisioner di storage dinamico non è riuscita | Controllare i registri di aggiornamento e riprovare l'aggiornamento. 
+| 098 | Copiare il secret dockercred dal namespace ntv-system al namespace rook-ceph non è riuscito | Controllare i registri di aggiornamento e riprovare l'aggiornamento. 
 
 
 | 099 | Impossibile convalidare la nuova aggiunta di HDD | Aggiungi il nuovo HDD a tutti i nodi in caso di ha e a un nodo in caso di implementazione non ha. 
+
+
+| 108 | Seeding script non riuscito | - 
 
 
 | 109 | il backup dei dati del volume persistente non è riuscito | Controllare i registri di aggiornamento e riprovare l'aggiornamento. 
@@ -161,7 +164,7 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 056 | eliminazione del backup di migrazione non riuscita | NA 
 
 
-| 090 | convalida del certificato per i backend di archiviazione e vCenter non riuscita | Controllare i registri di aggiornamento e il file di registro in /var/log/cert_validation_error.log e riprovare l'aggiornamento. 
+| 090 | convalida del certificato per i backend di archiviazione e vCenter non riuscita | Controlla i log di aggiornamento e il file di log in /var/log/otvng/cert_validation_error.log e riprova l'upgrade. 
 
 
 | 114 | Aggiornamento interno del certificato nella collezione MongoDB non riuscito  a| 
@@ -216,7 +219,7 @@ sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
 +
 [listing]
 ----
-tail -f /var/log/post-deploy-upgrade.log
+tail -f /var/log/otvng/post-deploy-upgrade.log
 ----
 +
 Cerca il messaggio di conferma: `Completed post 10.5 upgrade steps.`

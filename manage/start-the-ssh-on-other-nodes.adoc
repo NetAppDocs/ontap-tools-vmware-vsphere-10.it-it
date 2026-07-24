@@ -1,8 +1,8 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Prima di eseguire l"aggiornamento, è necessario avviare SSH su altri nodi.' 
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting 
+summary: 'Avvia SSH sugli altri nodi prima di eseguire l"aggiornamento.' 
 ---
 = Avvia SSH sugli altri nodi di ONTAP tools
 :allow-uri-read: 
@@ -20,8 +20,9 @@ Abilita l'estensione VASA Provider per la tua istanza di vCenter Server.
 Ripetere questa procedura su ciascun nodo prima di effettuare l'aggiornamento.
 
 .Fasi
-. Dal server vCenter, aprire una console per il provider VASA.
-. Accedere come utente di manutenzione.
+. Accedi al vCenter Server.
+. Individua la macchina virtuale del nodo ONTAP tools e avvia la console web.
+. Accedi utilizzando le `maint` credenziali.
 . Invio `4` Per selezionare Support and Diagnostics (supporto e diagnostica).
 . Invio `1` Per selezionare Accedi alla shell diagnostica.
 . Invio `y` per procedere.

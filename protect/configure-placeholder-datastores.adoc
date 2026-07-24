@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-placeholder-datastores.html 
 sidebar: sidebar 
-keywords:  
-summary: 'Configurare un datastore segnaposto per riservare spazio nell"inventario vCenter nel sito di ripristino per le macchine virtuali (VM) protette.  Gli archivi dati segnaposto richiedono una capacità minima, perché le VM segnaposto sono piccole e in genere utilizzano solo poche centinaia di kilobyte.' 
+keywords: placeholder datastore, VMware Live Site Recovery, vCenter inventory, protected virtual machines, ONTAP tools 
+summary: Configura i datastore segnaposto nel sito di recovery per riservare spazio di inventario vCenter per le macchine virtuali protette. 
 ---
 = Configurare i datastore segnaposto negli ONTAP tools
 :allow-uri-read: 

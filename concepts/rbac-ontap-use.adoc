@@ -1,8 +1,8 @@
 ---
 permalink: concepts/rbac-ontap-use.html 
 sidebar: sidebar 
-keywords: ontap rbac, use ontap rbac 
-summary: 'Esistono diversi aspetti dei tool ONTAP per l"implementazione RBAC di VMware vSphere 10 con ONTAP che è necessario prendere in considerazione prima di utilizzarlo in un ambiente di produzione.' 
+keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
+summary: Esamina le considerazioni RBAC di ONTAP per gli ONTAP tools prima di usarli in un ambiente di produzione. 
 ---
 = Considerazioni RBAC di ONTAP per ONTAP tools
 :allow-uri-read: 

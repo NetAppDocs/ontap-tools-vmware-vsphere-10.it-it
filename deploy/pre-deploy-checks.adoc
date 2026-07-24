@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html 
 sidebar: sidebar 
-keywords: ONTAP tools,Storage Replication Adapter 
-summary: Prima di implementare gli strumenti ONTAP per VMware vSphere, è necessario conoscere i requisiti di spazio per il pacchetto di implementazione e alcuni requisiti di base del sistema host. 
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server 
+summary: Completa la checklist di pre-distribuzione per ONTAP tools, inclusa la compatibilità con vSphere, il dimensionamento, i certificati e i requisiti di rete. 
 ---
 = Requisiti di pre-distribuzione per ONTAP tools
 :allow-uri-read: 
@@ -58,14 +58,15 @@ Prima di procedere con la distribuzione, assicurarsi che siano soddisfatti i seg
 
 Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richieste per gli strumenti ONTAP per la distribuzione iniziale di VMware vSphere:
 
+[cols="3,1"]
 |===
 | Requisito | Il tuo valore 
 
 
-| Indirizzo IP per l'applicazione ONTAP tools. Questo è l'indirizzo IP per accedere all'interfaccia web del gestore ONTAP tools (load balancer) a `\https://<ip>:8443/virtualization/ui/` |  
+| Indirizzo IP di ONTAP tools (precedentemente load balancer). Questo indirizzo IP esterno viene utilizzato per accedere all'interfaccia ONTAP tools Manager all'indirizzo  `\https://<ip>:8443/virtualization/ui/`, inviare chiamate API e accedere al plug-in ONTAP tools dall'interfaccia vCenter. |  
 
 
-| Indirizzo IP virtuale di ONTAP tools per la comunicazione interna. Questo indirizzo IP viene utilizzato per la comunicazione interna in una configurazione con più istanze di ONTAP tools. Questo indirizzo IP non deve essere uguale all'indirizzo IP per l'applicazione ONTAP tools. (Il Kubernetes Control Plane) |  
+| Indirizzo IP virtuale di ONTAP tools (precedentemente interconnessione nodo). Questo indirizzo IP viene assegnato al server API di Kubernetes e funge da indirizzo IP virtuale per il piano di controllo di Kubernetes nelle implementazioni a nodo singolo e multi-nodo. Viene utilizzato per la comunicazione interna del cluster e per la gestione di Kubernetes, e deve essere diverso dall'indirizzo IP di ONTAP tools. |  
 
 
 | Nome host DNS per il nodo di gestione degli strumenti ONTAP |  
@@ -80,7 +81,7 @@ Utilizzare il seguente foglio di lavoro per raccogliere le informazioni richiest
 | Dominio di ricerca DNS |  
 
 
-| Indirizzo IPv4 per il nodo di gestione degli strumenti ONTAP. Si tratta di un indirizzo IPv4 univoco per l'interfaccia di gestione del nodo sulla rete di gestione. Questo viene utilizzato per connettersi all'appliance degli strumenti ONTAP per l'accesso diagnostico remoto tramite SSH. |  
+| Indirizzo IPv4 per il nodo di gestione degli ONTAP tools. In una distribuzione a nodo singolo, questo indirizzo corrisponde all'host name specificato per la VM degli ONTAP tools. In una distribuzione HA, devi fornire indirizzi IPv4 aggiuntivi per le due VM aggiuntive degli ONTAP tools. |  
 
 
 | Subnet mask dell'indirizzo IPv4 |  
@@ -107,6 +108,7 @@ NOTE: Crea record DNS per tutti gli indirizzi IP sopra indicati. Prima di assegn
 
 Oltre ai requisiti di implementazione a nodo singolo, per l'implementazione ha sono necessarie le seguenti informazioni:
 
+[cols="3,1"]
 |===
 
 

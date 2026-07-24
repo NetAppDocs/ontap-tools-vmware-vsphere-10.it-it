@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: automation/learn-rest-api.html 
-keywords: ontap tools vmware vsphere rest api 
+keywords: REST API fundamentals, HTTP methods, JSON, authentication 
 summary: 'Tool ONTAP per VMware vSphere 10: Set di strumenti per la gestione del ciclo di vita delle macchine virtuali. Include una solida API REST che puoi utilizzare come parte dei processi di automazione.' 
 ---
 = Scopri di più sull'API REST di ONTAP tools
@@ -55,7 +55,7 @@ Gli strumenti ONTAP per l'API REST VMware vSphere 10 eseguono la maggior parte d
 Gli ONTAP tools for VMware vSphere 10 vengono distribuiti utilizzando l'architettura del plug-in remoto vSphere.  Il software, incluso il supporto per l'API REST, viene eseguito in una macchina virtuale separata.
 
 .Indirizzo IP degli strumenti ONTAP
-Gli strumenti ONTAP per VMware vSphere 10 espone un singolo indirizzo IP che fornisce un gateway alle funzionalità della macchina virtuale. È necessario fornire l'indirizzo durante la configurazione iniziale ed è assegnato a un componente di bilanciamento del carico interno. L'indirizzo viene utilizzato dall'interfaccia utente di ONTAP tools Manager, nonché per accedere direttamente alla pagina di documentazione di Swagger e all'API REST.
+ONTAP tools for VMware vSphere 10 espone un singolo indirizzo IP esterno (precedentemente load balancer) che fornisce un gateway alle funzionalità della macchina virtuale. Fornisci questo indirizzo durante la configurazione iniziale. L'indirizzo viene utilizzato dall'interfaccia ONTAP tools Manager e per accedere direttamente alla pagina della documentazione Swagger e alla REST API.
 
 .Due API REST
 Oltre ai tool ONTAP per le API REST di VMware vSphere 10, il cluster ONTAP dispone di una propria API REST. ONTAP Tools Manager utilizza l'API REST di ONTAP come client per eseguire attività relative allo storage. È importante tenere presente che queste due API sono separate e distinte. Per ulteriori informazioni, fare riferimento a https://docs.netapp.com/us-en/ontap-automation/["Automazione ONTAP"^].
