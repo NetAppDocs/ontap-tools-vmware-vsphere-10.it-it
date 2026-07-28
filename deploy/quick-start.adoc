@@ -67,11 +67,6 @@ Aggiungi backend di storage locali con credenziali del cluster o SVM utilizzando
 [discrete]
 == Attività successive facoltative
 
-
-
-[[optional-next-tasks]]
-== Attività successive facoltative
-
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Uno"]Configura i ruoli e i privilegi utente ONTAP
 [role="quick-margin-para"]
 Configura ruoli ONTAP personalizzati per l'accesso con privilegi minimi invece di usare l'account admin predefinito.

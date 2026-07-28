@@ -197,6 +197,13 @@ NOTE: I conteggi degli host nella tabella rappresentano il totale combinato tra 
 
 
 
+[[configuration-limits-for-storage-backend-discovery]]
+== Limiti di configurazione per il rilevamento del backend di archiviazione
+
+ONTAP tools supporta il rilevamento del backend di storage per un massimo di 200 SVM e circa 10.000 LUN.
+
+
+
 [[configuration-limits-for-vmfs-and-nfs-datastores]]
 == Limiti di configurazione per i datastore VMFS e NFS
 
