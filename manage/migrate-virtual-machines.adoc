@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices 
 summary: Prima di migrare le macchine virtuali esistenti nel tuo data center, esamina gli aspetti chiave da considerare. 
 ---
-= Considerazioni sulla migrazione e la clonazione di macchine virtuali per ONTAP tools
+= Scopri la migrazione e la clonazione delle macchine virtuali negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP tools for VMware vSphere supportano tutti i principali tipi di migrazione di macchine virtuali, incluse le migrazioni di sola elaborazione (vMotion), di sola archiviazione (Storage vMotion) e quelle combinate di elaborazione e archiviazione su tutti i datastore. Questo argomento illustra le considerazioni chiave e le best practice per garantire la corretta migrazione e clonazione delle macchine virtuali, indipendentemente dal tipo di datastore sottostante.
+ONTAP tools for VMware vSphere supporta tutti i principali tipi di migrazione di macchine virtuali, inclusi solo elaborazione (vMotion), solo storage (Storage vMotion) e migrazione combinata di elaborazione e storage su tutti i datastore. Comprendere queste considerazioni e best practice relative alla migrazione e alla clonazione ti aiuta a ottenere risultati di successo, indipendentemente dal tipo di datastore sottostante.
 
 
 
@@ -25,7 +25,7 @@ ONTAP tools for VMware vSphere supportano tutti i principali tipi di migrazione 
 * Un datastore compatibile diverso su un host ESXi diverso
 
 
-Se si migra una macchina virtuale su un volume FlexVol diverso, il sistema aggiorna il file di metadati di tale volume con le informazioni della macchina virtuale. Se una macchina virtuale viene migrata su un host ESXi diverso ma sullo stesso storage, il file di metadati del volume FlexVol sottostante non verrà modificato.
+Se migri la macchina virtuale su un volume FlexVol diverso, il sistema aggiorna il file di metadati di quel volume con le informazioni della macchina virtuale. Se una macchina virtuale viene migrata su un host ESXi diverso ma sullo stesso storage, il file di metadati del volume FlexVol sottostante non viene modificato.
 
 Per informazioni sulla migrazione delle macchine virtuali, fai riferimento a https://techdocs.broadcom.com/["Documentazione Tecnica Broadcom"]
 
@@ -38,19 +38,19 @@ Per informazioni sulla migrazione delle macchine virtuali, fai riferimento a htt
 
 * Lo stesso container dello stesso FlexVol volume utilizzando un gruppo di replica
 +
-Il file di metadati dello stesso volume FlexVol viene aggiornato con i dettagli della macchina virtuale clonata.
+ONTAP tools aggiorna il file di metadati dello stesso volume FlexVol con i dettagli della macchina virtuale clonata.
 
 * Lo stesso container di un volume FlexVol diverso utilizzando un gruppo di replica
 +
-Nel volume FlexVol in cui è posizionata la macchina virtuale clonata, il file di metadati viene aggiornato con i dettagli della macchina virtuale clonata.
+Nel volume FlexVol in cui è posizionata la macchina virtuale clonata, ONTAP tools aggiorna il file di metadati con i dettagli della macchina virtuale clonata.
 
 * Un container o vVols datastore diverso
 +
-Nel volume FlexVol in cui è posizionata la macchina virtuale clonata, il file di metadati viene aggiornato con i dettagli della macchina virtuale.
+Nel volume FlexVol in cui è posizionata la macchina virtuale clonata, ONTAP tools aggiorna il file dei metadati con i dettagli della macchina virtuale.
 
 
 
-Attualmente VMware non supporta le macchine virtuali clonate in un modello di macchina virtuale.
+Al momento VMware non supporta le macchine virtuali clonate in un modello di macchina virtuale.
 
 È supportata la clonazione di una clonazione di una macchina virtuale protetta.
 

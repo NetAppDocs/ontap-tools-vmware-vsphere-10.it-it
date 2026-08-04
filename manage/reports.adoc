@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: ONTAP tools reports, virtual machine reports, datastore reports, VMware storage reporting 
 summary: Visualizza i report delle macchine virtuali e dei datastore nel plug-in ONTAP tools. 
 ---
-= Report sui tool ONTAP
+= Report di ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-I tool ONTAP per il plug-in VMware vSphere forniscono report su macchine virtuali e datastore. Quando si seleziona l'icona degli strumenti NetApp ONTAP per il plug-in VMware vSphere nella sezione Collegamenti del client vCenter, l'interfaccia utente passa alla pagina Panoramica. Selezionare la scheda rapporti per visualizzare la macchina virtuale e il report degli archivi dati.
+Il plug-in ONTAP tools for VMware vSphere fornisce report che ti aiutano a monitorare le macchine virtuali e i datastore supportati dallo storage ONTAP. Per visualizzare questi report, seleziona l'icona del plug-in ONTAP tools for VMware vSphere nella sezione scorciatoie del client vCenter, quindi seleziona la scheda Report.
 
-Il report Macchine virtuali mostra l'elenco delle macchine virtuali rilevate (dovrebbero avere almeno un disco da datastore basati su storage ONTAP ) con metriche delle prestazioni. Quando si espande il record della VM, l'interfaccia visualizza tutte le informazioni relative al datastore relative al disco.
+Il report Macchine virtuali elenca le macchine virtuali rilevate che dispongono di almeno un disco su un datastore basato su storage ONTAP, insieme alle metriche sulle prestazioni. Quando espandi il record della macchina virtuale, l'interfaccia visualizza tutte le informazioni relative al datastore e al disco.
 
-Il report sui datastore elenca gli ONTAP tools for VMware vSphere rilevati o riconosciuti che utilizzano qualsiasi storage ONTAP , con metriche delle prestazioni.
+Il report sui datastore elenca i datastore che ONTAP tools for VMware vSphere rileva e che utilizzano lo storage ONTAP, insieme alle metriche sulle prestazioni.
 
 È possibile utilizzare l'opzione Gestisci colonne per nascondere o visualizzare colonne diverse.

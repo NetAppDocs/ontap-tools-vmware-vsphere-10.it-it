@@ -11,7 +11,7 @@ summary: 'Avvia SSH sugli altri nodi prima di eseguire l"aggiornamento.'
 
 
 [role="lead"]
-Prima di eseguire l'aggiornamento, è necessario avviare SSH su altri nodi.
+Prima di aggiornare ONTAP tools for VMware vSphere, devi avviare SSH su ciascuno degli altri nodi del tuo ambiente.
 
 .Prima di iniziare
 Abilita l'estensione VASA Provider per la tua istanza di vCenter Server.

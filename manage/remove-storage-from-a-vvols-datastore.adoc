@@ -11,11 +11,11 @@ summary: Elimina un vVols datastore solo quando non rimangono vVols nel datastor
 
 
 [role="lead"]
-Questa pagina spiega come rimuovere volumi da un datastore vVols .
+Utilizza l'azione "Rimuovi storage dal datastore" per rimuovere i volumi da un vVols datastore in ONTAP tools, riducendone la capacità quando lo storage aggiuntivo non è più necessario.
 
 Utilizzare l'azione di rimozione dello storage dal datastore su qualsiasi datastore vVols gestito dagli strumenti ONTAP in vCenter Server.
 
-Non è possibile rimuovere l'archiviazione da un volume se contiene vVols; l'opzione di rimozione sarà disabilitata per tali volumi.  Quando si rimuovono volumi dal datastore, è anche possibile eliminare i volumi selezionati dall'archiviazione ONTAP .
+Non puoi rimuovere lo storage da un volume se contiene vVols; l'opzione di rimozione è disabilitata per tali volumi. Quando rimuovi i volumi dal datastore, hai anche la possibilità di eliminare i volumi selezionati dallo storage ONTAP.
 
 
 NOTE: L'operazione di riduzione del datastore vVols non è supportata per i datastore vVols basati sui sistemi ASA r2.
@@ -27,7 +27,7 @@ NOTE: L'operazione di riduzione del datastore vVols non è supportata per i data
 . Selezionare i volumi che non hanno vVols e selezionare *Rimuovi*.
 +
 
-NOTE: L'opzione per selezionare il volume su cui risiede vVols è disabilitata.
+NOTE: L'opzione per selezionare il volume su cui vVols risiedono è disabilitata.
 
-. Nella finestra pop-up *Rimuovi storage*, seleziona la casella di controllo *Elimina volumi dal cluster ONTAP* per eliminare i volumi dal datastore e dallo storage ONTAP e seleziona *Elimina*.
+. Nella finestra a comparsa *Rimuovi storage*, seleziona la casella di controllo *Elimina volumi dal cluster ONTAP* per eliminare i volumi dal datastore e dallo storage ONTAP, quindi seleziona *Elimina*.
 

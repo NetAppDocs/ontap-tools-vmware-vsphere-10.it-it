@@ -14,17 +14,17 @@ summary: 'Esamina l"ambiente RBAC di ONTAP e come controlla l"accesso allo stora
 
 
 [role="lead"]
-ONTAP fornisce un ambiente RBAC solido ed estensibile. Puoi utilizzare la funzionalità RBAC per controllare l'accesso alle operazioni di storage e sistema così come esposte attraverso l'API REST e la CLI. È utile acquisire familiarità con l'ambiente prima di utilizzarlo con gli strumenti ONTAP per la distribuzione di VMware vSphere 10.
+ONTAP offre un ambiente RBAC robusto ed estensibile che controlla l'accesso allo storage e alle operazioni di sistema tramite REST API e CLI. Comprendere i concetti RBAC di ONTAP — inclusi i tipi di ruolo, gli ambiti e i privilegi — ti aiuta a configurare e gestire l'accesso degli utenti per la tua implementazione di ONTAP tools for VMware vSphere 10.
 
 
 
 [[overview-of-the-administrative-options]]
 == Panoramica delle opzioni amministrative
 
-Ci sono diverse opzioni disponibili quando si utilizza RBAC ONTAP in base al tuo ambiente e agli obiettivi. Di seguito viene presentata una panoramica delle principali decisioni amministrative. Per ulteriori informazioni, vedere anche https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["Automazione ONTAP: Panoramica della sicurezza RBAC"^].
+Sono disponibili diverse opzioni per l'utilizzo di ONTAP RBAC, a seconda dell'ambiente e degli obiettivi. Le sezioni seguenti forniscono una panoramica delle principali decisioni amministrative. Vedi anche  https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html["Automazione ONTAP: Panoramica della sicurezza RBAC"^] per ulteriori informazioni.
 
 
-NOTE: ONTAP RBAC è progettato su misura per un ambiente di archiviazione ed è più semplice dell'implementazione RBAC fornita con vCenter Server.  Con ONTAP, assegni un ruolo direttamente all'utente.  Con ONTAP RBAC non è necessario configurare autorizzazioni esplicite, come quelle utilizzate con vCenter Server.
+NOTE: ONTAP RBAC è progettato specificamente per un ambiente di storage ed è più semplice rispetto all'implementazione RBAC fornita con vCenter Server. Con ONTAP, assegni un ruolo direttamente all'utente. A differenza di vCenter Server, ONTAP RBAC non richiede di configurare autorizzazioni esplicite.
 
 .Tipi di ruoli e Privileges
 Quando si definisce un utente ONTAP, è necessario un ruolo ONTAP. Esistono due tipi di ruoli ONTAP:
@@ -39,7 +39,7 @@ Si tratta dei ruoli legacy esistenti prima di ONTAP 9.6. Essi continuano a rappr
 
 
 
-Sebbene i ruoli REST siano stati introdotti più di recente, i ruoli tradizionali offrono alcuni vantaggi. Ad esempio, è possibile includere parametri di query aggiuntivi per consentire ai Privileges di definire con maggiore precisione gli oggetti a cui si applicano.
+Sebbene i ruoli REST siano stati introdotti più di recente, i ruoli tradizionali offrono alcuni vantaggi. Ad esempio, puoi includere parametri di query aggiuntivi così che i privilegi definiscano con maggiore precisione gli oggetti a cui si applicano.
 
 .Scopo
 I ruoli ONTAP possono essere definiti con uno dei due ambiti diversi. Possono essere applicati a una SVM dati specifica (livello SVM) o all'intero cluster ONTAP (livello cluster).
@@ -52,7 +52,7 @@ ONTAP offre un set di ruoli predefiniti a livello di cluster e SVM. È inoltre p
 [[working-with-ontap-rest-roles]]
 == Utilizzo dei ruoli REST ONTAP
 
-Quando si utilizzano i ruoli REST ONTAP inclusi negli strumenti ONTAP per VMware vSphere 10, è necessario prendere in considerazione diverse considerazioni.
+Tieni presente quanto segue quando usi i ruoli REST ONTAP inclusi negli ONTAP tools for VMware vSphere 10.
 
 .Mappatura dei ruoli
 Indipendentemente dall'utilizzo di un ruolo tradizionale o REST, tutte le decisioni relative all'accesso a ONTAP vengono prese in base al comando CLI sottostante. Tuttavia, poiché Privileges in un ruolo REST è definito in termini di endpoint API REST, ONTAP deve creare un ruolo tradizionale _mapped_ per ciascuno dei ruoli REST. Pertanto, ogni ruolo REST viene associato a un ruolo tradizionale sottostante. In questo modo, ONTAP può prendere decisioni sul controllo degli accessi in modo coerente, indipendentemente dal tipo di ruolo. Non è possibile modificare i ruoli mappati paralleli.

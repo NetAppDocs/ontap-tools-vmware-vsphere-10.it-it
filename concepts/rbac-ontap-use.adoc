@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition 
 summary: Esamina le considerazioni RBAC di ONTAP per gli ONTAP tools prima di usarli in un ambiente di produzione. 
 ---
-= Considerazioni RBAC di ONTAP per ONTAP tools
+= ONTAP RBAC negli ONTAP tools for VMware vSphere
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Esistono diversi aspetti dei tool ONTAP per l'implementazione RBAC di VMware vSphere 10 con ONTAP che è necessario prendere in considerazione prima di utilizzarlo in un ambiente di produzione.
+ONTAP tools for VMware vSphere supporta il controllo degli accessi in base al ruolo (RBAC) tramite ONTAP, permettendoti di creare utenti e ruoli personalizzati che limitano l'accesso alle risorse di storage. Capire il processo di configurazione e i livelli di privilegio ti aiuta a impostare controlli di accesso appropriati prima di implementare ONTAP tools in un ambiente di produzione.
 
 
 
@@ -20,7 +20,7 @@ Esistono diversi aspetti dei tool ONTAP per l'implementazione RBAC di VMware vSp
 
 Gli ONTAP tools for VMware vSphere includono il supporto per la creazione di un utente ONTAP con un ruolo personalizzato.  Le definizioni sono impacchettate in un file JSON che è possibile caricare nel cluster ONTAP .  Puoi creare l'utente e personalizzare il ruolo in base al tuo ambiente e alle tue esigenze di sicurezza.
 
-Le fasi principali della configurazione sono descritte in alto di seguito. Per link:../configure/configure-user-role-and-privileges.html["Configurare i ruoli e i privilegi degli utenti ONTAP"]ulteriori dettagli, fare riferimento a.
+La sezione seguente descrive a high-level le principali fasi di configurazione. Consulta link:../configure/configure-user-role-and-privileges.html["Configurare i ruoli e i privilegi degli utenti ONTAP"] per maggiori dettagli.
 
 .1. Preparatevi
 È necessario disporre delle credenziali di amministratore per ONTAP Tools Manager e per il cluster ONTAP.
@@ -32,7 +32,7 @@ Dopo aver effettuato l'accesso all'interfaccia utente di ONTAP Tools Manager, è
 Dopo aver effettuato l'accesso a System Manager, è possibile creare l'utente e il ruolo:
 
 . Selezionare *Cluster* sulla sinistra, quindi *Settings*.
-. Scorrere fino a *utenti e ruoli* e fare clic su `-->`.
+. Scorri verso il basso fino a *Utenti e ruoli* e seleziona  `-->`.
 . Selezionare *Aggiungi* in *utenti* e selezionare *prodotti di virtualizzazione*.
 . Selezionare il file JSON sulla workstation locale e caricarlo.
 
@@ -84,7 +84,7 @@ Questo ruolo consente di distruggere lo storage. Include inoltre tutta la Privil
 [[generate-the-user-with-a-role]]
 === Generare l'utente con un ruolo
 
-Dopo aver selezionato le opzioni di configurazione per il proprio ambiente, fare clic su *Aggiungi* e ONTAP crea l'utente e il ruolo. Il nome del ruolo generato è una concatenazione dei seguenti valori:
+Dopo aver selezionato le opzioni di configurazione per il tuo ambiente, seleziona *Aggiungi* e ONTAP crea l'utente e il ruolo. Il nome del ruolo generato è una concatenazione dei seguenti valori:
 
 * Valore del prefisso costante definito nel file JSON (ad esempio "OTV_10")
 * Capacità del prodotto selezionata
@@ -94,4 +94,4 @@ Dopo aver selezionato le opzioni di configurazione per il proprio ambiente, fare
 .Esempio
 `OTV_10_VSC_Discovery_Create`
 
-Il nuovo utente verrà aggiunto all'elenco nella pagina 'Utenti e ruoli'. Si noti che sono supportati entrambi i metodi di accesso utente, HTTP e ONTAPI.
+Il nuovo utente appare nell'elenco nella pagina *Utenti e ruoli*. Nota che sono supportati entrambi i metodi di accesso utente, HTTP e ONTAPI.

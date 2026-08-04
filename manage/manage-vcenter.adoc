@@ -11,7 +11,7 @@ summary: Gestisci le istanze di vCenter negli ONTAP tools per controllare host, 
 
 
 [role="lead"]
-Le istanze di vCenter Server sono piattaforme di gestione centrali che consentono di controllare host, macchine virtuali e backend dello storage.
+Le istanze di vCenter Server sono piattaforme di gestione centralizzate che ti permettono di controllare host, macchine virtuali e backend di storage. Negli ONTAP tools puoi dissociare i backend di storage, modificare i dettagli delle istanze, rimuovere le istanze e rinnovare i certificati del server vCenter.
 
 
 
@@ -32,6 +32,8 @@ La pagina dell'elenco di vCenter Server mostra il numero associato di backend st
 
 [[modify-a-vcenter-server-instance]]
 == Modificare un'istanza di vCenter Server
+
+Modifica un'istanza del server vCenter completando i seguenti passaggi.
 
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
@@ -117,7 +119,7 @@ Gli strumenti ONTAP ti avvisano quando il certificato vCenter sta per scadere o 
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
 ----
-. Assicurarsi che il certificato sia in formato Base 64 ASCII e includa le righe iniziali e finali, ad esempio:
+. Verifica che il certificato sia in formato ASCII Base 64 e che includa le righe di inizio e fine, ad esempio:
 +
 [listing]
 ----
