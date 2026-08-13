@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SRA timeout settings, highly scaled environment, VMware Live Site Recovery, storage provider settings, ONTAP tools 
 summary: Configura le impostazioni di timeout del provider di storage VMware Live Site Recovery per SRA in ambienti altamente scalati. 
 ---
-= Configurare SRA in ONTAP tools per ambienti altamente scalabili
+= Impostazioni di timeout SRA per ambienti altamente scalabili negli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

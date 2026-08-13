@@ -2016,8 +2016,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="dc99d10a215fcfc7c9cc258f6b526f04" category="doc">Configurare SRA utilizzando il gestore array in ONTAP tools</block>
   <block id="f825d08cca5235c68d18f5f167189a42" category="doc">Configurare SRA sull'appliance VMware Live Site Recovery utilizzando ONTAP tools</block>
   <block id="8c8cc20f279873e3e2c26985f73dde50" category="doc">Configurare i datastore segnaposto negli ONTAP tools</block>
-  <block id="7daa54a7e34530faf73a185cac6ff92e" category="doc">Configura i siti protetti e di ripristino negli ONTAP tools</block>
-  <block id="7f76078e340f36a84d5f402d8a9e9ed2" category="doc">Configurare SRA in ONTAP tools per ambienti altamente scalabili</block>
   <block id="366099eedc535323fc065faade609247" category="doc">Configurare SRA in ONTAP tools for VMware vSphere per ambienti SAN e NAS</block>
   <block id="36acaddf44788c31be5317a19ff8bcfa" category="doc">Configurare SRA negli ONTAP tools per proteggere i datastore</block>
   <block id="866ca228b7c9c7c4dd7f33b4edfe6343" category="doc">Protezione fan-out negli ONTAP tools</block>
@@ -2851,7 +2849,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="41d5b3331c49688beabf64a476565b2f" category="paragraph">Per ulteriori informazioni, fare riferimento a<block ref="63042c288d643bd286f708c30aa7eeb1" category="inline-link-rx"></block></block>
   <block id="70ada8320af8255a677b6ffe7e62fb77" category="list-text">Aggiungere i datastore alla protezione del cluster host seguendo <block ref="606bd525eb6add3259ec861686535f41" category="inline-link-macro-rx"></block>. Aggiungere sia i tipi di policy asincroni che sincroni.</block>
   <block id="30c3acc62ace9fe8b9f51083513c9b1f" category="summary">Comprendi la protezione granulare dei datastore e i criteri di idoneità dei datastore prima di proteggerli in un cluster host.</block>
-  <block id="f8bdb2b4320068538b2e660cf5594097" category="doc">Criteri di idoneità per la protezione granulare dei datastore</block>
   <block id="7a6c5f13c11ac0091369e5de3372b041" category="paragraph">Usa la protezione granulare dei datastore per proteggere i datastore VMFS selezionati in un cluster host invece di proteggere l'intero cluster.</block>
   <block id="94ba1053dfcb4c2f50ecb31c2a3a48e9" category="paragraph">La protezione granulare del datastore è disponibile con ONTAP tools for VMware vSphere 10.6 e versioni successive. Questa funzionalità offre la pianificazione della protezione a livello di datastore invece che la selezione a livello di cluster.</block>
   <block id="5885c3f17ed13c3b9ddcd82efb888751" category="paragraph">Questa funzione ti consente di:</block>
@@ -3123,4 +3120,7 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="f02ba84a6292d236b6193eb515758b58" category="cell">La pagina elenca tutti i volumi. Puoi espandere o rimuovere lo storage dal riquadro di storage ONTAP. ONTAP tools for VMware vSphere non supporta questa visualizzazione per i datastore vVols basati su sistema ASA r2.</block>
   <block id="d6ac92fc703f8db58239689a33a3a860" category="doc">Disinstalla la tua distribuzione di ONTAP tools for VMware vSphere</block>
   <block id="675f332e8d70702f8454fa3cd1db7207" category="paragraph">La disinstallazione di ONTAP tools for VMware vSphere elimina tutti i dati negli strumenti, quindi devi completare questi passaggi per terminare correttamente la tua distribuzione ed evitare perdite di dati impreviste.</block>
+  <block id="61aba9a185948f67b0e30c93c8bd8745" category="doc">Associa i siti e configura i gruppi di protezione negli strumenti ONTAP</block>
+  <block id="2f1ee6929021bf5cd62c7d2d50b7d710" category="doc">Impostazioni di timeout SRA per ambienti altamente scalabili negli strumenti ONTAP</block>
+  <block id="ead0b27d7cf57e3420b139c5b99f4200" category="doc">Criteri di idoneità per la protezione granulare dei datastore negli strumenti ONTAP</block>
 </blocks>

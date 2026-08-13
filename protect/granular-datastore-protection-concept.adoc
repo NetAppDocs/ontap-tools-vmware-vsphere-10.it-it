@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection 
 summary: Comprendi la protezione granulare dei datastore e i criteri di idoneità dei datastore prima di proteggerli in un cluster host. 
 ---
-= Criteri di idoneità per la protezione granulare dei datastore
+= Criteri di idoneità per la protezione granulare dei datastore negli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
