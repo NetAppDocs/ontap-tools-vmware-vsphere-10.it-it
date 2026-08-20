@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine 
 summary: 'Visualizza l"elenco dei vVols creati da una macchina virtuale dalla vista dello storage.' 
 ---
-= Visualizzazione dell'archiviazione della macchina virtuale in ONTAP tools
+= Visualizza i dettagli di storage delle macchine virtuali in ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La vista di archiviazione mostra l'elenco dei vVols creati dalla macchina virtuale.
+Usa la vista di storage per vedere i vVols associati a una macchina virtuale.
 
 
 NOTE: Questa visualizzazione si applica alle VM con almeno un disco da un datastore vVols gestito da ONTAP tools for VMware vSphere .
@@ -19,8 +19,8 @@ NOTE: Questa visualizzazione si applica alle VM con almeno un disco da un datast
 .Fasi
 . Da vSphere Client vai alla macchina virtuale.
 . Selezionare la scheda *Monitor* nel riquadro di destra.
-. Selezionare *NetApp ONTAP tools* > *Storage*. I dettagli *archiviazione* vengono visualizzati nel riquadro di destra. È possibile visualizzare l'elenco dei vVol presenti sulla VM.
+. Seleziona *NetApp ONTAP tools* > *Storage*. I dettagli di *Storage* vengono visualizzati nel riquadro di destra. Puoi vedere l'elenco di vVols sulla VM.
 +
-È possibile utilizzare l'opzione 'Gestisci colonne' per nascondere o visualizzare colonne diverse.
+Puoi usare l'opzione *Gestisci colonne* per nascondere o mostrare le colonne.
 
 

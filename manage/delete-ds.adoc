@@ -11,7 +11,7 @@ summary: Elimina un datastore NFS, VMFS o vVols e rivedi le macchine virtuali ch
 
 
 [role="lead"]
-Usa questa procedura per eliminare i datastore NFS, VMFS o vVols utilizzando gli ONTAP tools in vCenter Server. Il comportamento di eliminazione e le opzioni di pulizia variano in base al tipo di datastore.
+Elimina i datastore NFS, VMFS o vVols in vCenter Server utilizzando ONTAP tools. Il comportamento di eliminazione e le opzioni di pulizia variano in base al tipo di datastore.
 
 .Comportamento di eliminazione per i datastore NFS e VMFS
 * Non puoi eliminare un datastore utilizzato da macchine virtuali.
@@ -24,7 +24,7 @@ Per i datastore vVols vengono eseguite le seguenti azioni:
 * Il contenitore vVol è smontato.
 * Se l'igroup non è in uso, i suoi initiator vengono rimossi dall'igroup.
 * Il contenitore vVol è stato eliminato.
-* I volumi flessibili vengono lasciati nell'array di archiviazione.
+* I volumi Flex rimangono sul backend di storage.
 
 
 Per gli archivi dati vVols, puoi eliminare l'archivio dati solo se non sono presenti vVols nell'archivio dati selezionato.
@@ -50,7 +50,7 @@ Per gli archivi dati vVols, puoi eliminare l'archivio dati solo se non sono pres
 |===
 .Fasi
 . Accedi al vSphere Client.
-. Fare clic con il pulsante destro del mouse su un sistema host, un cluster host o un data center e selezionare *Strumenti NetApp ONTAP * > *Elimina datastore*.
+. Fai clic con il pulsante destro del mouse su un sistema host, un cluster o un data center e seleziona *NetApp ONTAP tools* > *Elimina datastore*.
 +
 
 NOTE: Non puoi eliminare un datastore utilizzato da macchine virtuali. Sposta le macchine virtuali in un altro datastore prima di eliminarlo.

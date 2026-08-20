@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping 
 summary: Scopri come ONTAP tools rappresenta e gestisce gli igroup nidificati per una mappatura efficiente di host e datastore. 
 ---
-= Come ONTAP tools gestisce gli igroup
+= Gestione nidificata degli igroup negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Se gestisci sia le macchine virtuali ONTAP tools che i sistemi di storage ONTAP, devi capire come si comportano gli igroup, soprattutto quando sposti i datastore da ambienti non gestiti da ONTAP tools a quelli che lo sono. ONTAP tools per VMware vSphere rappresenta e gestisce gli igroup utilizzando un modello di igroup nidificato, e capire questo modello ti aiuta a interpretare le differenze di comportamento tra le versioni precedenti e l'attuale implementazione.
+Se sposti datastore da ambienti non gestiti da ONTAP tools ad ambienti che lo sono, assicurati di capire come si comportano gli igroup. ONTAP tools for VMware vSphere utilizza un modello di igroup nidificato, che aiuta a spiegare le differenze di comportamento tra le versioni precedenti e l'implementazione attuale.
 
-A partire da ONTAP tools for VMware vSphere 10.4, ONTAP tools for VMware crea e gestisce automaticamente oggetti ONTAP e vCenter, semplificando la gestione dei datastore negli ambienti datacenter VMware. A partire da ONTAP tools for VMware vSphere 10.5 P2, anche gli igroup migrati vengono eliminati automaticamente quando non sono più in uso.
+A partire da ONTAP tools for VMware vSphere 10.4, ONTAP tools for VMware crea e mantiene automaticamente oggetti ONTAP e vCenter, semplificando la gestione dei datastore negli ambienti datacenter VMware. A partire da ONTAP tools for VMware vSphere 10.5 P2, ONTAP tools for VMware elimina automaticamente anche gli igroup migrati quando non sono più in uso.
 
 
 

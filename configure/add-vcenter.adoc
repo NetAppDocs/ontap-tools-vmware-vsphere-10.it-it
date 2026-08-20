@@ -11,7 +11,7 @@ summary: Aggiungi le istanze del server vCenter agli ONTAP tools per configurare
 
 
 [role="lead"]
-Aggiungi istanze vCenter Server a ONTAP tools for VMware vSphere per configurare, gestire e proteggere i datastore nel tuo ambiente vCenter Server. Quando aggiungi più istanze vCenter Server, sono necessari certificati CA personalizzati per una comunicazione sicura tra ONTAP tools e ciascuna istanza vCenter Server.
+Aggiungi istanze vCenter Server a ONTAP tools for VMware vSphere per configurare, gestire e proteggere i datastore nel tuo ambiente vCenter Server. Quando aggiungi più istanze vCenter Server, configura certificati CA personalizzati per una comunicazione sicura tra ONTAP tools e ciascuna istanza vCenter Server.
 
 .A proposito di questa attività
 Gli strumenti ONTAP si integrano con vCenter Server per eseguire attività di archiviazione come provisioning, snapshot e protezione dei dati direttamente dal client vSphere.
@@ -19,8 +19,8 @@ Gli strumenti ONTAP si integrano con vCenter Server per eseguire attività di ar
 L'aggiunta di un'istanza di vCenter Server agli strumenti ONTAP attiva automaticamente le seguenti azioni:
 
 * Gli strumenti ONTAP registrano il plug-in del client vCenter come plug-in remoto.
-* All'istanza di vCenter Server vengono applicate le Privileges personalizzate per i plug-in e le API.
-* Per gestire gli utenti vengono creati ruoli personalizzati.
+* ONTAP tools applica privilegi personalizzati per i plug-in e le API all'istanza vCenter Server.
+* ONTAP tools crea ruoli personalizzati per gestire gli utenti.
 * Il plug-in viene visualizzato come collegamento nell'interfaccia utente di vSphere.
 
 
@@ -37,7 +37,7 @@ X509v3 extensions:
 Se il certificato non include un'estensione SAN, o se l'estensione SAN non contiene i valori DNS o di indirizzo IP corretti, le operazioni di ONTAP tools potrebbero non riuscire a causa di errori di convalida del certificato.
 
 * L'identificatore di rete primario (PNID) del vCenter Server deve essere incluso nei dettagli SAN. Il PNID e il nome DNS devono essere identici e risolvibili nel DNS.
-* Si raccomanda di distribuire vCenter Server utilizzando il suo fully qualified domain name (FQDN), assicurandosi che il SAN nel certificato includa DNS Name=machine_FQDN per una compatibilità e un supporto ottimali.
+* Distribuisci vCenter Server utilizzando il suo fully qualified domain name (FQDN) e assicurati che il SAN nel certificato includa DNS Name=machine_FQDN per una compatibilità e un supporto ottimali.
 * Per ulteriori informazioni, fare riferimento alla documentazione VMware:
 +
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html["vSphere Certificate Requirements per diversi percorsi di soluzione"]
@@ -49,7 +49,7 @@ Se il certificato non include un'estensione SAN, o se l'estensione SAN non conti
 
 [NOTE]
 ====
-Se l'FQDN non è disponibile, puoi impostare il PNID sull'indirizzo IP e includere l'indirizzo IP nella SAN. Tuttavia, questo non è raccomandato da VMware.
+Se il FQDN non è disponibile, puoi impostare il PNID sull'indirizzo IP e includere l'indirizzo IP nella SAN. Tuttavia, VMware sconsiglia questa configurazione.
 
 ====
 .Fasi
@@ -59,6 +59,6 @@ Se l'FQDN non è disponibile, puoi impostare il PNID sull'indirizzo IP e include
 . Nelle opzioni avanzate, è possibile recuperare automaticamente il certificato di vCenter Server (autorizzarlo) oppure caricarlo manualmente.
 +
 
-NOTE: Non occorre un account di amministratore per aggiungere istanze vCenter agli strumenti ONTAP. È possibile creare un ruolo personalizzato senza l'account admin con autorizzazioni limitate. Per ulteriori informazioni, fare riferimento alla link:../concepts/rbac-vcenter-use.html["USA vCenter Server RBAC con i tool ONTAP per VMware vSphere 10"] sezione.
+NOTE: Non ti serve un account admin per aggiungere istanze vCenter a ONTAP tools. Puoi creare un ruolo personalizzato senza l’account admin, con permessi limitati. Consulta link:../concepts/rbac-vcenter-use.html["USA vCenter Server RBAC con i tool ONTAP per VMware vSphere 10"] per i dettagli.
 
 

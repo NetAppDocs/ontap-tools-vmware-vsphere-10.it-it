@@ -11,7 +11,7 @@ summary: Termina correttamente la distribuzione degli ONTAP tools per VMware vSp
 
 
 [role="lead"]
-La disinstallazione di ONTAP tools for VMware vSphere elimina tutti i dati negli strumenti, quindi devi completare questi passaggi per terminare correttamente la tua distribuzione ed evitare perdite di dati impreviste.
+La disinstallazione di ONTAP tools per VMware vSphere elimina i dati nell'appliance, quindi completa questi passaggi per arrestare correttamente l'implementazione ed evitare perdite di dati impreviste.
 
 .Fasi
 . Rimuovere o spostare tutte le macchine virtuali dai tool ONTAP per datastore gestiti da VMware vSphere.
@@ -21,7 +21,7 @@ La disinstallazione di ONTAP tools for VMware vSphere elimina tutti i dati negli
 
 
 . link:../manage/delete-ds.html["Elimina datastore"] Creato su tool ONTAP per VMware vSphere.
-. Se hai abilitato il provider VASA, seleziona *Impostazioni* > *Impostazioni provider VASA* > *Annulla registrazione* negli strumenti ONTAP per annullare la registrazione dei provider VASA da tutti i server vCenter.
+. Se hai abilitato il VASA Provider, seleziona *Impostazioni* > *Impostazioni VASA Provider* > *Annulla registrazione* in ONTAP tools per annullare la registrazione del VASA Provider da tutte le istanze del server vCenter.
 . Disassociare tutti i backend di storage dall'istanza di vCenter Server. Fare riferimento alla link:../manage/manage-vcenter.html["Dissociare i backend di storage con l'istanza di vCenter Server"].
 . Eliminare tutti i backend di archiviazione. Fare riferimento alla link:../manage/storage-backend.html["Gestire i back-end dello storage"].
 . Rimuovere l'adattatore SRA da VMware Live Site Recovery:

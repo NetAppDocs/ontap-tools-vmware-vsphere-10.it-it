@@ -11,9 +11,12 @@ summary: Crea datastore NFS, VMFS o vVols negli ONTAP tools a livello di host o 
 
 
 [role="lead"]
-Quando si crea un datastore a livello di cluster host, gli strumenti ONTAP lo montano su tutti gli host di destinazione e abilitano l'azione solo se si dispone dei privilegi richiesti.
+Crea un datastore NFS, VMFS o vVols a livello di host o di cluster di host. Quando crei un datastore a livello di cluster di host, ONTAP tools lo monta su tutti gli host di destinazione, a condizione che tu abbia i privilegi necessari.
 
-*Interoperabilità tra datastore nativi con vCenter Server e datastore gestiti da strumenti ONTAP*
+
+
+[[interoperability-between-native-datastores-and-ontap-tools-managed-datastores]]
+== Interoperabilità tra datastore nativi e datastore gestiti da ONTAP tools
 
 A partire dagli ONTAP tools for VMware vSphere 10.4, gli strumenti ONTAP creano igroup annidati per gli archivi dati, con igroup padre specifici per gli archivi dati e igroup figlio mappati agli host.  È possibile creare igroup piatti da ONTAP System Manager e utilizzarli per creare datastore VMFS senza ricorrere agli strumenti ONTAP . Fare riferimento a https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Gestire gli iniziatori SAN e gli igroup"] per maggiori informazioni.
 
@@ -43,7 +46,7 @@ NOTE: Il sistema ASA R2 supporta i protocolli iSCSI e FC per i vVol.
 . Seleziona la macchina virtuale storage in cui desideri creare il datastore.
 . In *Opzioni avanzate*:
 +
-** Se selezioni *Custom export policy*, esegui la discovery in vCenter per tutti gli oggetti prima di continuare. Ti consigliamo di non usare questa opzione.
+** Se selezioni la *Custom export policy*, esegui la discovery in vCenter per tutti gli oggetti prima di continuare. NetApp consiglia di non usare questa opzione.
 ** È possibile selezionare un nome *Custom initiator group* per i protocolli iSCSI e FC.
 +
 
@@ -61,7 +64,7 @@ Quando si crea un nuovo volume, è possibile abilitare il QoS sul datastore. Per
 --
 .Creare un datastore NFS
 --
-Un datastore NFS collega gli host ESXi allo storage condiviso utilizzando il protocollo NFS. È semplice e flessibile e viene utilizzato negli ambienti VMware vSphere.
+Un datastore NFS connette gli host ESXi allo storage condiviso utilizzando il protocollo NFS. È semplice e flessibile, e gli ambienti VMware vSphere lo usano comunemente.
 
 .Fasi
 . Accedi al vSphere Client.
@@ -84,7 +87,7 @@ NOTE: L'autenticazione Kerberos è disponibile solo quando è selezionato il pro
 NOTE: Non è possibile creare un datastore NFS utilizzando il criterio del volume predefinito o root dell'SVM.
 
 +
-** Nelle *Opzioni avanzate*, il pulsante di attivazione *Asimmetrico* è visibile solo se nel menu a tendina della piattaforma è selezionata l'opzione prestazioni o capacità. Tuttavia, l'opzione *Asimmetrico* non si applica alla creazione di datastore NFS.
+** Nelle *Opzioni avanzate*, il pulsante di attivazione *Asimmetrico* è visibile solo se selezioni prestazioni o capacità nell'elenco a discesa della piattaforma. Tuttavia, l'opzione *Asimmetrico* non si applica alla creazione di datastore NFS.
 ** Quando scegli l'opzione *Any* nel menu a tendina della piattaforma, tutti gli SVM nel vCenter sono visibili. Le impostazioni della piattaforma e dell'asimmetria non influiscono sulla visibilità.
 
 
@@ -118,7 +121,7 @@ NOTE: VMware vSphere 7,0 U3 e le versioni successive supportano il protocollo NV
 
 * Se usi il protocollo NVMe/FC, segui questi passaggi per configurare l'host ESXi:
 +
-.. Se non è già abilitato, abilita NVMe over Fabrics (NVMe-oF) sul tuo host ESXi.
+.. Se non è già abilitato, abilita NVMe over Fabrics (NVMe-oF) sui tuoi host ESXi.
 .. Zoning SCSI completo.
 .. Verificare che gli host ESXi e il sistema ONTAP siano connessi a un livello fisico e logico.
 

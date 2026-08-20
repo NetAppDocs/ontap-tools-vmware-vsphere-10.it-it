@@ -6,17 +6,21 @@ summary: 'Configura le impostazioni di multipathing dell"host ESXi e di timeout 
 ---
 = Configurare le impostazioni dell'host ESXi negli ONTAP tools
 :allow-uri-read: 
+:firstname: = Configure ESXi host settings in ONTAP tools
+:author: = Configure ESXi host settings in ONTAP tools
+:authorinitials: =
+:authors: = Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-La configurazione delle impostazioni multipath e timeout del server ESXi aiuta a mantenere la disponibilità e l'integrità dei dati.  Abilita il failover automatico su un percorso di archiviazione di backup se il percorso primario non è più disponibile.
+La configurazione delle impostazioni di multipath e timeout dell'host ESXi ti aiuta a mantenere la disponibilità e l'integrità dei dati. Ti permette il failover automatico su un percorso di storage per il backup se il percorso primario diventa non disponibile.
 
 
 
-[[configure-esxi-server-multipath-and-timeout-settings]]
-== Configurare le impostazioni di multipath e timeout del server ESXi
+[[apply-recommended-esxi-host-settings]]
+== Applica le impostazioni host ESXi consigliate
 
 I tool ONTAP per VMware vSphere controllano e impostano le impostazioni di multipath host ESXi e le impostazioni di timeout HBA che funzionano meglio con i sistemi storage NetApp.
 
@@ -27,7 +31,7 @@ Questo processo potrebbe richiedere del tempo, a seconda della configurazione e 
 . Dalla home page del client Web VMware vSphere, selezionare *host e cluster*.
 . Nella pagina dei collegamenti del client Web VMware vSphere, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
 . Andare alla scheda *ESXi host compliance* nella panoramica (dashboard) degli strumenti ONTAP per il plug-in VMware vSphere.
-. Selezionare il collegamento *Applica impostazioni consigliate*.
+. Seleziona il link *Applica impostazioni consigliate*.
 . Nella finestra *Applica impostazioni host consigliate*, seleziona gli host che desideri aggiornare per utilizzare le impostazioni consigliate NetApp e seleziona *Avanti*.
 +
 
@@ -51,7 +55,7 @@ Utilizzare gli ONTAP tools for VMware vSphere per impostare timeout e altri valo
 [[hbacna-adapter-settings]]
 === Impostazioni adattatore HBA/CNA
 
-Imposta i seguenti parametri sui valori predefiniti:
+ONTAP tools imposta i seguenti parametri sui valori predefiniti:
 
 * Disk.QFullSampleSize
 * Disk.QFullThreshold
@@ -64,7 +68,7 @@ Imposta i seguenti parametri sui valori predefiniti:
 [[mpio-settings]]
 === Impostazioni MPIO
 
-Le impostazioni MPIO selezionano i percorsi migliori per i sistemi di archiviazione NetApp .  Le impostazioni MPIO selezionano il percorso migliore e lo utilizzano.
+Le impostazioni MPIO selezionano e utilizzano il percorso migliore disponibile per i sistemi storage NetApp.
 
 Per ambienti ad alte prestazioni o quando si esegue il test con un singolo datastore LUN, regolare l'impostazione del bilanciamento del carico del criterio di selezione del percorso (PSP) round-robin (VMW_PSP_RR) per migliorare le prestazioni.  Imposta il valore IOPS predefinito da 1000 a 1.
 
@@ -77,8 +81,6 @@ NOTE: Le impostazioni MPIO non si applicano ai protocolli NVMe, NVMe/FC e NVMe/T
 === Impostazioni NFS
 
 |===
-
-
 | Parametro | Impostare questo valore su... 
 
 

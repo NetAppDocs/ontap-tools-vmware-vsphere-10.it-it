@@ -19,7 +19,7 @@ Usa questa procedura per visualizzare, modificare ed eliminare i gruppi di prote
 
 
 
-IMPORTANT: Prima di modificare o rimuovere la protezione, esamina i messaggi di avviso nella finestra di dialogo. Rimuovere le relazioni può influire sul comportamento di backup e coerenza.
+IMPORTANT: Prima di modificare o rimuovere un gruppo di protezione, esamina i messaggi di avviso nella finestra di dialogo. La rimozione delle relazioni può influire sul comportamento di backup e coerenza.
 
 .A proposito di questa attività
 * ONTAP tools aggiorna i record di protezione locali nell'istanza ONTAP tools selezionata.

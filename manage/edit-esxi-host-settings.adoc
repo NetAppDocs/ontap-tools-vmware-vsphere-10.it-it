@@ -11,23 +11,23 @@ summary: 'Modifica le impostazioni dell"host ESXi dalla dashboard degli strument
 
 
 [role="lead"]
-Utilizzare la dashboard degli strumenti ONTAP in VMware vSphere per identificare i problemi di configurazione, selezionare gli host ESXi, rivedere le impostazioni consigliate NetApp e applicarle.
+Usa la dashboard di ONTAP tools in VMware vSphere per identificare i problemi di configurazione, rivedere le impostazioni consigliate da NetApp per gli host ESXi selezionati e applicarle.
 
 .Prima di iniziare
 Il portlet dei sistemi host ESXi visualizza i problemi con le impostazioni dell'host ESXi.  Seleziona un problema per visualizzare il nome host o l'indirizzo IP.
 
 .Fasi
-. Accedere al client vSphere.
-. Nella pagina Collegamenti, selezionare *NetApp ONTAP tools* nella sezione dei plug-in.
-. Accedere al portlet *ESXi host compliance* nella Panoramica (dashboard) degli strumenti ONTAP per il plug-in VMware vSphere.
-. Selezionare il collegamento *Applica impostazioni consigliate*.
-. Nella finestra *Applica impostazioni host consigliate*, seleziona gli host per i quali desideri utilizzare le impostazioni host consigliate NetApp e seleziona *Avanti*.
+. Accedi al vSphere Client.
+. Nella pagina Collegamenti rapidi, seleziona *NetApp ONTAP tools* nella sezione Plug-in.
+. Vai al portlet *Conformità host ESXi* nella dashboard Panoramica del plug-in ONTAP tools for VMware vSphere.
+. Seleziona il link *Applica impostazioni consigliate*.
+. Nella finestra *Applica impostazioni host consigliate*, seleziona gli host per cui vuoi applicare le impostazioni host consigliate NetApp, quindi seleziona *Avanti*.
 +
 
 NOTE: È possibile espandere l'host ESXi per visualizzare i valori correnti.
 
-. Nella pagina delle impostazioni, selezionare i valori consigliati secondo necessità.
-. Nel pannello di riepilogo, controllare i valori e selezionare *fine*. È possibile tenere traccia dell'avanzamento nel riquadro attività recenti.
+. Nella pagina Impostazioni, seleziona i valori consigliati secondo necessità.
+. Nel riquadro di riepilogo, verifica i valori e seleziona *Fine*. Puoi monitorare l'avanzamento nel pannello Attività recenti.
 
 
 .Informazioni correlate

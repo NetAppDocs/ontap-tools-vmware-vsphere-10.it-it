@@ -11,7 +11,7 @@ summary: 'Scala l"appliance ONTAP tools e configura l"High Availability (HA) usa
 
 
 [role="lead"]
-Utilizza ONTAP tools Manager per scalare l'appliance e configurare l'alta disponibilità (HA). Per impostazione predefinita, ONTAP tools for VMware vSphere viene distribuito come una configurazione a nodo singolo, senza HA.
+Usa ONTAP tools Manager per aumentare la scala dell'appliance o configurare l'High Availability (HA). Per impostazione predefinita, ONTAP tools for VMware vSphere viene distribuito come configurazione a nodo singolo, non-HA.
 
 .Prima di iniziare
 * Assicurati che il tuo modello OVA corrisponda alla versione di Node 1 (il nodo di distribuzione iniziale).
@@ -30,7 +30,7 @@ NOTE: Puoi solo aumentare le dimensioni del nodo, non diminuirle. Le implementaz
 . Nella sezione *Configurazione*, seleziona la nuova dimensione del nodo e attiva l'interruttore HA per abilitare l'Alta Disponibilità.
 . Nella pagina *Impostazioni HA*, verifica quanto segue:
 +
-** L'archivio di contenuti risiede sullo stesso vCenter Server dove verranno eseguite le VM degli ONTAP tools.
+** L'archivio di contenuti risiede sullo stesso vCenter Server dove sono in esecuzione le macchine virtuali (VM) di ONTAP tools.
 ** Le macchine virtuali ONTAP tools vengono distribuite su un cluster o pool di risorse, non direttamente su un host ESXi.
 +
 
@@ -40,7 +40,7 @@ IMPORTANT: Dopo che hai abilitato l'HA, non puoi tornare a una configurazione a 
 
 . Nella sezione *Impostazioni HA*, inserisci i dettagli di rete per i nodi 2 e 3. ONTAP tools supporta tre nodi in modalità HA.
 +
-ONTAP tools precompila la maggior parte dei campi con le impostazioni di rete del Node 1. Puoi modificare questi valori prima di completare la procedura guidata. Le voci degli indirizzi IPv6 sono disponibili solo se IPv6 è abilitato sul nodo di gestione. Assicurati che ogni host ESXi ospiti solo una VM ONTAP tools.
+ONTAP tools precompila la maggior parte dei campi con le impostazioni di rete del Nodo 1. Puoi modificare questi valori prima di completare la procedura guidata. Le voci dell'indirizzo IPv6 sono disponibili solo se IPv6 è abilitato sul nodo di gestione. Assicurati che su ogni host ESXi sia in esecuzione solo una VM ONTAP tools.
 
 . Rivedi il riepilogo e fai clic su *Salva*.
 

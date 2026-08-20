@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup 
 summary: Sblocca un datastore VMFS e, facoltativamente, rimuovi gli elementi di storage lato destinazione associati. 
 ---
-= Sblocca un datastore VMFS
+= Rimuovi la protezione da un datastore VMFS negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -16,7 +16,7 @@ Usa questa attività per rimuovere la protezione da un datastore VMFS e, facolta
 .A proposito di questa attività
 Quando rimuovi la protezione da un datastore VMFS, considera il seguente comportamento:
 
-* La rimozione della protezione dall'ultimo datastore in un gruppo di protezione elimina il gruppo di protezione e il nome delle impostazioni di protezione.
+* La rimozione della protezione dall'ultimo datastore in un gruppo di protezione elimina il gruppo di protezione e le sue impostazioni di protezione.
 * Per l'ultimo datastore, ONTAP tools mostra il nome delle impostazioni di protezione.
 
 

@@ -11,7 +11,7 @@ summary: Scopri come ONTAP tools acquisisce, conserva e monitora i log di contro
 
 
 [role="lead"]
-Usa questa attività per gestire il comportamento della registrazione degli audit e la risposta operativa in ONTAP tools for VMware vSphere. I log di audit forniscono una traccia degli eventi che mostra chi ha eseguito un'azione, quale azione è stata eseguita, quando si è verificata, l'origine della richiesta e se ha avuto successo o meno.
+Gestisci la registrazione degli audit negli ONTAP tools for VMware vSphere. I log di audit mostrano chi ha eseguito un'azione, cosa è successo, quando si è verificata, la fonte della richiesta e se l'azione è riuscita o meno.
 
 .Prima di iniziare
 * Assicurati di avere accesso come amministratore a ONTAP tools Manager.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration 
 summary: Gestisci le configurazioni degli strumenti ONTAP, reimposta le password, genera i pacchetti di supporto e configura le impostazioni TLS. 
 ---
-= Scopri la console di manutenzione di ONTAP tools
+= Console di manutenzione degli strumenti ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,12 +13,12 @@ summary: Gestisci le configurazioni degli strumenti ONTAP, reimposta le password
 [role="lead"]
 La console di manutenzione per gli ONTAP tools for VMware vSphere consente di gestire le impostazioni di applicazioni, sistema e rete.  È possibile aggiornare le password di amministratore e manutenzione, generare bundle di supporto, configurare i livelli di registro, gestire le impostazioni TLS e abilitare la diagnostica remota.
 
-Dopo aver distribuito gli ONTAP tools for VMware vSphere, se la console di manutenzione non è accessibile, installare gli strumenti VMware da vCenter Server.  Accedi utilizzando il `maint` nome utente e password impostati durante la distribuzione.  Utilizzare *nano* per modificare i file nella console di manutenzione o di accesso root.
+Dopo aver distribuito ONTAP tools for VMware vSphere, se la console di manutenzione non è accessibile, installa VMware Tools dal vCenter Server. Accedi usando il `maint` nome utente e la password impostati durante la distribuzione. Usa *nano* per modificare i file nella console di manutenzione o nella console di accesso root.
 
 
-NOTE: Impostare una password per `diag` utente durante l'attivazione della diagnostica remota.
+NOTE: Imposta una password per l' `diag`utente quando abiliti la diagnostica remota.
 
-Per accedere alla console di manutenzione, utilizzare la scheda *Riepilogo* degli strumenti ONTAP per VMware vSphere distribuiti. Quando si seleziona image:../media/launch-maintenance-console.gif["Pulsante Play (Riproduci)"], viene avviata la console di manutenzione.
+Usa la scheda *Summary* degli ONTAP tools for VMware vSphere distribuiti per accedere alla console di manutenzione. Seleziona image:../media/launch-maintenance-console.gif["Pulsante Play (Riproduci)"] per avviare la console di manutenzione.
 
 |===
 

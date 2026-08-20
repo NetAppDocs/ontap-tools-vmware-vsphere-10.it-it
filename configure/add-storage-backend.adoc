@@ -11,11 +11,11 @@ summary: 'Aggiungi e gestisci i backend di storage localmente per un"istanza vCe
 
 
 [role="lead"]
-Utilizza gli ONTAP tools for VMware vSphere per aggiungere e gestire i backend di storage per i tuoi host ESXi.  È possibile integrare cluster o SVM, abilitare il supporto MetroCluster e convalidare i certificati per una connettività sicura.  È possibile configurare i backend di archiviazione utilizzando ONTAP Tools Manager o il client vSphere, monitorare lo stato dei certificati e riscoprire manualmente le risorse dopo le modifiche al cluster.
+Usa ONTAP tools per VMware vSphere per aggiungere e gestire storage backends per i tuoi host ESXi, inclusi l'onboarding di cluster o SVM, l'abilitazione del supporto MetroCluster e la convalida dei certificati per una connettività sicura. Puoi configurare storage backends usando ONTAP tools Manager o il vSphere Client, monitorare lo stato dei certificati e riscoprire manualmente le risorse dopo le modifiche al cluster.
 
 Per aggiungere un backend di archiviazione in locale, utilizzare le credenziali del cluster o SVM nell'interfaccia degli strumenti ONTAP .  I backend di archiviazione locale sono disponibili solo per il vCenter Server selezionato. Gli strumenti ONTAP mappano le SVM sul vCenter Server per la gestione dei datastore vVols o VMFS.  Per i datastore VMFS e i flussi di lavoro SRA, è possibile utilizzare le credenziali SVM senza mappare un cluster a livello globale.
 
-Per aggiungere un backend di archiviazione globale, utilizzare le credenziali del cluster ONTAP in ONTAP Tools Manager.  I backend di archiviazione globali consentono ai flussi di lavoro di individuazione di identificare le risorse del cluster necessarie per la gestione vVol.  Negli ambienti multitenant, è possibile aggiungere un utente SVM localmente per gestire i datastore vVols .
+Per aggiungere un backend di storage globale, usa le credenziali del cluster ONTAP in ONTAP tools Manager. I backend di storage globali abilitano i flussi di lavoro di discovery per identificare le risorse del cluster necessarie per la gestione dei vVols. Negli ambienti multitenant, puoi aggiungere localmente un utente SVM per gestire i datastore vVols.
 
 Consultare l'articolo della Knowledge Base: https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10: Cos'è l'ambito globale e locale del backend di archiviazione"^] per ulteriori informazioni sui backend di archiviazione globali e locali.
 
@@ -76,7 +76,7 @@ NOTE: Dopo che il sistema ONTAP ha eseguito uno switchover e uno switchback, ese
 
 --
 ====
-Gli strumenti ONTAP elencano il backend di archiviazione appena aggiunto nella pagina *Backend di archiviazione*.  Se un certificato scade entro 30 giorni o meno, gli strumenti ONTAP mostrano un avviso nella colonna della data di scadenza del certificato.  Dopo la scadenza, gli strumenti ONTAP contrassegnano il backend di archiviazione come sconosciuto perché non riesce a connettersi al sistema di archiviazione.
+ONTAP tools elenca il nuovo storage backend nella pagina *Storage backends*. Se un certificato scade entro 30 giorni o meno, ONTAP tools mostra un avviso nella colonna della data di scadenza del certificato. Dopo la scadenza, ONTAP tools segna lo storage backend come sconosciuto perché non può connettersi al sistema storage.
 
 .Informazioni correlate
 https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope["OTV 10: Cos'è l'ambito globale e locale del backend di archiviazione"^]

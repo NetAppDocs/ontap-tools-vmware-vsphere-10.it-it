@@ -11,7 +11,7 @@ summary: Visualizza i dettagli del datastore e del volume dalla pagina Storage d
 
 
 [role="lead"]
-Gli ONTAP tools for VMware vSphere mostrano la vista lato storage ONTAP dei datastore e dei relativi volumi nella scheda Configura, inclusi backend di storage, aggregato e dettagli del volume per ogni tipo di datastore.
+ONTAP tools for VMware vSphere mostra i dettagli lato ONTAP per i datastore e i relativi volumi nella scheda *Configura*, inclusi backend di storage, aggregato e dettagli del volume per ogni tipo di datastore.
 
 .Fasi
 . Nell'inventario del vSphere Client, seleziona il datastore.

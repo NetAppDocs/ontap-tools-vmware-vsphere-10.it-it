@@ -11,14 +11,14 @@ summary: Gestisci le istanze di vCenter negli ONTAP tools per controllare host, 
 
 
 [role="lead"]
-Le istanze di vCenter Server sono piattaforme di gestione centralizzate che ti permettono di controllare host, macchine virtuali e backend di storage. Negli ONTAP tools puoi dissociare i backend di storage, modificare i dettagli delle istanze, rimuovere le istanze e rinnovare i certificati del server vCenter.
+Utilizza ONTAP tools per dissociare i backend di storage, modificare i dettagli delle istanze di vCenter Server, rimuovere le istanze e rinnovare i certificati di vCenter Server.
 
 
 
 [[dissociate-storage-backends-from-a-vcenter-server-instance]]
 == Dissocia i backend di storage da un'istanza del server vCenter
 
-La pagina dell'elenco di vCenter Server mostra il numero associato di backend storage. Ogni istanza di vCenter Server può essere associata o dissociata da un backend dello storage.
+La pagina di elenco dei server vCenter mostra il numero di backend di storage associati. Ogni istanza del server vCenter può associarsi o dissociarsi da un backend di storage.
 
 .Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
@@ -33,7 +33,7 @@ La pagina dell'elenco di vCenter Server mostra il numero associato di backend st
 [[modify-a-vcenter-server-instance]]
 == Modificare un'istanza di vCenter Server
 
-Modifica un'istanza del server vCenter completando i seguenti passaggi.
+Per modificare un'istanza del server vCenter, completa i seguenti passaggi.
 
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
@@ -100,7 +100,7 @@ L'istanza del server vCenter non è più gestita da ONTAP tools.
 Se il vCenter Server non è raggiungibile durante la cancellazione:
 
 * ONTAP tools rimuove il record del server vCenter.
-* La deregistrazione del plugin non avviene.
+* La disattivazione del plug-in non avviene.
 * Viene visualizzato un avviso.
 * Devi annullare manualmente la registrazione del plugin da VMware vCenter Server.
 
@@ -155,7 +155,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. Copia l'output e salvalo come file di testo con un `.pem` estensione sul desktop.
+. Copia l'output e salvalo come  `.pem` file sul tuo desktop.
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
 . Seleziona l'istanza vCenter Server applicabile dalla barra laterale

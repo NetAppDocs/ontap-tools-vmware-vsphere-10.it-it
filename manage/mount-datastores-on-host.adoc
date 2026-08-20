@@ -11,7 +11,7 @@ summary: 'Monta i datastore sugli host aggiuntivi dopo aver aggiunto gli host al
 
 
 [role="lead"]
-Il montaggio di un datastore consente l'accesso allo storage a host aggiuntivi dopo che li hai aggiunti all'ambiente VMware.
+Monta un datastore NFS o VMFS per fornire accesso allo storage ad host aggiuntivi dopo averli aggiunti al tuo ambiente VMware.
 
 
 NOTE: Dopo aver aggiunto l'host, aspetta che il rilevamento pianificato dell'host sia completato prima che venga visualizzato in ONTAP tools. In alternativa, puoi avviare manualmente il rilevamento dalla schermata panoramica di NetApp ONTAP tools. Per informazioni su come aggiungere un host ESXi al tuo cluster vSphere, consulta  https://techdocs.broadcom.com/["Documentazione Tecnica Broadcom"].
@@ -19,11 +19,11 @@ NOTE: Dopo aver aggiunto l'host, aspetta che il rilevamento pianificato dell'hos
 .A proposito di questa attività
 * Alcune azioni del pulsante destro del mouse sono disattivate o non disponibili a seconda della versione del client vSphere e del tipo di datastore selezionato.
 +
-** Se si utilizza vSphere client 8,0 o versioni successive, alcune delle opzioni del pulsante destro del mouse sono nascoste.
+** Se usi vSphere Client 8.0 o versioni successive, alcune delle opzioni del menu clic destro sono nascoste.
 ** Da vSphere 7.0U3 a vSphere 8.0, anche se le opzioni sono presenti, l'azione è disabilitata.
 
 
-* vSphere disabilita l'opzione di montaggio del datastore quando il cluster host è protetto con configurazioni uniformi.
+* vSphere disabilita l'opzione *Monta datastore* quando il cluster è protetto con configurazioni uniformi.
 
 
 .Fasi

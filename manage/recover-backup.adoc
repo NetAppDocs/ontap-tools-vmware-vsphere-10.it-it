@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration 
 summary: Ripristina gli ONTAP tools dal backup e comprendi il comportamento a RPO zero e quasi zero per release. 
 ---
-= Ripristina la configurazione degli strumenti ONTAP
+= Recupera ONTAP tools for VMware vSphere dal backup
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Puoi recuperare l'installazione di ONTAP tools for VMware vSphere ripristinandola da un file di backup archiviato nel datastore. A partire da ONTAP tools for VMware vSphere 10.5, la funzionalità di backup è abilitata per impostazione predefinita, quindi è disponibile un backup recente se hai bisogno di ridistribuire o recuperare l'appliance.
+Recupera ONTAP tools for VMware vSphere ripristinando un file di backup archiviato sul datastore. A partire da ONTAP tools for VMware vSphere 10.5, il backup è abilitato per impostazione predefinita, quindi di solito è disponibile un backup recente se hai bisogno di ridistribuire o recuperare l'appliance.
 
-Il datastore in cui vengono distribuiti gli ONTAP tools for VMware vSphere memorizza i file di backup.  Una cartella denominata in base all'indirizzo IP degli strumenti ONTAP (i punti sono sostituiti da caratteri di sottolineatura e con il suffisso _OTV_backup_) contiene i due file di backup più recenti (_OTV_backup_1.tar.enc_ e _OTV_backup_2.tar.enc_) e un file informativo (_OTV_backup_info.txt_) che contiene il nome dell'ultimo backup.
+Il datastore in cui distribuisci ONTAP tools for VMware vSphere macchine virtuali memorizza i file di backup. Una cartella che prende il nome dall'indirizzo IP di ONTAP tools contiene i due file di backup più recenti (_OTV_backup_1.tar.enc_ e _OTV_backup_2.tar.enc_) e il file info (_OTV_backup_info.txt_), che identifica il backup più recente.
 
 Assicurarsi che la nuova macchina virtuale utilizzi lo stesso indirizzo IP degli strumenti ONTAP e corrisponda alla configurazione iniziale del sistema, inclusi i servizi abilitati, le dimensioni del nodo e la modalità HA.
 

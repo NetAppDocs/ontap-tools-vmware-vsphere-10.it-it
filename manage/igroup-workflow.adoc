@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: 'Scopri come ONTAP tools crea e gestisce gli igroup e le policy di esportazione per l"accesso al datastore.' 
 ---
-= Come ONTAP tools gestisce gli igroup e le policy di esportazione
+= Flussi di lavoro di igroup e policy di esportazione negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-I gruppi iniziatori (igroup) sono tabelle di nomi di porte World Wide Port Name (WWPN) dell'host del protocollo FC o nomi di nodi qualificati dell'host iSCSI. È possibile definire igroups e mapparli alle LUN per controllare quali iniziatori hanno accesso alle LUN.
+Utilizza queste informazioni per capire come ONTAP tools for VMware vSphere crea e gestisce gli igroup e le policy di esportazione per l'accesso al datastore.
 
-In ONTAP tools for VMware vSphere 9.x, gli igroup venivano creati e gestiti in una struttura piatta, dove ogni datastore in vCenter era associato a un singolo igroup. Questo modello limitava la flessibilità e il riutilizzo degli igroup tra più datastore. ONTAP tools for VMware vSphere 10.4 introduce gli igroup nidificati, dove ogni datastore in vCenter è associato a un igroup padre, mentre ogni host è collegato a un igroup figlio sotto quel padre. Puoi definire igroup padre personalizzati con nomi scelti dall'utente per riutilizzarli tra i datastore e rendere più semplice la gestione degli igroup. Comprendi il flusso di lavoro degli igroup per gestire LUN e datastore in ONTAP tools for VMware vSphere. Flussi di lavoro diversi generano configurazioni di igroup differenti, come mostrato nei seguenti esempi:
+In ONTAP tools for VMware vSphere 9.x, gli igroup venivano creati e gestiti in una struttura piatta, dove ogni datastore in vCenter era associato a un singolo igroup. Questo modello limitava la flessibilità e il riutilizzo degli igroup tra più datastore. ONTAP tools for VMware vSphere 10.4 introduce gli igroup nidificati, dove ogni datastore in vCenter è associato a un igroup padre, mentre ogni host è collegato a un igroup figlio sotto quel padre. Puoi definire igroup padre personalizzati con nomi scelti dall'utente per riutilizzarli tra i datastore e rendere più semplice la gestione degli igroup. Usa queste informazioni per capire come ONTAP tools for VMware vSphere gestisce LUN e datastore tramite i workflow degli igroup. Workflow diversi generano configurazioni di igroup differenti, come mostrato nei seguenti esempi:
 
 
 NOTE: I nomi menzionati sono solo a scopo illustrativo e non si riferiscono ai nomi reali dei gruppi igroup.  Gli igroup gestiti dagli strumenti ONTAP utilizzano il prefisso “otv_”.  È possibile assegnare qualsiasi nome agli igroup personalizzati.
@@ -78,7 +78,7 @@ Montare il datastore esistente su un host aggiuntivo
 
 
 
-Gli ONTAP tools for VMware vSphere creano un igroup figlio host2Igroup e lo aggiungono all'igroup padre esistente DS1Igroup.
+ONTAP tools per VMware vSphere crea un igroup figlio host2Igroup e lo aggiunge all'igroup padre esistente DS1Igroup.
 
 .Esempio 3:
 Smontare un datastore da un host
@@ -203,7 +203,7 @@ Migrazione dagli strumenti ONTAP 9 a 10 (normalizzazione igroup)
 
 *Flusso di lavoro*
 
-Gli strumenti ONTAP per le versioni VMware vSPhere 9.x non supportano gli igroup gerarchici.  Durante la migrazione alla versione 10.3 o successive, gli igroup devono essere normalizzati nella struttura gerarchica.
+Gli ONTAP tools for VMware vSphere versione 9.x non supportano gli igroup gerarchici. Durante la migrazione alle versioni 10.3 o successive, gli igroup devono essere normalizzati nella struttura gerarchica.
 
 Prima della migrazione:
 
@@ -243,7 +243,7 @@ Quando si crea un datastore NFS negli strumenti ONTAP per VMware vSphere, è pos
 
 Quando si monta un datastore NFS su un nuovo host ESXi, gli strumenti ONTAP per VMware vSphere aggiungono l'indirizzo IP dell'host alla policy di esportazione esistente associata al datastore. Ciò consente al nuovo host di accedere al datastore senza dover creare una nuova policy di esportazione.
 
-Quando si elimina o si smonta un datastore NFS da un host ESXi, gli ONTAP tools for VMware vSphere rimuovono l'indirizzo IP dell'host dalla policy di esportazione. Se nessun altro host utilizza tale criterio di esportazione, verrà eliminato. Quando si elimina un datastore NFS, gli ONTAP tools for VMware vSphere rimuovono la policy di esportazione associata a tale datastore se non viene riutilizzata da altri datastore. Se la policy di esportazione viene riutilizzata, l'indirizzo IP dell'host viene mantenuto e non cambia. Quando si eliminano i datastore, la policy di esportazione annulla l'assegnazione dell'indirizzo IP dell'host e assegna una policy di esportazione predefinita, in modo che i sistemi ONTAP possano accedervi se necessario.
+Quando elimini o smonti un datastore NFS da un host ESXi, ONTAP tools for VMware vSphere rimuove l'indirizzo IP dell'host dalla policy di esportazione. Se nessun altro host utilizza quella policy di esportazione, verrà eliminata. Quando elimini un datastore NFS, ONTAP tools for VMware vSphere rimuove la policy di esportazione associata a quel datastore se non viene riutilizzata da altri datastore. Se la policy di esportazione viene riutilizzata, mantiene l'indirizzo IP dell'host e non cambia. Quando elimini i datastore, ONTAP tools rimuove l'indirizzo IP dell'host dalla policy di esportazione e assegna la policy di esportazione predefinita se ONTAP richiede l'accesso.
 
 L'assegnazione della policy di esportazione varia a seconda che venga riutilizzata su datastore diversi. Quando si riutilizza la policy di esportazione, è possibile aggiungerla con il nuovo indirizzo IP host. Quando si elimina o si smonta un datastore che utilizza una policy di esportazione condivisa, la policy non verrà eliminata. Rimane invariata e l'indirizzo IP host non viene rimosso, poiché è condivisa con gli altri datastore. Il riutilizzo delle policy di esportazione è sconsigliato, poiché può causare problemi di accesso e latenza.
 

@@ -4,19 +4,25 @@ sidebar: sidebar
 keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
 summary: 'Associa un backend di storage globale a un"istanza del server vCenter negli ONTAP tools.' 
 ---
-= Associare un backend di storage a un'istanza del vCenter Server negli ONTAP tools
+= Associazione di un backend dello storage a un'istanza di vCenter Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Usa questa attività per associare un backend di storage globale a un'istanza del server vCenter. Un backend di storage globale è un backend aggiunto in ONTAP tools Manager che non è ancora associato a specifiche istanze del server vCenter. Per le configurazioni NetApp MetroCluster, quando associ un cluster di backend di storage, associa anche il suo cluster peer al server vCenter.
+Associa un backend di storage globale, aggiunto in ONTAP tools Manager ma non ancora collegato a una specifica istanza di vCenter Server, a un'istanza di vCenter Server. Per le configurazioni NetApp MetroCluster, associa anche il cluster peer al vCenter Server.
 
 .Fasi
 . Avviare Gestione strumenti ONTAP da un browser Web: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
 . Effettua l'accesso con i tool ONTAP per le credenziali di amministratore di VMware vSphere fornite durante l'implementazione.
-. Seleziona vCenter dalla barra laterale.
+. Seleziona *vCenter* dalla barra laterale.
 . Seleziona i tre puntini verticali accanto all'istanza del server vCenter che vuoi connettere ai backend di storage.
 . Dal menu a discesa, seleziona il backend di archiviazione che desideri associare all'istanza di vCenter Server selezionata.
 
+
+
+NOTE: Per le configurazioni NetApp MetroCluster, quando associ un cluster di backend di storage, associa anche il suo cluster peer al server vCenter.
+
+.Quali sono le prossime novità?
+ONTAP tools associa il backend di storage selezionato all'istanza vCenter Server, rendendolo disponibile per le operazioni di datastore in quell'ambiente vCenter Server.
