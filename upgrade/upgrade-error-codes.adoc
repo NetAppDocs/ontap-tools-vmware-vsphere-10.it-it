@@ -119,6 +119,37 @@ Le ultime tre cifre del codice di errore indicano l'errore specifico del flusso 
 | 089 | La modifica della proprietà del file di configurazione rotazione del registro di riepilogo non è riuscita | Riprovare a eseguire l'aggiornamento. 
 
 
+| 094 | La configurazione NTP non è riuscita e il sistema è tornato a NTPsec  a| 
+Se l'aggiornamento non riesce a causa di un errore nell'installazione di Chrony:
+
+. Verifica se Chrony è installato:
++
+[listing]
+----
+systemctl status chrony
+----
+. Se Chrony è installato e il problema riguarda i server NTP che hai fornito, verifica se tali server sono raggiungibili:
++
+[listing]
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+Se i server sono raggiungibili, il problema non è legato alla raggiungibilità dei server. Se un server è effettivamente irraggiungibile, rimuovilo da ONTAP tools Manager e fornisci invece un server NTP raggiungibile.
+
+. Se l'upgrade non riesce a causa di qualsiasi altro problema durante l'upgrade NTP, controlla i seguenti log:
++
+[listing]
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
+
+
+
+
 | 095 | Aggiornamento del sistema operativo non riuscito | Nessun ripristino per l'aggiornamento del sistema operativo. I servizi degli strumenti ONTAP vengono aggiornati e saranno in esecuzione nuovi pod. 
 
 

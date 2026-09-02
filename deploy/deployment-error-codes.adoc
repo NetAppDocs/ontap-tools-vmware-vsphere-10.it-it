@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools 
 summary: Utilizza i codici di errore di distribuzione di ONTAP tools per diagnosticare e risolvere i problemi di distribuzione, riavvio e ripristino. 
 ---
-= Risolvi gli errori di distribuzione degli ONTAP tools
+= Codici di errore di distribuzione di ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

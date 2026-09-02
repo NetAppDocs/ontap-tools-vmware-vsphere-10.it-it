@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: associate storage backend, ONTAP tools backend mapping, global storage backend association, vCenter storage backend 
 summary: 'Associa un backend di storage globale a un"istanza del server vCenter negli ONTAP tools.' 
 ---
-= Associazione di un backend dello storage a un'istanza di vCenter Server
+= Associare un backend di storage a un'istanza del vCenter Server negli ONTAP tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

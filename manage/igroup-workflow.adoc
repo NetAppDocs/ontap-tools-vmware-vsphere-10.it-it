@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control 
 summary: 'Scopri come ONTAP tools crea e gestisce gli igroup e le policy di esportazione per l"accesso al datastore.' 
 ---
-= Flussi di lavoro di igroup e policy di esportazione negli ONTAP tools
+= Come ONTAP tools gestisce gli igroup e le policy di esportazione
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
