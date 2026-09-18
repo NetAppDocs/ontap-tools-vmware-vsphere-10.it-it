@@ -1910,7 +1910,6 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="6f8b3b7e42dadd9b7806e6e98d7d0a77" category="list-text">L'identificatore di rete primario (PNID) del vCenter Server deve essere incluso nei dettagli SAN. Il PNID e il nome DNS devono essere identici e risolvibili nel DNS.</block>
   <block id="dbabfcb48125f6c3a069313029fdada8" category="list-text">Per ulteriori informazioni, fare riferimento alla documentazione VMware:</block>
   <block id="381b5a0822c9882ced35624a3338ea81" category="inline-link">vSphere Certificate Requirements per diversi percorsi di soluzione</block>
-  <block id="38e7ce10f91b93ef8eecb43d98853cb3" category="list-text"><block ref="38e7ce10f91b93ef8eecb43d98853cb3" category="inline-link-rx"></block></block>
   <block id="bab39c0d7f700e0dbd68e4761a2c9ac4" category="inline-link">Sostituisci il certificato SSL della macchina vCenter con un certificato firmato da un'autorità di certificazione personalizzata</block>
   <block id="81c3c30e39dc6db9cf179ead4dc53c00" category="list-text"><block ref="81c3c30e39dc6db9cf179ead4dc53c00" category="inline-link-rx"></block></block>
   <block id="4ce004ede8d7c5a94bcc602e81d0dd46" category="inline-link">Errore: il campo Subject Alternate Name (SAN) non contiene il PNID. Fornire un certificato valido</block>
@@ -3138,4 +3137,5 @@ I codici di errore sono composti da cinque cifre, in cui le prime due rappresent
   <block id="4ea2f2639373a757d002c323f4650ae1" category="list-text">Se Chrony è installato e il problema riguarda i server NTP che hai fornito, verifica se tali server sono raggiungibili:</block>
   <block id="4db51794b7899f8781b7e514861f9c54" category="paragraph">Se i server sono raggiungibili, il problema non è legato alla raggiungibilità dei server. Se un server è effettivamente irraggiungibile, rimuovilo da ONTAP tools Manager e fornisci invece un server NTP raggiungibile.</block>
   <block id="58d802804e6af6816051d4101a78cd4b" category="list-text">Se l'upgrade non riesce a causa di qualsiasi altro problema durante l'upgrade NTP, controlla i seguenti log:</block>
+  <block id="f5589bd09ceeb2368f74d5725fa2dcc7" category="list-text"><block ref="f5589bd09ceeb2368f74d5725fa2dcc7" category="inline-link-rx"></block></block>
 </blocks>
