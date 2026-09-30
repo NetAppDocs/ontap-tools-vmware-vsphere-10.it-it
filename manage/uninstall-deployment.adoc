@@ -22,8 +22,6 @@ La disinstallazione di ONTAP tools per VMware vSphere elimina i dati nell'applia
 
 . link:../manage/delete-ds.html["Elimina datastore"] Creato su tool ONTAP per VMware vSphere.
 . Se hai abilitato il VASA Provider, seleziona *Impostazioni* > *Impostazioni VASA Provider* > *Annulla registrazione* in ONTAP tools per annullare la registrazione del VASA Provider da tutte le istanze del server vCenter.
-. Disassociare tutti i backend di storage dall'istanza di vCenter Server. Fare riferimento alla link:../manage/manage-vcenter.html["Dissociare i backend di storage con l'istanza di vCenter Server"].
-. Eliminare tutti i backend di archiviazione. Fare riferimento alla link:../manage/storage-backend.html["Gestire i back-end dello storage"].
 . Rimuovere l'adattatore SRA da VMware Live Site Recovery:
 +
 .. Accedere come amministratore all'interfaccia di gestione dell'appliance VMware Live Site Recovery utilizzando la porta 5480.
@@ -32,7 +30,16 @@ La disinstallazione di ONTAP tools per VMware vSphere elimina i dati nell'applia
 .. Verificare di conoscere i risultati dell'eliminazione della scheda e selezionare *Elimina*.
 
 
-. Elimina le istanze del server vCenter integrate negli strumenti ONTAP per VMware vSphere. Fare riferimento alla link:../manage/manage-vcenter.html["Gestire le istanze di vCenter Server"].
+. Rimuovi le istanze di vCenter Server integrate in ONTAP tools for VMware vSphere. Fai riferimento a link:../manage/manage-vcenter.html["Gestire le istanze di vCenter Server"].
++
+Quando rimuovi un'istanza di vCenter Server, ONTAP tools può guidarti nella procedura di pulizia necessaria. Se richiesto nella finestra di dialogo *Remove vCenter*, seleziona *Remove all storage artifacts from this vCenter Server* e *I understand that the associated datastores will no longer be managed by ONTAP tools*, quindi seleziona *Force delete*.
+
++
+Prima di utilizzare *Eliminazione forzata*, assicurati che tutti i datastore vVols siano rimossi o migrati, che tutti i datastore protetti siano non protetti e che non siano in esecuzione processi di rilevamento.
+
++
+Se il server vCenter non è raggiungibile durante l'eliminazione, ONTAP tools rimuove solo il record del server vCenter. Devi annullare manualmente la registrazione del plug-in da VMware vCenter Server.
+
 . Spegnere gli strumenti ONTAP per le VM VMware vSphere da vCenter Server ed eliminare le VM.
 
 

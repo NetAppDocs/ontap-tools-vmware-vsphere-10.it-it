@@ -16,6 +16,9 @@ Verifica le versioni supportate, il dimensionamento, i requisiti delle porte e i
 Distribuisci ONTAP tools for VMware vSphere in un ambiente vSphere supportato che include host ESXi e VMware vCenter Server Virtual Appliance (vCSA).
 
 
+NOTE: Non distribuire la macchina virtuale di ONTAP tools all'interno di una VMware vApp in vCenter Server.
+
+
 
 [[system-requirements]]
 == Requisiti di sistema

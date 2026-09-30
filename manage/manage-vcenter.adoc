@@ -117,7 +117,8 @@ Gli strumenti ONTAP ti avvisano quando il certificato vCenter sta per scadere o 
 +
 [listing]
 ----
-echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+echo | openssl s_client -connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p'
+// OTVDOC-378 updates
 ----
 . Verifica che il certificato sia in formato ASCII Base 64 e che includa le righe di inizio e fine, ad esempio:
 +
