@@ -14,7 +14,7 @@ summary: Proteggi un gruppo di coerenza con la protezione fan-out utilizzando la
 Usa la protezione fan-out per proteggere un gruppo di coerenza su due cluster ONTAP di destinazione. ONTAP tools mantiene la relazione sincrona tramite i flussi di lavoro di creazione, modifica ed eliminazione della protezione active sync SnapMirror, e VMware Live Site Recovery mantiene la relazione asincrona tramite i flussi di lavoro di failover e riprotezione.
 
 
-NOTE: La funzionalità fan-out non è supportata per gli utenti SVM.
+NOTE: La protezione fan-out non è supportata per gli utenti SVM. La protezione fan-out richiede una relazione Asynchronous oltre alla relazione AutomatedFailOverDuplex e ONTAP tools non supporta la creazione della protezione Asynchronous per un backend di storage aggiunto con le credenziali di un utente SVM.
 
 Per impostare la protezione fan-out, collegare in peering i tre cluster di siti e le SVM.
 
