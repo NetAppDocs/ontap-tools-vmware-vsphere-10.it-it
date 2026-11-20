@@ -19,7 +19,7 @@ Quando distribuisci ONTAP tools for VMware vSphere su un cluster ONTAP dedicato,
 Se la distribuzione utilizza iSCSI, elimina anche gli igroup.
 
 . Ottieni l'elenco dei volumi FlexVol . _kubectl describe persistentvolumes | grep internalName | awk -F'=' '{print $2}'_
-. Rimuovere le macchine virtuali da vCenter Server. Fare riferimento alla https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en["Rimuovere e registrare nuovamente le macchine virtuali e i modelli VM"].
+. Rimuovere le VM dal vCenter Server. Fai riferimento a https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machines/adding-and-removing-virtual-machines.html["Rimuovere e registrare nuovamente le macchine virtuali e i modelli VM"].
 . Eliminare i volumi FlexVol . Fare riferimento a https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html["Eliminare un volume FlexVol"] . Per eliminare un volume, immettere il nome esatto FlexVol volume nel comando CLI.
 . Per le implementazioni iSCSI, elimina gli igroup SAN dal backend di storage ONTAP. Vedi  https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html["Visualizza e gestisci GLI iniziatori SAN e igroups"].
 
